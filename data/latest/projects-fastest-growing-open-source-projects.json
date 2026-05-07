@@ -3,8 +3,8 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T05:08:01.515Z",
-  "fresh_until": "2026-05-14T05:08:01.515Z",
+  "generated_at": "2026-05-07T05:10:33.835Z",
+  "fresh_until": "2026-05-14T05:10:33.835Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,10 +16,10 @@
       10
     ],
     "top_10_signal": [
-      232
+      927
     ]
   },
-  "candidate_count": 34459,
+  "candidate_count": 34460,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,22 +27,58 @@
   ],
   "entries": [
     {
-      "full_name": "dotnet/android",
-      "url": "https://github.com/dotnet/android",
-      "stars": 2109,
-      "pull_requests_merged_7d": 149,
-      "active_contributors_30d": 3,
-      "primary_language": "C#",
+      "full_name": "unslothai/unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "stars": 63724,
+      "pull_requests_merged_7d": 399,
+      "active_contributors_30d": 85,
+      "primary_language": "Python",
       "rank": 1
     },
     {
-      "full_name": "TypeCellOS/BlockNote",
-      "url": "https://github.com/TypeCellOS/BlockNote",
-      "stars": 9671,
-      "pull_requests_merged_7d": 55,
-      "active_contributors_30d": 13,
-      "primary_language": "TypeScript",
+      "full_name": "root-project/root",
+      "url": "https://github.com/root-project/root",
+      "stars": 3199,
+      "pull_requests_merged_7d": 233,
+      "active_contributors_30d": 4,
+      "primary_language": "C++",
       "rank": 2
+    },
+    {
+      "full_name": "getpaseo/paseo",
+      "url": "https://github.com/getpaseo/paseo",
+      "stars": 5573,
+      "pull_requests_merged_7d": 132,
+      "active_contributors_30d": 7,
+      "primary_language": "TypeScript",
+      "rank": 3
+    },
+    {
+      "full_name": "apache/polaris",
+      "url": "https://github.com/apache/polaris",
+      "stars": 1926,
+      "pull_requests_merged_7d": 119,
+      "active_contributors_30d": 3,
+      "primary_language": "Java",
+      "rank": 4
+    },
+    {
+      "full_name": "jxxghp/MoviePilot",
+      "url": "https://github.com/jxxghp/MoviePilot",
+      "stars": 10992,
+      "pull_requests_merged_7d": 20,
+      "active_contributors_30d": 15,
+      "primary_language": "Python",
+      "rank": 5
+    },
+    {
+      "full_name": "web-infra-dev/rsbuild",
+      "url": "https://github.com/web-infra-dev/rsbuild",
+      "stars": 3292,
+      "pull_requests_merged_7d": 7,
+      "active_contributors_30d": 4,
+      "primary_language": "TypeScript",
+      "rank": 6
     },
     {
       "full_name": "mthcht/awesome-lists",
@@ -51,66 +87,32 @@
       "pull_requests_merged_7d": 7,
       "active_contributors_30d": 2,
       "primary_language": "YARA",
-      "rank": 3
-    },
-    {
-      "full_name": "t8y2/dbx",
-      "url": "https://github.com/t8y2/dbx",
-      "stars": 1081,
-      "pull_requests_merged_7d": 6,
-      "active_contributors_30d": 1,
-      "primary_language": "Vue",
-      "rank": 4
-    },
-    {
-      "full_name": "vasu-devs/JustHireMe",
-      "url": "https://github.com/vasu-devs/JustHireMe",
-      "stars": 674,
-      "pull_requests_merged_7d": 6,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 5
-    },
-    {
-      "full_name": "uBlockOrigin/uAssets",
-      "url": "https://github.com/uBlockOrigin/uAssets",
-      "stars": 5713,
-      "pull_requests_merged_7d": 4,
-      "active_contributors_30d": 8,
-      "primary_language": "Adblock Filter List",
-      "rank": 6
-    },
-    {
-      "full_name": "mirror/dd-wrt",
-      "url": "https://github.com/mirror/dd-wrt",
-      "stars": 604,
-      "pull_requests_merged_7d": 3,
-      "active_contributors_30d": 1,
       "rank": 7
     },
     {
-      "full_name": "rust-lang/crates.io-index",
-      "url": "https://github.com/rust-lang/crates.io-index",
-      "stars": 704,
-      "pull_requests_merged_7d": 1,
+      "full_name": "Olshansk/rss-feeds",
+      "url": "https://github.com/Olshansk/rss-feeds",
+      "stars": 538,
+      "pull_requests_merged_7d": 6,
       "active_contributors_30d": 1,
-      "primary_language": "Tcl",
+      "primary_language": "Python",
       "rank": 8
     },
     {
-      "full_name": "SoliSpirit/v2ray-configs",
-      "url": "https://github.com/SoliSpirit/v2ray-configs",
-      "stars": 508,
-      "pull_requests_merged_7d": 1,
-      "active_contributors_30d": 1,
+      "full_name": "ymyuuu/IPDB",
+      "url": "https://github.com/ymyuuu/IPDB",
+      "stars": 2456,
+      "pull_requests_merged_7d": 4,
+      "active_contributors_30d": 3,
       "rank": 9
     },
     {
-      "full_name": "DenverCoder1/DenverCoder1",
-      "url": "https://github.com/DenverCoder1/DenverCoder1",
-      "stars": 717,
+      "full_name": "TomoeMami/S1PlainTextBackup",
+      "url": "https://github.com/TomoeMami/S1PlainTextBackup",
+      "stars": 526,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "Python",
       "rank": 10
     }
   ]

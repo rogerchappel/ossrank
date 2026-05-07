@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T05:08:01.515Z",
-  "fresh_until": "2026-05-14T05:08:01.515Z",
+  "generated_at": "2026-05-07T05:10:33.835Z",
+  "fresh_until": "2026-05-14T05:10:33.835Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       10
     ],
     "top_10_signal": [
-      0
+      132
     ]
   },
   "candidate_count": 111036,
@@ -27,90 +27,88 @@
   ],
   "entries": [
     {
-      "full_name": "nirholas/lyra-web3-playground",
-      "url": "https://github.com/nirholas/lyra-web3-playground",
-      "stars": 24,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
+      "full_name": "getpaseo/paseo",
+      "url": "https://github.com/getpaseo/paseo",
+      "stars": 5573,
+      "pull_requests_merged_7d": 132,
+      "active_contributors_30d": 7,
       "primary_language": "TypeScript",
       "rank": 1
     },
     {
-      "full_name": "kinpatchii/batchi",
-      "url": "https://github.com/kinpatchii/batchi",
-      "stars": 2,
+      "full_name": "nirholas/github-to-mcp",
+      "url": "https://github.com/nirholas/github-to-mcp",
+      "stars": 28,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Go",
+      "primary_language": "TypeScript",
       "rank": 2
     },
     {
-      "full_name": "josephfawzy/api20",
-      "url": "https://github.com/josephfawzy/api20",
-      "stars": 1,
+      "full_name": "SoliEstre/EstreGenesis",
+      "url": "https://github.com/SoliEstre/EstreGenesis",
+      "stars": 2,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "rank": 3
     },
     {
-      "full_name": "Naxh156/claude-agent-sdk-python",
-      "url": "https://github.com/Naxh156/claude-agent-sdk-python",
+      "full_name": "maksimilianito/mootivator",
+      "url": "https://github.com/maksimilianito/mootivator",
       "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "primary_language": "Shell",
       "rank": 4
     },
     {
-      "full_name": "ok290/bbbbbbbfgh",
-      "url": "https://github.com/ok290/bbbbbbbfgh",
-      "stars": 1,
+      "full_name": "alok1920/ai-router",
+      "url": "https://github.com/alok1920/ai-router",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "JavaScript",
       "rank": 5
     },
     {
-      "full_name": "Autavian/groovy-zh5",
-      "url": "https://github.com/Autavian/groovy-zh5",
+      "full_name": "Jairon42/sekken-enum",
+      "url": "https://github.com/Jairon42/sekken-enum",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "HTML",
+      "primary_language": "JavaScript",
       "rank": 6
     },
     {
-      "full_name": "gimso2x/forgeflow",
-      "url": "https://github.com/gimso2x/forgeflow",
+      "full_name": "mirochnishenko/neo4j-qlr",
+      "url": "https://github.com/mirochnishenko/neo4j-qlr",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
       "rank": 7
     },
     {
-      "full_name": "milrblx/tailwind-ksl",
-      "url": "https://github.com/milrblx/tailwind-ksl",
+      "full_name": "Oscar22222224gtggf/shopify-github-command-list",
+      "url": "https://github.com/Oscar22222224gtggf/shopify-github-command-list",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "rank": 8
     },
     {
-      "full_name": "Rahul-kushwaha7050/lockbox-hub",
-      "url": "https://github.com/Rahul-kushwaha7050/lockbox-hub",
+      "full_name": "Samdex1921/n8n-terry-guide",
+      "url": "https://github.com/Samdex1921/n8n-terry-guide",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Solidity",
       "rank": 9
     },
     {
-      "full_name": "vachhanidhyey/llm_intercept",
-      "url": "https://github.com/vachhanidhyey/llm_intercept",
+      "full_name": "ZANGABR/amazon-q-for-engineers",
+      "url": "https://github.com/ZANGABR/amazon-q-for-engineers",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Visual Basic .NET",
       "rank": 10
     }
   ]
