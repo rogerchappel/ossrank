@@ -77,7 +77,7 @@ OSSRank must stay honest:
 
 - Use official GitHub APIs only; never scrape GitHub HTML.
 - Treat GitHub profile location text as unverified free text.
-- Rank observed public signals, not private contributions.
+- Rank observed public signals, not private contributions. V1 contributor rankings use an OSSRank proxy score, not GitHub profile commit/contribution counts.
 - Preserve last-known-good data when refreshes fail.
 - Show freshness, caveats, methodology, and raw JSON on every indexable ranking page.
 - Avoid claims of complete global coverage, endorsement, nationality, employment status, or identity attributes.
