@@ -51,14 +51,27 @@ function parseArgs(argv: string[]): CliOptions {
     const value = rest[index + 1];
     if (arg === '--input') { options.input = value; index += 1; continue; }
     if (arg === '--output') { options.output = value; index += 1; continue; }
-    if (arg === '--limit') { options.limit = Number(value); index += 1; continue; }
-    if (arg === '--format') { options.format = value === 'table' ? 'table' : 'json'; index += 1; continue; }
-    if (arg === '--mode') { options.mode = value === 'fixture' ? 'fixture' : 'live'; index += 1; continue; }
+    if (arg === '--limit') { options.limit = parsePositiveInteger(value, '--limit'); index += 1; continue; }
+    if (arg === '--format') { options.format = parseChoice(value, '--format', ['json', 'table']); index += 1; continue; }
+    if (arg === '--mode') { options.mode = parseChoice(value, '--mode', ['fixture', 'live']); index += 1; continue; }
     if (arg === '--token') { options.token = value; index += 1; continue; }
-    if (arg === '--max-countries') { options.maxCountries = Number(value); index += 1; continue; }
+    if (arg === '--max-countries') { options.maxCountries = parsePositiveInteger(value, '--max-countries'); index += 1; continue; }
     if (arg === '--help' || arg === '-h') options.command = 'help';
   }
   return options;
+}
+
+function parsePositiveInteger(value: string | undefined, flag: string): number {
+  const parsed = Number(value);
+  if (!value || !Number.isInteger(parsed) || parsed < 1) {
+    throw new Error(`${flag} must be a positive integer`);
+  }
+  return parsed;
+}
+
+function parseChoice<T extends string>(value: string | undefined, flag: string, choices: readonly T[]): T {
+  if (choices.includes(value as T)) return value as T;
+  throw new Error(`${flag} must be one of: ${choices.join(', ')}`);
 }
 
 async function readEntries<T>(path: string): Promise<T[]> {
