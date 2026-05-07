@@ -17,7 +17,14 @@ OSSRank is designed for <https://ossrank.dev>. V1 includes a conservative live G
 - `/`
 - `/countries/australia/top-github-contributors/`
 - `/countries/australia/fastest-rising-github-contributors/`
+- `/countries/australia/top-github-users-by-repositories/`
+- `/countries/australia/top-github-users-by-commits/`
+- `/countries/australia/top-github-users-by-pull-requests/`
+- `/countries/australia/top-github-users-by-score/`
 - `/languages/typescript/top-open-source-contributors/`
+- `/languages/typescript/top-github-users-by-repositories/`
+- `/languages/typescript/top-github-users-by-commits/`
+- `/languages/typescript/top-github-users-by-pull-requests/`
 - `/categories/developer-tools/top-open-source-projects/`
 - `/projects/most-pull-requests-this-week/`
 - `/projects/fastest-growing-open-source-projects/`
@@ -77,14 +84,14 @@ OSSRank must stay honest:
 
 - Use official GitHub APIs only; never scrape GitHub HTML.
 - Treat GitHub profile location text as unverified free text.
-- Rank observed public signals, not private contributions. V1 contributor rankings use an OSSRank proxy score, not GitHub profile commit/contribution counts.
+- Rank observed public signals, not private contributions. V1 contributor pages prioritize raw public repository counts plus observed recent public commits and opened pull requests from GitHub public events. The OSSRank score is a secondary proxy, not GitHub's profile contribution graph.
 - Preserve last-known-good data when refreshes fail.
 - Show freshness, caveats, methodology, and raw JSON on every indexable ranking page.
 - Avoid claims of complete global coverage, endorsement, nationality, employment status, or identity attributes.
 
 ## Roadmap
 
-- Add deeper GitHub GraphQL event scoring with low-concurrency backoff and checkpoint/resume.
+- Add deeper GitHub GraphQL contribution and pull-request collection with low-concurrency backoff and checkpoint/resume.
 - Generate contributor detail pages and full project badges.
 - Add compact historical charts and route tests for ambiguous aliases.
 - Connect `ossrank.dev` to Cloudflare Pages.

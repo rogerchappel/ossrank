@@ -6,6 +6,10 @@ export interface RankedContributor {
   name?: string;
   profile_url: string;
   public_contributions: number;
+  public_repos?: number;
+  public_gists?: number;
+  observed_public_commits?: number;
+  observed_public_pull_requests?: number;
   followers: number;
   location?: string;
   location_confidence?: 'profile-text-match' | 'curated' | 'unknown';

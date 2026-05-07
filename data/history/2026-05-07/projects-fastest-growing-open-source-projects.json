@@ -3,8 +3,8 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T05:32:38.729Z",
-  "fresh_until": "2026-05-14T05:32:38.729Z",
+  "generated_at": "2026-05-07T05:39:15.042Z",
+  "fresh_until": "2026-05-14T05:39:15.042Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,10 +16,10 @@
       20
     ],
     "top_10_signal": [
-      4061
+      1032
     ]
   },
-  "candidate_count": 34464,
+  "candidate_count": 34465,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,103 +27,76 @@
   ],
   "entries": [
     {
-      "full_name": "openclaw/openclaw",
-      "url": "https://github.com/openclaw/openclaw",
-      "stars": 369148,
-      "pull_requests_merged_7d": 2457,
-      "active_contributors_30d": 492,
+      "full_name": "ant-design/pro-components",
+      "url": "https://github.com/ant-design/pro-components",
+      "stars": 4742,
+      "pull_requests_merged_7d": 262,
+      "active_contributors_30d": 6,
       "primary_language": "TypeScript",
       "rank": 1
     },
     {
-      "full_name": "warpdotdev/warp",
-      "url": "https://github.com/warpdotdev/warp",
-      "stars": 55907,
-      "pull_requests_merged_7d": 1200,
-      "active_contributors_30d": 75,
-      "primary_language": "Rust",
+      "full_name": "ansible-collections/community.general",
+      "url": "https://github.com/ansible-collections/community.general",
+      "stars": 1034,
+      "pull_requests_merged_7d": 245,
+      "active_contributors_30d": 1,
+      "primary_language": "Python",
       "rank": 2
     },
     {
-      "full_name": "FWGS/xash3d-fwgs",
-      "url": "https://github.com/FWGS/xash3d-fwgs",
-      "stars": 2477,
-      "pull_requests_merged_7d": 144,
+      "full_name": "gentoo/gentoo",
+      "url": "https://github.com/gentoo/gentoo",
+      "stars": 2384,
+      "pull_requests_merged_7d": 229,
       "active_contributors_30d": 3,
-      "primary_language": "C",
+      "primary_language": "Shell",
       "rank": 3
     },
     {
-      "full_name": "spacedriveapp/spacebot",
-      "url": "https://github.com/spacedriveapp/spacebot",
-      "stars": 2194,
-      "pull_requests_merged_7d": 62,
-      "active_contributors_30d": 3,
-      "primary_language": "Rust",
+      "full_name": "freeorion/freeorion",
+      "url": "https://github.com/freeorion/freeorion",
+      "stars": 987,
+      "pull_requests_merged_7d": 169,
+      "active_contributors_30d": 1,
+      "primary_language": "C++",
       "rank": 4
     },
     {
-      "full_name": "latex3/latex2e",
-      "url": "https://github.com/latex3/latex2e",
-      "stars": 2384,
-      "pull_requests_merged_7d": 61,
-      "active_contributors_30d": 3,
-      "primary_language": "TeX",
+      "full_name": "OpenPipe/ART",
+      "url": "https://github.com/OpenPipe/ART",
+      "stars": 9420,
+      "pull_requests_merged_7d": 40,
+      "active_contributors_30d": 13,
+      "primary_language": "Python",
       "rank": 5
     },
     {
-      "full_name": "ScoopInstaller/Main",
-      "url": "https://github.com/ScoopInstaller/Main",
-      "stars": 1830,
-      "pull_requests_merged_7d": 46,
-      "active_contributors_30d": 2,
-      "primary_language": "PowerShell",
+      "full_name": "facebookincubator/nimble",
+      "url": "https://github.com/facebookincubator/nimble",
+      "stars": 709,
+      "pull_requests_merged_7d": 37,
+      "active_contributors_30d": 1,
+      "primary_language": "C++",
       "rank": 6
     },
     {
-      "full_name": "GrapheneOS/grapheneos.org",
-      "url": "https://github.com/GrapheneOS/grapheneos.org",
-      "stars": 644,
-      "pull_requests_merged_7d": 28,
+      "full_name": "vm0-ai/vm0",
+      "url": "https://github.com/vm0-ai/vm0",
+      "stars": 1102,
+      "pull_requests_merged_7d": 20,
       "active_contributors_30d": 1,
-      "primary_language": "HTML",
+      "primary_language": "TypeScript",
       "rank": 7
     },
     {
-      "full_name": "superdesk/superdesk",
-      "url": "https://github.com/superdesk/superdesk",
-      "stars": 731,
-      "pull_requests_merged_7d": 23,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "full_name": "sunflower-land/sunflower-land",
+      "url": "https://github.com/sunflower-land/sunflower-land",
+      "stars": 1623,
+      "pull_requests_merged_7d": 16,
+      "active_contributors_30d": 2,
+      "primary_language": "TypeScript",
       "rank": 8
-    },
-    {
-      "full_name": "frappe/builder",
-      "url": "https://github.com/frappe/builder",
-      "stars": 2010,
-      "pull_requests_merged_7d": 20,
-      "active_contributors_30d": 3,
-      "primary_language": "Vue",
-      "rank": 9
-    },
-    {
-      "full_name": "GhostESP-Revival/GhostESP",
-      "url": "https://github.com/GhostESP-Revival/GhostESP",
-      "stars": 646,
-      "pull_requests_merged_7d": 20,
-      "active_contributors_30d": 1,
-      "primary_language": "C",
-      "rank": 10
-    },
-    {
-      "full_name": "yfedoseev/pdf_oxide",
-      "url": "https://github.com/yfedoseev/pdf_oxide",
-      "stars": 723,
-      "pull_requests_merged_7d": 12,
-      "active_contributors_30d": 1,
-      "primary_language": "Rust",
-      "rank": 11
     },
     {
       "full_name": "89996462/Quantumult-X",
@@ -132,7 +105,16 @@
       "pull_requests_merged_7d": 7,
       "active_contributors_30d": 1,
       "primary_language": "JavaScript",
-      "rank": 12
+      "rank": 9
+    },
+    {
+      "full_name": "tukui-org/ElvUI",
+      "url": "https://github.com/tukui-org/ElvUI",
+      "stars": 681,
+      "pull_requests_merged_7d": 7,
+      "active_contributors_30d": 1,
+      "primary_language": "Lua",
+      "rank": 10
     },
     {
       "full_name": "CocoaPods/Specs",
@@ -140,42 +122,33 @@
       "stars": 6813,
       "pull_requests_merged_7d": 6,
       "active_contributors_30d": 9,
+      "rank": 11
+    },
+    {
+      "full_name": "kenzok8/small-package",
+      "url": "https://github.com/kenzok8/small-package",
+      "stars": 1640,
+      "pull_requests_merged_7d": 6,
+      "active_contributors_30d": 2,
+      "primary_language": "C",
+      "rank": 12
+    },
+    {
+      "full_name": "mahonzhan/awesome-coding-plan",
+      "url": "https://github.com/mahonzhan/awesome-coding-plan",
+      "stars": 793,
+      "pull_requests_merged_7d": 2,
+      "active_contributors_30d": 1,
       "rank": 13
     },
     {
-      "full_name": "vapoursynth/vapoursynth",
-      "url": "https://github.com/vapoursynth/vapoursynth",
-      "stars": 2019,
-      "pull_requests_merged_7d": 6,
-      "active_contributors_30d": 3,
-      "primary_language": "C++",
-      "rank": 14
-    },
-    {
-      "full_name": "daymade/claude-code-skills",
-      "url": "https://github.com/daymade/claude-code-skills",
-      "stars": 984,
-      "pull_requests_merged_7d": 6,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 15
-    },
-    {
-      "full_name": "AlibabaCloudDocs/aliyun_acp_learning",
-      "url": "https://github.com/AlibabaCloudDocs/aliyun_acp_learning",
-      "stars": 897,
-      "pull_requests_merged_7d": 2,
-      "active_contributors_30d": 1,
-      "primary_language": "Jupyter Notebook",
-      "rank": 16
-    },
-    {
-      "full_name": "SimplifyJobs/New-Grad-Positions",
-      "url": "https://github.com/SimplifyJobs/New-Grad-Positions",
-      "stars": 16876,
+      "full_name": "HKUDS/Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "stars": 5379,
       "pull_requests_merged_7d": 1,
-      "active_contributors_30d": 23,
-      "rank": 17
+      "active_contributors_30d": 7,
+      "primary_language": "Python",
+      "rank": 14
     },
     {
       "full_name": "rust-lang/crates.io-index",
@@ -184,24 +157,49 @@
       "pull_requests_merged_7d": 1,
       "active_contributors_30d": 1,
       "primary_language": "Tcl",
+      "rank": 15
+    },
+    {
+      "full_name": "SoliSpirit/v2ray-configs",
+      "url": "https://github.com/SoliSpirit/v2ray-configs",
+      "stars": 508,
+      "pull_requests_merged_7d": 1,
+      "active_contributors_30d": 1,
+      "rank": 16
+    },
+    {
+      "full_name": "SteamTracking/GameTracking-Dota2",
+      "url": "https://github.com/SteamTracking/GameTracking-Dota2",
+      "stars": 745,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "C++",
+      "rank": 17
+    },
+    {
+      "full_name": "johnsoncodehk/tsslint",
+      "url": "https://github.com/johnsoncodehk/tsslint",
+      "stars": 623,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
       "rank": 18
     },
     {
-      "full_name": "oekazuma/svelte-meta-tags",
-      "url": "https://github.com/oekazuma/svelte-meta-tags",
-      "stars": 663,
-      "pull_requests_merged_7d": 1,
+      "full_name": "bq2015/FreeProxies",
+      "url": "https://github.com/bq2015/FreeProxies",
+      "stars": 568,
+      "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
       "rank": 19
     },
     {
-      "full_name": "Dicklesworthstone/agentic_coding_flywheel_setup",
-      "url": "https://github.com/Dicklesworthstone/agentic_coding_flywheel_setup",
-      "stars": 1454,
+      "full_name": "kytmanov/obsidian-llm-wiki-local",
+      "url": "https://github.com/kytmanov/obsidian-llm-wiki-local",
+      "stars": 542,
       "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 2,
-      "primary_language": "TypeScript",
+      "active_contributors_30d": 1,
+      "primary_language": "Python",
       "rank": 20
     }
   ]

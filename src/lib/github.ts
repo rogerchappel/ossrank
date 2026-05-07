@@ -33,6 +33,13 @@ interface GitHubUserDetail {
   location: string | null;
 }
 interface GitHubRate { rate?: { remaining?: number } }
+interface GitHubPublicEvent {
+  type: string;
+  payload?: {
+    commits?: unknown[];
+    action?: string;
+  };
+}
 
 export class GitHubClient {
   remaining?: number;
@@ -71,6 +78,15 @@ function contributionScore(user: GitHubUserDetail): number {
   return user.public_repos * 100 + user.public_gists * 10 + user.followers;
 }
 
+async function publicActivityCounts(client: GitHubClient, login: string): Promise<{ commits: number; pullRequests: number }> {
+  const events = await client.get<GitHubPublicEvent[]>(`/users/${encodeURIComponent(login)}/events/public?per_page=100`);
+  return events.reduce((counts, event) => {
+    if (event.type === 'PushEvent') counts.commits += event.payload?.commits?.length ?? 0;
+    if (event.type === 'PullRequestEvent' && event.payload?.action === 'opened') counts.pullRequests += 1;
+    return counts;
+  }, { commits: 0, pullRequests: 0 });
+}
+
 async function collectUsers(client: GitHubClient, query: string, limit: number, locationTerms?: string[], seedLogins: string[] = []): Promise<{ total: number; users: RankedContributor[] }> {
   const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(query, limit)}`);
   const details = new Map<string, { user: GitHubUserDetail; seeded: boolean }>();
@@ -83,16 +99,25 @@ async function collectUsers(client: GitHubClient, query: string, limit: number, 
     const detail = await client.get<GitHubUserDetail>(`/users/${encodeURIComponent(login)}`);
     if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: true });
   }
-  const ranked = rankContributors([...details.values()].map(({ user, seeded }) => ({
-    login: user.login,
-    name: user.name ?? undefined,
-    profile_url: user.html_url,
-    public_contributions: contributionScore(user),
-    followers: user.followers,
-    location: user.location ?? undefined,
-    location_confidence: locationTerms ? (seeded ? 'curated' as const : 'profile-text-match' as const) : 'unknown' as const,
-    notable_repositories: []
-  }))).slice(0, limit);
+  const entries = [];
+  for (const { user, seeded } of details.values()) {
+    const activity = await publicActivityCounts(client, user.login);
+    entries.push({
+      login: user.login,
+      name: user.name ?? undefined,
+      profile_url: user.html_url,
+      public_contributions: contributionScore(user),
+      public_repos: user.public_repos,
+      public_gists: user.public_gists,
+      observed_public_commits: activity.commits,
+      observed_public_pull_requests: activity.pullRequests,
+      followers: user.followers,
+      location: user.location ?? undefined,
+      location_confidence: locationTerms ? (seeded ? 'curated' as const : 'profile-text-match' as const) : 'unknown' as const,
+      notable_repositories: []
+    });
+  }
+  const ranked = rankContributors(entries).slice(0, limit);
   return { total: search.total_count + seedLogins.length, users: ranked };
 }
 
@@ -128,7 +153,8 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const contributorCaveats = [
     'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',
     'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.',
-    'Contribution score is a transparent proxy weighted toward public repositories, then public gists and followers; deeper GraphQL event scoring is planned.'
+    'Contributor pages expose raw public repository counts plus observed recent public commits and pull requests from GitHub public events. Public events are a recent visible activity sample, not an all-time contribution graph.',
+    'The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages.'
   ];
   const projectCaveats = [
     'Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.',
