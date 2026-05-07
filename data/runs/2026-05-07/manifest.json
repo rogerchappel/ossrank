@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-07T04:29:13.804Z",
-  "source_commit": "182dff3",
+  "generated_at": "2026-05-07T04:35:26.025Z",
+  "source_commit": "b838ed5",
   "method": "fixture-refresh",
   "status": "demo",
   "completed_shards": [
@@ -10,8 +10,8 @@
       "title": "Top observed GitHub contributors in Australia",
       "path": "/data/latest/countries-australia.json",
       "status": "demo",
-      "generated_at": "2026-05-07T04:29:13.804Z",
-      "fresh_until": "2026-05-14T04:29:13.804Z",
+      "generated_at": "2026-05-07T04:35:26.025Z",
+      "fresh_until": "2026-05-14T04:35:26.025Z",
       "entries": 5
     },
     {
@@ -20,8 +20,8 @@
       "title": "Top observed TypeScript open-source contributors",
       "path": "/data/latest/languages-typescript.json",
       "status": "demo",
-      "generated_at": "2026-05-07T04:29:13.804Z",
-      "fresh_until": "2026-05-14T04:29:13.804Z",
+      "generated_at": "2026-05-07T04:35:26.025Z",
+      "fresh_until": "2026-05-14T04:35:26.025Z",
       "entries": 5
     },
     {
@@ -30,8 +30,8 @@
       "title": "Top observed developer tools open-source projects",
       "path": "/data/latest/categories-developer-tools.json",
       "status": "demo",
-      "generated_at": "2026-05-07T04:29:13.804Z",
-      "fresh_until": "2026-05-14T04:29:13.804Z",
+      "generated_at": "2026-05-07T04:35:26.025Z",
+      "fresh_until": "2026-05-14T04:35:26.025Z",
       "entries": 4
     },
     {
@@ -40,8 +40,8 @@
       "title": "Fastest growing observed open-source projects",
       "path": "/data/latest/projects-fastest-growing-open-source-projects.json",
       "status": "demo",
-      "generated_at": "2026-05-07T04:29:13.804Z",
-      "fresh_until": "2026-05-14T04:29:13.804Z",
+      "generated_at": "2026-05-07T04:35:26.025Z",
+      "fresh_until": "2026-05-14T04:35:26.025Z",
       "entries": 4
     }
   ],
@@ -51,5 +51,5 @@
     "provider": "github",
     "mode": "fixture"
   },
-  "duration_ms": 16
+  "duration_ms": 26
 }
