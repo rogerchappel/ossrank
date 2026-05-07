@@ -3,106 +3,135 @@
   "slug": "typescript",
   "name": "TypeScript",
   "title": "Top observed TypeScript open-source contributors",
-  "generated_at": "2026-05-07T04:37:48.451Z",
-  "fresh_until": "2026-05-14T04:37:48.451Z",
-  "status": "demo",
-  "method": "fixture-github-search-followers-then-public-contribution-score",
+  "generated_at": "2026-05-07T05:06:58.498Z",
+  "fresh_until": "2026-05-14T05:06:58.498Z",
+  "status": "fresh",
+  "method": "github-rest-search-profile-score",
   "source_run": "2026-05-07",
-  "candidate_count": 500,
-  "caveats": [
-    "Fixture data is demo-only until a live GitHub token-backed refresh is enabled.",
-    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
-    "Ranks are observed public signals from the configured snapshot, not a complete census of every OSS contributor."
-  ],
   "history": {
     "weeks": [
-      "2026-04-23",
-      "2026-04-30",
       "2026-05-07"
     ],
     "ranked_items": [
-      91,
-      96,
-      5
+      10
     ],
     "top_10_signal": [
-      61400,
-      67500,
-      72520
+      321539
     ]
   },
+  "candidate_count": 7998,
+  "caveats": [
+    "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Contribution score is a transparent proxy from public repos, public gists, and followers; deeper GraphQL event scoring is planned."
+  ],
   "entries": [
     {
-      "login": "octo-kiwi",
-      "name": "Ari Morgan",
-      "profile_url": "https://github.com/octo-kiwi",
-      "public_contributions": 18420,
-      "followers": 7100,
-      "location": "Brisbane, Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [
-        "octo-kiwi/agent-kit",
-        "octo-kiwi/typed-pipes"
-      ],
-      "previous_rank": 2,
+      "login": "idimetrix",
+      "name": "Dmitry Selikhov",
+      "profile_url": "https://github.com/idimetrix",
+      "public_contributions": 122539,
+      "followers": 15604,
+      "location": "New York",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
       "rank": 1
     },
     {
-      "login": "sydcompiler",
-      "name": "Maya Chen",
-      "profile_url": "https://github.com/sydcompiler",
-      "public_contributions": 17210,
-      "followers": 6200,
-      "location": "Sydney, Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [
-        "sydcompiler/rust-web",
-        "sydcompiler/build-notes"
-      ],
-      "previous_rank": 1,
+      "login": "modelcontextprotocol",
+      "name": "Model Context Protocol",
+      "profile_url": "https://github.com/modelcontextprotocol",
+      "public_contributions": 47684,
+      "followers": 46634,
+      "location_confidence": "unknown",
+      "notable_repositories": [],
       "rank": 2
     },
     {
-      "login": "melbmaintainer",
-      "name": "Noah Patel",
-      "profile_url": "https://github.com/melbmaintainer",
-      "public_contributions": 14880,
-      "followers": 5500,
-      "location": "Melbourne AU",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [
-        "melbmaintainer/queueflow"
-      ],
-      "previous_rank": 4,
+      "login": "Klerith",
+      "name": "Fernando Herrera",
+      "profile_url": "https://github.com/Klerith",
+      "public_contributions": 30989,
+      "followers": 15144,
+      "location": "Costa Rica",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
       "rank": 3
     },
     {
-      "login": "perthpatches",
-      "name": "Lena Brooks",
-      "profile_url": "https://github.com/perthpatches",
-      "public_contributions": 12140,
-      "followers": 3900,
-      "location": "Perth",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [
-        "perthpatches/secscan"
-      ],
-      "previous_rank": 3,
+      "login": "langchain-ai",
+      "name": "LangChain",
+      "profile_url": "https://github.com/langchain-ai",
+      "public_contributions": 24776,
+      "followers": 18801,
+      "location": "United States of America",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
       "rank": 4
     },
     {
-      "login": "typed-roo",
-      "name": "Sam Taylor",
-      "profile_url": "https://github.com/typed-roo",
-      "public_contributions": 9870,
-      "followers": 2600,
-      "location": "Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [
-        "typed-roo/ts-inspect"
-      ],
-      "previous_rank": 7,
+      "login": "openclaw",
+      "name": "openclaw",
+      "profile_url": "https://github.com/openclaw",
+      "public_contributions": 22115,
+      "followers": 20765,
+      "location_confidence": "unknown",
+      "notable_repositories": [],
       "rank": 5
+    },
+    {
+      "login": "trekhleb",
+      "name": "Oleksii Trekhleb",
+      "profile_url": "https://github.com/trekhleb",
+      "public_contributions": 18527,
+      "followers": 17852,
+      "location": "San Francisco Bay Area",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 6
+    },
+    {
+      "login": "gopinav",
+      "name": "Vishwas",
+      "profile_url": "https://github.com/gopinav",
+      "public_contributions": 17772,
+      "followers": 15732,
+      "location": "India",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 7
+    },
+    {
+      "login": "mosh-hamedani",
+      "name": "Mosh Hamedani",
+      "profile_url": "https://github.com/mosh-hamedani",
+      "public_contributions": 16410,
+      "followers": 15580,
+      "location": "Los Angeles",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 8
+    },
+    {
+      "login": "TanStack",
+      "name": "TanStack",
+      "profile_url": "https://github.com/TanStack",
+      "public_contributions": 10919,
+      "followers": 10319,
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 9
+    },
+    {
+      "login": "desktop",
+      "name": "GitHub Desktop",
+      "profile_url": "https://github.com/desktop",
+      "public_contributions": 9808,
+      "followers": 9358,
+      "location": "Everywhere",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 10
     }
   ]
 }

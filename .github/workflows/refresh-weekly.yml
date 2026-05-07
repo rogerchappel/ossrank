@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '17 18 * * 4'
   workflow_dispatch:
+    inputs:
+      limit:
+        description: Candidates per shard
+        required: false
+        default: '25'
 
 permissions:
   contents: write
@@ -25,14 +30,15 @@ jobs:
         env:
           OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN || github.token }}
         run: pnpm exec tsx src/cli.ts token-check
-      - name: Refresh OSSRank snapshots with CLI pipeline
+      - name: Refresh OSSRank snapshots with live GitHub collector
         env:
           OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN || github.token }}
-        run: pnpm run refresh:fixtures
+          OSSRANK_LIMIT: ${{ inputs.limit || '25' }}
+        run: pnpm run refresh:live
       - run: pnpm run validate:data
       - run: pnpm run build
       - name: Commit refreshed data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'data: refresh ossrank snapshots'
-          file_pattern: 'data dist'
+          commit_message: 'data: refresh ossrank live snapshots'
+          file_pattern: 'data'

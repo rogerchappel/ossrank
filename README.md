@@ -2,7 +2,7 @@
 
 A static-first public data product for ranking observed open-source contributors, projects, languages, and ecosystem momentum — with freshness, methodology, caveats, and raw JSON shown on every generated page.
 
-OSSRank is designed for <https://ossrank.dev>. V1 starts with fixture-backed country/language/project/category rankings so the full site, validation, data contracts, badge generation, and scheduled refresh shape can ship before live GitHub API collection is enabled.
+OSSRank is designed for <https://ossrank.dev>. V1 includes a conservative live GitHub REST collector plus fixture mode for deterministic tests. The collector powers country, language, project category, and project momentum snapshots while preserving freshness, methodology, caveats, and raw JSON on every generated page.
 
 ## What it builds
 
@@ -49,7 +49,8 @@ pnpm run build
 Useful scripts:
 
 ```sh
-pnpm run refresh:fixtures   # create demo snapshots
+pnpm run refresh:fixtures   # create deterministic demo snapshots
+pnpm run refresh:live       # collect live GitHub REST snapshots using OSSRANK_GITHUB_TOKEN/GITHUB_TOKEN
 pnpm run validate:data      # validate manifest + shard integrity
 pnpm run build              # generate dist site
 pnpm run deploy:cloudflare  # deploy dist with Wrangler
@@ -83,8 +84,7 @@ OSSRank must stay honest:
 
 ## Roadmap
 
-- Add live GitHub REST/GraphQL collectors with low-concurrency backoff and checkpoint/resume.
-- Promote fixture refresh workflows to live mode when `OSSRANK_GITHUB_TOKEN` is configured.
+- Add deeper GitHub GraphQL event scoring with low-concurrency backoff and checkpoint/resume.
 - Generate contributor detail pages and full project badges.
 - Add compact historical charts and route tests for ambiguous aliases.
 - Connect `ossrank.dev` to Cloudflare Pages.

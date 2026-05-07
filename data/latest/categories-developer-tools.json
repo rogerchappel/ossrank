@@ -3,74 +3,115 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T04:37:48.451Z",
-  "fresh_until": "2026-05-14T04:37:48.451Z",
-  "status": "demo",
-  "method": "fixture-github-repository-search-then-project-momentum-score",
+  "generated_at": "2026-05-07T05:06:58.498Z",
+  "fresh_until": "2026-05-14T05:06:58.498Z",
+  "status": "fresh",
+  "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
-  "candidate_count": 300,
-  "caveats": [
-    "Fixture data is demo-only until a live GitHub token-backed refresh is enabled.",
-    "Project momentum prioritises recent merged pull requests, active contributors, then stars.",
-    "Ranks are observed public repository signals from the configured snapshot."
-  ],
   "history": {
     "weeks": [
-      "2026-04-23",
-      "2026-04-30",
       "2026-05-07"
     ],
     "ranked_items": [
-      72,
-      80,
-      4
+      10
     ],
     "top_10_signal": [
-      188,
-      244,
-      392
+      0
     ]
   },
+  "candidate_count": 111036,
+  "caveats": [
+    "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
+    "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
+    "Project momentum prioritises recent activity, rough collaboration signal, then stars."
+  ],
   "entries": [
     {
-      "full_name": "example/agent-runtime",
-      "url": "https://github.com/example/agent-runtime",
-      "stars": 18420,
-      "pull_requests_merged_7d": 126,
-      "active_contributors_30d": 82,
+      "full_name": "nirholas/plugin.delivery",
+      "url": "https://github.com/nirholas/plugin.delivery",
+      "stars": 23,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
       "primary_language": "TypeScript",
-      "previous_rank": 2,
       "rank": 1
     },
     {
-      "full_name": "example/openvector",
-      "url": "https://github.com/example/openvector",
-      "stars": 28100,
-      "pull_requests_merged_7d": 111,
-      "active_contributors_30d": 75,
-      "primary_language": "Python",
-      "previous_rank": 1,
+      "full_name": "codedev-david/termpolis",
+      "url": "https://github.com/codedev-david/termpolis",
+      "stars": 3,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
       "rank": 2
     },
     {
-      "full_name": "example/cli-lab",
-      "url": "https://github.com/example/cli-lab",
-      "stars": 9300,
-      "pull_requests_merged_7d": 88,
-      "active_contributors_30d": 44,
-      "primary_language": "Go",
-      "previous_rank": 5,
+      "full_name": "groupsum/markdown_workspace",
+      "url": "https://github.com/groupsum/markdown_workspace",
+      "stars": 3,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "HTML",
       "rank": 3
     },
     {
-      "full_name": "example/safety-lint",
-      "url": "https://github.com/example/safety-lint",
-      "stars": 7400,
-      "pull_requests_merged_7d": 67,
-      "active_contributors_30d": 39,
-      "primary_language": "Rust",
-      "previous_rank": 4,
+      "full_name": "Ambili-Joseph/React-Redux-Typescript-examples",
+      "url": "https://github.com/Ambili-Joseph/React-Redux-Typescript-examples",
+      "stars": 1,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
       "rank": 4
+    },
+    {
+      "full_name": "mcagnuccivasquez/zodkit",
+      "url": "https://github.com/mcagnuccivasquez/zodkit",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 5
+    },
+    {
+      "full_name": "moHHisham1992/extlight",
+      "url": "https://github.com/moHHisham1992/extlight",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 6
+    },
+    {
+      "full_name": "sadkid12345/mcp-vscode-dev-days-2025-09-spcapital",
+      "url": "https://github.com/sadkid12345/mcp-vscode-dev-days-2025-09-spcapital",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "rank": 7
+    },
+    {
+      "full_name": "sirjohnson13/ibm-db2-ub4",
+      "url": "https://github.com/sirjohnson13/ibm-db2-ub4",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "rank": 8
+    },
+    {
+      "full_name": "SUASTELARA/Supercharged-AI-Dev-Tools",
+      "url": "https://github.com/SUASTELARA/Supercharged-AI-Dev-Tools",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "rank": 9
+    },
+    {
+      "full_name": "TettoLabs/anatomia",
+      "url": "https://github.com/TettoLabs/anatomia",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 10
     }
   ]
 }

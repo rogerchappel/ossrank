@@ -1,19 +1,18 @@
-name: Manual shard refresh
+name: Manual live refresh
 
 on:
   workflow_dispatch:
     inputs:
-      kind:
-        description: Shard kind to refresh
-        type: choice
-        required: true
-        options: [country, language, category, projects]
-      slug:
-        description: Preset slug, for example australia or typescript
-        required: true
+      limit:
+        description: Candidates per shard
+        required: false
+        default: '25'
+
+permissions:
+  contents: write
 
 jobs:
-  refresh-shard:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,6 +24,15 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run refresh:fixtures
+      - name: Refresh live data
+        env:
+          OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN || github.token }}
+          OSSRANK_LIMIT: ${{ inputs.limit || '25' }}
+        run: pnpm run refresh:live
       - run: pnpm run validate:data
       - run: pnpm run build
+      - name: Commit refreshed data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'data: manual ossrank live refresh'
+          file_pattern: 'data'

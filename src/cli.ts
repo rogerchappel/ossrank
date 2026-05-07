@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { dirname, join } from 'node:path';
+import { dirname } from 'node:path';
+import { collectLiveSnapshots } from './lib/github.js';
 import { rankContributors, rankProjects } from './lib/ranking.js';
+import { writeSnapshots } from './lib/snapshots.js';
 import type { RankedContributor, RankedProject, RankingSnapshot } from './lib/types.js';
 
 interface CliOptions {
@@ -11,6 +13,7 @@ interface CliOptions {
   output?: string;
   limit: number;
   format: 'json' | 'table';
+  mode: 'fixture' | 'live';
   token?: string;
 }
 
@@ -20,17 +23,19 @@ function usage(): string {
 Usage:
   ossrank rank contributors --input fixtures/contributors.json --output out.json
   ossrank rank projects --input fixtures/projects.json --format table
+  ossrank refresh --mode live --limit 25
   ossrank token-check
 
 Options:
-  --input <path>       JSON array, or snapshot JSON with entries
-  --output <path>      Write result JSON to a file instead of stdout
-  --limit <number>     Limit rows (default: 50)
+  --input <path>        JSON array, or snapshot JSON with entries
+  --output <path>       Write result JSON to a file instead of stdout
+  --limit <number>      Limit rows/candidates per shard (default: 50)
   --format <json|table> Output format (default: json)
-  --token <token>      GitHub token; defaults to OSSRANK_GITHUB_TOKEN or GITHUB_TOKEN
+  --mode <fixture|live> Refresh mode (default: live for refresh)
+  --token <token>       GitHub token; defaults to OSSRANK_GITHUB_TOKEN or GITHUB_TOKEN
 
-Live GitHub collection is intentionally conservative in v0.1.0: token-check verifies that
-a token is available, while ranking commands operate on local JSON snapshots/fixtures.
+Live mode uses GitHub REST search with conservative limits and writes the same
+OSSRank data/latest snapshot contract used by the static website.
 `;
 }
 
@@ -38,7 +43,7 @@ function parseArgs(argv: string[]): CliOptions {
   const command = argv[0] ?? 'help';
   const kind = argv[1]?.startsWith('-') ? undefined : argv[1];
   const rest = argv.slice(kind ? 2 : 1);
-  const options: CliOptions = { command, kind, limit: 50, format: 'json' };
+  const options: CliOptions = { command, kind, limit: 50, format: 'json', mode: 'live' };
   for (let index = 0; index < rest.length; index += 1) {
     const arg = rest[index];
     const value = rest[index + 1];
@@ -46,6 +51,7 @@ function parseArgs(argv: string[]): CliOptions {
     if (arg === '--output') { options.output = value; index += 1; continue; }
     if (arg === '--limit') { options.limit = Number(value); index += 1; continue; }
     if (arg === '--format') { options.format = value === 'table' ? 'table' : 'json'; index += 1; continue; }
+    if (arg === '--mode') { options.mode = value === 'fixture' ? 'fixture' : 'live'; index += 1; continue; }
     if (arg === '--token') { options.token = value; index += 1; continue; }
     if (arg === '--help' || arg === '-h') options.command = 'help';
   }
@@ -88,6 +94,20 @@ async function main(): Promise<void> {
     const token = options.token ?? process.env.OSSRANK_GITHUB_TOKEN ?? process.env.GITHUB_TOKEN;
     await emit({ ok: Boolean(token), provider: 'github', mode: token ? 'token-present' : 'missing-token' }, options);
     process.exitCode = token ? 0 : 2;
+    return;
+  }
+
+  if (options.command === 'refresh') {
+    if (options.mode === 'fixture') {
+      process.stderr.write('Use pnpm run refresh:fixtures for fixture refreshes.\n');
+      process.exitCode = 1;
+      return;
+    }
+    const started = Date.now();
+    const token = options.token ?? process.env.OSSRANK_GITHUB_TOKEN ?? process.env.GITHUB_TOKEN;
+    const { snapshots, remaining } = await collectLiveSnapshots({ token, limit: options.limit });
+    const manifest = await writeSnapshots(snapshots, { method: 'github-live-refresh', mode: 'live', durationMs: Date.now() - started, remaining });
+    await emit(manifest, options);
     return;
   }
 
