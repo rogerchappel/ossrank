@@ -16,6 +16,7 @@ interface CliOptions {
   mode: 'fixture' | 'live';
   token?: string;
   maxCountries?: number;
+  requireGraphqlSearch: boolean;
 }
 
 function usage(): string {
@@ -26,6 +27,7 @@ Usage:
   ossrank rank projects --input fixtures/projects.json --format table
   ossrank refresh --mode live --limit 20
   ossrank token-check
+  ossrank token-check --require-graphql-search
 
 Options:
   --input <path>        JSON array, or snapshot JSON with entries
@@ -35,9 +37,10 @@ Options:
   --mode <fixture|live> Refresh mode (default: live for refresh)
   --token <token>       GitHub token; defaults to OSSRANK_GITHUB_TOKEN or GITHUB_TOKEN
   --max-countries <n>   Refresh only the first n configured countries
+  --require-graphql-search  Validate that the token can run the GraphQL user search used by live refresh
 
-Live mode uses GitHub REST search with conservative limits and writes the same
-OSSRank data/latest snapshot contract used by the static website.
+Live mode uses GitHub REST and GraphQL APIs with conservative limits and writes
+the same OSSRank data/latest snapshot contract used by the static website.
 `;
 }
 
@@ -45,7 +48,7 @@ function parseArgs(argv: string[]): CliOptions {
   const command = argv[0] ?? 'help';
   const kind = argv[1]?.startsWith('-') ? undefined : argv[1];
   const rest = argv.slice(kind ? 2 : 1);
-  const options: CliOptions = { command, kind, limit: 50, format: 'json', mode: 'live' };
+  const options: CliOptions = { command, kind, limit: 50, format: 'json', mode: 'live', requireGraphqlSearch: false };
   for (let index = 0; index < rest.length; index += 1) {
     const arg = rest[index];
     const value = rest[index + 1];
@@ -56,6 +59,7 @@ function parseArgs(argv: string[]): CliOptions {
     if (arg === '--mode') { options.mode = parseChoice(value, '--mode', ['fixture', 'live']); index += 1; continue; }
     if (arg === '--token') { options.token = value; index += 1; continue; }
     if (arg === '--max-countries') { options.maxCountries = parsePositiveInteger(value, '--max-countries'); index += 1; continue; }
+    if (arg === '--require-graphql-search') { options.requireGraphqlSearch = true; continue; }
     if (arg === '--help' || arg === '-h') options.command = 'help';
   }
   return options;
@@ -99,6 +103,30 @@ async function emit(data: unknown, options: CliOptions): Promise<void> {
   }
 }
 
+async function validateGraphqlSearchToken(token: string): Promise<void> {
+  const response = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/vnd.github+json',
+      'Content-Type': 'application/json',
+      'User-Agent': 'ossrank/0.1.0',
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify({
+      query: `query OssrankTokenCheck($query: String!) {
+        search(type: USER, query: $query, first: 1) { userCount }
+        rateLimit { remaining cost }
+      }`,
+      variables: { query: 'type:user repos:>0' }
+    })
+  });
+  const body = await response.json() as { errors?: Array<{ message: string }>; data?: unknown };
+  if (!response.ok || body.errors?.length) {
+    const message = body.errors?.map((error) => error.message).join('; ') ?? response.statusText;
+    throw new Error(`GitHub token cannot run OSSRank GraphQL search: ${message}`);
+  }
+}
+
 async function main(): Promise<void> {
   const options = parseArgs(process.argv.slice(2));
   if (options.command === 'help') {
@@ -108,8 +136,15 @@ async function main(): Promise<void> {
 
   if (options.command === 'token-check') {
     const token = options.token ?? process.env.OSSRANK_GITHUB_TOKEN ?? process.env.GITHUB_TOKEN;
-    await emit({ ok: Boolean(token), provider: 'github', mode: token ? 'token-present' : 'missing-token' }, options);
-    process.exitCode = token ? 0 : 2;
+    if (!token) {
+      await emit({ ok: false, provider: 'github', mode: 'missing-token', message: 'Set OSSRANK_GITHUB_TOKEN to a GitHub PAT for live refreshes.' }, options);
+      process.exitCode = 2;
+      return;
+    }
+    if (options.requireGraphqlSearch) {
+      await validateGraphqlSearchToken(token);
+    }
+    await emit({ ok: true, provider: 'github', mode: options.requireGraphqlSearch ? 'graphql-search-access' : 'token-present' }, options);
     return;
   }
 

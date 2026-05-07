@@ -26,13 +26,13 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - name: Confirm GitHub token is available
+      - name: Confirm GitHub PAT can access GraphQL search
         env:
-          OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN || github.token }}
-        run: pnpm exec tsx src/cli.ts token-check
+          OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
+        run: pnpm exec tsx src/cli.ts token-check --require-graphql-search
       - name: Refresh OSSRank snapshots with live GitHub collector
         env:
-          OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN || github.token }}
+          OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
           OSSRANK_LIMIT: ${{ inputs.limit || '20' }}
         run: pnpm run refresh:live
       - run: pnpm run validate:data

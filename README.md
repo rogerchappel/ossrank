@@ -47,12 +47,14 @@ Useful scripts:
 
 ```sh
 pnpm run refresh:fixtures   # create deterministic demo snapshots
-pnpm run refresh:live       # collect live GitHub REST snapshots using OSSRANK_GITHUB_TOKEN/GITHUB_TOKEN
+pnpm run refresh:live       # collect live GitHub API snapshots using OSSRANK_GITHUB_TOKEN
 pnpm run validate:data      # validate manifest + shard integrity
 pnpm run build              # generate dist site
 pnpm run deploy:cloudflare  # deploy dist with Wrangler
 bash scripts/validate.sh    # StackForge validation wrapper
 ```
+
+Live refreshes use GitHub GraphQL search and contribution APIs. GitHub Actions' default `GITHUB_TOKEN` is an integration token and can return `Resource not accessible by integration`; configure a repository secret named `OSSRANK_GITHUB_TOKEN` with a classic or fine-grained PAT that can read public repository/user metadata.
 
 ## Cloudflare Pages
 
