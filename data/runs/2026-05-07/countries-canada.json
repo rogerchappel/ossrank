@@ -3,8 +3,8 @@
   "slug": "canada",
   "name": "Canada",
   "title": "Top observed GitHub contributors in Canada",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      36861
+      36862
     ]
   },
   "code": "CA",
-  "candidate_count": 123396,
+  "candidate_count": 123395,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -41,7 +41,7 @@
     },
     {
       "query": "location:Toronto repos:>5 type:user",
-      "total": 33566,
+      "total": 33565,
       "accepted": 21
     },
     {
@@ -98,7 +98,7 @@
       "observed_public_commits": 4757,
       "observed_public_pull_requests": 306,
       "followers": 1997,
-      "location": "Vancouver, British Columbia, Canada \ud83c\udde8\ud83c\udde6",
+      "location": "Vancouver, British Columbia, Canada 🇨🇦",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
@@ -113,7 +113,7 @@
       "public_gists": 6,
       "observed_public_commits": 3337,
       "observed_public_pull_requests": 242,
-      "followers": 2137,
+      "followers": 2138,
       "location": "Vancouver, BC",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vancouver repos:>5 type:user",
@@ -161,7 +161,7 @@
       "public_gists": 113,
       "observed_public_commits": 2568,
       "observed_public_pull_requests": 18,
-      "followers": 20776,
+      "followers": 20777,
       "location": "Canada",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Canada repos:>5 type:user",
@@ -188,10 +188,10 @@
       "login": "jennybc",
       "name": "Jennifer (Jenny) Bryan",
       "profile_url": "https://github.com/jennybc",
-      "public_contributions": 2038,
+      "public_contributions": 2039,
       "public_repos": 271,
       "public_gists": 71,
-      "observed_public_commits": 2038,
+      "observed_public_commits": 2039,
       "observed_public_pull_requests": 142,
       "followers": 5635,
       "location": "Vancouver, BC, Canada",
@@ -202,7 +202,7 @@
     },
     {
       "login": "meziantou",
-      "name": "G\u00e9rald Barr\u00e9",
+      "name": "Gérald Barré",
       "profile_url": "https://github.com/meziantou",
       "public_contributions": 1887,
       "public_repos": 75,
@@ -218,7 +218,7 @@
     },
     {
       "login": "tobi",
-      "name": "Tobias L\u00fctke",
+      "name": "Tobias Lütke",
       "profile_url": "https://github.com/tobi",
       "public_contributions": 1841,
       "public_repos": 89,
@@ -321,8 +321,8 @@
       "public_gists": 8,
       "observed_public_commits": 1308,
       "observed_public_pull_requests": 0,
-      "followers": 6488,
-      "location": "Canada / Qu\u00e9bec",
+      "followers": 6490,
+      "location": "Canada / Québec",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],

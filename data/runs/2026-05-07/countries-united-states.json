@@ -3,8 +3,8 @@
   "slug": "united-states",
   "name": "United States",
   "title": "Top observed GitHub contributors in United States",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      30312
+      30324
     ]
   },
   "code": "US",
@@ -42,12 +42,12 @@
     },
     {
       "query": "location:California repos:>5 type:user",
-      "total": 27162,
+      "total": 27161,
       "accepted": 20
     },
     {
       "query": "location:\"San Francisco\" repos:>5 type:user",
-      "total": 37659,
+      "total": 37660,
       "accepted": 18
     },
     {
@@ -65,10 +65,10 @@
     {
       "login": "vczh",
       "profile_url": "https://github.com/vczh",
-      "public_contributions": 5497,
+      "public_contributions": 5509,
       "public_repos": 13,
       "public_gists": 10,
-      "observed_public_commits": 5497,
+      "observed_public_commits": 5509,
       "observed_public_pull_requests": 4,
       "followers": 17529,
       "location": "Seattle, WA, USA",
@@ -134,7 +134,7 @@
       "public_gists": 335,
       "observed_public_commits": 3767,
       "observed_public_pull_requests": 730,
-      "followers": 14690,
+      "followers": 14691,
       "location": "Half Moon Bay, California",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:California repos:>5 type:user",
@@ -165,7 +165,7 @@
       "public_repos": 9,
       "public_gists": 6,
       "observed_public_commits": 1786,
-      "observed_public_pull_requests": 1423,
+      "observed_public_pull_requests": 1424,
       "followers": 4023,
       "location": "United States",
       "location_confidence": "exact-country",
@@ -198,7 +198,7 @@
       "public_gists": 30,
       "observed_public_commits": 1405,
       "observed_public_pull_requests": 173,
-      "followers": 3694,
+      "followers": 3695,
       "location": "Seattle, WA",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Seattle repos:>5 type:user",
@@ -287,14 +287,14 @@
     },
     {
       "login": "danielmiessler",
-      "name": "Daniel Miessler \ud83d\udee1\ufe0f",
+      "name": "Daniel Miessler 🛡️",
       "profile_url": "https://github.com/danielmiessler",
       "public_contributions": 817,
       "public_repos": 78,
       "public_gists": 16,
       "observed_public_commits": 817,
       "observed_public_pull_requests": 7,
-      "followers": 15522,
+      "followers": 15523,
       "location": "San Francisco Bay Area",
       "location_confidence": "city-match",
       "discovered_by_query": "location:\"San Francisco\" repos:>5 type:user",
@@ -373,7 +373,7 @@
       "public_gists": 42,
       "observed_public_commits": 527,
       "observed_public_pull_requests": 1,
-      "followers": 9514,
+      "followers": 9513,
       "location": "California",
       "location_confidence": "city-match",
       "discovered_by_query": "location:California repos:>5 type:user",

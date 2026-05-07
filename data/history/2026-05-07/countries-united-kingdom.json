@@ -3,8 +3,8 @@
   "slug": "united-kingdom",
   "name": "United Kingdom",
   "title": "Top observed GitHub contributors in United Kingdom",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      79246
+      79331
     ]
   },
   "code": "GB",
@@ -36,12 +36,12 @@
   "candidate_count_by_query": [
     {
       "query": "location:\"United Kingdom\" repos:>5 type:user",
-      "total": 29227,
+      "total": 29228,
       "accepted": 25
     },
     {
       "query": "location:London repos:>5 type:user",
-      "total": 56196,
+      "total": 56195,
       "accepted": 20
     },
     {
@@ -60,12 +60,12 @@
       "login": "steipete",
       "name": "Peter Steinberger",
       "profile_url": "https://github.com/steipete",
-      "public_contributions": 44903,
+      "public_contributions": 44984,
       "public_repos": 166,
       "public_gists": 297,
-      "observed_public_commits": 44903,
+      "observed_public_commits": 44984,
       "observed_public_pull_requests": 925,
-      "followers": 49355,
+      "followers": 49354,
       "location": "Vienna & London",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:London repos:>5 type:user",
@@ -108,10 +108,10 @@
       "login": "MikeMcQuaid",
       "name": "Mike McQuaid",
       "profile_url": "https://github.com/MikeMcQuaid",
-      "public_contributions": 3977,
+      "public_contributions": 3980,
       "public_repos": 41,
       "public_gists": 0,
-      "observed_public_commits": 3977,
+      "observed_public_commits": 3980,
       "observed_public_pull_requests": 578,
       "followers": 4303,
       "location": "Edinburgh, Scotland",
@@ -172,10 +172,10 @@
       "login": "segunadebayo",
       "name": "Segun Adebayo",
       "profile_url": "https://github.com/segunadebayo",
-      "public_contributions": 2221,
+      "public_contributions": 2222,
       "public_repos": 36,
       "public_gists": 34,
-      "observed_public_commits": 2221,
+      "observed_public_commits": 2222,
       "observed_public_pull_requests": 53,
       "followers": 4402,
       "location": "United Kingdom",
@@ -186,7 +186,7 @@
     },
     {
       "login": "mvdan",
-      "name": "Daniel Mart\u00ed",
+      "name": "Daniel Martí",
       "profile_url": "https://github.com/mvdan",
       "public_contributions": 1868,
       "public_repos": 65,
@@ -316,10 +316,10 @@
       "login": "surma",
       "name": "Surma",
       "profile_url": "https://github.com/surma",
-      "public_contributions": 1101,
+      "public_contributions": 1103,
       "public_repos": 61,
       "public_gists": 69,
-      "observed_public_commits": 1101,
+      "observed_public_commits": 1103,
       "observed_public_pull_requests": 98,
       "followers": 4585,
       "location": "Bristol, England",

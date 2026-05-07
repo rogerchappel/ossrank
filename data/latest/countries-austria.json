@@ -3,8 +3,8 @@
   "slug": "austria",
   "name": "Austria",
   "title": "Top observed GitHub contributors in Austria",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      60226
+      60308
     ]
   },
   "code": "AT",
-  "candidate_count": 15269,
+  "candidate_count": 15270,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -35,7 +35,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Austria repos:>5 type:user",
-      "total": 8782,
+      "total": 8783,
       "accepted": 34
     },
     {
@@ -54,12 +54,12 @@
       "login": "steipete",
       "name": "Peter Steinberger",
       "profile_url": "https://github.com/steipete",
-      "public_contributions": 44903,
+      "public_contributions": 44984,
       "public_repos": 166,
       "public_gists": 297,
-      "observed_public_commits": 44903,
+      "observed_public_commits": 44984,
       "observed_public_pull_requests": 925,
-      "followers": 49355,
+      "followers": 49354,
       "location": "Vienna & London",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vienna repos:>5 type:user",
@@ -74,7 +74,7 @@
       "public_repos": 336,
       "public_gists": 271,
       "observed_public_commits": 2318,
-      "observed_public_pull_requests": 143,
+      "observed_public_pull_requests": 144,
       "followers": 24527,
       "location": "Austria",
       "location_confidence": "exact-country",
@@ -132,7 +132,7 @@
     },
     {
       "login": "nefarius",
-      "name": "Benjamin H\u00f6glinger-Stelzer",
+      "name": "Benjamin Höglinger-Stelzer",
       "profile_url": "https://github.com/nefarius",
       "public_contributions": 1774,
       "public_repos": 224,
@@ -166,10 +166,10 @@
       "login": "firefart",
       "name": "Christian Mehlmauer",
       "profile_url": "https://github.com/firefart",
-      "public_contributions": 1237,
+      "public_contributions": 1238,
       "public_repos": 65,
       "public_gists": 4,
-      "observed_public_commits": 1237,
+      "observed_public_commits": 1238,
       "observed_public_pull_requests": 39,
       "followers": 1091,
       "location": "Vienna",
@@ -196,13 +196,13 @@
     },
     {
       "login": "TkDodo",
-      "name": "Dominik Dorfmeister \ud83d\udd2e",
+      "name": "Dominik Dorfmeister 🔮",
       "profile_url": "https://github.com/TkDodo",
       "public_contributions": 1044,
       "public_repos": 58,
       "public_gists": 2,
       "observed_public_commits": 1044,
-      "observed_public_pull_requests": 599,
+      "observed_public_pull_requests": 601,
       "followers": 3410,
       "location": "Vienna, Austria",
       "location_confidence": "multi-location",
@@ -323,7 +323,7 @@
     },
     {
       "login": "mfussenegger",
-      "name": "Mathias Fu\u00dfenegger",
+      "name": "Mathias Fußenegger",
       "profile_url": "https://github.com/mfussenegger",
       "public_contributions": 637,
       "public_repos": 89,

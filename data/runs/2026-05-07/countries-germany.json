@@ -3,8 +3,8 @@
   "slug": "germany",
   "name": "Germany",
   "title": "Top observed GitHub contributors in Germany",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -20,7 +20,7 @@
     ]
   },
   "code": "DE",
-  "candidate_count": 129236,
+  "candidate_count": 129243,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -35,17 +35,17 @@
   "candidate_count_by_query": [
     {
       "query": "location:Germany repos:>5 type:user",
-      "total": 89644,
+      "total": 89649,
       "accepted": 34
     },
     {
       "query": "location:Berlin repos:>5 type:user",
-      "total": 28706,
+      "total": 28707,
       "accepted": 22
     },
     {
       "query": "location:Munich repos:>5 type:user",
-      "total": 10886,
+      "total": 10887,
       "accepted": 32
     }
   ],
@@ -59,7 +59,7 @@
       "public_gists": 39,
       "observed_public_commits": 6313,
       "observed_public_pull_requests": 20,
-      "followers": 5557,
+      "followers": 5558,
       "location": "Berlin, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
@@ -294,10 +294,10 @@
       "login": "KittyGiraudel",
       "name": "Kitty Giraudel",
       "profile_url": "https://github.com/KittyGiraudel",
-      "public_contributions": 1098,
+      "public_contributions": 1108,
       "public_repos": 55,
       "public_gists": 111,
-      "observed_public_commits": 1098,
+      "observed_public_commits": 1108,
       "observed_public_pull_requests": 24,
       "followers": 2984,
       "location": "Berlin",
@@ -340,14 +340,14 @@
     },
     {
       "login": "tiangolo",
-      "name": "Sebasti\u00e1n Ram\u00edrez",
+      "name": "Sebastián Ramírez",
       "profile_url": "https://github.com/tiangolo",
       "public_contributions": 871,
       "public_repos": 48,
       "public_gists": 1,
       "observed_public_commits": 871,
       "observed_public_pull_requests": 578,
-      "followers": 31219,
+      "followers": 31221,
       "location": "Berlin, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",

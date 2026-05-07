@@ -3,8 +3,8 @@
   "slug": "sweden",
   "name": "Sweden",
   "title": "Top observed GitHub contributors in Sweden",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      20021
+      20037
     ]
   },
   "code": "SE",
-  "candidate_count": 23571,
+  "candidate_count": 23574,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Sweden repos:>5 type:user",
-      "total": 23571,
+      "total": 23574,
       "accepted": 100
     }
   ],
@@ -56,7 +56,7 @@
     },
     {
       "login": "hrydgard",
-      "name": "Henrik Rydg\u00e5rd",
+      "name": "Henrik Rydgård",
       "profile_url": "https://github.com/hrydgard",
       "public_contributions": 2503,
       "public_repos": 66,
@@ -122,10 +122,10 @@
       "login": "bagder",
       "name": "Daniel Stenberg",
       "profile_url": "https://github.com/bagder",
-      "public_contributions": 1855,
+      "public_contributions": 1856,
       "public_repos": 52,
       "public_gists": 111,
-      "observed_public_commits": 1855,
+      "observed_public_commits": 1856,
       "observed_public_pull_requests": 1180,
       "followers": 7608,
       "location": "the curl factory, Sweden - close to Nebraska",
@@ -186,10 +186,10 @@
       "login": "awesomekling",
       "name": "Andreas Kling",
       "profile_url": "https://github.com/awesomekling",
-      "public_contributions": 1469,
+      "public_contributions": 1484,
       "public_repos": 24,
       "public_gists": 4,
-      "observed_public_commits": 1469,
+      "observed_public_commits": 1484,
       "observed_public_pull_requests": 357,
       "followers": 5725,
       "location": "Sweden",
@@ -232,7 +232,7 @@
     },
     {
       "login": "ErikBjare",
-      "name": "Erik Bj\u00e4reholt",
+      "name": "Erik Bjäreholt",
       "profile_url": "https://github.com/ErikBjare",
       "public_contributions": 979,
       "public_repos": 187,
@@ -240,7 +240,7 @@
       "observed_public_commits": 979,
       "observed_public_pull_requests": 300,
       "followers": 3026,
-      "location": "Lund, Sweden \ud83c\uddf8\ud83c\uddea",
+      "location": "Lund, Sweden 🇸🇪",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
@@ -266,11 +266,11 @@
       "login": "spydon",
       "name": "Lukas Klingsbo",
       "profile_url": "https://github.com/spydon",
-      "public_contributions": 838,
+      "public_contributions": 839,
       "public_repos": 143,
       "public_gists": 15,
-      "observed_public_commits": 838,
-      "observed_public_pull_requests": 160,
+      "observed_public_commits": 839,
+      "observed_public_pull_requests": 161,
       "followers": 738,
       "location": "Stockholm, Sweden",
       "location_confidence": "multi-location",
@@ -352,7 +352,7 @@
       "observed_public_commits": 662,
       "observed_public_pull_requests": 134,
       "followers": 3121,
-      "location": "Malm\u00f6, Sweden",
+      "location": "Malmö, Sweden",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],

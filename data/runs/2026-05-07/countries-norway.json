@@ -3,8 +3,8 @@
   "slug": "norway",
   "name": "Norway",
   "title": "Top observed GitHub contributors in Norway",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      55167
+      55180
     ]
   },
   "code": "NO",
-  "candidate_count": 10972,
+  "candidate_count": 10973,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Norway repos:>5 type:user",
-      "total": 10972,
+      "total": 10973,
       "accepted": 100
     }
   ],
@@ -56,7 +56,7 @@
     },
     {
       "login": "oleavr",
-      "name": "Ole Andr\u00e9 Vadla Ravn\u00e5s",
+      "name": "Ole André Vadla Ravnås",
       "profile_url": "https://github.com/oleavr",
       "public_contributions": 3765,
       "public_repos": 83,
@@ -106,10 +106,10 @@
       "login": "Starefossen",
       "name": "Hans Kristian Flaatten",
       "profile_url": "https://github.com/Starefossen",
-      "public_contributions": 2652,
+      "public_contributions": 2663,
       "public_repos": 279,
       "public_gists": 72,
-      "observed_public_commits": 2652,
+      "observed_public_commits": 2663,
       "observed_public_pull_requests": 203,
       "followers": 377,
       "location": "Norway",
@@ -136,12 +136,12 @@
     },
     {
       "login": "ludeeus",
-      "name": "Joakim S\u00f8rensen",
+      "name": "Joakim Sørensen",
       "profile_url": "https://github.com/ludeeus",
-      "public_contributions": 1996,
+      "public_contributions": 1998,
       "public_repos": 107,
       "public_gists": 14,
-      "observed_public_commits": 1996,
+      "observed_public_commits": 1998,
       "observed_public_pull_requests": 390,
       "followers": 699,
       "location": "Norway",
@@ -152,7 +152,7 @@
     },
     {
       "login": "bep",
-      "name": "Bj\u00f8rn Erik Pedersen",
+      "name": "Bjørn Erik Pedersen",
       "profile_url": "https://github.com/bep",
       "public_contributions": 1987,
       "public_repos": 358,
@@ -232,7 +232,7 @@
     },
     {
       "login": "TorsteinHonsi",
-      "name": "Torstein H\u00f8nsi",
+      "name": "Torstein Hønsi",
       "profile_url": "https://github.com/TorsteinHonsi",
       "public_contributions": 1182,
       "public_repos": 6,
@@ -298,10 +298,10 @@
       "login": "HansKristian-Work",
       "name": "Hans-Kristian Arntzen",
       "profile_url": "https://github.com/HansKristian-Work",
-      "public_contributions": 1046,
+      "public_contributions": 1047,
       "public_repos": 30,
       "public_gists": 10,
-      "observed_public_commits": 1046,
+      "observed_public_commits": 1047,
       "observed_public_pull_requests": 300,
       "followers": 1109,
       "location": "Trondheim, Norway",
@@ -344,7 +344,7 @@
     },
     {
       "login": "eonist",
-      "name": "Andr\u00e9 J",
+      "name": "André J",
       "profile_url": "https://github.com/eonist",
       "public_contributions": 839,
       "public_repos": 115,

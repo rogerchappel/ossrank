@@ -3,8 +3,8 @@
   "slug": "netherlands",
   "name": "Netherlands",
   "title": "Top observed GitHub contributors in Netherlands",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      40631
+      40666
     ]
   },
   "code": "NL",
-  "candidate_count": 40283,
+  "candidate_count": 40287,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -34,7 +34,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Netherlands repos:>5 type:user",
-      "total": 28079,
+      "total": 28083,
       "accepted": 50
     },
     {
@@ -48,11 +48,11 @@
       "login": "alexey-milovidov",
       "name": "Alexey Milovidov",
       "profile_url": "https://github.com/alexey-milovidov",
-      "public_contributions": 10464,
+      "public_contributions": 10497,
       "public_repos": 78,
       "public_gists": 59,
-      "observed_public_commits": 10464,
-      "observed_public_pull_requests": 2073,
+      "observed_public_commits": 10497,
+      "observed_public_pull_requests": 2074,
       "followers": 2040,
       "location": "Amsterdam, Netherlands",
       "location_confidence": "multi-location",
@@ -78,7 +78,7 @@
     },
     {
       "login": "can1357",
-      "name": "Can B\u00f6l\u00fck",
+      "name": "Can Bölük",
       "profile_url": "https://github.com/can1357",
       "public_contributions": 4560,
       "public_repos": 51,
@@ -96,10 +96,10 @@
       "login": "thaJeztah",
       "name": "Sebastiaan van Stijn",
       "profile_url": "https://github.com/thaJeztah",
-      "public_contributions": 4313,
+      "public_contributions": 4314,
       "public_repos": 406,
       "public_gists": 43,
-      "observed_public_commits": 4313,
+      "observed_public_commits": 4314,
       "observed_public_pull_requests": 1983,
       "followers": 1914,
       "location": "Netherlands",
@@ -181,7 +181,7 @@
       "public_gists": 3,
       "observed_public_commits": 2055,
       "observed_public_pull_requests": 6,
-      "followers": 1213,
+      "followers": 1215,
       "location": "Amsterdam",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Amsterdam repos:>5 type:user",
@@ -192,10 +192,10 @@
       "login": "jfversluis",
       "name": "Gerald Versluis",
       "profile_url": "https://github.com/jfversluis",
-      "public_contributions": 1510,
+      "public_contributions": 1511,
       "public_repos": 424,
       "public_gists": 156,
-      "observed_public_commits": 1510,
+      "observed_public_commits": 1511,
       "observed_public_pull_requests": 399,
       "followers": 1894,
       "location": "Netherlands",

@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-rest-search-real-recent-project-signals",
   "source_run": "2026-05-07",
@@ -16,10 +16,10 @@
       20
     ],
     "top_10_signal": [
-      446
+      450
     ]
   },
-  "candidate_count": 111061,
+  "candidate_count": 111081,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Project PR counts use recent merged pull requests visible through GitHub GraphQL; high-volume repositories may be capped by the first 100 recently updated merged PRs per snapshot.",
@@ -34,12 +34,12 @@
   "candidate_count_by_query": [
     {
       "query": "topic:developer-tools archived:false",
-      "total": 26827,
+      "total": 26832,
       "accepted": 34
     },
     {
       "query": "topic:cli archived:false",
-      "total": 80272,
+      "total": 80287,
       "accepted": 29
     },
     {
@@ -52,15 +52,15 @@
     {
       "full_name": "daytonaio/daytona",
       "url": "https://github.com/daytonaio/daytona",
-      "stars": 72389,
+      "stars": 72387,
       "pull_requests_merged_7d": 29,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 220,
+      "recent_commits_30d": 219,
       "active_contributors_30d": 223,
       "total_contributors_observed": 223,
       "releases_90d": 37,
       "open_issues": 269,
-      "pushed_at": "2026-05-06T21:17:09Z",
+      "pushed_at": "2026-05-07T08:46:04Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "TypeScript",
       "rank": 1
@@ -68,15 +68,15 @@
     {
       "full_name": "streamlit/streamlit",
       "url": "https://github.com/streamlit/streamlit",
-      "stars": 44478,
-      "pull_requests_merged_7d": 79,
+      "stars": 44479,
+      "pull_requests_merged_7d": 80,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 186,
+      "recent_commits_30d": 184,
       "active_contributors_30d": 305,
       "total_contributors_observed": 305,
       "releases_90d": 3,
       "open_issues": 1101,
-      "pushed_at": "2026-05-07T05:40:53Z",
+      "pushed_at": "2026-05-07T08:49:52Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 2
@@ -92,7 +92,7 @@
       "total_contributors_observed": 195,
       "releases_90d": 100,
       "open_issues": 226,
-      "pushed_at": "2026-05-07T04:16:02Z",
+      "pushed_at": "2026-05-07T08:52:17Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 3
@@ -101,14 +101,14 @@
       "full_name": "flipt-io/flipt",
       "url": "https://github.com/flipt-io/flipt",
       "stars": 4788,
-      "pull_requests_merged_7d": 22,
+      "pull_requests_merged_7d": 23,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 48,
       "active_contributors_30d": 79,
       "total_contributors_observed": 79,
       "releases_90d": 5,
       "open_issues": 41,
-      "pushed_at": "2026-05-07T06:37:10Z",
+      "pushed_at": "2026-05-07T08:32:52Z",
       "discovered_by_query": "topic:devtools archived:false",
       "primary_language": "Go",
       "rank": 4
@@ -116,15 +116,15 @@
     {
       "full_name": "n8n-io/n8n",
       "url": "https://github.com/n8n-io/n8n",
-      "stars": 186926,
+      "stars": 186930,
       "pull_requests_merged_7d": 99,
       "pull_requests_merged_30d": 99,
-      "recent_commits_30d": 787,
+      "recent_commits_30d": 796,
       "active_contributors_30d": 428,
       "total_contributors_observed": 428,
       "releases_90d": 92,
-      "open_issues": 403,
-      "pushed_at": "2026-05-07T08:03:57Z",
+      "open_issues": 405,
+      "pushed_at": "2026-05-07T08:56:40Z",
       "discovered_by_query": "topic:cli archived:false",
       "primary_language": "TypeScript",
       "rank": 5
@@ -132,7 +132,7 @@
     {
       "full_name": "google-gemini/gemini-cli",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "stars": 103313,
+      "stars": 103319,
       "pull_requests_merged_7d": 97,
       "pull_requests_merged_30d": 99,
       "recent_commits_30d": 352,
@@ -148,15 +148,15 @@
     {
       "full_name": "ComposioHQ/composio",
       "url": "https://github.com/ComposioHQ/composio",
-      "stars": 28099,
-      "pull_requests_merged_7d": 21,
+      "stars": 28100,
+      "pull_requests_merged_7d": 22,
       "pull_requests_merged_30d": 99,
-      "recent_commits_30d": 345,
+      "recent_commits_30d": 349,
       "active_contributors_30d": 48,
       "total_contributors_observed": 48,
       "releases_90d": 100,
       "open_issues": 67,
-      "pushed_at": "2026-05-07T07:17:02Z",
+      "pushed_at": "2026-05-07T08:56:36Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "TypeScript",
       "rank": 7
@@ -165,14 +165,14 @@
       "full_name": "agno-agi/agno",
       "url": "https://github.com/agno-agi/agno",
       "stars": 39961,
-      "pull_requests_merged_7d": 15,
+      "pull_requests_merged_7d": 17,
       "pull_requests_merged_30d": 98,
-      "recent_commits_30d": 147,
+      "recent_commits_30d": 149,
       "active_contributors_30d": 418,
       "total_contributors_observed": 418,
       "releases_90d": 24,
       "open_issues": 393,
-      "pushed_at": "2026-05-07T07:58:35Z",
+      "pushed_at": "2026-05-07T08:52:08Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 8
@@ -180,8 +180,8 @@
     {
       "full_name": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": 38341,
-      "pull_requests_merged_7d": 15,
+      "stars": 38347,
+      "pull_requests_merged_7d": 14,
       "pull_requests_merged_30d": 97,
       "recent_commits_30d": 97,
       "active_contributors_30d": 83,
@@ -196,7 +196,7 @@
     {
       "full_name": "OpenHands/OpenHands",
       "url": "https://github.com/OpenHands/OpenHands",
-      "stars": 72787,
+      "stars": 72789,
       "pull_requests_merged_7d": 46,
       "pull_requests_merged_30d": 96,
       "recent_commits_30d": 266,
@@ -212,15 +212,15 @@
     {
       "full_name": "ultralytics/ultralytics",
       "url": "https://github.com/ultralytics/ultralytics",
-      "stars": 56825,
-      "pull_requests_merged_7d": 13,
+      "stars": 56828,
+      "pull_requests_merged_7d": 12,
       "pull_requests_merged_30d": 96,
-      "recent_commits_30d": 125,
+      "recent_commits_30d": 124,
       "active_contributors_30d": 353,
       "total_contributors_observed": 353,
       "releases_90d": 35,
       "open_issues": 108,
-      "pushed_at": "2026-05-07T07:59:17Z",
+      "pushed_at": "2026-05-07T08:57:14Z",
       "discovered_by_query": "topic:cli archived:false",
       "primary_language": "Python",
       "rank": 11
@@ -228,8 +228,8 @@
     {
       "full_name": "affaan-m/everything-claude-code",
       "url": "https://github.com/affaan-m/everything-claude-code",
-      "stars": 174933,
-      "pull_requests_merged_7d": 13,
+      "stars": 174965,
+      "pull_requests_merged_7d": 11,
       "pull_requests_merged_30d": 92,
       "recent_commits_30d": 432,
       "active_contributors_30d": 160,
@@ -244,7 +244,7 @@
     {
       "full_name": "rtk-ai/rtk",
       "url": "https://github.com/rtk-ai/rtk",
-      "stars": 43292,
+      "stars": 43324,
       "pull_requests_merged_7d": 18,
       "pull_requests_merged_30d": 88,
       "recent_commits_30d": 219,
@@ -260,7 +260,7 @@
     {
       "full_name": "cli/cli",
       "url": "https://github.com/cli/cli",
-      "stars": 44257,
+      "stars": 44259,
       "pull_requests_merged_7d": 5,
       "pull_requests_merged_30d": 78,
       "recent_commits_30d": 183,
@@ -276,14 +276,14 @@
     {
       "full_name": "puppeteer/puppeteer",
       "url": "https://github.com/puppeteer/puppeteer",
-      "stars": 94261,
+      "stars": 94263,
       "pull_requests_merged_7d": 14,
       "pull_requests_merged_30d": 77,
       "recent_commits_30d": 77,
       "active_contributors_30d": 448,
       "total_contributors_observed": 448,
       "releases_90d": 25,
-      "open_issues": 260,
+      "open_issues": 259,
       "pushed_at": "2026-05-06T18:24:13Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "TypeScript",
@@ -292,7 +292,7 @@
     {
       "full_name": "yamadashy/repomix",
       "url": "https://github.com/yamadashy/repomix",
-      "stars": 24444,
+      "stars": 24446,
       "pull_requests_merged_7d": 19,
       "pull_requests_merged_30d": 72,
       "recent_commits_30d": 267,
@@ -308,7 +308,7 @@
     {
       "full_name": "santifer/career-ops",
       "url": "https://github.com/santifer/career-ops",
-      "stars": 43190,
+      "stars": 43206,
       "pull_requests_merged_7d": 4,
       "pull_requests_merged_30d": 69,
       "recent_commits_30d": 125,
@@ -332,7 +332,7 @@
       "total_contributors_observed": 65,
       "releases_90d": 2,
       "open_issues": 121,
-      "pushed_at": "2026-05-06T16:27:54Z",
+      "pushed_at": "2026-05-07T08:52:15Z",
       "discovered_by_query": "topic:devtools archived:false",
       "primary_language": "TypeScript",
       "rank": 18
@@ -340,7 +340,7 @@
     {
       "full_name": "sickn33/antigravity-awesome-skills",
       "url": "https://github.com/sickn33/antigravity-awesome-skills",
-      "stars": 36653,
+      "stars": 36662,
       "pull_requests_merged_7d": 6,
       "pull_requests_merged_30d": 58,
       "recent_commits_30d": 250,

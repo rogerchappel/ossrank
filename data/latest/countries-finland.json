@@ -3,8 +3,8 @@
   "slug": "finland",
   "name": "Finland",
   "title": "Top observed GitHub contributors in Finland",
-  "generated_at": "2026-05-07T08:00:41.279Z",
-  "fresh_until": "2026-05-14T08:00:41.279Z",
+  "generated_at": "2026-05-07T08:51:35.617Z",
+  "fresh_until": "2026-05-14T08:51:35.617Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      25550
+      25551
     ]
   },
   "code": "FI",
-  "candidate_count": 12634,
+  "candidate_count": 12635,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Finland repos:>5 type:user",
-      "total": 12634,
+      "total": 12635,
       "accepted": 100
     }
   ],
@@ -88,12 +88,12 @@
     },
     {
       "login": "bebraw",
-      "name": "Juho Veps\u00e4l\u00e4inen",
+      "name": "Juho Vepsäläinen",
       "profile_url": "https://github.com/bebraw",
-      "public_contributions": 2710,
+      "public_contributions": 2711,
       "public_repos": 224,
       "public_gists": 208,
-      "observed_public_commits": 2710,
+      "observed_public_commits": 2711,
       "observed_public_pull_requests": 6,
       "followers": 2214,
       "location": "Rautalampi, Finland",
@@ -112,7 +112,7 @@
       "observed_public_commits": 2677,
       "observed_public_pull_requests": 35,
       "followers": 320,
-      "location": "Jyv\u00e4skyl\u00e4, Finland",
+      "location": "Jyväskylä, Finland",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
@@ -168,14 +168,14 @@
     },
     {
       "login": "kijai",
-      "name": "Jukka Sepp\u00e4nen",
+      "name": "Jukka Seppänen",
       "profile_url": "https://github.com/kijai",
       "public_contributions": 1713,
       "public_repos": 106,
       "public_gists": 0,
       "observed_public_commits": 1713,
       "observed_public_pull_requests": 60,
-      "followers": 6048,
+      "followers": 6049,
       "location": "Finland",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Finland repos:>5 type:user",
@@ -200,7 +200,7 @@
     },
     {
       "login": "dalathegreat",
-      "name": "Daniel \u00d6ster",
+      "name": "Daniel Öster",
       "profile_url": "https://github.com/dalathegreat",
       "public_contributions": 1449,
       "public_repos": 43,
@@ -216,7 +216,7 @@
     },
     {
       "login": "nikohoffren",
-      "name": "Niko Hoffr\u00e9n",
+      "name": "Niko Hoffrén",
       "profile_url": "https://github.com/nikohoffren",
       "public_contributions": 1334,
       "public_repos": 64,
@@ -238,7 +238,7 @@
       "public_repos": 113,
       "public_gists": 38,
       "observed_public_commits": 1218,
-      "observed_public_pull_requests": 202,
+      "observed_public_pull_requests": 203,
       "followers": 510,
       "location": "Turku, Finland",
       "location_confidence": "multi-location",
@@ -288,7 +288,7 @@
       "observed_public_commits": 812,
       "observed_public_pull_requests": 10,
       "followers": 510,
-      "location": "Mariehman, \u00c5land Islands, Finland",
+      "location": "Mariehman, Åland Islands, Finland",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
