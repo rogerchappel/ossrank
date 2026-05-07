@@ -3,202 +3,74 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T05:41:15.885Z",
-  "fresh_until": "2026-05-14T05:41:15.885Z",
-  "status": "fresh",
-  "method": "github-rest-repository-search-momentum-proxy",
+  "generated_at": "2026-05-07T05:57:25.057Z",
+  "fresh_until": "2026-05-14T05:57:25.057Z",
+  "status": "demo",
+  "method": "fixture-github-repository-search-then-project-momentum-score",
   "source_run": "2026-05-07",
+  "candidate_count": 300,
+  "caveats": [
+    "Fixture data is demo-only until a live GitHub token-backed refresh is enabled.",
+    "Project momentum prioritises recent merged pull requests, active contributors, then stars.",
+    "Ranks are observed public repository signals from the configured snapshot."
+  ],
   "history": {
     "weeks": [
+      "2026-04-23",
+      "2026-04-30",
       "2026-05-07"
     ],
     "ranked_items": [
-      20
+      72,
+      80,
+      4
     ],
     "top_10_signal": [
-      3
+      188,
+      244,
+      392
     ]
   },
-  "candidate_count": 111043,
-  "caveats": [
-    "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
-    "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
-    "Project momentum prioritises recent activity, rough collaboration signal, then stars."
-  ],
   "entries": [
     {
-      "full_name": "RicardoOliver/Nextify.js",
-      "url": "https://github.com/RicardoOliver/Nextify.js",
-      "stars": 0,
-      "pull_requests_merged_7d": 2,
-      "active_contributors_30d": 1,
+      "full_name": "example/agent-runtime",
+      "url": "https://github.com/example/agent-runtime",
+      "stars": 18420,
+      "pull_requests_merged_7d": 126,
+      "active_contributors_30d": 82,
       "primary_language": "TypeScript",
+      "previous_rank": 2,
       "rank": 1
     },
     {
-      "full_name": "Signet-AI/signetai",
-      "url": "https://github.com/Signet-AI/signetai",
-      "stars": 137,
-      "pull_requests_merged_7d": 1,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "full_name": "example/openvector",
+      "url": "https://github.com/example/openvector",
+      "stars": 28100,
+      "pull_requests_merged_7d": 111,
+      "active_contributors_30d": 75,
+      "primary_language": "Python",
+      "previous_rank": 1,
       "rank": 2
     },
     {
-      "full_name": "PsikaBRk/webcontainer-ide",
-      "url": "https://github.com/PsikaBRk/webcontainer-ide",
-      "stars": 2,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "full_name": "example/cli-lab",
+      "url": "https://github.com/example/cli-lab",
+      "stars": 9300,
+      "pull_requests_merged_7d": 88,
+      "active_contributors_30d": 44,
+      "primary_language": "Go",
+      "previous_rank": 5,
       "rank": 3
     },
     {
-      "full_name": "bougui92m/fasthooks",
-      "url": "https://github.com/bougui92m/fasthooks",
-      "stars": 1,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
+      "full_name": "example/safety-lint",
+      "url": "https://github.com/example/safety-lint",
+      "stars": 7400,
+      "pull_requests_merged_7d": 67,
+      "active_contributors_30d": 39,
       "primary_language": "Rust",
+      "previous_rank": 4,
       "rank": 4
-    },
-    {
-      "full_name": "gennadi-kuzmin/awesome-codex-pets",
-      "url": "https://github.com/gennadi-kuzmin/awesome-codex-pets",
-      "stars": 1,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "JavaScript",
-      "rank": 5
-    },
-    {
-      "full_name": "Hazim100-Shadow/documan",
-      "url": "https://github.com/Hazim100-Shadow/documan",
-      "stars": 1,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 6
-    },
-    {
-      "full_name": "Majd911nj/claudekit",
-      "url": "https://github.com/Majd911nj/claudekit",
-      "stars": 1,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "JavaScript",
-      "rank": 7
-    },
-    {
-      "full_name": "StrangeDaysTech/devtrail",
-      "url": "https://github.com/StrangeDaysTech/devtrail",
-      "stars": 1,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Rust",
-      "rank": 8
-    },
-    {
-      "full_name": "A7MD-010/tuna-app",
-      "url": "https://github.com/A7MD-010/tuna-app",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Dart",
-      "rank": 9
-    },
-    {
-      "full_name": "chrisgiovannibanatte/Rate-Limited-Token-Faucet",
-      "url": "https://github.com/chrisgiovannibanatte/Rate-Limited-Token-Faucet",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Solidity",
-      "rank": 10
-    },
-    {
-      "full_name": "Ghost121111/Blackash-CVE-2025-55182",
-      "url": "https://github.com/Ghost121111/Blackash-CVE-2025-55182",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 11
-    },
-    {
-      "full_name": "Huehue2526/n8n_book_translator",
-      "url": "https://github.com/Huehue2526/n8n_book_translator",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Batchfile",
-      "rank": 12
-    },
-    {
-      "full_name": "kaustubhkagrawal/kaustubhkagrawal",
-      "url": "https://github.com/kaustubhkagrawal/kaustubhkagrawal",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 13
-    },
-    {
-      "full_name": "mashrafi1122/FPL",
-      "url": "https://github.com/mashrafi1122/FPL",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 14
-    },
-    {
-      "full_name": "Miguel-max219/qaa-airtype",
-      "url": "https://github.com/Miguel-max219/qaa-airtype",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 15
-    },
-    {
-      "full_name": "mikers2/Byt-wyze-technology",
-      "url": "https://github.com/mikers2/Byt-wyze-technology",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 16
-    },
-    {
-      "full_name": "reochoi109/reochoi109",
-      "url": "https://github.com/reochoi109/reochoi109",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 17
-    },
-    {
-      "full_name": "shoaibraza123/promptbook-mcp",
-      "url": "https://github.com/shoaibraza123/promptbook-mcp",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "HTML",
-      "rank": 18
-    },
-    {
-      "full_name": "thatavarthi-raj/Git-Buddha",
-      "url": "https://github.com/thatavarthi-raj/Git-Buddha",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 19
-    },
-    {
-      "full_name": "yawglobal/cocoon-contracts",
-      "url": "https://github.com/yawglobal/cocoon-contracts",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
-      "rank": 20
     }
   ]
 }

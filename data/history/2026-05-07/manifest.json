@@ -1,56 +1,55 @@
 {
-  "generated_at": "2026-05-07T05:41:55.125Z",
-  "source_commit": "ccb30f7",
-  "method": "github-live-refresh",
-  "status": "fresh",
+  "generated_at": "2026-05-07T05:57:25.057Z",
+  "source_commit": "7c1ff80",
+  "method": "fixture-refresh",
+  "status": "demo",
   "completed_shards": [
     {
       "kind": "country",
       "slug": "australia",
       "title": "Top observed GitHub contributors in Australia",
       "path": "/data/latest/countries-australia.json",
-      "status": "fresh",
-      "generated_at": "2026-05-07T05:41:15.885Z",
-      "fresh_until": "2026-05-14T05:41:15.885Z",
-      "entries": 20
+      "status": "demo",
+      "generated_at": "2026-05-07T05:57:25.057Z",
+      "fresh_until": "2026-05-14T05:57:25.057Z",
+      "entries": 5
     },
     {
       "kind": "language",
       "slug": "typescript",
       "title": "Top observed TypeScript open-source contributors",
       "path": "/data/latest/languages-typescript.json",
-      "status": "fresh",
-      "generated_at": "2026-05-07T05:41:15.885Z",
-      "fresh_until": "2026-05-14T05:41:15.885Z",
-      "entries": 20
+      "status": "demo",
+      "generated_at": "2026-05-07T05:57:25.057Z",
+      "fresh_until": "2026-05-14T05:57:25.057Z",
+      "entries": 5
     },
     {
       "kind": "category",
       "slug": "developer-tools",
       "title": "Top observed developer tools open-source projects",
       "path": "/data/latest/categories-developer-tools.json",
-      "status": "fresh",
-      "generated_at": "2026-05-07T05:41:15.885Z",
-      "fresh_until": "2026-05-14T05:41:15.885Z",
-      "entries": 20
+      "status": "demo",
+      "generated_at": "2026-05-07T05:57:25.057Z",
+      "fresh_until": "2026-05-14T05:57:25.057Z",
+      "entries": 4
     },
     {
       "kind": "projects",
       "slug": "fastest-growing-open-source-projects",
       "title": "Fastest growing observed open-source projects",
       "path": "/data/latest/projects-fastest-growing-open-source-projects.json",
-      "status": "fresh",
-      "generated_at": "2026-05-07T05:41:15.885Z",
-      "fresh_until": "2026-05-14T05:41:15.885Z",
-      "entries": 20
+      "status": "demo",
+      "generated_at": "2026-05-07T05:57:25.057Z",
+      "fresh_until": "2026-05-14T05:57:25.057Z",
+      "entries": 4
     }
   ],
   "failed_shards": [],
   "stale_pages": [],
   "api_budget": {
     "provider": "github",
-    "mode": "live",
-    "remaining": 24
+    "mode": "fixture"
   },
-  "duration_ms": 39240
+  "duration_ms": 3
 }
