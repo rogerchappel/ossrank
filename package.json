@@ -1,0 +1,26 @@
+{
+  "name": "ossrank",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static-first public ranking site for observed open-source contributors, projects, and ecosystem momentum.",
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "refresh:fixtures": "tsx scripts/refresh-fixtures.ts",
+    "validate:data": "tsx scripts/validate-data.ts data/latest",
+    "build": "pnpm run refresh:fixtures && tsx scripts/build-site.ts --data data/latest --history data/history --out dist",
+    "test": "pnpm run check && pnpm run refresh:fixtures && pnpm run validate:data && pnpm run build",
+    "dev": "pnpm run build && npx --yes serve dist",
+    "deploy:cloudflare": "pnpm run build && wrangler pages deploy dist --project-name ossrank"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.14.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

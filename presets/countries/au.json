@@ -1,0 +1,8 @@
+{
+  "code": "AU",
+  "slug": "australia",
+  "name": "Australia",
+  "location_terms": ["Australia", "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Canberra", "Hobart", "Darwin"],
+  "candidate_window": 500,
+  "limit": 100
+}

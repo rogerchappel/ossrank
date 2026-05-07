@@ -1,0 +1,32 @@
+name: Weekly OSSRank refresh
+
+on:
+  schedule:
+    - cron: '17 18 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Refresh fixture snapshot until live GitHub mode is enabled
+        run: pnpm run refresh:fixtures
+      - run: pnpm run validate:data
+      - run: pnpm run build
+      - name: Commit refreshed data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'data: refresh ossrank snapshots'
+          file_pattern: 'data dist'

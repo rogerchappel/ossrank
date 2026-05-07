@@ -1,0 +1,109 @@
+{
+  "kind": "country",
+  "slug": "australia",
+  "code": "AU",
+  "name": "Australia",
+  "title": "Top observed GitHub contributors in Australia",
+  "generated_at": "2026-05-07T04:25:41.634Z",
+  "fresh_until": "2026-05-14T04:25:41.634Z",
+  "status": "demo",
+  "method": "fixture-github-search-followers-then-public-contribution-score",
+  "source_run": "2026-05-07",
+  "candidate_count": 500,
+  "caveats": [
+    "Fixture data is demo-only until a live GitHub token-backed refresh is enabled.",
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Ranks are observed public signals from the configured snapshot, not a complete census of every OSS contributor."
+  ],
+  "history": {
+    "weeks": [
+      "2026-04-23",
+      "2026-04-30",
+      "2026-05-07"
+    ],
+    "ranked_items": [
+      91,
+      96,
+      5
+    ],
+    "top_10_signal": [
+      61400,
+      67500,
+      72520
+    ]
+  },
+  "entries": [
+    {
+      "login": "octo-kiwi",
+      "name": "Ari Morgan",
+      "profile_url": "https://github.com/octo-kiwi",
+      "public_contributions": 18420,
+      "followers": 7100,
+      "location": "Brisbane, Australia",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [
+        "octo-kiwi/agent-kit",
+        "octo-kiwi/typed-pipes"
+      ],
+      "previous_rank": 2,
+      "rank": 1
+    },
+    {
+      "login": "sydcompiler",
+      "name": "Maya Chen",
+      "profile_url": "https://github.com/sydcompiler",
+      "public_contributions": 17210,
+      "followers": 6200,
+      "location": "Sydney, Australia",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [
+        "sydcompiler/rust-web",
+        "sydcompiler/build-notes"
+      ],
+      "previous_rank": 1,
+      "rank": 2
+    },
+    {
+      "login": "melbmaintainer",
+      "name": "Noah Patel",
+      "profile_url": "https://github.com/melbmaintainer",
+      "public_contributions": 14880,
+      "followers": 5500,
+      "location": "Melbourne AU",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [
+        "melbmaintainer/queueflow"
+      ],
+      "previous_rank": 4,
+      "rank": 3
+    },
+    {
+      "login": "perthpatches",
+      "name": "Lena Brooks",
+      "profile_url": "https://github.com/perthpatches",
+      "public_contributions": 12140,
+      "followers": 3900,
+      "location": "Perth",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [
+        "perthpatches/secscan"
+      ],
+      "previous_rank": 3,
+      "rank": 4
+    },
+    {
+      "login": "typed-roo",
+      "name": "Sam Taylor",
+      "profile_url": "https://github.com/typed-roo",
+      "public_contributions": 9870,
+      "followers": 2600,
+      "location": "Australia",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [
+        "typed-roo/ts-inspect"
+      ],
+      "previous_rank": 7,
+      "rank": 5
+    }
+  ]
+}

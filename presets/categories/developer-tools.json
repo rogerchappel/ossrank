@@ -1,0 +1,7 @@
+{
+  "slug": "developer-tools",
+  "name": "Developer Tools",
+  "queries": ["topic:developer-tools archived:false", "topic:cli archived:false", "topic:devtools archived:false"],
+  "candidate_window": 300,
+  "limit": 100
+}

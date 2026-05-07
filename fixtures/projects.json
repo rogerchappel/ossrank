@@ -1,0 +1,6 @@
+[
+  {"full_name":"example/agent-runtime","url":"https://github.com/example/agent-runtime","stars":18420,"pull_requests_merged_7d":126,"active_contributors_30d":82,"primary_language":"TypeScript","previous_rank":2},
+  {"full_name":"example/openvector","url":"https://github.com/example/openvector","stars":28100,"pull_requests_merged_7d":111,"active_contributors_30d":75,"primary_language":"Python","previous_rank":1},
+  {"full_name":"example/cli-lab","url":"https://github.com/example/cli-lab","stars":9300,"pull_requests_merged_7d":88,"active_contributors_30d":44,"primary_language":"Go","previous_rank":5},
+  {"full_name":"example/safety-lint","url":"https://github.com/example/safety-lint","stars":7400,"pull_requests_merged_7d":67,"active_contributors_30d":39,"primary_language":"Rust","previous_rank":4}
+]

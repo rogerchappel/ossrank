@@ -1,0 +1,7 @@
+{
+  "slug": "fastest-growing-open-source-projects",
+  "name": "Fastest Growing Open Source Projects",
+  "queries": ["stars:>500 pushed:>=2026-04-01 archived:false"],
+  "candidate_window": 500,
+  "limit": 100
+}
