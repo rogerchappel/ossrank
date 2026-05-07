@@ -3,10 +3,10 @@
   "slug": "australia",
   "name": "Australia",
   "title": "Top observed GitHub contributors in Australia",
-  "generated_at": "2026-05-07T05:39:15.042Z",
-  "fresh_until": "2026-05-14T05:39:15.042Z",
+  "generated_at": "2026-05-07T05:41:15.885Z",
+  "fresh_until": "2026-05-14T05:41:15.885Z",
   "status": "fresh",
-  "method": "github-rest-search-profile-score",
+  "method": "github-rest-raw-public-metrics",
   "source_run": "2026-05-07",
   "history": {
     "weeks": [

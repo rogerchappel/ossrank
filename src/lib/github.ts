@@ -163,13 +163,13 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   ];
 
   const country: RankingSnapshot<RankedContributor> = {
-    ...snapshotBase('country', 'australia', 'Australia', 'Top observed GitHub contributors in Australia', generatedAt, 'fresh', 'github-rest-search-profile-score'),
+    ...snapshotBase('country', 'australia', 'Australia', 'Top observed GitHub contributors in Australia', generatedAt, 'fresh', 'github-rest-raw-public-metrics'),
     code: 'AU', candidate_count: au.total, caveats: contributorCaveats,
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [au.users.length], top_10_signal: [au.users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
     entries: au.users
   };
   const language: RankingSnapshot<RankedContributor> = {
-    ...snapshotBase('language', 'typescript', 'TypeScript', 'Top observed TypeScript open-source contributors', generatedAt, 'fresh', 'github-rest-search-profile-score'),
+    ...snapshotBase('language', 'typescript', 'TypeScript', 'Top observed TypeScript open-source contributors', generatedAt, 'fresh', 'github-rest-raw-public-metrics'),
     candidate_count: ts.total, caveats: contributorCaveats,
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [ts.users.length], top_10_signal: [ts.users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
     entries: ts.users

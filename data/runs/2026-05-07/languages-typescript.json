@@ -3,10 +3,10 @@
   "slug": "typescript",
   "name": "TypeScript",
   "title": "Top observed TypeScript open-source contributors",
-  "generated_at": "2026-05-07T05:39:15.042Z",
-  "fresh_until": "2026-05-14T05:39:15.042Z",
+  "generated_at": "2026-05-07T05:41:15.885Z",
+  "fresh_until": "2026-05-14T05:41:15.885Z",
   "status": "fresh",
-  "method": "github-rest-search-profile-score",
+  "method": "github-rest-raw-public-metrics",
   "source_run": "2026-05-07",
   "history": {
     "weeks": [
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      766544
+      766545
     ]
   },
   "candidate_count": 7998,
@@ -75,12 +75,12 @@
       "login": "langchain-ai",
       "name": "LangChain",
       "profile_url": "https://github.com/langchain-ai",
-      "public_contributions": 42702,
+      "public_contributions": 42703,
       "public_repos": 239,
       "public_gists": 0,
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
-      "followers": 18802,
+      "followers": 18803,
       "location": "United States of America",
       "location_confidence": "unknown",
       "notable_repositories": [],

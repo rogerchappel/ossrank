@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T05:39:15.042Z",
-  "fresh_until": "2026-05-14T05:39:15.042Z",
+  "generated_at": "2026-05-07T05:41:15.885Z",
+  "fresh_until": "2026-05-14T05:41:15.885Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,10 +16,10 @@
       20
     ],
     "top_10_signal": [
-      6
+      3
     ]
   },
-  "candidate_count": 111044,
+  "candidate_count": 111043,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -30,46 +30,37 @@
       "full_name": "RicardoOliver/Nextify.js",
       "url": "https://github.com/RicardoOliver/Nextify.js",
       "stars": 0,
-      "pull_requests_merged_7d": 3,
+      "pull_requests_merged_7d": 2,
       "active_contributors_30d": 1,
       "primary_language": "TypeScript",
       "rank": 1
     },
     {
-      "full_name": "AkaraChen/2code",
-      "url": "https://github.com/AkaraChen/2code",
-      "stars": 6,
-      "pull_requests_merged_7d": 2,
+      "full_name": "Signet-AI/signetai",
+      "url": "https://github.com/Signet-AI/signetai",
+      "stars": 137,
+      "pull_requests_merged_7d": 1,
       "active_contributors_30d": 1,
       "primary_language": "TypeScript",
       "rank": 2
     },
     {
-      "full_name": "StrangeDaysTech/devtrail",
-      "url": "https://github.com/StrangeDaysTech/devtrail",
-      "stars": 1,
-      "pull_requests_merged_7d": 1,
-      "active_contributors_30d": 1,
-      "primary_language": "Rust",
-      "rank": 3
-    },
-    {
-      "full_name": "f959/adb-turbo",
-      "url": "https://github.com/f959/adb-turbo",
-      "stars": 4,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 4
-    },
-    {
-      "full_name": "abusufyan-netizen/webtoolkitpro",
-      "url": "https://github.com/abusufyan-netizen/webtoolkitpro",
-      "stars": 1,
+      "full_name": "PsikaBRk/webcontainer-ide",
+      "url": "https://github.com/PsikaBRk/webcontainer-ide",
+      "stars": 2,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "TypeScript",
-      "rank": 5
+      "rank": 3
+    },
+    {
+      "full_name": "bougui92m/fasthooks",
+      "url": "https://github.com/bougui92m/fasthooks",
+      "stars": 1,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "Rust",
+      "rank": 4
     },
     {
       "full_name": "gennadi-kuzmin/awesome-codex-pets",
@@ -78,6 +69,14 @@
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "JavaScript",
+      "rank": 5
+    },
+    {
+      "full_name": "Hazim100-Shadow/documan",
+      "url": "https://github.com/Hazim100-Shadow/documan",
+      "stars": 1,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
       "rank": 6
     },
     {
@@ -90,34 +89,35 @@
       "rank": 7
     },
     {
-      "full_name": "pawankmrai/swift-utils",
-      "url": "https://github.com/pawankmrai/swift-utils",
+      "full_name": "StrangeDaysTech/devtrail",
+      "url": "https://github.com/StrangeDaysTech/devtrail",
       "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Swift",
+      "primary_language": "Rust",
       "rank": 8
     },
     {
-      "full_name": "SimplyUniq/smartCFL",
-      "url": "https://github.com/SimplyUniq/smartCFL",
-      "stars": 1,
+      "full_name": "A7MD-010/tuna-app",
+      "url": "https://github.com/A7MD-010/tuna-app",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "Dart",
       "rank": 9
     },
     {
-      "full_name": "termlnk/termlnk",
-      "url": "https://github.com/termlnk/termlnk",
-      "stars": 1,
+      "full_name": "chrisgiovannibanatte/Rate-Limited-Token-Faucet",
+      "url": "https://github.com/chrisgiovannibanatte/Rate-Limited-Token-Faucet",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "primary_language": "Solidity",
       "rank": 10
     },
     {
-      "full_name": "brightboateng/.Industrial-LLM-Agents",
-      "url": "https://github.com/brightboateng/.Industrial-LLM-Agents",
+      "full_name": "Ghost121111/Blackash-CVE-2025-55182",
+      "url": "https://github.com/Ghost121111/Blackash-CVE-2025-55182",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
@@ -134,20 +134,19 @@
       "rank": 12
     },
     {
-      "full_name": "krisnaaaaaaaaaaaa/Documentations",
-      "url": "https://github.com/krisnaaaaaaaaaaaa/Documentations",
+      "full_name": "kaustubhkagrawal/kaustubhkagrawal",
+      "url": "https://github.com/kaustubhkagrawal/kaustubhkagrawal",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "rank": 13
     },
     {
-      "full_name": "Linux9505/claude-code-skill-activator",
-      "url": "https://github.com/Linux9505/claude-code-skill-activator",
+      "full_name": "mashrafi1122/FPL",
+      "url": "https://github.com/mashrafi1122/FPL",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "HTML",
       "rank": 14
     },
     {
@@ -160,12 +159,11 @@
       "rank": 15
     },
     {
-      "full_name": "reiolft/xsukax-Github-Logo-Embed-Code-Generator",
-      "url": "https://github.com/reiolft/xsukax-Github-Logo-Embed-Code-Generator",
+      "full_name": "mikers2/Byt-wyze-technology",
+      "url": "https://github.com/mikers2/Byt-wyze-technology",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "HTML",
       "rank": 16
     },
     {
@@ -177,20 +175,20 @@
       "rank": 17
     },
     {
-      "full_name": "rickyone69/smgrep",
-      "url": "https://github.com/rickyone69/smgrep",
+      "full_name": "shoaibraza123/promptbook-mcp",
+      "url": "https://github.com/shoaibraza123/promptbook-mcp",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "HTML",
       "rank": 18
     },
     {
-      "full_name": "SchmidleImpuls/double-loop",
-      "url": "https://github.com/SchmidleImpuls/double-loop",
+      "full_name": "thatavarthi-raj/Git-Buddha",
+      "url": "https://github.com/thatavarthi-raj/Git-Buddha",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
       "rank": 19
     },
     {
