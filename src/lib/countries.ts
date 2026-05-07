@@ -8,7 +8,24 @@ export interface CountryConfig {
 }
 
 export const COUNTRY_CONFIGS: CountryConfig[] = [
-  { slug: 'australia', code: 'AU', name: 'Australia', queries: ['location:Australia repos:>5', 'location:Sydney repos:>5', 'location:Melbourne repos:>5', 'location:Brisbane repos:>5'], locationTerms: ['Australia', 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Canberra', 'Hobart', 'Darwin', 'NSW', 'VIC', 'QLD'] },
+  {
+    slug: 'australia',
+    code: 'AU',
+    name: 'Australia',
+    queries: [
+      'location:Australia repos:>5',
+      'location:Sydney repos:>5',
+      'location:Melbourne repos:>5',
+      'location:Brisbane repos:>5',
+      'location:Australia followers:<10 repos:80..120',
+      'location:Australia followers:<20 repos:80..120',
+      'location:Australia saas',
+      'location:Australia automation',
+      'location:Australia agentic'
+    ],
+    candidateLimit: 900,
+    locationTerms: ['Australia', 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Canberra', 'Hobart', 'Darwin', 'NSW', 'VIC', 'QLD']
+  },
   { slug: 'new-zealand', code: 'NZ', name: 'New Zealand', queries: ['location:"New Zealand" repos:>5'], locationTerms: ['New Zealand', 'Aotearoa', 'Auckland', 'Wellington', 'Christchurch'] },
   { slug: 'united-states', code: 'US', name: 'United States', queries: ['location:"United States" repos:>5', 'location:California repos:>5', 'location:"San Francisco" repos:>5', 'location:Seattle repos:>5', 'location:NYC repos:>5'], locationTerms: ['United States', 'USA', 'U.S.', 'US', 'California', 'New York', 'Seattle', 'San Francisco', 'Bay Area', 'Austin', 'Boston', 'Chicago'] },
   { slug: 'canada', code: 'CA', name: 'Canada', queries: ['location:Canada repos:>5', 'location:Toronto repos:>5', 'location:Vancouver repos:>5', 'location:Montreal repos:>5'], locationTerms: ['Canada', 'Toronto', 'Vancouver', 'Montreal', 'Ottawa', 'Calgary'] },

@@ -63,6 +63,16 @@ interface GitHubUserProfileResponse {
   rateLimit?: { remaining?: number; cost?: number };
 }
 
+interface GitHubUserSearchResponse {
+  search: {
+    userCount: number;
+    nodes: Array<{
+      login: string;
+    } | null>;
+  };
+  rateLimit?: { remaining?: number; cost?: number };
+}
+
 interface CandidateQueryStat {
   query: string;
   total: number;
@@ -270,6 +280,21 @@ async function userProfileAndContributions(client: GitHubClient, login: string, 
   };
 }
 
+async function searchUsers(client: GitHubClient, query: string, limit: number): Promise<{ total: number; items: GitHubUserSearchItem[] }> {
+  const data = await client.graphql<GitHubUserSearchResponse>(`query OssrankUserSearch($query: String!, $limit: Int!) {
+    search(type: USER, query: $query, first: $limit) {
+      userCount
+      nodes { ... on User { login } }
+    }
+    rateLimit { remaining cost }
+  }`, { query, limit: Math.min(100, Math.max(1, limit)) });
+  if (data.rateLimit?.remaining !== undefined) client.remaining = data.rateLimit.remaining;
+  return {
+    total: data.search.userCount,
+    items: data.search.nodes.filter((node): node is { login: string } => Boolean(node?.login)).map((node) => ({ login: node.login, html_url: `https://github.com/${node.login}`, type: 'User' }))
+  };
+}
+
 async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, locationTerms?: string[], countryName?: string, candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; users: RankedContributor[]; queryStats: CandidateQueryStat[] }> {
   const searchQueries = Array.isArray(queries) ? queries : [queries];
   const details = new Map<string, UserCandidate>();
@@ -277,15 +302,15 @@ async function collectUsers(client: GitHubClient, queries: string | string[], li
   let total = 0;
   const perQueryLimit = Math.min(100, Math.max(limit, Math.ceil(candidateLimit / searchQueries.length)));
   for (const query of searchQueries) {
-    const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(userQuery(query), perQueryLimit, 'followers')}`);
-    total += search.total_count;
+    const search = await searchUsers(client, userQuery(query), perQueryLimit);
+    total += search.total;
     const before = details.size;
     const unseen = search.items.filter((item) => item.type !== 'Organization' && !details.has(item.login.toLowerCase()));
     const fetched = await mapLimit(unseen, 8, async (item) => userProfileAndContributions(client, item.login, generatedAt));
     for (const detail of fetched) {
       if (detail && (!locationTerms || matchesLocation(detail.user.location, locationTerms))) details.set(detail.user.login.toLowerCase(), { ...detail, discoveredByQuery: userQuery(query) });
     }
-    queryStats.push({ query: userQuery(query), total: search.total_count, accepted: details.size - before });
+    queryStats.push({ query: userQuery(query), total: search.total, accepted: details.size - before });
   }
   const entries = [...details.values()].map(({ user, activity, discoveredByQuery }) => ({
       login: user.login,
