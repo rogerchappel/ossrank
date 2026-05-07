@@ -3,8 +3,8 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,10 +16,10 @@
       20
     ],
     "top_10_signal": [
-      40949
+      36884
     ]
   },
-  "candidate_count": 38111,
+  "candidate_count": 38110,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,31 +27,22 @@
   ],
   "entries": [
     {
-      "full_name": "pytorch/pytorch",
-      "url": "https://github.com/pytorch/pytorch",
-      "stars": 99712,
-      "pull_requests_merged_7d": 6185,
-      "active_contributors_30d": 133,
-      "primary_language": "Python",
-      "rank": 1
-    },
-    {
       "full_name": "godotengine/godot",
       "url": "https://github.com/godotengine/godot",
       "stars": 110384,
       "pull_requests_merged_7d": 6060,
       "active_contributors_30d": 147,
       "primary_language": "C++",
-      "rank": 2
+      "rank": 1
     },
     {
       "full_name": "microsoft/vscode",
       "url": "https://github.com/microsoft/vscode",
-      "stars": 184629,
-      "pull_requests_merged_7d": 5767,
+      "stars": 184631,
+      "pull_requests_merged_7d": 5765,
       "active_contributors_30d": 246,
       "primary_language": "TypeScript",
-      "rank": 3
+      "rank": 2
     },
     {
       "full_name": "flutter/flutter",
@@ -60,7 +51,7 @@
       "pull_requests_merged_7d": 4195,
       "active_contributors_30d": 235,
       "primary_language": "Dart",
-      "rank": 4
+      "rank": 3
     },
     {
       "full_name": "rust-lang/rust",
@@ -69,16 +60,16 @@
       "pull_requests_merged_7d": 4115,
       "active_contributors_30d": 150,
       "primary_language": "Rust",
-      "rank": 5
+      "rank": 4
     },
     {
       "full_name": "anthropics/claude-code",
       "url": "https://github.com/anthropics/claude-code",
-      "stars": 121111,
-      "pull_requests_merged_7d": 3598,
+      "stars": 121115,
+      "pull_requests_merged_7d": 3599,
       "active_contributors_30d": 161,
       "primary_language": "Shell",
-      "rank": 6
+      "rank": 5
     },
     {
       "full_name": "golang/go",
@@ -87,43 +78,43 @@
       "pull_requests_merged_7d": 3371,
       "active_contributors_30d": 178,
       "primary_language": "Go",
-      "rank": 7
+      "rank": 6
     },
     {
       "full_name": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 136475,
-      "pull_requests_merged_7d": 2905,
+      "stars": 136508,
+      "pull_requests_merged_7d": 2907,
       "active_contributors_30d": 182,
       "primary_language": "Python",
-      "rank": 8
+      "rank": 7
     },
     {
       "full_name": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": 369179,
-      "pull_requests_merged_7d": 2453,
+      "stars": 369194,
+      "pull_requests_merged_7d": 2456,
       "active_contributors_30d": 492,
       "primary_language": "TypeScript",
-      "rank": 9
+      "rank": 8
     },
     {
       "full_name": "microsoft/PowerToys",
       "url": "https://github.com/microsoft/PowerToys",
       "stars": 132897,
-      "pull_requests_merged_7d": 2300,
+      "pull_requests_merged_7d": 2301,
       "active_contributors_30d": 177,
       "primary_language": "C#",
-      "rank": 10
+      "rank": 9
     },
     {
       "full_name": "anomalyco/opencode",
       "url": "https://github.com/anomalyco/opencode",
-      "stars": 156037,
+      "stars": 156048,
       "pull_requests_merged_7d": 2115,
       "active_contributors_30d": 208,
       "primary_language": "TypeScript",
-      "rank": 11
+      "rank": 10
     },
     {
       "full_name": "microsoft/TypeScript",
@@ -132,61 +123,61 @@
       "pull_requests_merged_7d": 1677,
       "active_contributors_30d": 145,
       "primary_language": "TypeScript",
-      "rank": 12
+      "rank": 11
     },
     {
       "full_name": "tensorflow/tensorflow",
       "url": "https://github.com/tensorflow/tensorflow",
       "stars": 195026,
-      "pull_requests_merged_7d": 1651,
+      "pull_requests_merged_7d": 1653,
       "active_contributors_30d": 260,
       "primary_language": "C++",
-      "rank": 13
+      "rank": 12
     },
     {
       "full_name": "Comfy-Org/ComfyUI",
       "url": "https://github.com/Comfy-Org/ComfyUI",
-      "stars": 111707,
+      "stars": 111712,
       "pull_requests_merged_7d": 1331,
       "active_contributors_30d": 149,
       "primary_language": "Python",
-      "rank": 14
+      "rank": 13
     },
     {
       "full_name": "vercel/next.js",
       "url": "https://github.com/vercel/next.js",
       "stars": 139308,
-      "pull_requests_merged_7d": 1297,
+      "pull_requests_merged_7d": 1298,
       "active_contributors_30d": 186,
       "primary_language": "JavaScript",
-      "rank": 15
+      "rank": 14
     },
     {
       "full_name": "openai/codex",
       "url": "https://github.com/openai/codex",
-      "stars": 80517,
+      "stars": 80525,
       "pull_requests_merged_7d": 1287,
       "active_contributors_30d": 107,
       "primary_language": "Rust",
-      "rank": 16
+      "rank": 15
     },
     {
       "full_name": "paperclipai/paperclip",
       "url": "https://github.com/paperclipai/paperclip",
-      "stars": 63140,
+      "stars": 63147,
       "pull_requests_merged_7d": 1119,
       "active_contributors_30d": 84,
       "primary_language": "TypeScript",
-      "rank": 17
+      "rank": 16
     },
     {
       "full_name": "ollama/ollama",
       "url": "https://github.com/ollama/ollama",
-      "stars": 170894,
+      "stars": 170899,
       "pull_requests_merged_7d": 1068,
       "active_contributors_30d": 228,
       "primary_language": "Go",
-      "rank": 18
+      "rank": 17
     },
     {
       "full_name": "excalidraw/excalidraw",
@@ -195,15 +186,24 @@
       "pull_requests_merged_7d": 1010,
       "active_contributors_30d": 164,
       "primary_language": "TypeScript",
-      "rank": 19
+      "rank": 18
     },
     {
       "full_name": "Genymobile/scrcpy",
       "url": "https://github.com/Genymobile/scrcpy",
-      "stars": 139522,
+      "stars": 139525,
       "pull_requests_merged_7d": 931,
       "active_contributors_30d": 186,
       "primary_language": "C",
+      "rank": 19
+    },
+    {
+      "full_name": "kubernetes/kubernetes",
+      "url": "https://github.com/kubernetes/kubernetes",
+      "stars": 122093,
+      "pull_requests_merged_7d": 890,
+      "active_contributors_30d": 163,
+      "primary_language": "Go",
       "rank": 20
     }
   ]

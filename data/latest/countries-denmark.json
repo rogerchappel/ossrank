@@ -3,8 +3,8 @@
   "slug": "denmark",
   "name": "Denmark",
   "title": "Top observed GitHub contributors in Denmark",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      26101
+      26102
     ]
   },
   "code": "DK",
-  "candidate_count": 10870,
+  "candidate_count": 10871,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -107,10 +107,10 @@
       "login": "maxandersen",
       "name": "Max Rydahl Andersen",
       "profile_url": "https://github.com/maxandersen",
-      "public_contributions": 1704,
+      "public_contributions": 1705,
       "public_repos": 683,
       "public_gists": 297,
-      "observed_public_commits": 1704,
+      "observed_public_commits": 1705,
       "observed_public_pull_requests": 279,
       "followers": 409,
       "location": "Denmark",
@@ -261,7 +261,7 @@
       "public_repos": 175,
       "public_gists": 79,
       "observed_public_commits": 826,
-      "observed_public_pull_requests": 147,
+      "observed_public_pull_requests": 148,
       "followers": 1728,
       "location": "Denmark",
       "location_confidence": "profile-text-match",

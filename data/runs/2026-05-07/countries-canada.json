@@ -3,8 +3,8 @@
   "slug": "canada",
   "name": "Canada",
   "title": "Top observed GitHub contributors in Canada",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      35158
+      36861
     ]
   },
   "code": "CA",
-  "candidate_count": 63062,
+  "candidate_count": 123396,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -74,19 +74,34 @@
       "rank": 3
     },
     {
-      "login": "behdad",
-      "name": "Behdad Esfahbod",
-      "profile_url": "https://github.com/behdad",
-      "public_contributions": 3098,
-      "public_repos": 80,
-      "public_gists": 12,
-      "observed_public_commits": 3098,
-      "observed_public_pull_requests": 459,
-      "followers": 2220,
-      "location": "Canada",
+      "login": "jamiepine",
+      "name": "Jamie Pine",
+      "profile_url": "https://github.com/jamiepine",
+      "public_contributions": 3337,
+      "public_repos": 31,
+      "public_gists": 6,
+      "observed_public_commits": 3337,
+      "observed_public_pull_requests": 242,
+      "followers": 2137,
+      "location": "Vancouver, BC",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 4
+    },
+    {
+      "login": "brunoborges",
+      "name": "Bruno Borges",
+      "profile_url": "https://github.com/brunoborges",
+      "public_contributions": 3120,
+      "public_repos": 293,
+      "public_gists": 98,
+      "observed_public_commits": 3120,
+      "observed_public_pull_requests": 112,
+      "followers": 1053,
+      "location": "Montreal, Canada",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 5
     },
     {
       "login": "lemire",
@@ -101,7 +116,7 @@
       "location": "Montreal, Quebec, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 6
     },
     {
       "login": "standardgalactic",
@@ -116,7 +131,22 @@
       "location": "Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 7
+    },
+    {
+      "login": "codereport",
+      "name": "Conor Hoekstra",
+      "profile_url": "https://github.com/codereport",
+      "public_contributions": 2123,
+      "public_repos": 154,
+      "public_gists": 4,
+      "observed_public_commits": 2123,
+      "observed_public_pull_requests": 91,
+      "followers": 1972,
+      "location": "Toronto, ON",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 8
     },
     {
       "login": "jennybc",
@@ -131,37 +161,22 @@
       "location": "Vancouver, BC, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 7
-    },
-    {
-      "login": "Redth",
-      "name": "Jonathan Dick",
-      "profile_url": "https://github.com/Redth",
-      "public_contributions": 1927,
-      "public_repos": 304,
-      "public_gists": 68,
-      "observed_public_commits": 1927,
-      "observed_public_pull_requests": 319,
-      "followers": 1584,
-      "location": "Ontario, Canada",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 8
-    },
-    {
-      "login": "k4yt3x",
-      "name": "K4YT3X",
-      "profile_url": "https://github.com/k4yt3x",
-      "public_contributions": 1898,
-      "public_repos": 114,
-      "public_gists": 9,
-      "observed_public_commits": 1898,
-      "observed_public_pull_requests": 7,
-      "followers": 1215,
-      "location": "Québec City, Canada",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
       "rank": 9
+    },
+    {
+      "login": "meziantou",
+      "name": "Gérald Barré",
+      "profile_url": "https://github.com/meziantou",
+      "public_contributions": 1887,
+      "public_repos": 75,
+      "public_gists": 29,
+      "observed_public_commits": 1887,
+      "observed_public_pull_requests": 563,
+      "followers": 859,
+      "location": "Montreal",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 10
     },
     {
       "login": "tobi",
@@ -176,7 +191,22 @@
       "location": "Ottawa, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 11
+    },
+    {
+      "login": "vincentarelbundock",
+      "name": "Vincent Arel-Bundock",
+      "profile_url": "https://github.com/vincentarelbundock",
+      "public_contributions": 1751,
+      "public_repos": 41,
+      "public_gists": 42,
+      "observed_public_commits": 1751,
+      "observed_public_pull_requests": 152,
+      "followers": 826,
+      "location": "Montreal, Canada",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 12
     },
     {
       "login": "Xe",
@@ -191,7 +221,22 @@
       "location": "Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 13
+    },
+    {
+      "login": "richlander",
+      "name": "Rich Lander",
+      "profile_url": "https://github.com/richlander",
+      "public_contributions": 1667,
+      "public_repos": 233,
+      "public_gists": 111,
+      "observed_public_commits": 1667,
+      "observed_public_pull_requests": 721,
+      "followers": 1594,
+      "location": "Seattle / Toronto",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 14
     },
     {
       "login": "dsherret",
@@ -206,22 +251,7 @@
       "location": "Toronto, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 12
-    },
-    {
-      "login": "markstory",
-      "name": "Mark Story",
-      "profile_url": "https://github.com/markstory",
-      "public_contributions": 1356,
-      "public_repos": 88,
-      "public_gists": 55,
-      "observed_public_commits": 1356,
-      "observed_public_pull_requests": 481,
-      "followers": 1318,
-      "location": "Toronto, Canada",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 13
+      "rank": 15
     },
     {
       "login": "CamDavidsonPilon",
@@ -236,7 +266,7 @@
       "location": "Waterloo, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 16
     },
     {
       "login": "gorhill",
@@ -251,7 +281,7 @@
       "location": "Canada / Québec",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 17
     },
     {
       "login": "chris1111",
@@ -266,22 +296,7 @@
       "location": "Montreal Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 16
-    },
-    {
-      "login": "automateyournetwork",
-      "name": "John Capobianco",
-      "profile_url": "https://github.com/automateyournetwork",
-      "public_contributions": 1031,
-      "public_repos": 214,
-      "public_gists": 0,
-      "observed_public_commits": 1031,
-      "observed_public_pull_requests": 140,
-      "followers": 1355,
-      "location": "Val-des-Monts, Quebec, Canada",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 17
+      "rank": 18
     },
     {
       "login": "fnando",
@@ -294,21 +309,6 @@
       "observed_public_pull_requests": 248,
       "followers": 1980,
       "location": "Vancouver, Canada",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 18
-    },
-    {
-      "login": "syl20bnr",
-      "name": "Sylvain Benner",
-      "profile_url": "https://github.com/syl20bnr",
-      "public_contributions": 852,
-      "public_repos": 160,
-      "public_gists": 25,
-      "observed_public_commits": 852,
-      "observed_public_pull_requests": 54,
-      "followers": 1306,
-      "location": "Quebec City, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 19

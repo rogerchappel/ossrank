@@ -3,8 +3,8 @@
   "slug": "austria",
   "name": "Austria",
   "title": "Top observed GitHub contributors in Austria",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      89890
+      60218
     ]
   },
   "code": "AT",
-  "candidate_count": 8784,
+  "candidate_count": 15269,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -36,86 +36,12 @@
       "public_repos": 166,
       "public_gists": 297,
       "observed_public_commits": 44900,
-      "observed_public_pull_requests": 924,
+      "observed_public_pull_requests": 925,
       "followers": 49356,
       "location": "Vienna & London",
-      "location_confidence": "curated",
+      "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 1
-    },
-    {
-      "login": "nerolation",
-      "name": "Toni Wahrstätter",
-      "profile_url": "https://github.com/nerolation",
-      "public_contributions": 17586,
-      "public_repos": 140,
-      "public_gists": 0,
-      "observed_public_commits": 17586,
-      "observed_public_pull_requests": 181,
-      "followers": 303,
-      "location": "Austria",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 2
-    },
-    {
-      "login": "phax",
-      "name": "Philip Helger",
-      "profile_url": "https://github.com/phax",
-      "public_contributions": 6732,
-      "public_repos": 161,
-      "public_gists": 1,
-      "observed_public_commits": 6732,
-      "observed_public_pull_requests": 33,
-      "followers": 402,
-      "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 3
-    },
-    {
-      "login": "silverwind",
-      "profile_url": "https://github.com/silverwind",
-      "public_contributions": 4276,
-      "public_repos": 426,
-      "public_gists": 27,
-      "observed_public_commits": 4276,
-      "observed_public_pull_requests": 387,
-      "followers": 646,
-      "location": "Austria",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 4
-    },
-    {
-      "login": "alenfour",
-      "name": "Alenfour",
-      "profile_url": "https://github.com/alenfour",
-      "public_contributions": 4040,
-      "public_repos": 32,
-      "public_gists": 0,
-      "observed_public_commits": 4040,
-      "observed_public_pull_requests": 14,
-      "followers": 506,
-      "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 5
-    },
-    {
-      "login": "pbek",
-      "name": "Patrizio Bekerle",
-      "profile_url": "https://github.com/pbek",
-      "public_contributions": 3866,
-      "public_repos": 163,
-      "public_gists": 4,
-      "observed_public_commits": 3866,
-      "observed_public_pull_requests": 68,
-      "followers": 334,
-      "location": "Graz, Austria",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 6
     },
     {
       "login": "mitsuhiko",
@@ -130,7 +56,7 @@
       "location": "Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 2
     },
     {
       "login": "odrobnik",
@@ -140,12 +66,12 @@
       "public_repos": 55,
       "public_gists": 123,
       "observed_public_commits": 2189,
-      "observed_public_pull_requests": 168,
+      "observed_public_pull_requests": 169,
       "followers": 1061,
       "location": "Vienna, Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 3
     },
     {
       "login": "rstropek",
@@ -160,7 +86,7 @@
       "location": "Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 4
     },
     {
       "login": "mikepenz",
@@ -175,7 +101,7 @@
       "location": "Linz, Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 5
     },
     {
       "login": "nefarius",
@@ -190,7 +116,7 @@
       "location": "Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 6
     },
     {
       "login": "norbusan",
@@ -200,42 +126,27 @@
       "public_repos": 99,
       "public_gists": 4,
       "observed_public_commits": 1670,
-      "observed_public_pull_requests": 231,
+      "observed_public_pull_requests": 232,
       "followers": 721,
       "location": "Vienna, Austria and Ishikawa, Japan",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 7
     },
     {
-      "login": "ahocevar",
-      "name": "Andreas Hocevar",
-      "profile_url": "https://github.com/ahocevar",
-      "public_contributions": 1373,
-      "public_repos": 133,
-      "public_gists": 18,
-      "observed_public_commits": 1373,
-      "observed_public_pull_requests": 259,
-      "followers": 416,
-      "location": "Austria",
+      "login": "firefart",
+      "name": "Christian Mehlmauer",
+      "profile_url": "https://github.com/firefart",
+      "public_contributions": 1237,
+      "public_repos": 65,
+      "public_gists": 4,
+      "observed_public_commits": 1237,
+      "observed_public_pull_requests": 39,
+      "followers": 1091,
+      "location": "Vienna",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 13
-    },
-    {
-      "login": "c-ehrlich",
-      "name": "Christopher Ehrlich",
-      "profile_url": "https://github.com/c-ehrlich",
-      "public_contributions": 1345,
-      "public_repos": 188,
-      "public_gists": 3,
-      "observed_public_commits": 1345,
-      "observed_public_pull_requests": 219,
-      "followers": 360,
-      "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 14
+      "rank": 8
     },
     {
       "login": "philipp-spiess",
@@ -250,22 +161,7 @@
       "location": "Vienna, Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 15
-    },
-    {
-      "login": "slhck",
-      "name": "Werner Robitza",
-      "profile_url": "https://github.com/slhck",
-      "public_contributions": 1064,
-      "public_repos": 170,
-      "public_gists": 62,
-      "observed_public_commits": 1064,
-      "observed_public_pull_requests": 45,
-      "followers": 330,
-      "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 16
+      "rank": 9
     },
     {
       "login": "TkDodo",
@@ -280,7 +176,7 @@
       "location": "Vienna, Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 17
+      "rank": 10
     },
     {
       "login": "michaelbromley",
@@ -295,7 +191,7 @@
       "location": "Vienna, Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 11
     },
     {
       "login": "michael",
@@ -310,7 +206,7 @@
       "location": "Linz, Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 12
     },
     {
       "login": "mrousavy",
@@ -323,6 +219,110 @@
       "observed_public_pull_requests": 513,
       "followers": 5182,
       "location": "Vienna, Austria",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 13
+    },
+    {
+      "login": "nikgraf",
+      "name": "Nik Graf",
+      "profile_url": "https://github.com/nikgraf",
+      "public_contributions": 706,
+      "public_repos": 248,
+      "public_gists": 29,
+      "observed_public_commits": 706,
+      "observed_public_pull_requests": 351,
+      "followers": 1560,
+      "location": "Vienna",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 14
+    },
+    {
+      "login": "kevinpapst",
+      "name": "Kevin Papst",
+      "profile_url": "https://github.com/kevinpapst",
+      "public_contributions": 705,
+      "public_repos": 38,
+      "public_gists": 3,
+      "observed_public_commits": 705,
+      "observed_public_pull_requests": 94,
+      "followers": 687,
+      "location": "Austria, Vienna",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 15
+    },
+    {
+      "login": "mrothauer",
+      "name": "Mario Rothauer",
+      "profile_url": "https://github.com/mrothauer",
+      "public_contributions": 652,
+      "public_repos": 16,
+      "public_gists": 0,
+      "observed_public_commits": 652,
+      "observed_public_pull_requests": 44,
+      "followers": 669,
+      "location": "Scharnstein, Austria",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 16
+    },
+    {
+      "login": "DavidXanatos",
+      "profile_url": "https://github.com/DavidXanatos",
+      "public_contributions": 643,
+      "public_repos": 42,
+      "public_gists": 4,
+      "observed_public_commits": 643,
+      "observed_public_pull_requests": 29,
+      "followers": 928,
+      "location": "Vienna",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 17
+    },
+    {
+      "login": "mfussenegger",
+      "name": "Mathias Fußenegger",
+      "profile_url": "https://github.com/mfussenegger",
+      "public_contributions": 637,
+      "public_repos": 89,
+      "public_gists": 4,
+      "observed_public_commits": 637,
+      "observed_public_pull_requests": 513,
+      "followers": 1074,
+      "location": "Austria",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 18
+    },
+    {
+      "login": "untitaker",
+      "name": "Markus Unterwaditzer",
+      "profile_url": "https://github.com/untitaker",
+      "public_contributions": 616,
+      "public_repos": 246,
+      "public_gists": 13,
+      "observed_public_commits": 616,
+      "observed_public_pull_requests": 313,
+      "followers": 732,
+      "location": "Austria",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 19
+    },
+    {
+      "login": "manfredsteyer",
+      "name": "Manfred Steyer",
+      "profile_url": "https://github.com/manfredsteyer",
+      "public_contributions": 568,
+      "public_repos": 736,
+      "public_gists": 2,
+      "observed_public_commits": 568,
+      "observed_public_pull_requests": 9,
+      "followers": 2645,
+      "location": "Graz, Austria",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 20

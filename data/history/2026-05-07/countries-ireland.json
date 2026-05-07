@@ -3,8 +3,8 @@
   "slug": "ireland",
   "name": "Ireland",
   "title": "Top observed GitHub contributors in Ireland",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -20,7 +20,7 @@
     ]
   },
   "code": "IE",
-  "candidate_count": 13665,
+  "candidate_count": 13666,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",

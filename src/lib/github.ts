@@ -170,28 +170,21 @@ async function contributionTotals(client: GitHubClient, login: string, generated
   };
 }
 
-async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, locationTerms?: string[], seedLogins: string[] = [], candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; users: RankedContributor[] }> {
+async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, locationTerms?: string[], candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; users: RankedContributor[] }> {
   const searchQueries = Array.isArray(queries) ? queries : [queries];
-  const details = new Map<string, { user: GitHubUserDetail; seeded: boolean }>();
+  const details = new Map<string, GitHubUserDetail>();
   let total = 0;
+  const perQueryLimit = Math.min(100, Math.max(limit, Math.ceil(candidateLimit / searchQueries.length)));
   for (const query of searchQueries) {
-    const remaining = Math.max(0, candidateLimit - details.size);
-    if (remaining === 0) break;
-    const searchLimit = Math.min(100, Math.max(limit, remaining));
-    const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(userQuery(query), searchLimit, 'followers')}`);
+    const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(userQuery(query), perQueryLimit, 'followers')}`);
     total += search.total_count;
-    const unseen = search.items.slice(0, remaining).filter((item) => item.type !== 'Organization' && !details.has(item.login.toLowerCase()));
+    const unseen = search.items.filter((item) => item.type !== 'Organization' && !details.has(item.login.toLowerCase()));
     const fetched = await Promise.all(unseen.map(async (item) => client.get<GitHubUserDetail>(`/users/${encodeURIComponent(item.login)}`)));
     for (const detail of fetched) {
-      if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: false });
+      if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), detail);
     }
   }
-  for (const login of seedLogins) {
-    if (details.has(login.toLowerCase())) continue;
-    const detail = await client.get<GitHubUserDetail>(`/users/${encodeURIComponent(login)}`);
-    if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: true });
-  }
-  const entries = await Promise.all([...details.values()].map(async ({ user, seeded }) => {
+  const entries = await Promise.all([...details.values()].map(async (user) => {
     let activity: { commits: number; pullRequests: number };
     try {
       activity = await contributionTotals(client, user.login, generatedAt);
@@ -209,29 +202,22 @@ async function collectUsers(client: GitHubClient, queries: string | string[], li
       observed_public_pull_requests: activity.pullRequests,
       followers: user.followers,
       location: user.location ?? undefined,
-      location_confidence: locationTerms ? (seeded ? 'curated' as const : 'profile-text-match' as const) : 'unknown' as const,
+      location_confidence: locationTerms ? 'profile-text-match' as const : 'unknown' as const,
       notable_repositories: []
     };
   }));
   const ranked = rankContributors(entries).slice(0, limit);
-  return { total: total + seedLogins.length, users: ranked };
+  return { total, users: ranked };
 }
 
-async function collectRepos(client: GitHubClient, queries: string[], limit: number, seedRepos: SeedRepo[] = [], candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; projects: RankedProject[] }> {
+async function collectRepos(client: GitHubClient, queries: string[], limit: number, candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; projects: RankedProject[] }> {
   const byName = new Map<string, GitHubRepoSearchItem>();
   let total = 0;
+  const perQueryLimit = Math.min(100, Math.max(limit, Math.ceil(candidateLimit / queries.length)));
   for (const query of queries) {
-    const remaining = Math.max(0, candidateLimit - byName.size);
-    if (remaining === 0) break;
-    const searchLimit = Math.min(100, Math.max(limit, remaining));
-    const search = await client.search<GitHubRepoSearchItem>(`/search/repositories?${encodeQuery(query, searchLimit, 'stars')}`);
+    const search = await client.search<GitHubRepoSearchItem>(`/search/repositories?${encodeQuery(query, perQueryLimit, 'stars')}`);
     total += search.total_count;
     for (const repo of search.items) byName.set(repo.full_name, repo);
-  }
-  for (const seed of seedRepos) {
-    if (byName.has(seed.full_name)) continue;
-    const repo = await client.get<GitHubRepoSearchItem>(`/repos/${seed.full_name}`);
-    byName.set(repo.full_name, repo);
   }
   const projects = rankProjects([...byName.values()].map((repo) => ({
     full_name: repo.full_name,
@@ -241,7 +227,7 @@ async function collectRepos(client: GitHubClient, queries: string[], limit: numb
     active_contributors_30d: Math.max(1, Math.min(1000, Math.round(repo.stargazers_count / 750))),
     primary_language: repo.language ?? undefined
   }))).slice(0, limit);
-  return { total: total + seedRepos.length, projects };
+  return { total, projects };
 }
 
 export async function collectLiveSnapshots(options: GitHubCollectorOptions): Promise<{ snapshots: RankingSnapshot<unknown>[]; remaining?: number }> {
@@ -253,13 +239,13 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const countryConfigs = COUNTRY_CONFIGS.slice(0, options.maxCountries ?? COUNTRY_CONFIGS.length);
   for (const config of countryConfigs) {
     process.stderr.write(`Refreshing ${config.name}...\n`);
-    const result = await collectUsers(client, config.queries, limit, generatedAt, config.locationTerms, config.seedLogins ?? [], config.candidateLimit ?? Math.max(50, limit * 5));
+    const result = await collectUsers(client, config.queries, limit, generatedAt, config.locationTerms, config.candidateLimit ?? Math.max(50, limit * 5));
     countryResults.push({ config, ...result });
   }
-  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, undefined, ['steipete'], Math.max(100, limit * 8));
-  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, undefined, [], Math.max(50, limit * 5));
-  const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit, [{ full_name: 'openclaw/openclaw' }]);
-  const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, [{ full_name: 'openclaw/openclaw' }], Math.max(100, limit * 8));
+  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, undefined, Math.max(100, limit * 8));
+  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, undefined, Math.max(50, limit * 5));
+  const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit);
+  const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, Math.max(100, limit * 8));
 
   const contributorCaveats = [
     'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',

@@ -3,8 +3,8 @@
   "slug": "switzerland",
   "name": "Switzerland",
   "title": "Top observed GitHub contributors in Switzerland",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      38412
+      38414
     ]
   },
   "code": "CH",
-  "candidate_count": 15908,
+  "candidate_count": 15909,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -122,10 +122,10 @@
       "login": "pschatzmann",
       "name": "Phil Schatzmann",
       "profile_url": "https://github.com/pschatzmann",
-      "public_contributions": 1856,
+      "public_contributions": 1858,
       "public_repos": 151,
       "public_gists": 56,
-      "observed_public_commits": 1856,
+      "observed_public_commits": 1858,
       "observed_public_pull_requests": 18,
       "followers": 897,
       "location": "Valais, Switzerland",
@@ -287,10 +287,10 @@
       "login": "sspaeti",
       "name": "Simon Späti",
       "profile_url": "https://github.com/sspaeti",
-      "public_contributions": 1186,
+      "public_contributions": 1187,
       "public_repos": 56,
       "public_gists": 10,
-      "observed_public_commits": 1186,
+      "observed_public_commits": 1187,
       "observed_public_pull_requests": 17,
       "followers": 839,
       "location": "Switzerland",

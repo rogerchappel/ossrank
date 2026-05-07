@@ -3,8 +3,8 @@
   "slug": "norway",
   "name": "Norway",
   "title": "Top observed GitHub contributors in Norway",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      55161
+      55164
     ]
   },
   "code": "NO",
-  "candidate_count": 10968,
+  "candidate_count": 10971,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -92,10 +92,10 @@
       "login": "Starefossen",
       "name": "Hans Kristian Flaatten",
       "profile_url": "https://github.com/Starefossen",
-      "public_contributions": 2648,
+      "public_contributions": 2651,
       "public_repos": 279,
       "public_gists": 72,
-      "observed_public_commits": 2648,
+      "observed_public_commits": 2651,
       "observed_public_pull_requests": 203,
       "followers": 377,
       "location": "Norway",

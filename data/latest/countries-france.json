@@ -3,8 +3,8 @@
   "slug": "france",
   "name": "France",
   "title": "Top observed GitHub contributors in France",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      59670
+      85524
     ]
   },
   "code": "FR",
-  "candidate_count": 61333,
+  "candidate_count": 93583,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -28,6 +28,21 @@
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "entries": [
+    {
+      "login": "Charles-Chrismann",
+      "name": "Charles Chrismann",
+      "profile_url": "https://github.com/Charles-Chrismann",
+      "public_contributions": 30005,
+      "public_repos": 28,
+      "public_gists": 0,
+      "observed_public_commits": 30005,
+      "observed_public_pull_requests": 38,
+      "followers": 15677,
+      "location": "Paris, La Défense",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 1
+    },
     {
       "login": "fasterthanlime",
       "name": "Amos Wenger",
@@ -41,7 +56,7 @@
       "location": "Lyon, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 2
     },
     {
       "login": "nicolas-grekas",
@@ -56,7 +71,7 @@
       "location": "Paris, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 3
     },
     {
       "login": "ornicar",
@@ -71,7 +86,7 @@
       "location": "France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 4
     },
     {
       "login": "crazy-max",
@@ -86,7 +101,7 @@
       "location": "France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 5
     },
     {
       "login": "samber",
@@ -101,34 +116,19 @@
       "location": "Nantes, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 6
     },
     {
       "login": "jedisct1",
       "name": "Frank Denis",
       "profile_url": "https://github.com/jedisct1",
-      "public_contributions": 6094,
+      "public_contributions": 6095,
       "public_repos": 508,
       "public_gists": 810,
-      "observed_public_commits": 6094,
+      "observed_public_commits": 6095,
       "observed_public_pull_requests": 177,
       "followers": 4221,
       "location": "Antibes, France",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 6
-    },
-    {
-      "login": "AlexNesvit",
-      "name": "Alex NESVIT",
-      "profile_url": "https://github.com/AlexNesvit",
-      "public_contributions": 3474,
-      "public_repos": 47,
-      "public_gists": 0,
-      "observed_public_commits": 3474,
-      "observed_public_pull_requests": 8,
-      "followers": 1817,
-      "location": "La Ciotat, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 7
@@ -149,63 +149,34 @@
       "rank": 8
     },
     {
-      "login": "enjoy-digital",
-      "profile_url": "https://github.com/enjoy-digital",
-      "public_contributions": 2622,
-      "public_repos": 57,
-      "public_gists": 11,
-      "observed_public_commits": 2622,
-      "observed_public_pull_requests": 43,
-      "followers": 1557,
-      "location": "France",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 9
-    },
-    {
-      "login": "xoofx",
-      "name": "Alexandre Mutel",
-      "profile_url": "https://github.com/xoofx",
-      "public_contributions": 2461,
-      "public_repos": 104,
-      "public_gists": 52,
-      "observed_public_commits": 2461,
-      "observed_public_pull_requests": 12,
-      "followers": 1652,
-      "location": "Grenoble - France",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 10
-    },
-    {
       "login": "fzaninotto",
       "name": "Francois Zaninotto",
       "profile_url": "https://github.com/fzaninotto",
-      "public_contributions": 2344,
+      "public_contributions": 2345,
       "public_repos": 80,
       "public_gists": 24,
-      "observed_public_commits": 2344,
+      "observed_public_commits": 2345,
       "observed_public_pull_requests": 51,
       "followers": 4311,
       "location": "Nancy, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 9
     },
     {
-      "login": "GuillaumeGomez",
-      "name": "Guillaume Gomez",
-      "profile_url": "https://github.com/GuillaumeGomez",
-      "public_contributions": 2068,
-      "public_repos": 280,
-      "public_gists": 57,
-      "observed_public_commits": 2068,
-      "observed_public_pull_requests": 694,
-      "followers": 1601,
-      "location": "France",
+      "login": "angristan",
+      "name": "Stanislas",
+      "profile_url": "https://github.com/angristan",
+      "public_contributions": 2060,
+      "public_repos": 260,
+      "public_gists": 28,
+      "observed_public_commits": 2060,
+      "observed_public_pull_requests": 126,
+      "followers": 2170,
+      "location": "Paris",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 10
     },
     {
       "login": "Dimillian",
@@ -220,7 +191,7 @@
       "location": "France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 11
     },
     {
       "login": "vincentbernat",
@@ -235,7 +206,7 @@
       "location": "Paris, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 12
     },
     {
       "login": "fabpot",
@@ -250,7 +221,7 @@
       "location": "Paris, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 13
     },
     {
       "login": "p0dalirius",
@@ -265,37 +236,7 @@
       "location": "France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 16
-    },
-    {
-      "login": "maelle",
-      "name": "Maëlle Salmon",
-      "profile_url": "https://github.com/maelle",
-      "public_contributions": 1699,
-      "public_repos": 338,
-      "public_gists": 28,
-      "observed_public_commits": 1699,
-      "observed_public_pull_requests": 361,
-      "followers": 1095,
-      "location": "Nancy, France",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 17
-    },
-    {
-      "login": "moul",
-      "name": "moul",
-      "profile_url": "https://github.com/moul",
-      "public_contributions": 1458,
-      "public_repos": 628,
-      "public_gists": 114,
-      "observed_public_commits": 1458,
-      "observed_public_pull_requests": 149,
-      "followers": 1644,
-      "location": "France",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 18
+      "rank": 14
     },
     {
       "login": "gregberge",
@@ -310,19 +251,79 @@
       "location": "Paris, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
+      "rank": 15
+    },
+    {
+      "login": "StanGirard",
+      "name": "Stan Girard",
+      "profile_url": "https://github.com/StanGirard",
+      "public_contributions": 1357,
+      "public_repos": 79,
+      "public_gists": 12,
+      "observed_public_commits": 1357,
+      "observed_public_pull_requests": 683,
+      "followers": 2377,
+      "location": "Paris",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 16
+    },
+    {
+      "login": "ocornut",
+      "name": "omar",
+      "profile_url": "https://github.com/ocornut",
+      "public_contributions": 1005,
+      "public_repos": 19,
+      "public_gists": 14,
+      "observed_public_commits": 1005,
+      "observed_public_pull_requests": 5,
+      "followers": 4087,
+      "location": "Paris, France",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 17
+    },
+    {
+      "login": "agoncal",
+      "name": "Antonio Goncalves",
+      "profile_url": "https://github.com/agoncal",
+      "public_contributions": 911,
+      "public_repos": 167,
+      "public_gists": 34,
+      "observed_public_commits": 911,
+      "observed_public_pull_requests": 11,
+      "followers": 1428,
+      "location": "Paris",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 18
+    },
+    {
+      "login": "LaurentMazare",
+      "name": "Laurent Mazare",
+      "profile_url": "https://github.com/LaurentMazare",
+      "public_contributions": 896,
+      "public_repos": 100,
+      "public_gists": 9,
+      "observed_public_commits": 896,
+      "observed_public_pull_requests": 145,
+      "followers": 2764,
+      "location": "Paris, France",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
       "rank": 19
     },
     {
-      "login": "Carreau",
-      "name": "M Bussonnier",
-      "profile_url": "https://github.com/Carreau",
-      "public_contributions": 1109,
-      "public_repos": 599,
-      "public_gists": 103,
-      "observed_public_commits": 1109,
-      "observed_public_pull_requests": 458,
-      "followers": 1423,
-      "location": "France",
+      "login": "nadimkobeissi",
+      "name": "Nadim Kobeissi",
+      "profile_url": "https://github.com/nadimkobeissi",
+      "public_contributions": 884,
+      "public_repos": 17,
+      "public_gists": 0,
+      "observed_public_commits": 884,
+      "observed_public_pull_requests": 14,
+      "followers": 1354,
+      "location": "Paris, France",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 20

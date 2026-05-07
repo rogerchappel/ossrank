@@ -12,7 +12,7 @@ export interface RankedContributor {
   observed_public_pull_requests?: number;
   followers: number;
   location?: string;
-  location_confidence?: 'profile-text-match' | 'curated' | 'unknown';
+  location_confidence?: 'profile-text-match' | 'unknown';
   notable_repositories?: string[];
   previous_rank?: number;
 }

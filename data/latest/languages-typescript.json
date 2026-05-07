@@ -3,8 +3,8 @@
   "slug": "typescript",
   "name": "TypeScript",
   "title": "Top observed TypeScript open-source contributors",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-rest-raw-public-metrics",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      92522
+      92523
     ]
   },
   "candidate_count": 6193,
@@ -50,7 +50,7 @@
       "public_repos": 35,
       "public_gists": 0,
       "observed_public_commits": 13768,
-      "observed_public_pull_requests": 9189,
+      "observed_public_pull_requests": 8718,
       "followers": 4703,
       "location": "Worldwide!",
       "location_confidence": "unknown",
@@ -118,10 +118,10 @@
       "login": "arch-yunus",
       "name": "Yunus ÇETİN",
       "profile_url": "https://github.com/arch-yunus",
-      "public_contributions": 3964,
+      "public_contributions": 3965,
       "public_repos": 392,
       "public_gists": 1,
-      "observed_public_commits": 3964,
+      "observed_public_commits": 3965,
       "observed_public_pull_requests": 25,
       "followers": 4821,
       "location": "Türkiye",
@@ -183,7 +183,7 @@
       "public_gists": 0,
       "observed_public_commits": 1805,
       "observed_public_pull_requests": 1913,
-      "followers": 1337,
+      "followers": 1336,
       "location_confidence": "unknown",
       "notable_repositories": [],
       "rank": 11

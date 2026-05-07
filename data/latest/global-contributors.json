@@ -3,8 +3,8 @@
   "slug": "contributors",
   "name": "Global",
   "title": "Top observed GitHub contributors globally",
-  "generated_at": "2026-05-07T07:14:07.725Z",
-  "fresh_until": "2026-05-14T07:14:07.725Z",
+  "generated_at": "2026-05-07T07:35:53.433Z",
+  "fresh_until": "2026-05-14T07:35:53.433Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,10 +16,10 @@
       20
     ],
     "top_10_signal": [
-      94096
+      94229
     ]
   },
-  "candidate_count": 12593,
+  "candidate_count": 12592,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -35,7 +35,7 @@
       "public_repos": 166,
       "public_gists": 297,
       "observed_public_commits": 44900,
-      "observed_public_pull_requests": 924,
+      "observed_public_pull_requests": 925,
       "followers": 49356,
       "location": "Vienna & London",
       "location_confidence": "unknown",
@@ -46,10 +46,10 @@
       "login": "xiaolai",
       "name": "xiaolai",
       "profile_url": "https://github.com/xiaolai",
-      "public_contributions": 13116,
+      "public_contributions": 13119,
       "public_repos": 200,
       "public_gists": 51,
-      "observed_public_commits": 13116,
+      "observed_public_commits": 13119,
       "observed_public_pull_requests": 490,
       "followers": 21772,
       "location": "beijing",
@@ -81,7 +81,7 @@
       "public_gists": 261,
       "observed_public_commits": 6082,
       "observed_public_pull_requests": 1232,
-      "followers": 34702,
+      "followers": 34701,
       "location": "Salt Lake City, Utah, USA",
       "location_confidence": "unknown",
       "notable_repositories": [],
@@ -148,6 +148,21 @@
       "rank": 8
     },
     {
+      "login": "wesm",
+      "name": "Wes McKinney",
+      "profile_url": "https://github.com/wesm",
+      "public_contributions": 3004,
+      "public_repos": 136,
+      "public_gists": 77,
+      "observed_public_commits": 3004,
+      "observed_public_pull_requests": 788,
+      "followers": 16386,
+      "location": "Nashville, TN",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 9
+    },
+    {
       "login": "midudev",
       "name": "Miguel Ángel Durán",
       "profile_url": "https://github.com/midudev",
@@ -160,7 +175,7 @@
       "location": "Barcelona",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 10
     },
     {
       "login": "sindresorhus",
@@ -171,10 +186,10 @@
       "public_gists": 99,
       "observed_public_commits": 2874,
       "observed_public_pull_requests": 155,
-      "followers": 79059,
+      "followers": 79061,
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 11
     },
     {
       "login": "keijiro",
@@ -189,7 +204,7 @@
       "location": "Japan",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 12
     },
     {
       "login": "taylorotwell",
@@ -204,7 +219,7 @@
       "location": "Little Rock, AR",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 13
     },
     {
       "login": "standardgalactic",
@@ -219,22 +234,22 @@
       "location": "Canada",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 14
     },
     {
       "login": "antfu",
       "name": "Anthony Fu",
       "profile_url": "https://github.com/antfu",
-      "public_contributions": 2513,
+      "public_contributions": 2517,
       "public_repos": 394,
       "public_gists": 39,
-      "observed_public_commits": 2513,
-      "observed_public_pull_requests": 190,
+      "observed_public_commits": 2517,
+      "observed_public_pull_requests": 192,
       "followers": 39245,
       "location": "undefined",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 15
     },
     {
       "login": "mitsuhiko",
@@ -249,7 +264,7 @@
       "location": "Austria",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 16
     },
     {
       "login": "mouredev",
@@ -264,22 +279,37 @@
       "location": "Building software with  ♥ from Galicia (Spain) to the world.",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 16
+      "rank": 17
     },
     {
-      "login": "ggerganov",
-      "name": "Georgi Gerganov",
-      "profile_url": "https://github.com/ggerganov",
-      "public_contributions": 2023,
-      "public_repos": 71,
-      "public_gists": 10,
-      "observed_public_commits": 2023,
-      "observed_public_pull_requests": 724,
-      "followers": 19537,
-      "location": "Sofia, Bulgaria",
+      "login": "akitaonrails",
+      "name": "Fabio Akita",
+      "profile_url": "https://github.com/akitaonrails",
+      "public_contributions": 2036,
+      "public_repos": 155,
+      "public_gists": 106,
+      "observed_public_commits": 2036,
+      "observed_public_pull_requests": 11,
+      "followers": 16916,
+      "location": "Brazil",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 17
+      "rank": 18
+    },
+    {
+      "login": "onevcat",
+      "name": "Wei Wang",
+      "profile_url": "https://github.com/onevcat",
+      "public_contributions": 1852,
+      "public_repos": 253,
+      "public_gists": 124,
+      "observed_public_commits": 1852,
+      "observed_public_pull_requests": 364,
+      "followers": 15801,
+      "location": "Yokohama, Japan / China",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 19
     },
     {
       "login": "nilbuild",
@@ -292,36 +322,6 @@
       "observed_public_pull_requests": 25,
       "followers": 39993,
       "location": "United Kingdom",
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 18
-    },
-    {
-      "login": "JakeWharton",
-      "name": "Jake Wharton",
-      "profile_url": "https://github.com/JakeWharton",
-      "public_contributions": 1448,
-      "public_repos": 149,
-      "public_gists": 54,
-      "observed_public_commits": 1448,
-      "observed_public_pull_requests": 515,
-      "followers": 68290,
-      "location": "Pittsburgh, PA, USA",
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 19
-    },
-    {
-      "login": "geohot",
-      "name": "George Hotz",
-      "profile_url": "https://github.com/geohot",
-      "public_contributions": 1444,
-      "public_repos": 102,
-      "public_gists": 33,
-      "observed_public_commits": 1444,
-      "observed_public_pull_requests": 1137,
-      "followers": 46462,
-      "location": "San Diego, CA",
       "location_confidence": "unknown",
       "notable_repositories": [],
       "rank": 20
