@@ -3,8 +3,8 @@
   "slug": "austria",
   "name": "Austria",
   "title": "Top observed GitHub contributors in Austria",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      60218
+      60226
     ]
   },
   "code": "AT",
@@ -27,19 +27,42 @@
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
+  "discovery_queries": [
+    "location:Austria repos:>5 type:user",
+    "location:Vienna repos:>5 type:user",
+    "location:Wien repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Austria repos:>5 type:user",
+      "total": 8782,
+      "accepted": 34
+    },
+    {
+      "query": "location:Vienna repos:>5 type:user",
+      "total": 6153,
+      "accepted": 15
+    },
+    {
+      "query": "location:Wien repos:>5 type:user",
+      "total": 334,
+      "accepted": 34
+    }
+  ],
   "entries": [
     {
       "login": "steipete",
       "name": "Peter Steinberger",
       "profile_url": "https://github.com/steipete",
-      "public_contributions": 44900,
+      "public_contributions": 44903,
       "public_repos": 166,
       "public_gists": 297,
-      "observed_public_commits": 44900,
+      "observed_public_commits": 44903,
       "observed_public_pull_requests": 925,
-      "followers": 49356,
+      "followers": 49355,
       "location": "Vienna & London",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Vienna repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -52,9 +75,10 @@
       "public_gists": 271,
       "observed_public_commits": 2318,
       "observed_public_pull_requests": 143,
-      "followers": 24526,
+      "followers": 24527,
       "location": "Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,7 +93,8 @@
       "observed_public_pull_requests": 169,
       "followers": 1061,
       "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -84,7 +109,8 @@
       "observed_public_pull_requests": 10,
       "followers": 1099,
       "location": "Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -92,20 +118,21 @@
       "login": "mikepenz",
       "name": "Mike Penz",
       "profile_url": "https://github.com/mikepenz",
-      "public_contributions": 1874,
+      "public_contributions": 1879,
       "public_repos": 110,
       "public_gists": 12,
-      "observed_public_commits": 1874,
-      "observed_public_pull_requests": 449,
+      "observed_public_commits": 1879,
+      "observed_public_pull_requests": 451,
       "followers": 5726,
       "location": "Linz, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
     {
       "login": "nefarius",
-      "name": "Benjamin Höglinger-Stelzer",
+      "name": "Benjamin H\u00f6glinger-Stelzer",
       "profile_url": "https://github.com/nefarius",
       "public_contributions": 1774,
       "public_repos": 224,
@@ -114,7 +141,8 @@
       "observed_public_pull_requests": 152,
       "followers": 1496,
       "location": "Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -129,7 +157,8 @@
       "observed_public_pull_requests": 232,
       "followers": 721,
       "location": "Vienna, Austria and Ishikawa, Japan",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,7 +173,8 @@
       "observed_public_pull_requests": 39,
       "followers": 1091,
       "location": "Vienna",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Vienna repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,22 +189,24 @@
       "observed_public_pull_requests": 47,
       "followers": 674,
       "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
     {
       "login": "TkDodo",
-      "name": "Dominik Dorfmeister 🔮",
+      "name": "Dominik Dorfmeister \ud83d\udd2e",
       "profile_url": "https://github.com/TkDodo",
       "public_contributions": 1044,
       "public_repos": 58,
       "public_gists": 2,
       "observed_public_commits": 1044,
-      "observed_public_pull_requests": 598,
+      "observed_public_pull_requests": 599,
       "followers": 3410,
       "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -189,7 +221,8 @@
       "observed_public_pull_requests": 176,
       "followers": 961,
       "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -204,7 +237,8 @@
       "observed_public_pull_requests": 81,
       "followers": 819,
       "location": "Linz, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -219,7 +253,8 @@
       "observed_public_pull_requests": 513,
       "followers": 5182,
       "location": "Vienna, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +269,8 @@
       "observed_public_pull_requests": 351,
       "followers": 1560,
       "location": "Vienna",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Vienna repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -249,7 +285,8 @@
       "observed_public_pull_requests": 94,
       "followers": 687,
       "location": "Austria, Vienna",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -264,7 +301,8 @@
       "observed_public_pull_requests": 44,
       "followers": 669,
       "location": "Scharnstein, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -278,13 +316,14 @@
       "observed_public_pull_requests": 29,
       "followers": 928,
       "location": "Vienna",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Vienna repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
     {
       "login": "mfussenegger",
-      "name": "Mathias Fußenegger",
+      "name": "Mathias Fu\u00dfenegger",
       "profile_url": "https://github.com/mfussenegger",
       "public_contributions": 637,
       "public_repos": 89,
@@ -293,7 +332,8 @@
       "observed_public_pull_requests": 513,
       "followers": 1074,
       "location": "Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -308,7 +348,8 @@
       "observed_public_pull_requests": 313,
       "followers": 732,
       "location": "Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -323,7 +364,8 @@
       "observed_public_pull_requests": 9,
       "followers": 2645,
       "location": "Graz, Austria",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

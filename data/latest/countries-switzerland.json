@@ -3,8 +3,8 @@
   "slug": "switzerland",
   "name": "Switzerland",
   "title": "Top observed GitHub contributors in Switzerland",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      38414
+      38415
     ]
   },
   "code": "CH",
@@ -26,6 +26,16 @@
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
+  ],
+  "discovery_queries": [
+    "location:Switzerland repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Switzerland repos:>5 type:user",
+      "total": 15909,
+      "accepted": 100
+    }
   ],
   "entries": [
     {
@@ -39,7 +49,8 @@
       "observed_public_pull_requests": 2631,
       "followers": 732,
       "location": "Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -54,7 +65,8 @@
       "observed_public_pull_requests": 924,
       "followers": 3000,
       "location": "Zurich, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,7 +81,8 @@
       "observed_public_pull_requests": 399,
       "followers": 638,
       "location": "Zurich, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -84,7 +97,8 @@
       "observed_public_pull_requests": 13,
       "followers": 1533,
       "location": "Basel, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -99,7 +113,8 @@
       "observed_public_pull_requests": 962,
       "followers": 1069,
       "location": "Basel, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -114,7 +129,8 @@
       "observed_public_pull_requests": 103,
       "followers": 2041,
       "location": "Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -129,7 +145,8 @@
       "observed_public_pull_requests": 18,
       "followers": 897,
       "location": "Valais, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -137,14 +154,15 @@
       "login": "alan-agius4",
       "name": "Alan Agius",
       "profile_url": "https://github.com/alan-agius4",
-      "public_contributions": 1790,
+      "public_contributions": 1791,
       "public_repos": 251,
       "public_gists": 11,
-      "observed_public_commits": 1790,
-      "observed_public_pull_requests": 1254,
+      "observed_public_commits": 1791,
+      "observed_public_pull_requests": 1255,
       "followers": 659,
       "location": "Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,7 +177,8 @@
       "observed_public_pull_requests": 231,
       "followers": 6351,
       "location": "Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -174,7 +193,8 @@
       "observed_public_pull_requests": 1367,
       "followers": 3028,
       "location": "Zurich, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -188,8 +208,9 @@
       "observed_public_commits": 1525,
       "observed_public_pull_requests": 7,
       "followers": 1005,
-      "location": "Zürich, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location": "Z\u00fcrich, Switzerland",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -204,13 +225,14 @@
       "observed_public_pull_requests": 21,
       "followers": 3016,
       "location": "Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
     {
       "login": "Tom94",
-      "name": "Thomas Müller",
+      "name": "Thomas M\u00fcller",
       "profile_url": "https://github.com/Tom94",
       "public_contributions": 1371,
       "public_repos": 66,
@@ -218,8 +240,9 @@
       "observed_public_commits": 1371,
       "observed_public_pull_requests": 161,
       "followers": 1277,
-      "location": "Zürich, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location": "Z\u00fcrich, Switzerland",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +257,8 @@
       "observed_public_pull_requests": 48,
       "followers": 669,
       "location": "Olten, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -248,8 +272,9 @@
       "observed_public_commits": 1330,
       "observed_public_pull_requests": 1346,
       "followers": 731,
-      "location": "Zürich, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location": "Z\u00fcrich, Switzerland",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -258,13 +283,14 @@
       "name": "Christian Clauss",
       "profile_url": "https://github.com/cclauss",
       "public_contributions": 1265,
-      "public_repos": 4624,
+      "public_repos": 4620,
       "public_gists": 34,
       "observed_public_commits": 1265,
       "observed_public_pull_requests": 984,
       "followers": 5241,
       "location": "Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -279,22 +305,24 @@
       "observed_public_pull_requests": 276,
       "followers": 840,
       "location": "Basel, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
     {
       "login": "sspaeti",
-      "name": "Simon Späti",
+      "name": "Simon Sp\u00e4ti",
       "profile_url": "https://github.com/sspaeti",
-      "public_contributions": 1187,
+      "public_contributions": 1188,
       "public_repos": 56,
       "public_gists": 10,
-      "observed_public_commits": 1187,
+      "observed_public_commits": 1188,
       "observed_public_pull_requests": 17,
       "followers": 839,
       "location": "Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -309,7 +337,8 @@
       "observed_public_pull_requests": 78,
       "followers": 1132,
       "location": "Lausanne, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -324,7 +353,8 @@
       "observed_public_pull_requests": 11,
       "followers": 1290,
       "location": "Zurich, Switzerland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Switzerland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

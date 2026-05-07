@@ -3,8 +3,8 @@
   "slug": "canada",
   "name": "Canada",
   "title": "Top observed GitHub contributors in Canada",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -27,6 +27,34 @@
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
+  "discovery_queries": [
+    "location:Canada repos:>5 type:user",
+    "location:Toronto repos:>5 type:user",
+    "location:Vancouver repos:>5 type:user",
+    "location:Montreal repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Canada repos:>5 type:user",
+      "total": 63064,
+      "accepted": 25
+    },
+    {
+      "query": "location:Toronto repos:>5 type:user",
+      "total": 33566,
+      "accepted": 21
+    },
+    {
+      "query": "location:Vancouver repos:>5 type:user",
+      "total": 15760,
+      "accepted": 20
+    },
+    {
+      "query": "location:Montreal repos:>5 type:user",
+      "total": 11006,
+      "accepted": 23
+    }
+  ],
   "entries": [
     {
       "login": "thestinger",
@@ -39,7 +67,8 @@
       "observed_public_pull_requests": 1,
       "followers": 1854,
       "location": "Toronto, Ontario, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -54,7 +83,8 @@
       "observed_public_pull_requests": 342,
       "followers": 1622,
       "location": "Toronto, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -68,8 +98,9 @@
       "observed_public_commits": 4757,
       "observed_public_pull_requests": 306,
       "followers": 1997,
-      "location": "Vancouver, British Columbia, Canada 🇨🇦",
-      "location_confidence": "profile-text-match",
+      "location": "Vancouver, British Columbia, Canada \ud83c\udde8\ud83c\udde6",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -84,7 +115,8 @@
       "observed_public_pull_requests": 242,
       "followers": 2137,
       "location": "Vancouver, BC",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -99,7 +131,8 @@
       "observed_public_pull_requests": 112,
       "followers": 1053,
       "location": "Montreal, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -114,7 +147,8 @@
       "observed_public_pull_requests": 281,
       "followers": 7975,
       "location": "Montreal, Quebec, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -123,13 +157,14 @@
       "name": "Cogito Ergo Sum",
       "profile_url": "https://github.com/standardgalactic",
       "public_contributions": 2568,
-      "public_repos": 23630,
+      "public_repos": 23628,
       "public_gists": 113,
       "observed_public_commits": 2568,
       "observed_public_pull_requests": 18,
       "followers": 20776,
       "location": "Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,7 +179,8 @@
       "observed_public_pull_requests": 91,
       "followers": 1972,
       "location": "Toronto, ON",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,13 +195,14 @@
       "observed_public_pull_requests": 142,
       "followers": 5635,
       "location": "Vancouver, BC, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
     {
       "login": "meziantou",
-      "name": "Gérald Barré",
+      "name": "G\u00e9rald Barr\u00e9",
       "profile_url": "https://github.com/meziantou",
       "public_contributions": 1887,
       "public_repos": 75,
@@ -174,13 +211,14 @@
       "observed_public_pull_requests": 563,
       "followers": 859,
       "location": "Montreal",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
     {
       "login": "tobi",
-      "name": "Tobias Lütke",
+      "name": "Tobias L\u00fctke",
       "profile_url": "https://github.com/tobi",
       "public_contributions": 1841,
       "public_repos": 89,
@@ -189,7 +227,8 @@
       "observed_public_pull_requests": 67,
       "followers": 4941,
       "location": "Ottawa, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -204,7 +243,8 @@
       "observed_public_pull_requests": 152,
       "followers": 826,
       "location": "Montreal, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -219,7 +259,8 @@
       "observed_public_pull_requests": 445,
       "followers": 4066,
       "location": "Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +275,8 @@
       "observed_public_pull_requests": 721,
       "followers": 1594,
       "location": "Seattle / Toronto",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -243,13 +285,14 @@
       "name": "David Sherret",
       "profile_url": "https://github.com/dsherret",
       "public_contributions": 1612,
-      "public_repos": 177,
+      "public_repos": 176,
       "public_gists": 19,
       "observed_public_commits": 1612,
       "observed_public_pull_requests": 1070,
       "followers": 2091,
       "location": "Toronto, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -264,7 +307,8 @@
       "observed_public_pull_requests": 22,
       "followers": 4787,
       "location": "Waterloo, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -278,8 +322,9 @@
       "observed_public_commits": 1308,
       "observed_public_pull_requests": 0,
       "followers": 6488,
-      "location": "Canada / Québec",
-      "location_confidence": "profile-text-match",
+      "location": "Canada / Qu\u00e9bec",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -294,7 +339,8 @@
       "observed_public_pull_requests": 33,
       "followers": 1410,
       "location": "Montreal Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -309,7 +355,8 @@
       "observed_public_pull_requests": 248,
       "followers": 1980,
       "location": "Vancouver, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -324,7 +371,8 @@
       "observed_public_pull_requests": 553,
       "followers": 4935,
       "location": "Toronto, Canada",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

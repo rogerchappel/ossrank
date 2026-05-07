@@ -8,7 +8,7 @@ export function rankContributors(entries: Omit<RankedContributor, 'rank'>[]): Ra
 
 export function rankProjects(entries: Omit<RankedProject, 'rank'>[]): RankedProject[] {
   return [...entries]
-    .sort((a, b) => b.pull_requests_merged_7d - a.pull_requests_merged_7d || b.active_contributors_30d - a.active_contributors_30d || b.stars - a.stars || a.full_name.localeCompare(b.full_name))
+    .sort((a, b) => (b.pull_requests_merged_30d ?? b.pull_requests_merged_7d) - (a.pull_requests_merged_30d ?? a.pull_requests_merged_7d) || (b.recent_commits_30d ?? 0) - (a.recent_commits_30d ?? 0) || (b.total_contributors_observed ?? b.active_contributors_30d) - (a.total_contributors_observed ?? a.active_contributors_30d) || b.stars - a.stars || a.full_name.localeCompare(b.full_name))
     .map((entry, index) => ({ ...entry, rank: index + 1 }));
 }
 

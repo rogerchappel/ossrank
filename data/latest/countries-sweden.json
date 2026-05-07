@@ -3,8 +3,8 @@
   "slug": "sweden",
   "name": "Sweden",
   "title": "Top observed GitHub contributors in Sweden",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -20,12 +20,22 @@
     ]
   },
   "code": "SE",
-  "candidate_count": 23570,
+  "candidate_count": 23571,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
+  ],
+  "discovery_queries": [
+    "location:Sweden repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Sweden repos:>5 type:user",
+      "total": 23571,
+      "accepted": 100
+    }
   ],
   "entries": [
     {
@@ -39,22 +49,24 @@
       "observed_public_pull_requests": 109,
       "followers": 988,
       "location": "Uddevalla, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
     {
       "login": "hrydgard",
-      "name": "Henrik Rydgård",
+      "name": "Henrik Rydg\u00e5rd",
       "profile_url": "https://github.com/hrydgard",
       "public_contributions": 2503,
-      "public_repos": 67,
+      "public_repos": 66,
       "public_gists": 5,
       "observed_public_commits": 2503,
       "observed_public_pull_requests": 473,
       "followers": 6646,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,7 +81,8 @@
       "observed_public_pull_requests": 675,
       "followers": 7736,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -84,7 +97,8 @@
       "observed_public_pull_requests": 1,
       "followers": 913,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -99,7 +113,8 @@
       "observed_public_pull_requests": 420,
       "followers": 865,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -111,10 +126,11 @@
       "public_repos": 52,
       "public_gists": 111,
       "observed_public_commits": 1855,
-      "observed_public_pull_requests": 1178,
+      "observed_public_pull_requests": 1180,
       "followers": 7608,
       "location": "the curl factory, Sweden - close to Nebraska",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -123,13 +139,14 @@
       "name": "Muhammad Ahsan Ayaz",
       "profile_url": "https://github.com/AhsanAyaz",
       "public_contributions": 1670,
-      "public_repos": 270,
+      "public_repos": 269,
       "public_gists": 49,
       "observed_public_commits": 1670,
       "observed_public_pull_requests": 42,
       "followers": 1558,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,7 +161,8 @@
       "observed_public_pull_requests": 136,
       "followers": 616,
       "location": "Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,7 +177,8 @@
       "observed_public_pull_requests": 544,
       "followers": 2838,
       "location": "Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -174,7 +193,8 @@
       "observed_public_pull_requests": 357,
       "followers": 5725,
       "location": "Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -189,7 +209,8 @@
       "observed_public_pull_requests": 425,
       "followers": 1898,
       "location": "Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -204,22 +225,24 @@
       "observed_public_pull_requests": 697,
       "followers": 3351,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
     {
       "login": "ErikBjare",
-      "name": "Erik Bjäreholt",
+      "name": "Erik Bj\u00e4reholt",
       "profile_url": "https://github.com/ErikBjare",
       "public_contributions": 979,
       "public_repos": 187,
       "public_gists": 14,
       "observed_public_commits": 979,
       "observed_public_pull_requests": 300,
-      "followers": 3025,
-      "location": "Lund, Sweden 🇸🇪",
-      "location_confidence": "profile-text-match",
+      "followers": 3026,
+      "location": "Lund, Sweden \ud83c\uddf8\ud83c\uddea",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +257,8 @@
       "observed_public_pull_requests": 236,
       "followers": 633,
       "location": "Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -249,7 +273,8 @@
       "observed_public_pull_requests": 160,
       "followers": 738,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -264,7 +289,8 @@
       "observed_public_pull_requests": 600,
       "followers": 2305,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -279,7 +305,8 @@
       "observed_public_pull_requests": 67,
       "followers": 1209,
       "location": "Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -294,7 +321,8 @@
       "observed_public_pull_requests": 0,
       "followers": 568,
       "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -309,7 +337,8 @@
       "observed_public_pull_requests": 249,
       "followers": 782,
       "location": "Sweden",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -323,8 +352,9 @@
       "observed_public_commits": 662,
       "observed_public_pull_requests": 134,
       "followers": 3121,
-      "location": "Malmö, Sweden",
-      "location_confidence": "profile-text-match",
+      "location": "Malm\u00f6, Sweden",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Sweden repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

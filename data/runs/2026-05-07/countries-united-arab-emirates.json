@@ -98,7 +98,7 @@
       "observed_public_commits": 181,
       "observed_public_pull_requests": 16,
       "followers": 892,
-      "location": "🇦🇪 United Arab Emirates (Dubai & RAK)",
+      "location": "\ud83c\udde6\ud83c\uddea United Arab Emirates (Dubai & RAK)",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 5
@@ -135,7 +135,7 @@
     },
     {
       "login": "seyhunak",
-      "name": "Seyhun Akyürek",
+      "name": "Seyhun Aky\u00fcrek",
       "profile_url": "https://github.com/seyhunak",
       "public_contributions": 56,
       "public_repos": 46,

@@ -3,8 +3,8 @@
   "slug": "contributors",
   "name": "Global",
   "title": "Top observed GitHub contributors globally",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,29 +16,46 @@
       20
     ],
     "top_10_signal": [
-      94229
+      94233
     ]
   },
-  "candidate_count": 12592,
+  "candidate_count": 12593,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
+  "discovery_queries": [
+    "followers:>1000 repos:>20 type:user",
+    "repos:>100 followers:>500 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "followers:>1000 repos:>20 type:user",
+      "total": 6474,
+      "accepted": 80
+    },
+    {
+      "query": "repos:>100 followers:>500 type:user",
+      "total": 6119,
+      "accepted": 33
+    }
+  ],
   "entries": [
     {
       "login": "steipete",
       "name": "Peter Steinberger",
       "profile_url": "https://github.com/steipete",
-      "public_contributions": 44900,
+      "public_contributions": 44903,
       "public_repos": 166,
       "public_gists": 297,
-      "observed_public_commits": 44900,
+      "observed_public_commits": 44903,
       "observed_public_pull_requests": 925,
-      "followers": 49356,
+      "followers": 49355,
       "location": "Vienna & London",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -46,14 +63,15 @@
       "login": "xiaolai",
       "name": "xiaolai",
       "profile_url": "https://github.com/xiaolai",
-      "public_contributions": 13119,
+      "public_contributions": 13120,
       "public_repos": 200,
       "public_gists": 51,
-      "observed_public_commits": 13119,
+      "observed_public_commits": 13120,
       "observed_public_pull_requests": 490,
       "followers": 21772,
       "location": "beijing",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,6 +87,7 @@
       "followers": 20715,
       "location": "Hangzhou",
       "location_confidence": "unknown",
+      "discovered_by_query": "repos:>100 followers:>500 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -84,6 +103,7 @@
       "followers": 34701,
       "location": "Salt Lake City, Utah, USA",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -96,9 +116,10 @@
       "public_gists": 33,
       "observed_public_commits": 4203,
       "observed_public_pull_requests": 24,
-      "followers": 59731,
+      "followers": 59732,
       "location": "San Francisco",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -114,6 +135,7 @@
       "followers": 22437,
       "location": "Los Angeles, CA",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -129,6 +151,7 @@
       "followers": 29834,
       "location": "Virginia, USA, Earth, Milky Way.",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,6 +167,7 @@
       "followers": 26606,
       "location": "Houston, TX",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,12 +183,13 @@
       "followers": 16386,
       "location": "Nashville, TN",
       "location_confidence": "unknown",
+      "discovered_by_query": "repos:>100 followers:>500 type:user",
       "notable_repositories": [],
       "rank": 9
     },
     {
       "login": "midudev",
-      "name": "Miguel Ángel Durán",
+      "name": "Miguel \u00c1ngel Dur\u00e1n",
       "profile_url": "https://github.com/midudev",
       "public_contributions": 2928,
       "public_repos": 225,
@@ -174,6 +199,7 @@
       "followers": 37848,
       "location": "Barcelona",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -188,6 +214,7 @@
       "observed_public_pull_requests": 155,
       "followers": 79061,
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -203,6 +230,7 @@
       "followers": 23597,
       "location": "Japan",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -218,6 +246,7 @@
       "followers": 35492,
       "location": "Little Rock, AR",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -226,13 +255,14 @@
       "name": "Cogito Ergo Sum",
       "profile_url": "https://github.com/standardgalactic",
       "public_contributions": 2568,
-      "public_repos": 23630,
+      "public_repos": 23628,
       "public_gists": 113,
       "observed_public_commits": 2568,
       "observed_public_pull_requests": 18,
       "followers": 20776,
       "location": "Canada",
       "location_confidence": "unknown",
+      "discovered_by_query": "repos:>100 followers:>500 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -244,10 +274,11 @@
       "public_repos": 394,
       "public_gists": 39,
       "observed_public_commits": 2517,
-      "observed_public_pull_requests": 192,
-      "followers": 39245,
+      "observed_public_pull_requests": 194,
+      "followers": 39246,
       "location": "undefined",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -260,9 +291,10 @@
       "public_gists": 271,
       "observed_public_commits": 2318,
       "observed_public_pull_requests": 143,
-      "followers": 24526,
+      "followers": 24527,
       "location": "Austria",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -276,8 +308,9 @@
       "observed_public_commits": 2233,
       "observed_public_pull_requests": 0,
       "followers": 35438,
-      "location": "Building software with  ♥ from Galicia (Spain) to the world.",
+      "location": "Building software with  \u2665 from Galicia (Spain) to the world.",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -293,6 +326,7 @@
       "followers": 16916,
       "location": "Brazil",
       "location_confidence": "unknown",
+      "discovered_by_query": "repos:>100 followers:>500 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -308,6 +342,7 @@
       "followers": 15801,
       "location": "Yokohama, Japan / China",
       "location_confidence": "unknown",
+      "discovered_by_query": "repos:>100 followers:>500 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -323,6 +358,7 @@
       "followers": 39993,
       "location": "United Kingdom",
       "location_confidence": "unknown",
+      "discovered_by_query": "followers:>1000 repos:>20 type:user",
       "notable_repositories": [],
       "rank": 20
     }

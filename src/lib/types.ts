@@ -12,7 +12,8 @@ export interface RankedContributor {
   observed_public_pull_requests?: number;
   followers: number;
   location?: string;
-  location_confidence?: 'profile-text-match' | 'unknown';
+  location_confidence?: 'exact-country' | 'city-match' | 'multi-location' | 'profile-text-match' | 'unknown';
+  discovered_by_query?: string;
   notable_repositories?: string[];
   previous_rank?: number;
 }
@@ -23,7 +24,14 @@ export interface RankedProject {
   url: string;
   stars: number;
   pull_requests_merged_7d: number;
+  pull_requests_merged_30d?: number;
+  recent_commits_30d?: number;
   active_contributors_30d: number;
+  total_contributors_observed?: number;
+  releases_90d?: number;
+  open_issues?: number;
+  pushed_at?: string;
+  discovered_by_query?: string;
   primary_language?: string;
   previous_rank?: number;
 }
@@ -48,6 +56,8 @@ export interface RankingSnapshot<TEntry> {
   candidate_count: number;
   caveats: string[];
   history: TrendSeries;
+  discovery_queries?: string[];
+  candidate_count_by_query?: Array<{ query: string; total: number; accepted: number }>;
   entries: TEntry[];
 }
 

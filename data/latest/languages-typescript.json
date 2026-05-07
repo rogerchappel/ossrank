@@ -3,8 +3,8 @@
   "slug": "typescript",
   "name": "TypeScript",
   "title": "Top observed TypeScript open-source contributors",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-rest-raw-public-metrics",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      92523
+      92526
     ]
   },
   "candidate_count": 6193,
@@ -26,10 +26,20 @@
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
+  "discovery_queries": [
+    "language:TypeScript repos:>10 followers:>25 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "language:TypeScript repos:>10 followers:>25 type:user",
+      "total": 6193,
+      "accepted": 100
+    }
+  ],
   "entries": [
     {
       "login": "buraksocial",
-      "name": "Burâk",
+      "name": "Bur\u00e2k",
       "profile_url": "https://github.com/buraksocial",
       "public_contributions": 39168,
       "public_repos": 17,
@@ -39,6 +49,7 @@
       "followers": 3191,
       "location": "Izmir, Turkey",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -46,14 +57,15 @@
       "login": "azure-sdk",
       "name": "Azure SDK Bot",
       "profile_url": "https://github.com/azure-sdk",
-      "public_contributions": 13768,
+      "public_contributions": 13769,
       "public_repos": 35,
       "public_gists": 0,
-      "observed_public_commits": 13768,
-      "observed_public_pull_requests": 8718,
+      "observed_public_commits": 13769,
+      "observed_public_pull_requests": 9189,
       "followers": 4703,
       "location": "Worldwide!",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -63,12 +75,13 @@
       "profile_url": "https://github.com/ruvnet",
       "public_contributions": 10303,
       "public_repos": 174,
-      "public_gists": 322,
+      "public_gists": 323,
       "observed_public_commits": 10303,
-      "observed_public_pull_requests": 691,
-      "followers": 7555,
+      "observed_public_pull_requests": 692,
+      "followers": 7558,
       "location": "0x",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -76,13 +89,14 @@
       "login": "Pawdroid",
       "name": "Pawdroid",
       "profile_url": "https://github.com/Pawdroid",
-      "public_contributions": 8437,
+      "public_contributions": 8438,
       "public_repos": 17,
       "public_gists": 0,
-      "observed_public_commits": 8437,
+      "observed_public_commits": 8438,
       "observed_public_pull_requests": 0,
       "followers": 2016,
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -97,6 +111,7 @@
       "observed_public_pull_requests": 2,
       "followers": 1716,
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -111,21 +126,23 @@
       "observed_public_pull_requests": 2240,
       "followers": 2027,
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 6
     },
     {
       "login": "arch-yunus",
-      "name": "Yunus ÇETİN",
+      "name": "Yunus \u00c7ET\u0130N",
       "profile_url": "https://github.com/arch-yunus",
-      "public_contributions": 3965,
+      "public_contributions": 3966,
       "public_repos": 392,
       "public_gists": 1,
-      "observed_public_commits": 3965,
+      "observed_public_commits": 3966,
       "observed_public_pull_requests": 25,
-      "followers": 4821,
-      "location": "Türkiye",
+      "followers": 4822,
+      "location": "T\u00fcrkiye",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -141,6 +158,7 @@
       "followers": 1772,
       "location": "Berlin",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -156,6 +174,7 @@
       "followers": 2759,
       "location": "Bothell, WA",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -171,6 +190,7 @@
       "followers": 8712,
       "location": "Poland",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -178,19 +198,20 @@
       "login": "mvanhorn",
       "name": "Matt Van Horn",
       "profile_url": "https://github.com/mvanhorn",
-      "public_contributions": 1805,
+      "public_contributions": 1806,
       "public_repos": 906,
       "public_gists": 0,
-      "observed_public_commits": 1805,
+      "observed_public_commits": 1806,
       "observed_public_pull_requests": 1913,
-      "followers": 1336,
+      "followers": 1337,
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 11
     },
     {
       "login": "kijai",
-      "name": "Jukka Seppänen",
+      "name": "Jukka Sepp\u00e4nen",
       "profile_url": "https://github.com/kijai",
       "public_contributions": 1713,
       "public_repos": 106,
@@ -200,6 +221,7 @@
       "followers": 6048,
       "location": "Finland",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -208,13 +230,14 @@
       "name": "LongYinan",
       "profile_url": "https://github.com/Brooooooklyn",
       "public_contributions": 1696,
-      "public_repos": 297,
+      "public_repos": 296,
       "public_gists": 5,
       "observed_public_commits": 1696,
       "observed_public_pull_requests": 904,
       "followers": 5017,
       "location": "Singapore",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -223,13 +246,14 @@
       "name": "Muhammad Ahsan Ayaz",
       "profile_url": "https://github.com/AhsanAyaz",
       "public_contributions": 1670,
-      "public_repos": 270,
+      "public_repos": 269,
       "public_gists": 49,
       "observed_public_commits": 1670,
       "observed_public_pull_requests": 42,
       "followers": 1558,
       "location": "Stockholm, Sweden",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -238,13 +262,14 @@
       "name": "David Sherret",
       "profile_url": "https://github.com/dsherret",
       "public_contributions": 1612,
-      "public_repos": 177,
+      "public_repos": 176,
       "public_gists": 19,
       "observed_public_commits": 1612,
       "observed_public_pull_requests": 1070,
       "followers": 2091,
       "location": "Toronto, Canada",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -260,6 +285,7 @@
       "followers": 1976,
       "location": "Remote",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -275,6 +301,7 @@
       "followers": 1223,
       "location": "San Francisco, CA",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -290,6 +317,7 @@
       "followers": 2215,
       "location": "Kerem Re'im, Israel ",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -305,6 +333,7 @@
       "followers": 1747,
       "location": "Zurich",
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -319,6 +348,7 @@
       "observed_public_pull_requests": 132,
       "followers": 1130,
       "location_confidence": "unknown",
+      "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
       "rank": 20
     }

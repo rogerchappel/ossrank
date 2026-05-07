@@ -3,8 +3,8 @@
   "slug": "germany",
   "name": "Germany",
   "title": "Top observed GitHub contributors in Germany",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,30 +16,53 @@
       20
     ],
     "top_10_signal": [
-      33099
+      33101
     ]
   },
   "code": "DE",
-  "candidate_count": 129233,
+  "candidate_count": 129236,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
+  "discovery_queries": [
+    "location:Germany repos:>5 type:user",
+    "location:Berlin repos:>5 type:user",
+    "location:Munich repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Germany repos:>5 type:user",
+      "total": 89644,
+      "accepted": 34
+    },
+    {
+      "query": "location:Berlin repos:>5 type:user",
+      "total": 28706,
+      "accepted": 22
+    },
+    {
+      "query": "location:Munich repos:>5 type:user",
+      "total": 10886,
+      "accepted": 32
+    }
+  ],
   "entries": [
     {
       "login": "alexeygrigorev",
       "name": "Alexey Grigorev",
       "profile_url": "https://github.com/alexeygrigorev",
-      "public_contributions": 6311,
+      "public_contributions": 6313,
       "public_repos": 170,
       "public_gists": 39,
-      "observed_public_commits": 6311,
+      "observed_public_commits": 6313,
       "observed_public_pull_requests": 20,
-      "followers": 5556,
+      "followers": 5557,
       "location": "Berlin, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -54,7 +77,8 @@
       "observed_public_pull_requests": 56,
       "followers": 4808,
       "location": "Munich, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,7 +93,8 @@
       "observed_public_pull_requests": 574,
       "followers": 1381,
       "location": "Germany, Munich",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -84,7 +109,8 @@
       "observed_public_pull_requests": 956,
       "followers": 14140,
       "location": "Berlin, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -99,7 +125,8 @@
       "observed_public_pull_requests": 50,
       "followers": 7607,
       "location": "Siegburg, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -114,7 +141,8 @@
       "observed_public_pull_requests": 556,
       "followers": 2439,
       "location": "Berlin",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -129,7 +157,8 @@
       "observed_public_pull_requests": 129,
       "followers": 3036,
       "location": "Berlin",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,7 +173,8 @@
       "observed_public_pull_requests": 54,
       "followers": 6517,
       "location": "Berlin",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,7 +189,8 @@
       "observed_public_pull_requests": 160,
       "followers": 2468,
       "location": "Berlin, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -174,7 +205,8 @@
       "observed_public_pull_requests": 30,
       "followers": 1489,
       "location": "Munich, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -189,7 +221,8 @@
       "observed_public_pull_requests": 167,
       "followers": 2059,
       "location": "Munich, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -204,7 +237,8 @@
       "observed_public_pull_requests": 303,
       "followers": 1777,
       "location": "Munich",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -219,7 +253,8 @@
       "observed_public_pull_requests": 14,
       "followers": 769,
       "location": "Munich",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +269,8 @@
       "observed_public_pull_requests": 218,
       "followers": 5281,
       "location": "Earth, Europe, Ukraine, Kiev, Kyiv, USA, Spain, Germany, Italy, China",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -249,7 +285,8 @@
       "observed_public_pull_requests": 116,
       "followers": 1160,
       "location": "Munich, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -264,7 +301,8 @@
       "observed_public_pull_requests": 24,
       "followers": 2984,
       "location": "Berlin",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -279,7 +317,8 @@
       "observed_public_pull_requests": 2,
       "followers": 7053,
       "location": "Berlin",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -294,13 +333,14 @@
       "observed_public_pull_requests": 582,
       "followers": 8013,
       "location": "Stuttgart, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
     {
       "login": "tiangolo",
-      "name": "Sebastián Ramírez",
+      "name": "Sebasti\u00e1n Ram\u00edrez",
       "profile_url": "https://github.com/tiangolo",
       "public_contributions": 871,
       "public_repos": 48,
@@ -309,7 +349,8 @@
       "observed_public_pull_requests": 578,
       "followers": 31219,
       "location": "Berlin, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -317,14 +358,15 @@
       "login": "nikic",
       "name": "Nikita Popov",
       "profile_url": "https://github.com/nikic",
-      "public_contributions": 798,
+      "public_contributions": 800,
       "public_repos": 115,
       "public_gists": 73,
-      "observed_public_commits": 798,
+      "observed_public_commits": 800,
       "observed_public_pull_requests": 448,
       "followers": 6476,
       "location": "Berlin, Germany",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

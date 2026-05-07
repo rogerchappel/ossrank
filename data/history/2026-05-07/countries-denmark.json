@@ -3,8 +3,8 @@
   "slug": "denmark",
   "name": "Denmark",
   "title": "Top observed GitHub contributors in Denmark",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -20,12 +20,22 @@
     ]
   },
   "code": "DK",
-  "candidate_count": 10871,
+  "candidate_count": 10872,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
+  ],
+  "discovery_queries": [
+    "location:Denmark repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Denmark repos:>5 type:user",
+      "total": 10872,
+      "accepted": 100
+    }
   ],
   "entries": [
     {
@@ -39,7 +49,8 @@
       "observed_public_pull_requests": 382,
       "followers": 275,
       "location": "Copenhagen - Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -54,7 +65,8 @@
       "observed_public_pull_requests": 56,
       "followers": 297,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,13 +81,14 @@
       "observed_public_pull_requests": 71,
       "followers": 539,
       "location": "Holstebro, Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
     {
       "login": "soegaard",
-      "name": "Jens Axel Søgaard",
+      "name": "Jens Axel S\u00f8gaard",
       "profile_url": "https://github.com/soegaard",
       "public_contributions": 3618,
       "public_repos": 150,
@@ -84,7 +97,8 @@
       "observed_public_pull_requests": 429,
       "followers": 258,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -99,7 +113,8 @@
       "observed_public_pull_requests": 159,
       "followers": 1225,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -114,13 +129,14 @@
       "observed_public_pull_requests": 279,
       "followers": 409,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
     {
       "login": "akien-mga",
-      "name": "Rémi Verschelde",
+      "name": "R\u00e9mi Verschelde",
       "profile_url": "https://github.com/akien-mga",
       "public_contributions": 1610,
       "public_repos": 218,
@@ -129,7 +145,8 @@
       "observed_public_pull_requests": 186,
       "followers": 1729,
       "location": "Copenhagen, Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,7 +161,8 @@
       "observed_public_pull_requests": 332,
       "followers": 650,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,7 +177,8 @@
       "observed_public_pull_requests": 405,
       "followers": 382,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -174,7 +193,8 @@
       "observed_public_pull_requests": 90,
       "followers": 329,
       "location": "Copenhagen, Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -189,7 +209,8 @@
       "observed_public_pull_requests": 45,
       "followers": 360,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -204,13 +225,14 @@
       "observed_public_pull_requests": 428,
       "followers": 471,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
     {
       "login": "alexrp",
-      "name": "Alex Rønne Petersen",
+      "name": "Alex R\u00f8nne Petersen",
       "profile_url": "https://github.com/alexrp",
       "public_contributions": 873,
       "public_repos": 10,
@@ -219,7 +241,8 @@
       "observed_public_pull_requests": 174,
       "followers": 410,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +257,8 @@
       "observed_public_pull_requests": 5,
       "followers": 563,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -248,8 +272,9 @@
       "observed_public_commits": 848,
       "observed_public_pull_requests": 4,
       "followers": 604,
-      "location": "Denmark ☁️",
-      "location_confidence": "profile-text-match",
+      "location": "Denmark \u2601\ufe0f",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -257,14 +282,15 @@
       "login": "davidpdrsn",
       "name": "David Pedersen",
       "profile_url": "https://github.com/davidpdrsn",
-      "public_contributions": 826,
+      "public_contributions": 828,
       "public_repos": 175,
       "public_gists": 79,
-      "observed_public_commits": 826,
-      "observed_public_pull_requests": 148,
+      "observed_public_commits": 828,
+      "observed_public_pull_requests": 149,
       "followers": 1728,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -279,7 +305,8 @@
       "observed_public_pull_requests": 17,
       "followers": 951,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -294,7 +321,8 @@
       "observed_public_pull_requests": 753,
       "followers": 914,
       "location": "Aalborg, Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -309,7 +337,8 @@
       "observed_public_pull_requests": 729,
       "followers": 576,
       "location": "Copenhagen, Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -324,7 +353,8 @@
       "observed_public_pull_requests": 257,
       "followers": 833,
       "location": "Denmark",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

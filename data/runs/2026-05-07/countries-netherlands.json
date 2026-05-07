@@ -3,8 +3,8 @@
   "slug": "netherlands",
   "name": "Netherlands",
   "title": "Top observed GitHub contributors in Netherlands",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,16 +16,32 @@
       20
     ],
     "top_10_signal": [
-      40629
+      40631
     ]
   },
   "code": "NL",
-  "candidate_count": 40286,
+  "candidate_count": 40283,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
+  ],
+  "discovery_queries": [
+    "location:Netherlands repos:>5 type:user",
+    "location:Amsterdam repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Netherlands repos:>5 type:user",
+      "total": 28079,
+      "accepted": 50
+    },
+    {
+      "query": "location:Amsterdam repos:>5 type:user",
+      "total": 12204,
+      "accepted": 38
+    }
   ],
   "entries": [
     {
@@ -39,7 +55,8 @@
       "observed_public_pull_requests": 2073,
       "followers": 2040,
       "location": "Amsterdam, Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -54,13 +71,14 @@
       "observed_public_pull_requests": 663,
       "followers": 1277,
       "location": "Amsterdam, Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
     {
       "login": "can1357",
-      "name": "Can Bölük",
+      "name": "Can B\u00f6l\u00fck",
       "profile_url": "https://github.com/can1357",
       "public_contributions": 4560,
       "public_repos": 51,
@@ -69,7 +87,8 @@
       "observed_public_pull_requests": 35,
       "followers": 2420,
       "location": "The Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -77,14 +96,15 @@
       "login": "thaJeztah",
       "name": "Sebastiaan van Stijn",
       "profile_url": "https://github.com/thaJeztah",
-      "public_contributions": 4311,
+      "public_contributions": 4313,
       "public_repos": 406,
       "public_gists": 43,
-      "observed_public_commits": 4311,
+      "observed_public_commits": 4313,
       "observed_public_pull_requests": 1983,
       "followers": 1914,
       "location": "Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -93,13 +113,14 @@
       "name": "Pooya Parsa",
       "profile_url": "https://github.com/pi0",
       "public_contributions": 3642,
-      "public_repos": 432,
+      "public_repos": 431,
       "public_gists": 84,
       "observed_public_commits": 3642,
       "observed_public_pull_requests": 494,
       "followers": 4998,
       "location": "Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -114,7 +135,8 @@
       "observed_public_pull_requests": 1150,
       "followers": 1357,
       "location": "Amsterdam, The Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -129,7 +151,8 @@
       "observed_public_pull_requests": 723,
       "followers": 2546,
       "location": "The Netherlands, Helmond",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,7 +167,8 @@
       "observed_public_pull_requests": 27,
       "followers": 2727,
       "location": "Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,7 +183,8 @@
       "observed_public_pull_requests": 6,
       "followers": 1213,
       "location": "Amsterdam",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -171,10 +196,11 @@
       "public_repos": 424,
       "public_gists": 156,
       "observed_public_commits": 1510,
-      "observed_public_pull_requests": 398,
+      "observed_public_pull_requests": 399,
       "followers": 1894,
       "location": "Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -189,7 +215,8 @@
       "observed_public_pull_requests": 305,
       "followers": 1509,
       "location": "Wageningen, Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -204,7 +231,8 @@
       "observed_public_pull_requests": 552,
       "followers": 2722,
       "location": "Amsterdam",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -213,13 +241,14 @@
       "name": "Moussa Ouallaf",
       "profile_url": "https://github.com/tr4m0ryp",
       "public_contributions": 1225,
-      "public_repos": 92,
+      "public_repos": 91,
       "public_gists": 0,
       "observed_public_commits": 1225,
       "observed_public_pull_requests": 20,
       "followers": 1540,
       "location": "Amsterdam",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +263,8 @@
       "observed_public_pull_requests": 244,
       "followers": 1639,
       "location": "Amsterdam",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -243,13 +273,14 @@
       "name": "Karl Horky",
       "profile_url": "https://github.com/karlhorky",
       "public_contributions": 897,
-      "public_repos": 541,
+      "public_repos": 540,
       "public_gists": 110,
       "observed_public_commits": 897,
       "observed_public_pull_requests": 293,
       "followers": 934,
       "location": "Amsterdam",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -264,7 +295,8 @@
       "observed_public_pull_requests": 777,
       "followers": 3067,
       "location": "Utrecht, Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -279,7 +311,8 @@
       "observed_public_pull_requests": 0,
       "followers": 1684,
       "location": "Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -294,7 +327,8 @@
       "observed_public_pull_requests": 522,
       "followers": 1521,
       "location": "Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -309,7 +343,8 @@
       "observed_public_pull_requests": 166,
       "followers": 3401,
       "location": "The Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -324,7 +359,8 @@
       "observed_public_pull_requests": 423,
       "followers": 6877,
       "location": "Noord-Brabant, the Netherlands",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

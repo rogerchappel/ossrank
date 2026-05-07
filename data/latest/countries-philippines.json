@@ -255,7 +255,7 @@
     },
     {
       "login": "carlcastanas",
-      "name": "Carl Andrew Castañas",
+      "name": "Carl Andrew Casta\u00f1as",
       "profile_url": "https://github.com/carlcastanas",
       "public_contributions": 4,
       "public_repos": 55,
@@ -278,7 +278,7 @@
       "observed_public_commits": 3,
       "observed_public_pull_requests": 0,
       "followers": 778,
-      "location": "Las Piñas City, Philippines",
+      "location": "Las Pi\u00f1as City, Philippines",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 17

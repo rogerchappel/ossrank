@@ -3,8 +3,8 @@
   "slug": "france",
   "name": "France",
   "title": "Top observed GitHub contributors in France",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,16 +16,32 @@
       20
     ],
     "top_10_signal": [
-      85524
+      85532
     ]
   },
   "code": "FR",
-  "candidate_count": 93583,
+  "candidate_count": 93584,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
+  ],
+  "discovery_queries": [
+    "location:France repos:>5 type:user",
+    "location:Paris repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:France repos:>5 type:user",
+      "total": 61334,
+      "accepted": 50
+    },
+    {
+      "query": "location:Paris repos:>5 type:user",
+      "total": 32250,
+      "accepted": 33
+    }
   ],
   "entries": [
     {
@@ -38,8 +54,9 @@
       "observed_public_commits": 30005,
       "observed_public_pull_requests": 38,
       "followers": 15677,
-      "location": "Paris, La Défense",
-      "location_confidence": "profile-text-match",
+      "location": "Paris, La D\u00e9fense",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Paris repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -54,7 +71,8 @@
       "observed_public_pull_requests": 1471,
       "followers": 4675,
       "location": "Lyon, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,7 +87,8 @@
       "observed_public_pull_requests": 553,
       "followers": 2101,
       "location": "Paris, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -77,14 +96,15 @@
       "login": "ornicar",
       "name": "Thibault Duplessis",
       "profile_url": "https://github.com/ornicar",
-      "public_contributions": 7362,
+      "public_contributions": 7368,
       "public_repos": 426,
       "public_gists": 429,
-      "observed_public_commits": 7362,
+      "observed_public_commits": 7368,
       "observed_public_pull_requests": 227,
       "followers": 6389,
       "location": "France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -99,7 +119,8 @@
       "observed_public_pull_requests": 1480,
       "followers": 2737,
       "location": "France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -114,7 +135,8 @@
       "observed_public_pull_requests": 285,
       "followers": 2081,
       "location": "Nantes, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -122,14 +144,15 @@
       "login": "jedisct1",
       "name": "Frank Denis",
       "profile_url": "https://github.com/jedisct1",
-      "public_contributions": 6095,
+      "public_contributions": 6096,
       "public_repos": 508,
       "public_gists": 810,
-      "observed_public_commits": 6095,
+      "observed_public_commits": 6096,
       "observed_public_pull_requests": 177,
       "followers": 4221,
       "location": "Antibes, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,7 +167,8 @@
       "observed_public_pull_requests": 349,
       "followers": 2333,
       "location": "Creil, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -152,14 +176,15 @@
       "login": "fzaninotto",
       "name": "Francois Zaninotto",
       "profile_url": "https://github.com/fzaninotto",
-      "public_contributions": 2345,
+      "public_contributions": 2346,
       "public_repos": 80,
       "public_gists": 24,
-      "observed_public_commits": 2345,
+      "observed_public_commits": 2346,
       "observed_public_pull_requests": 51,
       "followers": 4311,
       "location": "Nancy, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -172,9 +197,10 @@
       "public_gists": 28,
       "observed_public_commits": 2060,
       "observed_public_pull_requests": 126,
-      "followers": 2170,
+      "followers": 2171,
       "location": "Paris",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Paris repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -189,7 +215,8 @@
       "observed_public_pull_requests": 179,
       "followers": 4129,
       "location": "France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -204,7 +231,8 @@
       "observed_public_pull_requests": 98,
       "followers": 1231,
       "location": "Paris, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Paris repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -217,15 +245,16 @@
       "public_gists": 12,
       "observed_public_commits": 1808,
       "observed_public_pull_requests": 180,
-      "followers": 13411,
+      "followers": 13412,
       "location": "Paris, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
     {
       "login": "p0dalirius",
-      "name": "Rémi GASCOU (Podalirius)",
+      "name": "R\u00e9mi GASCOU (Podalirius)",
       "profile_url": "https://github.com/p0dalirius",
       "public_contributions": 1763,
       "public_repos": 120,
@@ -234,13 +263,14 @@
       "observed_public_pull_requests": 300,
       "followers": 2278,
       "location": "France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
     {
       "login": "gregberge",
-      "name": "Greg Bergé",
+      "name": "Greg Berg\u00e9",
       "profile_url": "https://github.com/gregberge",
       "public_contributions": 1454,
       "public_repos": 138,
@@ -249,7 +279,8 @@
       "observed_public_pull_requests": 729,
       "followers": 2044,
       "location": "Paris, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -264,7 +295,8 @@
       "observed_public_pull_requests": 683,
       "followers": 2377,
       "location": "Paris",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Paris repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -279,7 +311,8 @@
       "observed_public_pull_requests": 5,
       "followers": 4087,
       "location": "Paris, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -294,7 +327,8 @@
       "observed_public_pull_requests": 11,
       "followers": 1428,
       "location": "Paris",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Paris repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -309,7 +343,8 @@
       "observed_public_pull_requests": 145,
       "followers": 2764,
       "location": "Paris, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -324,7 +359,8 @@
       "observed_public_pull_requests": 14,
       "followers": 1354,
       "location": "Paris, France",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Paris repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

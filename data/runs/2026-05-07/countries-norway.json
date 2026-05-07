@@ -3,8 +3,8 @@
   "slug": "norway",
   "name": "Norway",
   "title": "Top observed GitHub contributors in Norway",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,16 +16,26 @@
       20
     ],
     "top_10_signal": [
-      55164
+      55167
     ]
   },
   "code": "NO",
-  "candidate_count": 10971,
+  "candidate_count": 10972,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
+  ],
+  "discovery_queries": [
+    "location:Norway repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Norway repos:>5 type:user",
+      "total": 10972,
+      "accepted": 100
+    }
   ],
   "entries": [
     {
@@ -39,13 +49,14 @@
       "observed_public_pull_requests": 145,
       "followers": 351,
       "location": "Oslo, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
     {
       "login": "oleavr",
-      "name": "Ole André Vadla Ravnås",
+      "name": "Ole Andr\u00e9 Vadla Ravn\u00e5s",
       "profile_url": "https://github.com/oleavr",
       "public_contributions": 3765,
       "public_repos": 83,
@@ -54,7 +65,8 @@
       "observed_public_pull_requests": 39,
       "followers": 1921,
       "location": "Stavanger, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,7 +81,8 @@
       "observed_public_pull_requests": 135,
       "followers": 1026,
       "location": "Oslo, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -84,7 +97,8 @@
       "observed_public_pull_requests": 207,
       "followers": 362,
       "location": "Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -92,14 +106,15 @@
       "login": "Starefossen",
       "name": "Hans Kristian Flaatten",
       "profile_url": "https://github.com/Starefossen",
-      "public_contributions": 2651,
+      "public_contributions": 2652,
       "public_repos": 279,
       "public_gists": 72,
-      "observed_public_commits": 2651,
+      "observed_public_commits": 2652,
       "observed_public_pull_requests": 203,
       "followers": 377,
       "location": "Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -111,31 +126,33 @@
       "public_repos": 81,
       "public_gists": 100,
       "observed_public_commits": 2557,
-      "observed_public_pull_requests": 253,
+      "observed_public_pull_requests": 254,
       "followers": 315,
       "location": "Stavanger; Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
     {
       "login": "ludeeus",
-      "name": "Joakim Sørensen",
+      "name": "Joakim S\u00f8rensen",
       "profile_url": "https://github.com/ludeeus",
-      "public_contributions": 1994,
+      "public_contributions": 1996,
       "public_repos": 107,
       "public_gists": 14,
-      "observed_public_commits": 1994,
+      "observed_public_commits": 1996,
       "observed_public_pull_requests": 390,
       "followers": 699,
       "location": "Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
     {
       "login": "bep",
-      "name": "Bjørn Erik Pedersen",
+      "name": "Bj\u00f8rn Erik Pedersen",
       "profile_url": "https://github.com/bep",
       "public_contributions": 1987,
       "public_repos": 358,
@@ -144,7 +161,8 @@
       "observed_public_pull_requests": 447,
       "followers": 2457,
       "location": "Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -159,7 +177,8 @@
       "observed_public_pull_requests": 0,
       "followers": 673,
       "location": "Oslo, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -174,7 +193,8 @@
       "observed_public_pull_requests": 466,
       "followers": 426,
       "location": "Oslo, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -189,7 +209,8 @@
       "observed_public_pull_requests": 123,
       "followers": 13560,
       "location": "Oslo, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -197,20 +218,21 @@
       "login": "eried",
       "name": "Erwin Ried",
       "profile_url": "https://github.com/eried",
-      "public_contributions": 1245,
+      "public_contributions": 1246,
       "public_repos": 141,
       "public_gists": 1,
-      "observed_public_commits": 1245,
+      "observed_public_commits": 1246,
       "observed_public_pull_requests": 11,
       "followers": 528,
       "location": "Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
     {
       "login": "TorsteinHonsi",
-      "name": "Torstein Hønsi",
+      "name": "Torstein H\u00f8nsi",
       "profile_url": "https://github.com/TorsteinHonsi",
       "public_contributions": 1182,
       "public_repos": 6,
@@ -219,7 +241,8 @@
       "observed_public_pull_requests": 103,
       "followers": 514,
       "location": "Vik i Sogn, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +257,8 @@
       "observed_public_pull_requests": 362,
       "followers": 321,
       "location": "Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -249,7 +273,8 @@
       "observed_public_pull_requests": 63,
       "followers": 367,
       "location": "Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -264,7 +289,8 @@
       "observed_public_pull_requests": 282,
       "followers": 968,
       "location": "Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -279,7 +305,8 @@
       "observed_public_pull_requests": 300,
       "followers": 1109,
       "location": "Trondheim, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -294,7 +321,8 @@
       "observed_public_pull_requests": 34,
       "followers": 394,
       "location": "Oslo, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -309,13 +337,14 @@
       "observed_public_pull_requests": 106,
       "followers": 334,
       "location": "Oslo, Norway",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
     {
       "login": "eonist",
-      "name": "André J",
+      "name": "Andr\u00e9 J",
       "profile_url": "https://github.com/eonist",
       "public_contributions": 839,
       "public_repos": 115,
@@ -324,7 +353,8 @@
       "observed_public_pull_requests": 52,
       "followers": 496,
       "location": "Norway, Oslo",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

@@ -30,7 +30,7 @@
   "entries": [
     {
       "login": "montoyamoraga",
-      "name": "aarón montoya-moraga",
+      "name": "aar\u00f3n montoya-moraga",
       "profile_url": "https://github.com/montoyamoraga",
       "public_contributions": 5587,
       "public_repos": 197,
@@ -105,7 +105,7 @@
     },
     {
       "login": "tyronejosee",
-      "name": "Tyrone José",
+      "name": "Tyrone Jos\u00e9",
       "profile_url": "https://github.com/tyronejosee",
       "public_contributions": 515,
       "public_repos": 111,
@@ -158,7 +158,7 @@
       "observed_public_commits": 356,
       "observed_public_pull_requests": 39,
       "followers": 425,
-      "location": "Valparaíso, Chile",
+      "location": "Valpara\u00edso, Chile",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 9
@@ -203,7 +203,7 @@
       "observed_public_commits": 125,
       "observed_public_pull_requests": 6,
       "followers": 408,
-      "location": "Copiapó, Atacama. Chile",
+      "location": "Copiap\u00f3, Atacama. Chile",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 12
@@ -255,7 +255,7 @@
     },
     {
       "login": "tomas",
-      "name": "Tomás Pollak",
+      "name": "Tom\u00e1s Pollak",
       "profile_url": "https://github.com/tomas",
       "public_contributions": 42,
       "public_repos": 102,
@@ -308,7 +308,7 @@
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
       "followers": 565,
-      "location": "Perú, Chile, México, Brasil, Colombia",
+      "location": "Per\u00fa, Chile, M\u00e9xico, Brasil, Colombia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 19
@@ -323,7 +323,7 @@
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
       "followers": 1082,
-      "location": "Pontificia Universidad Católica de Chile",
+      "location": "Pontificia Universidad Cat\u00f3lica de Chile",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 20

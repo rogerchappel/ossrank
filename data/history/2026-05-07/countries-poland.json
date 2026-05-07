@@ -38,7 +38,7 @@
       "observed_public_commits": 2705,
       "observed_public_pull_requests": 219,
       "followers": 3552,
-      "location": "Kraków, Poland",
+      "location": "Krak\u00f3w, Poland",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 1
@@ -60,7 +60,7 @@
     },
     {
       "login": "josevalim",
-      "name": "José Valim",
+      "name": "Jos\u00e9 Valim",
       "profile_url": "https://github.com/josevalim",
       "public_contributions": 1773,
       "public_repos": 71,
@@ -68,7 +68,7 @@
       "observed_public_commits": 1773,
       "observed_public_pull_requests": 239,
       "followers": 16122,
-      "location": "Kraków, Poland",
+      "location": "Krak\u00f3w, Poland",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 3
@@ -98,7 +98,7 @@
       "observed_public_commits": 1721,
       "observed_public_pull_requests": 136,
       "followers": 2483,
-      "location": "Wrocław, Poland",
+      "location": "Wroc\u0142aw, Poland",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 5
@@ -135,7 +135,7 @@
     },
     {
       "login": "Andarist",
-      "name": "Mateusz Burzyński",
+      "name": "Mateusz Burzy\u0144ski",
       "profile_url": "https://github.com/Andarist",
       "public_contributions": 396,
       "public_repos": 603,
@@ -143,7 +143,7 @@
       "observed_public_commits": 396,
       "observed_public_pull_requests": 367,
       "followers": 2289,
-      "location": "Wrocław, Poland",
+      "location": "Wroc\u0142aw, Poland",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 8
@@ -165,7 +165,7 @@
     },
     {
       "login": "ambv",
-      "name": "Łukasz Langa",
+      "name": "\u0141ukasz Langa",
       "profile_url": "https://github.com/ambv",
       "public_contributions": 156,
       "public_repos": 121,
@@ -173,7 +173,7 @@
       "observed_public_commits": 156,
       "observed_public_pull_requests": 80,
       "followers": 2384,
-      "location": "Poznań, Poland",
+      "location": "Pozna\u0144, Poland",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 10
@@ -195,7 +195,7 @@
     },
     {
       "login": "kitze",
-      "name": "kitze 🚀",
+      "name": "kitze \ud83d\ude80",
       "profile_url": "https://github.com/kitze",
       "public_contributions": 81,
       "public_repos": 82,
@@ -210,7 +210,7 @@
     },
     {
       "login": "krzysztofzablocki",
-      "name": "Krzysztof Zabłocki",
+      "name": "Krzysztof Zab\u0142ocki",
       "profile_url": "https://github.com/krzysztofzablocki",
       "public_contributions": 80,
       "public_repos": 46,
@@ -225,7 +225,7 @@
     },
     {
       "login": "MarcinusX",
-      "name": "Marcin Szałek",
+      "name": "Marcin Sza\u0142ek",
       "profile_url": "https://github.com/MarcinusX",
       "public_contributions": 51,
       "public_repos": 59,
@@ -285,7 +285,7 @@
     },
     {
       "login": "trimstray",
-      "name": "Michał Ży",
+      "name": "Micha\u0142 \u017by",
       "profile_url": "https://github.com/trimstray",
       "public_contributions": 1,
       "public_repos": 17,
@@ -323,7 +323,7 @@
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
       "followers": 1489,
-      "location": "Kraków, Poland",
+      "location": "Krak\u00f3w, Poland",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 20

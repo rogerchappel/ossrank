@@ -3,8 +3,8 @@
   "slug": "finland",
   "name": "Finland",
   "title": "Top observed GitHub contributors in Finland",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,16 +16,26 @@
       20
     ],
     "top_10_signal": [
-      25546
+      25550
     ]
   },
   "code": "FI",
-  "candidate_count": 12635,
+  "candidate_count": 12634,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
+  ],
+  "discovery_queries": [
+    "location:Finland repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:Finland repos:>5 type:user",
+      "total": 12634,
+      "accepted": 100
+    }
   ],
   "entries": [
     {
@@ -39,7 +49,8 @@
       "observed_public_pull_requests": 741,
       "followers": 1884,
       "location": "Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -54,7 +65,8 @@
       "observed_public_pull_requests": 98,
       "followers": 1128,
       "location": "Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -69,22 +81,24 @@
       "observed_public_pull_requests": 125,
       "followers": 313,
       "location": "Helsinki, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
     {
       "login": "bebraw",
-      "name": "Juho Vepsäläinen",
+      "name": "Juho Veps\u00e4l\u00e4inen",
       "profile_url": "https://github.com/bebraw",
-      "public_contributions": 2706,
+      "public_contributions": 2710,
       "public_repos": 224,
       "public_gists": 208,
-      "observed_public_commits": 2706,
+      "observed_public_commits": 2710,
       "observed_public_pull_requests": 6,
       "followers": 2214,
       "location": "Rautalampi, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -98,8 +112,9 @@
       "observed_public_commits": 2677,
       "observed_public_pull_requests": 35,
       "followers": 320,
-      "location": "Jyväskylä, Finland",
-      "location_confidence": "profile-text-match",
+      "location": "Jyv\u00e4skyl\u00e4, Finland",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -114,7 +129,8 @@
       "observed_public_pull_requests": 983,
       "followers": 1124,
       "location": "Helsinki, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -129,7 +145,8 @@
       "observed_public_pull_requests": 24,
       "followers": 1057,
       "location": "Helsinki, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -144,13 +161,14 @@
       "observed_public_pull_requests": 144,
       "followers": 310,
       "location": "Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
     {
       "login": "kijai",
-      "name": "Jukka Seppänen",
+      "name": "Jukka Sepp\u00e4nen",
       "profile_url": "https://github.com/kijai",
       "public_contributions": 1713,
       "public_repos": 106,
@@ -159,7 +177,8 @@
       "observed_public_pull_requests": 60,
       "followers": 6048,
       "location": "Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -174,13 +193,14 @@
       "observed_public_pull_requests": 21,
       "followers": 389,
       "location": "Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
     {
       "login": "dalathegreat",
-      "name": "Daniel Öster",
+      "name": "Daniel \u00d6ster",
       "profile_url": "https://github.com/dalathegreat",
       "public_contributions": 1449,
       "public_repos": 43,
@@ -189,13 +209,14 @@
       "observed_public_pull_requests": 368,
       "followers": 1699,
       "location": "Vaasa, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
     {
       "login": "nikohoffren",
-      "name": "Niko Hoffrén",
+      "name": "Niko Hoffr\u00e9n",
       "profile_url": "https://github.com/nikohoffren",
       "public_contributions": 1334,
       "public_repos": 64,
@@ -204,7 +225,8 @@
       "observed_public_pull_requests": 17,
       "followers": 502,
       "location": "Kuopio, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -219,7 +241,8 @@
       "observed_public_pull_requests": 202,
       "followers": 510,
       "location": "Turku, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -234,7 +257,8 @@
       "observed_public_pull_requests": 56,
       "followers": 631,
       "location": "Turku, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
@@ -249,7 +273,8 @@
       "observed_public_pull_requests": 4,
       "followers": 427,
       "location": "Helsinki, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -263,8 +288,9 @@
       "observed_public_commits": 812,
       "observed_public_pull_requests": 10,
       "followers": 510,
-      "location": "Mariehman, Åland Islands, Finland",
-      "location_confidence": "profile-text-match",
+      "location": "Mariehman, \u00c5land Islands, Finland",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -279,7 +305,8 @@
       "observed_public_pull_requests": 398,
       "followers": 670,
       "location": "Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -294,7 +321,8 @@
       "observed_public_pull_requests": 333,
       "followers": 265,
       "location": "Espoo, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -309,7 +337,8 @@
       "observed_public_pull_requests": 207,
       "followers": 448,
       "location": "Helsinki, Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -324,7 +353,8 @@
       "observed_public_pull_requests": 363,
       "followers": 509,
       "location": "Finland",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }

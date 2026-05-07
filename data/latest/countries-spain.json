@@ -83,7 +83,7 @@
       "observed_public_commits": 2233,
       "observed_public_pull_requests": 0,
       "followers": 35438,
-      "location": "Building software with  ♥ from Galicia (Spain) to the world.",
+      "location": "Building software with  \u2665 from Galicia (Spain) to the world.",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 4
@@ -240,7 +240,7 @@
     },
     {
       "login": "JoseAlcerreca",
-      "name": "Jose Alcérreca",
+      "name": "Jose Alc\u00e9rreca",
       "profile_url": "https://github.com/JoseAlcerreca",
       "public_contributions": 50,
       "public_repos": 33,
@@ -278,7 +278,7 @@
       "observed_public_commits": 26,
       "observed_public_pull_requests": 0,
       "followers": 7582,
-      "location": "España, Spain",
+      "location": "Espa\u00f1a, Spain",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 17

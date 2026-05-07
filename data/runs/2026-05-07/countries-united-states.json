@@ -3,8 +3,8 @@
   "slug": "united-states",
   "name": "United States",
   "title": "Top observed GitHub contributors in United States",
-  "generated_at": "2026-05-07T07:35:53.433Z",
-  "fresh_until": "2026-05-14T07:35:53.433Z",
+  "generated_at": "2026-05-07T08:00:41.279Z",
+  "fresh_until": "2026-05-14T08:00:41.279Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -27,6 +27,40 @@
     "Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.",
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
+  "discovery_queries": [
+    "location:\"United States\" repos:>5 type:user",
+    "location:California repos:>5 type:user",
+    "location:\"San Francisco\" repos:>5 type:user",
+    "location:Seattle repos:>5 type:user",
+    "location:NYC repos:>5 type:user"
+  ],
+  "candidate_count_by_query": [
+    {
+      "query": "location:\"United States\" repos:>5 type:user",
+      "total": 42298,
+      "accepted": 20
+    },
+    {
+      "query": "location:California repos:>5 type:user",
+      "total": 27162,
+      "accepted": 20
+    },
+    {
+      "query": "location:\"San Francisco\" repos:>5 type:user",
+      "total": 37659,
+      "accepted": 18
+    },
+    {
+      "query": "location:Seattle repos:>5 type:user",
+      "total": 30926,
+      "accepted": 20
+    },
+    {
+      "query": "location:NYC repos:>5 type:user",
+      "total": 7280,
+      "accepted": 0
+    }
+  ],
   "entries": [
     {
       "login": "vczh",
@@ -38,7 +72,8 @@
       "observed_public_pull_requests": 4,
       "followers": 17529,
       "location": "Seattle, WA, USA",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Seattle repos:>5 type:user",
       "notable_repositories": [],
       "rank": 1
     },
@@ -53,7 +88,8 @@
       "observed_public_pull_requests": 447,
       "followers": 6009,
       "location": "Seattle, WA",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Seattle repos:>5 type:user",
       "notable_repositories": [],
       "rank": 2
     },
@@ -66,9 +102,10 @@
       "public_gists": 33,
       "observed_public_commits": 4203,
       "observed_public_pull_requests": 24,
-      "followers": 59731,
+      "followers": 59732,
       "location": "San Francisco",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:\"San Francisco\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3
     },
@@ -83,7 +120,8 @@
       "observed_public_pull_requests": 607,
       "followers": 9340,
       "location": "Redwood City, California",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:California repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4
     },
@@ -92,13 +130,14 @@
       "name": "Simon Willison",
       "profile_url": "https://github.com/simonw",
       "public_contributions": 3767,
-      "public_repos": 959,
+      "public_repos": 958,
       "public_gists": 335,
       "observed_public_commits": 3767,
       "observed_public_pull_requests": 730,
       "followers": 14690,
       "location": "Half Moon Bay, California",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:California repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5
     },
@@ -113,7 +152,8 @@
       "observed_public_pull_requests": 338,
       "followers": 3908,
       "location": "California",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:California repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6
     },
@@ -128,7 +168,8 @@
       "observed_public_pull_requests": 1423,
       "followers": 4023,
       "location": "United States",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:\"United States\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7
     },
@@ -143,7 +184,8 @@
       "observed_public_pull_requests": 2,
       "followers": 3854,
       "location": "United states",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:\"United States\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8
     },
@@ -158,7 +200,8 @@
       "observed_public_pull_requests": 173,
       "followers": 3694,
       "location": "Seattle, WA",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Seattle repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9
     },
@@ -173,7 +216,8 @@
       "observed_public_pull_requests": 122,
       "followers": 7445,
       "location": "Carlsbad, California",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:California repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10
     },
@@ -188,7 +232,8 @@
       "observed_public_pull_requests": 105,
       "followers": 3778,
       "location": "United States",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:\"United States\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11
     },
@@ -203,7 +248,8 @@
       "observed_public_pull_requests": 3,
       "followers": 6009,
       "location": "California",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:California repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12
     },
@@ -218,7 +264,8 @@
       "observed_public_pull_requests": 27,
       "followers": 8404,
       "location": "Seattle, WA",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Seattle repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13
     },
@@ -233,13 +280,14 @@
       "observed_public_pull_requests": 478,
       "followers": 13258,
       "location": "Seattle",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Seattle repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14
     },
     {
       "login": "danielmiessler",
-      "name": "Daniel Miessler 🛡️",
+      "name": "Daniel Miessler \ud83d\udee1\ufe0f",
       "profile_url": "https://github.com/danielmiessler",
       "public_contributions": 817,
       "public_repos": 78,
@@ -248,7 +296,8 @@
       "observed_public_pull_requests": 7,
       "followers": 15522,
       "location": "San Francisco Bay Area",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:\"San Francisco\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15
     },
@@ -263,7 +312,8 @@
       "observed_public_pull_requests": 319,
       "followers": 6149,
       "location": "California",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:California repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16
     },
@@ -278,7 +328,8 @@
       "observed_public_pull_requests": 4,
       "followers": 14050,
       "location": "San Francisco",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:\"San Francisco\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17
     },
@@ -293,7 +344,8 @@
       "observed_public_pull_requests": 99,
       "followers": 9615,
       "location": "Seattle",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:Seattle repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18
     },
@@ -307,7 +359,8 @@
       "observed_public_pull_requests": 16,
       "followers": 3192,
       "location": "United States & America",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:\"United States\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19
     },
@@ -322,7 +375,8 @@
       "observed_public_pull_requests": 1,
       "followers": 9514,
       "location": "California",
-      "location_confidence": "profile-text-match",
+      "location_confidence": "city-match",
+      "discovered_by_query": "location:California repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
     }
