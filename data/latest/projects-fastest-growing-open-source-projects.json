@@ -3,74 +3,205 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T05:57:25.057Z",
-  "fresh_until": "2026-05-14T05:57:25.057Z",
-  "status": "demo",
-  "method": "fixture-github-repository-search-then-project-momentum-score",
+  "generated_at": "2026-05-07T05:58:11.576Z",
+  "fresh_until": "2026-05-14T05:58:11.576Z",
+  "status": "fresh",
+  "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
-  "candidate_count": 300,
-  "caveats": [
-    "Fixture data is demo-only until a live GitHub token-backed refresh is enabled.",
-    "Project momentum prioritises recent merged pull requests, active contributors, then stars.",
-    "Ranks are observed public repository signals from the configured snapshot."
-  ],
   "history": {
     "weeks": [
-      "2026-04-23",
-      "2026-04-30",
       "2026-05-07"
     ],
     "ranked_items": [
-      72,
-      80,
-      4
+      20
     ],
     "top_10_signal": [
-      188,
-      244,
-      392
+      868
     ]
   },
+  "candidate_count": 34468,
+  "caveats": [
+    "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
+    "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
+    "Project momentum prioritises recent activity, rough collaboration signal, then stars."
+  ],
   "entries": [
     {
-      "full_name": "example/agent-runtime",
-      "url": "https://github.com/example/agent-runtime",
-      "stars": 18420,
-      "pull_requests_merged_7d": 126,
-      "active_contributors_30d": 82,
-      "primary_language": "TypeScript",
-      "previous_rank": 2,
+      "full_name": "openemr/openemr",
+      "url": "https://github.com/openemr/openemr",
+      "stars": 5123,
+      "pull_requests_merged_7d": 295,
+      "active_contributors_30d": 7,
+      "primary_language": "PHP",
       "rank": 1
     },
     {
-      "full_name": "example/openvector",
-      "url": "https://github.com/example/openvector",
-      "stars": 28100,
-      "pull_requests_merged_7d": 111,
-      "active_contributors_30d": 75,
-      "primary_language": "Python",
-      "previous_rank": 1,
+      "full_name": "openxla/xla",
+      "url": "https://github.com/openxla/xla",
+      "stars": 4249,
+      "pull_requests_merged_7d": 233,
+      "active_contributors_30d": 6,
+      "primary_language": "C++",
       "rank": 2
     },
     {
-      "full_name": "example/cli-lab",
-      "url": "https://github.com/example/cli-lab",
-      "stars": 9300,
-      "pull_requests_merged_7d": 88,
-      "active_contributors_30d": 44,
-      "primary_language": "Go",
-      "previous_rank": 5,
+      "full_name": "mdn/translated-content",
+      "url": "https://github.com/mdn/translated-content",
+      "stars": 1983,
+      "pull_requests_merged_7d": 141,
+      "active_contributors_30d": 3,
+      "primary_language": "Markdown",
       "rank": 3
     },
     {
-      "full_name": "example/safety-lint",
-      "url": "https://github.com/example/safety-lint",
-      "stars": 7400,
-      "pull_requests_merged_7d": 67,
-      "active_contributors_30d": 39,
-      "primary_language": "Rust",
-      "previous_rank": 4,
+      "full_name": "apify/crawlee",
+      "url": "https://github.com/apify/crawlee",
+      "stars": 23092,
+      "pull_requests_merged_7d": 59,
+      "active_contributors_30d": 31,
+      "primary_language": "TypeScript",
       "rank": 4
+    },
+    {
+      "full_name": "CodeGraphContext/CodeGraphContext",
+      "url": "https://github.com/CodeGraphContext/CodeGraphContext",
+      "stars": 3174,
+      "pull_requests_merged_7d": 54,
+      "active_contributors_30d": 4,
+      "primary_language": "Python",
+      "rank": 5
+    },
+    {
+      "full_name": "zinggAI/zingg",
+      "url": "https://github.com/zinggAI/zingg",
+      "stars": 1197,
+      "pull_requests_merged_7d": 31,
+      "active_contributors_30d": 2,
+      "primary_language": "Java",
+      "rank": 6
+    },
+    {
+      "full_name": "martinrotter/rssguard",
+      "url": "https://github.com/martinrotter/rssguard",
+      "stars": 2555,
+      "pull_requests_merged_7d": 22,
+      "active_contributors_30d": 3,
+      "primary_language": "C++",
+      "rank": 7
+    },
+    {
+      "full_name": "ImperialCollegeLondon/FLT",
+      "url": "https://github.com/ImperialCollegeLondon/FLT",
+      "stars": 881,
+      "pull_requests_merged_7d": 13,
+      "active_contributors_30d": 1,
+      "primary_language": "Lean",
+      "rank": 8
+    },
+    {
+      "full_name": "curl/curl",
+      "url": "https://github.com/curl/curl",
+      "stars": 41737,
+      "pull_requests_merged_7d": 12,
+      "active_contributors_30d": 56,
+      "primary_language": "C",
+      "rank": 9
+    },
+    {
+      "full_name": "GrahamDumpleton/mod_wsgi",
+      "url": "https://github.com/GrahamDumpleton/mod_wsgi",
+      "stars": 1043,
+      "pull_requests_merged_7d": 8,
+      "active_contributors_30d": 1,
+      "primary_language": "C",
+      "rank": 10
+    },
+    {
+      "full_name": "asgeirtj/system_prompts_leaks",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "stars": 39772,
+      "pull_requests_merged_7d": 7,
+      "active_contributors_30d": 53,
+      "rank": 11
+    },
+    {
+      "full_name": "t8y2/dbx",
+      "url": "https://github.com/t8y2/dbx",
+      "stars": 1084,
+      "pull_requests_merged_7d": 6,
+      "active_contributors_30d": 1,
+      "primary_language": "Vue",
+      "rank": 12
+    },
+    {
+      "full_name": "needle-tools/needle-engine-support",
+      "url": "https://github.com/needle-tools/needle-engine-support",
+      "stars": 596,
+      "pull_requests_merged_7d": 3,
+      "active_contributors_30d": 1,
+      "primary_language": "JavaScript",
+      "rank": 13
+    },
+    {
+      "full_name": "docker-library/repo-info",
+      "url": "https://github.com/docker-library/repo-info",
+      "stars": 600,
+      "pull_requests_merged_7d": 2,
+      "active_contributors_30d": 1,
+      "primary_language": "Perl",
+      "rank": 14
+    },
+    {
+      "full_name": "rust-lang/crates.io-index",
+      "url": "https://github.com/rust-lang/crates.io-index",
+      "stars": 704,
+      "pull_requests_merged_7d": 1,
+      "active_contributors_30d": 1,
+      "primary_language": "Tcl",
+      "rank": 15
+    },
+    {
+      "full_name": "TylerTemp/SaintsField",
+      "url": "https://github.com/TylerTemp/SaintsField",
+      "stars": 665,
+      "pull_requests_merged_7d": 1,
+      "active_contributors_30d": 1,
+      "primary_language": "C#",
+      "rank": 16
+    },
+    {
+      "full_name": "phishdestroy/destroylist",
+      "url": "https://github.com/phishdestroy/destroylist",
+      "stars": 997,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "HTML",
+      "rank": 17
+    },
+    {
+      "full_name": "Hommy-master/capcut-mate",
+      "url": "https://github.com/Hommy-master/capcut-mate",
+      "stars": 923,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "Python",
+      "rank": 18
+    },
+    {
+      "full_name": "ebrasha/free-v2ray-public-list",
+      "url": "https://github.com/ebrasha/free-v2ray-public-list",
+      "stars": 726,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "rank": 19
+    },
+    {
+      "full_name": "databay-labs/free-proxy-list",
+      "url": "https://github.com/databay-labs/free-proxy-list",
+      "stars": 589,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "rank": 20
     }
   ]
 }
