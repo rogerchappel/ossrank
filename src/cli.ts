@@ -23,7 +23,7 @@ function usage(): string {
 Usage:
   ossrank rank contributors --input fixtures/contributors.json --output out.json
   ossrank rank projects --input fixtures/projects.json --format table
-  ossrank refresh --mode live --limit 25
+  ossrank refresh --mode live --limit 20
   ossrank token-check
 
 Options:

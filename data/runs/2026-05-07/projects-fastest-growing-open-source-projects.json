@@ -3,8 +3,8 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T05:10:33.835Z",
-  "fresh_until": "2026-05-14T05:10:33.835Z",
+  "generated_at": "2026-05-07T05:32:38.729Z",
+  "fresh_until": "2026-05-14T05:32:38.729Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -13,13 +13,13 @@
       "2026-05-07"
     ],
     "ranked_items": [
-      10
+      20
     ],
     "top_10_signal": [
-      927
+      4061
     ]
   },
-  "candidate_count": 34460,
+  "candidate_count": 34464,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,93 +27,182 @@
   ],
   "entries": [
     {
-      "full_name": "unslothai/unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "stars": 63724,
-      "pull_requests_merged_7d": 399,
-      "active_contributors_30d": 85,
-      "primary_language": "Python",
+      "full_name": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "stars": 369148,
+      "pull_requests_merged_7d": 2457,
+      "active_contributors_30d": 492,
+      "primary_language": "TypeScript",
       "rank": 1
     },
     {
-      "full_name": "root-project/root",
-      "url": "https://github.com/root-project/root",
-      "stars": 3199,
-      "pull_requests_merged_7d": 233,
-      "active_contributors_30d": 4,
-      "primary_language": "C++",
+      "full_name": "warpdotdev/warp",
+      "url": "https://github.com/warpdotdev/warp",
+      "stars": 55907,
+      "pull_requests_merged_7d": 1200,
+      "active_contributors_30d": 75,
+      "primary_language": "Rust",
       "rank": 2
     },
     {
-      "full_name": "getpaseo/paseo",
-      "url": "https://github.com/getpaseo/paseo",
-      "stars": 5573,
-      "pull_requests_merged_7d": 132,
-      "active_contributors_30d": 7,
-      "primary_language": "TypeScript",
+      "full_name": "FWGS/xash3d-fwgs",
+      "url": "https://github.com/FWGS/xash3d-fwgs",
+      "stars": 2477,
+      "pull_requests_merged_7d": 144,
+      "active_contributors_30d": 3,
+      "primary_language": "C",
       "rank": 3
     },
     {
-      "full_name": "apache/polaris",
-      "url": "https://github.com/apache/polaris",
-      "stars": 1926,
-      "pull_requests_merged_7d": 119,
+      "full_name": "spacedriveapp/spacebot",
+      "url": "https://github.com/spacedriveapp/spacebot",
+      "stars": 2194,
+      "pull_requests_merged_7d": 62,
       "active_contributors_30d": 3,
-      "primary_language": "Java",
+      "primary_language": "Rust",
       "rank": 4
     },
     {
-      "full_name": "jxxghp/MoviePilot",
-      "url": "https://github.com/jxxghp/MoviePilot",
-      "stars": 10992,
-      "pull_requests_merged_7d": 20,
-      "active_contributors_30d": 15,
-      "primary_language": "Python",
+      "full_name": "latex3/latex2e",
+      "url": "https://github.com/latex3/latex2e",
+      "stars": 2384,
+      "pull_requests_merged_7d": 61,
+      "active_contributors_30d": 3,
+      "primary_language": "TeX",
       "rank": 5
     },
     {
-      "full_name": "web-infra-dev/rsbuild",
-      "url": "https://github.com/web-infra-dev/rsbuild",
-      "stars": 3292,
-      "pull_requests_merged_7d": 7,
-      "active_contributors_30d": 4,
-      "primary_language": "TypeScript",
+      "full_name": "ScoopInstaller/Main",
+      "url": "https://github.com/ScoopInstaller/Main",
+      "stars": 1830,
+      "pull_requests_merged_7d": 46,
+      "active_contributors_30d": 2,
+      "primary_language": "PowerShell",
       "rank": 6
     },
     {
-      "full_name": "mthcht/awesome-lists",
-      "url": "https://github.com/mthcht/awesome-lists",
-      "stars": 1441,
-      "pull_requests_merged_7d": 7,
-      "active_contributors_30d": 2,
-      "primary_language": "YARA",
+      "full_name": "GrapheneOS/grapheneos.org",
+      "url": "https://github.com/GrapheneOS/grapheneos.org",
+      "stars": 644,
+      "pull_requests_merged_7d": 28,
+      "active_contributors_30d": 1,
+      "primary_language": "HTML",
       "rank": 7
     },
     {
-      "full_name": "Olshansk/rss-feeds",
-      "url": "https://github.com/Olshansk/rss-feeds",
-      "stars": 538,
-      "pull_requests_merged_7d": 6,
+      "full_name": "superdesk/superdesk",
+      "url": "https://github.com/superdesk/superdesk",
+      "stars": 731,
+      "pull_requests_merged_7d": 23,
       "active_contributors_30d": 1,
       "primary_language": "Python",
       "rank": 8
     },
     {
-      "full_name": "ymyuuu/IPDB",
-      "url": "https://github.com/ymyuuu/IPDB",
-      "stars": 2456,
-      "pull_requests_merged_7d": 4,
+      "full_name": "frappe/builder",
+      "url": "https://github.com/frappe/builder",
+      "stars": 2010,
+      "pull_requests_merged_7d": 20,
       "active_contributors_30d": 3,
+      "primary_language": "Vue",
       "rank": 9
     },
     {
-      "full_name": "TomoeMami/S1PlainTextBackup",
-      "url": "https://github.com/TomoeMami/S1PlainTextBackup",
-      "stars": 526,
-      "pull_requests_merged_7d": 0,
+      "full_name": "GhostESP-Revival/GhostESP",
+      "url": "https://github.com/GhostESP-Revival/GhostESP",
+      "stars": 646,
+      "pull_requests_merged_7d": 20,
+      "active_contributors_30d": 1,
+      "primary_language": "C",
+      "rank": 10
+    },
+    {
+      "full_name": "yfedoseev/pdf_oxide",
+      "url": "https://github.com/yfedoseev/pdf_oxide",
+      "stars": 723,
+      "pull_requests_merged_7d": 12,
+      "active_contributors_30d": 1,
+      "primary_language": "Rust",
+      "rank": 11
+    },
+    {
+      "full_name": "89996462/Quantumult-X",
+      "url": "https://github.com/89996462/Quantumult-X",
+      "stars": 918,
+      "pull_requests_merged_7d": 7,
+      "active_contributors_30d": 1,
+      "primary_language": "JavaScript",
+      "rank": 12
+    },
+    {
+      "full_name": "CocoaPods/Specs",
+      "url": "https://github.com/CocoaPods/Specs",
+      "stars": 6813,
+      "pull_requests_merged_7d": 6,
+      "active_contributors_30d": 9,
+      "rank": 13
+    },
+    {
+      "full_name": "vapoursynth/vapoursynth",
+      "url": "https://github.com/vapoursynth/vapoursynth",
+      "stars": 2019,
+      "pull_requests_merged_7d": 6,
+      "active_contributors_30d": 3,
+      "primary_language": "C++",
+      "rank": 14
+    },
+    {
+      "full_name": "daymade/claude-code-skills",
+      "url": "https://github.com/daymade/claude-code-skills",
+      "stars": 984,
+      "pull_requests_merged_7d": 6,
       "active_contributors_30d": 1,
       "primary_language": "Python",
-      "rank": 10
+      "rank": 15
+    },
+    {
+      "full_name": "AlibabaCloudDocs/aliyun_acp_learning",
+      "url": "https://github.com/AlibabaCloudDocs/aliyun_acp_learning",
+      "stars": 897,
+      "pull_requests_merged_7d": 2,
+      "active_contributors_30d": 1,
+      "primary_language": "Jupyter Notebook",
+      "rank": 16
+    },
+    {
+      "full_name": "SimplifyJobs/New-Grad-Positions",
+      "url": "https://github.com/SimplifyJobs/New-Grad-Positions",
+      "stars": 16876,
+      "pull_requests_merged_7d": 1,
+      "active_contributors_30d": 23,
+      "rank": 17
+    },
+    {
+      "full_name": "rust-lang/crates.io-index",
+      "url": "https://github.com/rust-lang/crates.io-index",
+      "stars": 704,
+      "pull_requests_merged_7d": 1,
+      "active_contributors_30d": 1,
+      "primary_language": "Tcl",
+      "rank": 18
+    },
+    {
+      "full_name": "oekazuma/svelte-meta-tags",
+      "url": "https://github.com/oekazuma/svelte-meta-tags",
+      "stars": 663,
+      "pull_requests_merged_7d": 1,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 19
+    },
+    {
+      "full_name": "Dicklesworthstone/agentic_coding_flywheel_setup",
+      "url": "https://github.com/Dicklesworthstone/agentic_coding_flywheel_setup",
+      "stars": 1454,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 2,
+      "primary_language": "TypeScript",
+      "rank": 20
     }
   ]
 }

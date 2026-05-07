@@ -6,7 +6,7 @@ on:
       limit:
         description: Candidates per shard
         required: false
-        default: '25'
+        default: '20'
 
 permissions:
   contents: write
@@ -27,7 +27,7 @@ jobs:
       - name: Refresh live data
         env:
           OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN || github.token }}
-          OSSRANK_LIMIT: ${{ inputs.limit || '25' }}
+          OSSRANK_LIMIT: ${{ inputs.limit || '20' }}
         run: pnpm run refresh:live
       - run: pnpm run validate:data
       - run: pnpm run build

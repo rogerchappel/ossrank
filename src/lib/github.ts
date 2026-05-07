@@ -68,27 +68,32 @@ function matchesLocation(location: string | null, terms: string[]): boolean {
 }
 
 function contributionScore(user: GitHubUserDetail): number {
-  return user.public_repos * 25 + user.public_gists * 5 + user.followers;
+  return user.public_repos * 100 + user.public_gists * 10 + user.followers;
 }
 
-async function collectUsers(client: GitHubClient, query: string, limit: number, locationTerms?: string[]): Promise<{ total: number; users: RankedContributor[] }> {
+async function collectUsers(client: GitHubClient, query: string, limit: number, locationTerms?: string[], seedLogins: string[] = []): Promise<{ total: number; users: RankedContributor[] }> {
   const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(query, limit)}`);
-  const details: GitHubUserDetail[] = [];
+  const details = new Map<string, { user: GitHubUserDetail; seeded: boolean }>();
   for (const item of search.items.slice(0, limit)) {
     const detail = await client.get<GitHubUserDetail>(`/users/${encodeURIComponent(item.login)}`);
-    if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.push(detail);
+    if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: false });
   }
-  const ranked = rankContributors(details.map((user) => ({
+  for (const login of seedLogins) {
+    if (details.has(login.toLowerCase())) continue;
+    const detail = await client.get<GitHubUserDetail>(`/users/${encodeURIComponent(login)}`);
+    if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: true });
+  }
+  const ranked = rankContributors([...details.values()].map(({ user, seeded }) => ({
     login: user.login,
     name: user.name ?? undefined,
     profile_url: user.html_url,
     public_contributions: contributionScore(user),
     followers: user.followers,
     location: user.location ?? undefined,
-    location_confidence: locationTerms ? 'profile-text-match' as const : 'unknown' as const,
+    location_confidence: locationTerms ? (seeded ? 'curated' as const : 'profile-text-match' as const) : 'unknown' as const,
     notable_repositories: []
-  })));
-  return { total: search.total_count, users: ranked };
+  }))).slice(0, limit);
+  return { total: search.total_count + seedLogins.length, users: ranked };
 }
 
 async function collectRepos(client: GitHubClient, queries: string[], limit: number): Promise<{ total: number; projects: RankedProject[] }> {
@@ -115,7 +120,7 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const client = new GitHubClient(options.token);
   const limit = Math.max(1, options.limit);
 
-  const au = await collectUsers(client, 'location:Australia repos:>5 followers:>10', limit, ['Australia', 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Canberra', 'Hobart', 'Darwin']);
+  const au = await collectUsers(client, 'location:Australia repos:>5', limit, ['Australia', 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Canberra', 'Hobart', 'Darwin'], ['rogerchappel']);
   const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit);
   const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit);
   const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false'], limit);
@@ -123,7 +128,7 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const contributorCaveats = [
     'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',
     'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.',
-    'Contribution score is a transparent proxy from public repos, public gists, and followers; deeper GraphQL event scoring is planned.'
+    'Contribution score is a transparent proxy weighted toward public repositories, then public gists and followers; deeper GraphQL event scoring is planned.'
   ];
   const projectCaveats = [
     'Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.',
