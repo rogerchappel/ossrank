@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T05:06:58.498Z",
-  "fresh_until": "2026-05-14T05:06:58.498Z",
+  "generated_at": "2026-05-07T05:08:01.515Z",
+  "fresh_until": "2026-05-14T05:08:01.515Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -27,90 +27,90 @@
   ],
   "entries": [
     {
-      "full_name": "nirholas/plugin.delivery",
-      "url": "https://github.com/nirholas/plugin.delivery",
-      "stars": 23,
+      "full_name": "nirholas/lyra-web3-playground",
+      "url": "https://github.com/nirholas/lyra-web3-playground",
+      "stars": 24,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "TypeScript",
       "rank": 1
     },
     {
-      "full_name": "codedev-david/termpolis",
-      "url": "https://github.com/codedev-david/termpolis",
-      "stars": 3,
+      "full_name": "kinpatchii/batchi",
+      "url": "https://github.com/kinpatchii/batchi",
+      "stars": 2,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "primary_language": "Go",
       "rank": 2
     },
     {
-      "full_name": "groupsum/markdown_workspace",
-      "url": "https://github.com/groupsum/markdown_workspace",
-      "stars": 3,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "HTML",
-      "rank": 3
-    },
-    {
-      "full_name": "Ambili-Joseph/React-Redux-Typescript-examples",
-      "url": "https://github.com/Ambili-Joseph/React-Redux-Typescript-examples",
+      "full_name": "josephfawzy/api20",
+      "url": "https://github.com/josephfawzy/api20",
       "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "rank": 3
+    },
+    {
+      "full_name": "Naxh156/claude-agent-sdk-python",
+      "url": "https://github.com/Naxh156/claude-agent-sdk-python",
+      "stars": 1,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "Python",
       "rank": 4
     },
     {
-      "full_name": "mcagnuccivasquez/zodkit",
-      "url": "https://github.com/mcagnuccivasquez/zodkit",
-      "stars": 0,
+      "full_name": "ok290/bbbbbbbfgh",
+      "url": "https://github.com/ok290/bbbbbbbfgh",
+      "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
       "rank": 5
     },
     {
-      "full_name": "moHHisham1992/extlight",
-      "url": "https://github.com/moHHisham1992/extlight",
+      "full_name": "Autavian/groovy-zh5",
+      "url": "https://github.com/Autavian/groovy-zh5",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "primary_language": "HTML",
       "rank": 6
     },
     {
-      "full_name": "sadkid12345/mcp-vscode-dev-days-2025-09-spcapital",
-      "url": "https://github.com/sadkid12345/mcp-vscode-dev-days-2025-09-spcapital",
+      "full_name": "gimso2x/forgeflow",
+      "url": "https://github.com/gimso2x/forgeflow",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "Python",
       "rank": 7
     },
     {
-      "full_name": "sirjohnson13/ibm-db2-ub4",
-      "url": "https://github.com/sirjohnson13/ibm-db2-ub4",
+      "full_name": "milrblx/tailwind-ksl",
+      "url": "https://github.com/milrblx/tailwind-ksl",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "rank": 8
     },
     {
-      "full_name": "SUASTELARA/Supercharged-AI-Dev-Tools",
-      "url": "https://github.com/SUASTELARA/Supercharged-AI-Dev-Tools",
+      "full_name": "Rahul-kushwaha7050/lockbox-hub",
+      "url": "https://github.com/Rahul-kushwaha7050/lockbox-hub",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "Solidity",
       "rank": 9
     },
     {
-      "full_name": "TettoLabs/anatomia",
-      "url": "https://github.com/TettoLabs/anatomia",
+      "full_name": "vachhanidhyey/llm_intercept",
+      "url": "https://github.com/vachhanidhyey/llm_intercept",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "primary_language": "Visual Basic .NET",
       "rank": 10
     }
   ]

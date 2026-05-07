@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-07T05:07:09.197Z",
-  "source_commit": "430ee30",
+  "generated_at": "2026-05-07T05:08:11.996Z",
+  "source_commit": "580b6eb",
   "method": "github-live-refresh",
   "status": "fresh",
   "completed_shards": [
@@ -10,8 +10,8 @@
       "title": "Top observed GitHub contributors in Australia",
       "path": "/data/latest/countries-australia.json",
       "status": "fresh",
-      "generated_at": "2026-05-07T05:06:58.498Z",
-      "fresh_until": "2026-05-14T05:06:58.498Z",
+      "generated_at": "2026-05-07T05:08:01.515Z",
+      "fresh_until": "2026-05-14T05:08:01.515Z",
       "entries": 10
     },
     {
@@ -20,8 +20,8 @@
       "title": "Top observed TypeScript open-source contributors",
       "path": "/data/latest/languages-typescript.json",
       "status": "fresh",
-      "generated_at": "2026-05-07T05:06:58.498Z",
-      "fresh_until": "2026-05-14T05:06:58.498Z",
+      "generated_at": "2026-05-07T05:08:01.515Z",
+      "fresh_until": "2026-05-14T05:08:01.515Z",
       "entries": 10
     },
     {
@@ -30,8 +30,8 @@
       "title": "Top observed developer tools open-source projects",
       "path": "/data/latest/categories-developer-tools.json",
       "status": "fresh",
-      "generated_at": "2026-05-07T05:06:58.498Z",
-      "fresh_until": "2026-05-14T05:06:58.498Z",
+      "generated_at": "2026-05-07T05:08:01.515Z",
+      "fresh_until": "2026-05-14T05:08:01.515Z",
       "entries": 10
     },
     {
@@ -40,8 +40,8 @@
       "title": "Fastest growing observed open-source projects",
       "path": "/data/latest/projects-fastest-growing-open-source-projects.json",
       "status": "fresh",
-      "generated_at": "2026-05-07T05:06:58.498Z",
-      "fresh_until": "2026-05-14T05:06:58.498Z",
+      "generated_at": "2026-05-07T05:08:01.515Z",
+      "fresh_until": "2026-05-14T05:08:01.515Z",
       "entries": 10
     }
   ],
@@ -50,7 +50,7 @@
   "api_budget": {
     "provider": "github",
     "mode": "live",
-    "remaining": 18
+    "remaining": 24
   },
-  "duration_ms": 10699
+  "duration_ms": 10481
 }

@@ -3,8 +3,8 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T05:06:58.498Z",
-  "fresh_until": "2026-05-14T05:06:58.498Z",
+  "generated_at": "2026-05-07T05:08:01.515Z",
+  "fresh_until": "2026-05-14T05:08:01.515Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       10
     ],
     "top_10_signal": [
-      3119
+      232
     ]
   },
   "candidate_count": 34459,
@@ -27,49 +27,22 @@
   ],
   "entries": [
     {
-      "full_name": "openclaw/openclaw",
-      "url": "https://github.com/openclaw/openclaw",
-      "stars": 369138,
-      "pull_requests_merged_7d": 2458,
-      "active_contributors_30d": 492,
-      "primary_language": "TypeScript",
+      "full_name": "dotnet/android",
+      "url": "https://github.com/dotnet/android",
+      "stars": 2109,
+      "pull_requests_merged_7d": 149,
+      "active_contributors_30d": 3,
+      "primary_language": "C#",
       "rank": 1
     },
     {
-      "full_name": "Azure/azure-sdk-for-net",
-      "url": "https://github.com/Azure/azure-sdk-for-net",
-      "stars": 5983,
-      "pull_requests_merged_7d": 462,
-      "active_contributors_30d": 8,
-      "primary_language": "C#",
+      "full_name": "TypeCellOS/BlockNote",
+      "url": "https://github.com/TypeCellOS/BlockNote",
+      "stars": 9671,
+      "pull_requests_merged_7d": 55,
+      "active_contributors_30d": 13,
+      "primary_language": "TypeScript",
       "rank": 2
-    },
-    {
-      "full_name": "mastra-ai/mastra",
-      "url": "https://github.com/mastra-ai/mastra",
-      "stars": 23626,
-      "pull_requests_merged_7d": 147,
-      "active_contributors_30d": 32,
-      "primary_language": "TypeScript",
-      "rank": 3
-    },
-    {
-      "full_name": "vercel-labs/json-render",
-      "url": "https://github.com/vercel-labs/json-render",
-      "stars": 14614,
-      "pull_requests_merged_7d": 28,
-      "active_contributors_30d": 19,
-      "primary_language": "TypeScript",
-      "rank": 4
-    },
-    {
-      "full_name": "MindFreeze/ha-sankey-chart",
-      "url": "https://github.com/MindFreeze/ha-sankey-chart",
-      "stars": 649,
-      "pull_requests_merged_7d": 10,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
-      "rank": 5
     },
     {
       "full_name": "mthcht/awesome-lists",
@@ -78,15 +51,51 @@
       "pull_requests_merged_7d": 7,
       "active_contributors_30d": 2,
       "primary_language": "YARA",
+      "rank": 3
+    },
+    {
+      "full_name": "t8y2/dbx",
+      "url": "https://github.com/t8y2/dbx",
+      "stars": 1081,
+      "pull_requests_merged_7d": 6,
+      "active_contributors_30d": 1,
+      "primary_language": "Vue",
+      "rank": 4
+    },
+    {
+      "full_name": "vasu-devs/JustHireMe",
+      "url": "https://github.com/vasu-devs/JustHireMe",
+      "stars": 674,
+      "pull_requests_merged_7d": 6,
+      "active_contributors_30d": 1,
+      "primary_language": "Python",
+      "rank": 5
+    },
+    {
+      "full_name": "uBlockOrigin/uAssets",
+      "url": "https://github.com/uBlockOrigin/uAssets",
+      "stars": 5713,
+      "pull_requests_merged_7d": 4,
+      "active_contributors_30d": 8,
+      "primary_language": "Adblock Filter List",
       "rank": 6
     },
     {
-      "full_name": "CocoaPods/Specs",
-      "url": "https://github.com/CocoaPods/Specs",
-      "stars": 6813,
-      "pull_requests_merged_7d": 6,
-      "active_contributors_30d": 9,
+      "full_name": "mirror/dd-wrt",
+      "url": "https://github.com/mirror/dd-wrt",
+      "stars": 604,
+      "pull_requests_merged_7d": 3,
+      "active_contributors_30d": 1,
       "rank": 7
+    },
+    {
+      "full_name": "rust-lang/crates.io-index",
+      "url": "https://github.com/rust-lang/crates.io-index",
+      "stars": 704,
+      "pull_requests_merged_7d": 1,
+      "active_contributors_30d": 1,
+      "primary_language": "Tcl",
+      "rank": 8
     },
     {
       "full_name": "SoliSpirit/v2ray-configs",
@@ -94,23 +103,14 @@
       "stars": 508,
       "pull_requests_merged_7d": 1,
       "active_contributors_30d": 1,
-      "rank": 8
-    },
-    {
-      "full_name": "YouMind-OpenLab/awesome-nano-banana-pro-prompts",
-      "url": "https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts",
-      "stars": 11854,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 16,
-      "primary_language": "TypeScript",
       "rank": 9
     },
     {
-      "full_name": "monosans/proxy-list",
-      "url": "https://github.com/monosans/proxy-list",
-      "stars": 1408,
+      "full_name": "DenverCoder1/DenverCoder1",
+      "url": "https://github.com/DenverCoder1/DenverCoder1",
+      "stars": 717,
       "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 2,
+      "active_contributors_30d": 1,
       "rank": 10
     }
   ]
