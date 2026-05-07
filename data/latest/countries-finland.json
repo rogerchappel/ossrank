@@ -3,8 +3,8 @@
   "slug": "finland",
   "name": "Finland",
   "title": "Top observed GitHub contributors in Finland",
-  "generated_at": "2026-05-07T08:51:35.617Z",
-  "fresh_until": "2026-05-14T08:51:35.617Z",
+  "generated_at": "2026-05-07T09:36:48.636Z",
+  "fresh_until": "2026-05-14T09:36:48.636Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -20,7 +20,7 @@
     ]
   },
   "code": "FI",
-  "candidate_count": 12635,
+  "candidate_count": 12636,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Finland repos:>5 type:user",
-      "total": 12635,
+      "total": 12636,
       "accepted": 100
     }
   ],
@@ -234,10 +234,10 @@
       "login": "akheron",
       "name": "Petri Lehtinen",
       "profile_url": "https://github.com/akheron",
-      "public_contributions": 1218,
+      "public_contributions": 1232,
       "public_repos": 113,
       "public_gists": 38,
-      "observed_public_commits": 1218,
+      "observed_public_commits": 1232,
       "observed_public_pull_requests": 203,
       "followers": 510,
       "location": "Turku, Finland",
@@ -266,10 +266,10 @@
       "login": "Kaltsoon",
       "name": "Kalle Ilves",
       "profile_url": "https://github.com/Kaltsoon",
-      "public_contributions": 890,
+      "public_contributions": 891,
       "public_repos": 108,
       "public_gists": 0,
-      "observed_public_commits": 890,
+      "observed_public_commits": 891,
       "observed_public_pull_requests": 4,
       "followers": 427,
       "location": "Helsinki, Finland",
@@ -334,7 +334,7 @@
       "public_repos": 143,
       "public_gists": 8,
       "observed_public_commits": 654,
-      "observed_public_pull_requests": 207,
+      "observed_public_pull_requests": 208,
       "followers": 448,
       "location": "Helsinki, Finland",
       "location_confidence": "multi-location",

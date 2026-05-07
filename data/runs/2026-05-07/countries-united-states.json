@@ -3,8 +3,8 @@
   "slug": "united-states",
   "name": "United States",
   "title": "Top observed GitHub contributors in United States",
-  "generated_at": "2026-05-07T08:51:35.617Z",
-  "fresh_until": "2026-05-14T08:51:35.617Z",
+  "generated_at": "2026-05-07T09:36:48.636Z",
+  "fresh_until": "2026-05-14T09:36:48.636Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      30324
+      30325
     ]
   },
   "code": "US",
@@ -65,10 +65,10 @@
     {
       "login": "vczh",
       "profile_url": "https://github.com/vczh",
-      "public_contributions": 5509,
+      "public_contributions": 5510,
       "public_repos": 13,
       "public_gists": 10,
-      "observed_public_commits": 5509,
+      "observed_public_commits": 5510,
       "observed_public_pull_requests": 4,
       "followers": 17529,
       "location": "Seattle, WA, USA",
@@ -102,7 +102,7 @@
       "public_gists": 33,
       "observed_public_commits": 4203,
       "observed_public_pull_requests": 24,
-      "followers": 59732,
+      "followers": 59733,
       "location": "San Francisco",
       "location_confidence": "city-match",
       "discovered_by_query": "location:\"San Francisco\" repos:>5 type:user",
@@ -134,7 +134,7 @@
       "public_gists": 335,
       "observed_public_commits": 3767,
       "observed_public_pull_requests": 730,
-      "followers": 14691,
+      "followers": 14692,
       "location": "Half Moon Bay, California",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:California repos:>5 type:user",
@@ -326,7 +326,7 @@
       "public_gists": 20,
       "observed_public_commits": 687,
       "observed_public_pull_requests": 4,
-      "followers": 14050,
+      "followers": 14049,
       "location": "San Francisco",
       "location_confidence": "city-match",
       "discovered_by_query": "location:\"San Francisco\" repos:>5 type:user",
@@ -373,7 +373,7 @@
       "public_gists": 42,
       "observed_public_commits": 527,
       "observed_public_pull_requests": 1,
-      "followers": 9513,
+      "followers": 9514,
       "location": "California",
       "location_confidence": "city-match",
       "discovered_by_query": "location:California repos:>5 type:user",

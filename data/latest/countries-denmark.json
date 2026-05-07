@@ -3,8 +3,8 @@
   "slug": "denmark",
   "name": "Denmark",
   "title": "Top observed GitHub contributors in Denmark",
-  "generated_at": "2026-05-07T08:51:35.617Z",
-  "fresh_until": "2026-05-14T08:51:35.617Z",
+  "generated_at": "2026-05-07T09:36:48.636Z",
+  "fresh_until": "2026-05-14T09:36:48.636Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -20,7 +20,7 @@
     ]
   },
   "code": "DK",
-  "candidate_count": 10873,
+  "candidate_count": 10874,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Denmark repos:>5 type:user",
-      "total": 10873,
+      "total": 10874,
       "accepted": 100
     }
   ],
@@ -286,7 +286,7 @@
       "public_repos": 175,
       "public_gists": 79,
       "observed_public_commits": 835,
-      "observed_public_pull_requests": 150,
+      "observed_public_pull_requests": 151,
       "followers": 1728,
       "location": "Denmark",
       "location_confidence": "exact-country",

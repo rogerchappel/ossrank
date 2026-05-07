@@ -3,8 +3,8 @@
   "slug": "new-zealand",
   "name": "New Zealand",
   "title": "Top observed GitHub contributors in New Zealand",
-  "generated_at": "2026-05-07T08:51:35.617Z",
-  "fresh_until": "2026-05-14T08:51:35.617Z",
+  "generated_at": "2026-05-07T09:36:48.636Z",
+  "fresh_until": "2026-05-14T09:36:48.636Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      69168
+      69175
     ]
   },
   "code": "NZ",
-  "candidate_count": 8865,
+  "candidate_count": 8864,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:\"New Zealand\" repos:>5 type:user",
-      "total": 8865,
+      "total": 8864,
       "accepted": 100
     }
   ],
@@ -42,10 +42,10 @@
       "login": "ryanbr",
       "name": "Fanboynz",
       "profile_url": "https://github.com/ryanbr",
-      "public_contributions": 44366,
+      "public_contributions": 44370,
       "public_repos": 37,
       "public_gists": 0,
-      "observed_public_commits": 44366,
+      "observed_public_commits": 44370,
       "observed_public_pull_requests": 654,
       "followers": 461,
       "location": "New Zealand",
@@ -138,10 +138,10 @@
       "login": "ioquatix",
       "name": "Samuel Williams",
       "profile_url": "https://github.com/ioquatix",
-      "public_contributions": 2574,
+      "public_contributions": 2577,
       "public_repos": 301,
       "public_gists": 46,
-      "observed_public_commits": 2574,
+      "observed_public_commits": 2577,
       "observed_public_pull_requests": 127,
       "followers": 1398,
       "location": "Ōtautahi, New Zealand",
@@ -174,7 +174,7 @@
       "public_repos": 146,
       "public_gists": 5,
       "observed_public_commits": 1975,
-      "observed_public_pull_requests": 880,
+      "observed_public_pull_requests": 882,
       "followers": 402,
       "location": "Wellington, New Zealand",
       "location_confidence": "multi-location",

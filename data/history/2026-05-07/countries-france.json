@@ -3,8 +3,8 @@
   "slug": "france",
   "name": "France",
   "title": "Top observed GitHub contributors in France",
-  "generated_at": "2026-05-07T08:51:35.617Z",
-  "fresh_until": "2026-05-14T08:51:35.617Z",
+  "generated_at": "2026-05-07T09:36:48.636Z",
+  "fresh_until": "2026-05-14T09:36:48.636Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      85537
+      85538
     ]
   },
   "code": "FR",
-  "candidate_count": 93585,
+  "candidate_count": 93586,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -34,7 +34,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:France repos:>5 type:user",
-      "total": 61334,
+      "total": 61335,
       "accepted": 50
     },
     {
@@ -64,10 +64,10 @@
       "login": "fasterthanlime",
       "name": "Amos Wenger",
       "profile_url": "https://github.com/fasterthanlime",
-      "public_contributions": 12565,
+      "public_contributions": 12566,
       "public_repos": 508,
       "public_gists": 91,
-      "observed_public_commits": 12565,
+      "observed_public_commits": 12566,
       "observed_public_pull_requests": 1471,
       "followers": 4675,
       "location": "Lyon, France",
@@ -85,7 +85,7 @@
       "public_gists": 29,
       "observed_public_commits": 9736,
       "observed_public_pull_requests": 553,
-      "followers": 2101,
+      "followers": 2102,
       "location": "Paris, France",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:France repos:>5 type:user",
@@ -100,7 +100,7 @@
       "public_repos": 426,
       "public_gists": 429,
       "observed_public_commits": 7369,
-      "observed_public_pull_requests": 229,
+      "observed_public_pull_requests": 230,
       "followers": 6389,
       "location": "France",
       "location_confidence": "exact-country",

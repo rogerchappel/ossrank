@@ -3,8 +3,8 @@
   "slug": "australia",
   "name": "Australia",
   "title": "Top observed GitHub contributors in Australia",
-  "generated_at": "2026-05-07T08:51:35.617Z",
-  "fresh_until": "2026-05-14T08:51:35.617Z",
+  "generated_at": "2026-05-07T09:36:48.636Z",
+  "fresh_until": "2026-05-14T09:36:48.636Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       20
     ],
     "top_10_signal": [
-      92511
+      92519
     ]
   },
   "code": "AU",
-  "candidate_count": 70443,
+  "candidate_count": 70444,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -46,17 +46,17 @@
     },
     {
       "query": "location:Sydney repos:>5 type:user",
-      "total": 15309,
+      "total": 15308,
       "accepted": 68
     },
     {
       "query": "location:Melbourne repos:>5 type:user",
-      "total": 14646,
+      "total": 14649,
       "accepted": 77
     },
     {
       "query": "location:Brisbane repos:>5 type:user",
-      "total": 4561,
+      "total": 4560,
       "accepted": 91
     },
     {
@@ -90,10 +90,10 @@
       "login": "mP1",
       "name": "Miroslav Pokorny",
       "profile_url": "https://github.com/mP1",
-      "public_contributions": 23063,
+      "public_contributions": 23065,
       "public_repos": 113,
       "public_gists": 0,
-      "observed_public_commits": 23063,
+      "observed_public_commits": 23065,
       "observed_public_pull_requests": 9960,
       "followers": 8,
       "location": "NSW, Australia",
@@ -106,11 +106,11 @@
       "login": "SimonCropp",
       "name": "Simon Cropp",
       "profile_url": "https://github.com/SimonCropp",
-      "public_contributions": 20846,
+      "public_contributions": 20852,
       "public_repos": 123,
       "public_gists": 57,
-      "observed_public_commits": 20846,
-      "observed_public_pull_requests": 1309,
+      "observed_public_commits": 20852,
+      "observed_public_pull_requests": 1310,
       "followers": 1106,
       "location": "Canberra, ACT, Australia",
       "location_confidence": "multi-location",
@@ -159,7 +159,7 @@
       "public_gists": 7,
       "observed_public_commits": 5800,
       "observed_public_pull_requests": 64,
-      "followers": 823,
+      "followers": 824,
       "location": "Melbourne, Australia",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Melbourne repos:>5 type:user",
@@ -329,10 +329,10 @@
       "login": "LTLA",
       "name": "Aaron Lun",
       "profile_url": "https://github.com/LTLA",
-      "public_contributions": 3439,
+      "public_contributions": 3440,
       "public_repos": 171,
       "public_gists": 12,
-      "observed_public_commits": 3439,
+      "observed_public_commits": 3440,
       "observed_public_pull_requests": 97,
       "followers": 480,
       "location": "Sydney",
@@ -358,6 +358,22 @@
       "rank": 17
     },
     {
+      "login": "rogerchappel",
+      "name": "Roger Chappel",
+      "profile_url": "https://github.com/rogerchappel",
+      "public_contributions": 2622,
+      "public_repos": 97,
+      "public_gists": 0,
+      "observed_public_commits": 2622,
+      "observed_public_pull_requests": 593,
+      "followers": 7,
+      "location": "Australia",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Australia followers:<10 repos:80..120 type:user",
+      "notable_repositories": [],
+      "rank": 18
+    },
+    {
       "login": "stebo85",
       "name": "Steffen Bollmann",
       "profile_url": "https://github.com/stebo85",
@@ -370,22 +386,6 @@
       "location": "Brisbane",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Brisbane repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 18
-    },
-    {
-      "login": "rogerchappel",
-      "name": "Roger Chappel",
-      "profile_url": "https://github.com/rogerchappel",
-      "public_contributions": 2617,
-      "public_repos": 97,
-      "public_gists": 0,
-      "observed_public_commits": 2617,
-      "observed_public_pull_requests": 589,
-      "followers": 7,
-      "location": "Australia",
-      "location_confidence": "exact-country",
-      "discovered_by_query": "location:Australia followers:<10 repos:80..120 type:user",
       "notable_repositories": [],
       "rank": 19
     },
