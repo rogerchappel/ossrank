@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T05:58:11.576Z",
-  "fresh_until": "2026-05-14T05:58:11.576Z",
+  "generated_at": "2026-05-07T06:02:25.022Z",
+  "fresh_until": "2026-05-14T06:02:25.022Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      2
+      92
     ]
   },
   "candidate_count": 111048,
@@ -27,75 +27,66 @@
   ],
   "entries": [
     {
-      "full_name": "paulchiu/poe-editor",
-      "url": "https://github.com/paulchiu/poe-editor",
-      "stars": 4,
-      "pull_requests_merged_7d": 2,
+      "full_name": "juspay/neurolink",
+      "url": "https://github.com/juspay/neurolink",
+      "stars": 87,
+      "pull_requests_merged_7d": 92,
       "active_contributors_30d": 1,
       "primary_language": "TypeScript",
       "rank": 1
     },
     {
-      "full_name": "pazdan12385/uix-ai-agent",
-      "url": "https://github.com/pazdan12385/uix-ai-agent",
+      "full_name": "Arseeth/skills-for-vibe-coder",
+      "url": "https://github.com/Arseeth/skills-for-vibe-coder",
       "stars": 4,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
       "rank": 2
     },
     {
-      "full_name": "HDineshG/ux",
-      "url": "https://github.com/HDineshG/ux",
-      "stars": 2,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 3
-    },
-    {
-      "full_name": "9093333310/scagent",
-      "url": "https://github.com/9093333310/scagent",
-      "stars": 1,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
-      "rank": 4
-    },
-    {
-      "full_name": "abusufyan-netizen/webtoolkitpro",
-      "url": "https://github.com/abusufyan-netizen/webtoolkitpro",
-      "stars": 1,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
-      "rank": 5
-    },
-    {
-      "full_name": "coderboy69/gastown-viewer-intent",
-      "url": "https://github.com/coderboy69/gastown-viewer-intent",
-      "stars": 1,
+      "full_name": "Harshx07/grepai",
+      "url": "https://github.com/Harshx07/grepai",
+      "stars": 3,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "Go",
-      "rank": 6
+      "rank": 3
     },
     {
-      "full_name": "DefaultPerson/cc-live-cheatsheet",
-      "url": "https://github.com/DefaultPerson/cc-live-cheatsheet",
-      "stars": 1,
+      "full_name": "ChisomNwokoro/andy-universal-agent-rules",
+      "url": "https://github.com/ChisomNwokoro/andy-universal-agent-rules",
+      "stars": 2,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "Python",
+      "rank": 4
+    },
+    {
+      "full_name": "hallucinatemd/hallucinate.md",
+      "url": "https://github.com/hallucinatemd/hallucinate.md",
+      "stars": 2,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "JavaScript",
-      "rank": 7
+      "rank": 5
     },
     {
-      "full_name": "imbflool/cc-plugin-eval",
-      "url": "https://github.com/imbflool/cc-plugin-eval",
+      "full_name": "KWAMIVAVA/RefCheck",
+      "url": "https://github.com/KWAMIVAVA/RefCheck",
+      "stars": 2,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 6
+    },
+    {
+      "full_name": "ayushh2k/turbine",
+      "url": "https://github.com/ayushh2k/turbine",
       "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "TypeScript",
-      "rank": 8
+      "rank": 7
     },
     {
       "full_name": "Kuestenlogik/Bowire",
@@ -104,16 +95,16 @@
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "C#",
-      "rank": 9
+      "rank": 8
     },
     {
-      "full_name": "Sachin5464/reasonkit-mem",
-      "url": "https://github.com/Sachin5464/reasonkit-mem",
+      "full_name": "oliverquaye23/claude-hooks",
+      "url": "https://github.com/oliverquaye23/claude-hooks",
       "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Rust",
-      "rank": 10
+      "primary_language": "CSS",
+      "rank": 9
     },
     {
       "full_name": "AISquare-Studio/office",
@@ -121,55 +112,64 @@
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "rank": 10
+    },
+    {
+      "full_name": "AltNoob010472/posovia-ui-mock",
+      "url": "https://github.com/AltNoob010472/posovia-ui-mock",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
       "rank": 11
     },
     {
-      "full_name": "AnmolPro9757/sequential-multi-model-cofing-pipeline",
-      "url": "https://github.com/AnmolPro9757/sequential-multi-model-cofing-pipeline",
+      "full_name": "cinoindo/smart-xdebug-mcp",
+      "url": "https://github.com/cinoindo/smart-xdebug-mcp",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 12
+    },
+    {
+      "full_name": "GekoYumi/OmniSolve-AI_System",
+      "url": "https://github.com/GekoYumi/OmniSolve-AI_System",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "Python",
-      "rank": 12
-    },
-    {
-      "full_name": "FIJIHERE/GitHubDaily",
-      "url": "https://github.com/FIJIHERE/GitHubDaily",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
       "rank": 13
     },
     {
-      "full_name": "imurdad2344/dep-why",
-      "url": "https://github.com/imurdad2344/dep-why",
+      "full_name": "Icolfyou/RTCPilot",
+      "url": "https://github.com/Icolfyou/RTCPilot",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Rust",
+      "primary_language": "C++",
       "rank": 14
     },
     {
-      "full_name": "jucyboy/pyo3-hint-transpiler",
-      "url": "https://github.com/jucyboy/pyo3-hint-transpiler",
+      "full_name": "jul-mokel/debug-effort-estimator",
+      "url": "https://github.com/jul-mokel/debug-effort-estimator",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Rust",
+      "primary_language": "Jupyter Notebook",
       "rank": 15
     },
     {
-      "full_name": "justarandomfella/serdejsonpy",
-      "url": "https://github.com/justarandomfella/serdejsonpy",
+      "full_name": "ManuelGonzalessalas/orbiqd-briefkit",
+      "url": "https://github.com/ManuelGonzalessalas/orbiqd-briefkit",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Rust",
+      "primary_language": "Go",
       "rank": 16
     },
     {
-      "full_name": "NaetheraS/claude-skills-pack",
-      "url": "https://github.com/NaetheraS/claude-skills-pack",
+      "full_name": "Matt201306/buildinpublic-bot",
+      "url": "https://github.com/Matt201306/buildinpublic-bot",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
@@ -177,30 +177,28 @@
       "rank": 17
     },
     {
-      "full_name": "NamwokoyiBashir/life-calculators",
-      "url": "https://github.com/NamwokoyiBashir/life-calculators",
+      "full_name": "reochoi109/reochoi109",
+      "url": "https://github.com/reochoi109/reochoi109",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "HTML",
       "rank": 18
     },
     {
-      "full_name": "romny5/reasonkit-web",
-      "url": "https://github.com/romny5/reasonkit-web",
+      "full_name": "Somaliking3/weevean",
+      "url": "https://github.com/Somaliking3/weevean",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Rust",
+      "primary_language": "CSS",
       "rank": 19
     },
     {
-      "full_name": "Stephhkz/life-calculators",
-      "url": "https://github.com/Stephhkz/life-calculators",
+      "full_name": "talalhassankhan18/SlowedLab",
+      "url": "https://github.com/talalhassankhan18/SlowedLab",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "HTML",
       "rank": 20
     }
   ]

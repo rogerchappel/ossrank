@@ -3,8 +3,8 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T05:58:11.576Z",
-  "fresh_until": "2026-05-14T05:58:11.576Z",
+  "generated_at": "2026-05-07T06:02:25.022Z",
+  "fresh_until": "2026-05-14T06:02:25.022Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      868
+      1928
     ]
   },
   "candidate_count": 34468,
@@ -27,76 +27,58 @@
   ],
   "entries": [
     {
-      "full_name": "openemr/openemr",
-      "url": "https://github.com/openemr/openemr",
-      "stars": 5123,
-      "pull_requests_merged_7d": 295,
-      "active_contributors_30d": 7,
-      "primary_language": "PHP",
+      "full_name": "openai/codex",
+      "url": "https://github.com/openai/codex",
+      "stars": 80497,
+      "pull_requests_merged_7d": 1288,
+      "active_contributors_30d": 107,
+      "primary_language": "Rust",
       "rank": 1
     },
     {
-      "full_name": "openxla/xla",
-      "url": "https://github.com/openxla/xla",
-      "stars": 4249,
-      "pull_requests_merged_7d": 233,
-      "active_contributors_30d": 6,
-      "primary_language": "C++",
+      "full_name": "easylist/easylist",
+      "url": "https://github.com/easylist/easylist",
+      "stars": 2981,
+      "pull_requests_merged_7d": 437,
+      "active_contributors_30d": 4,
+      "primary_language": "Adblock Filter List",
       "rank": 2
     },
     {
-      "full_name": "mdn/translated-content",
-      "url": "https://github.com/mdn/translated-content",
-      "stars": 1983,
-      "pull_requests_merged_7d": 141,
-      "active_contributors_30d": 3,
-      "primary_language": "Markdown",
+      "full_name": "stalwartlabs/stalwart",
+      "url": "https://github.com/stalwartlabs/stalwart",
+      "stars": 12656,
+      "pull_requests_merged_7d": 49,
+      "active_contributors_30d": 17,
+      "primary_language": "Rust",
       "rank": 3
     },
     {
-      "full_name": "apify/crawlee",
-      "url": "https://github.com/apify/crawlee",
-      "stars": 23092,
-      "pull_requests_merged_7d": 59,
-      "active_contributors_30d": 31,
-      "primary_language": "TypeScript",
+      "full_name": "nextcloud/passman",
+      "url": "https://github.com/nextcloud/passman",
+      "stars": 820,
+      "pull_requests_merged_7d": 45,
+      "active_contributors_30d": 1,
+      "primary_language": "JavaScript",
       "rank": 4
     },
     {
-      "full_name": "CodeGraphContext/CodeGraphContext",
-      "url": "https://github.com/CodeGraphContext/CodeGraphContext",
-      "stars": 3174,
-      "pull_requests_merged_7d": 54,
-      "active_contributors_30d": 4,
-      "primary_language": "Python",
+      "full_name": "dubinc/dub",
+      "url": "https://github.com/dubinc/dub",
+      "stars": 23488,
+      "pull_requests_merged_7d": 38,
+      "active_contributors_30d": 31,
+      "primary_language": "TypeScript",
       "rank": 5
     },
     {
-      "full_name": "zinggAI/zingg",
-      "url": "https://github.com/zinggAI/zingg",
-      "stars": 1197,
-      "pull_requests_merged_7d": 31,
-      "active_contributors_30d": 2,
-      "primary_language": "Java",
-      "rank": 6
-    },
-    {
-      "full_name": "martinrotter/rssguard",
-      "url": "https://github.com/martinrotter/rssguard",
-      "stars": 2555,
-      "pull_requests_merged_7d": 22,
+      "full_name": "rubygems/rubygems.org",
+      "url": "https://github.com/rubygems/rubygems.org",
+      "stars": 2425,
+      "pull_requests_merged_7d": 37,
       "active_contributors_30d": 3,
-      "primary_language": "C++",
-      "rank": 7
-    },
-    {
-      "full_name": "ImperialCollegeLondon/FLT",
-      "url": "https://github.com/ImperialCollegeLondon/FLT",
-      "stars": 881,
-      "pull_requests_merged_7d": 13,
-      "active_contributors_30d": 1,
-      "primary_language": "Lean",
-      "rank": 8
+      "primary_language": "Ruby",
+      "rank": 6
     },
     {
       "full_name": "curl/curl",
@@ -105,60 +87,59 @@
       "pull_requests_merged_7d": 12,
       "active_contributors_30d": 56,
       "primary_language": "C",
+      "rank": 7
+    },
+    {
+      "full_name": "tumic0/GPXSee",
+      "url": "https://github.com/tumic0/GPXSee",
+      "stars": 1188,
+      "pull_requests_merged_7d": 9,
+      "active_contributors_30d": 2,
+      "primary_language": "C++",
+      "rank": 8
+    },
+    {
+      "full_name": "openupm/openupm",
+      "url": "https://github.com/openupm/openupm",
+      "stars": 1862,
+      "pull_requests_merged_7d": 7,
+      "active_contributors_30d": 2,
+      "primary_language": "JavaScript",
       "rank": 9
     },
     {
-      "full_name": "GrahamDumpleton/mod_wsgi",
-      "url": "https://github.com/GrahamDumpleton/mod_wsgi",
-      "stars": 1043,
-      "pull_requests_merged_7d": 8,
-      "active_contributors_30d": 1,
-      "primary_language": "C",
+      "full_name": "chromium/chromium",
+      "url": "https://github.com/chromium/chromium",
+      "stars": 23608,
+      "pull_requests_merged_7d": 6,
+      "active_contributors_30d": 31,
+      "primary_language": "C++",
       "rank": 10
     },
     {
-      "full_name": "asgeirtj/system_prompts_leaks",
-      "url": "https://github.com/asgeirtj/system_prompts_leaks",
-      "stars": 39772,
-      "pull_requests_merged_7d": 7,
-      "active_contributors_30d": 53,
+      "full_name": "specta-rs/specta",
+      "url": "https://github.com/specta-rs/specta",
+      "stars": 576,
+      "pull_requests_merged_7d": 5,
+      "active_contributors_30d": 1,
+      "primary_language": "Rust",
       "rank": 11
     },
     {
-      "full_name": "t8y2/dbx",
-      "url": "https://github.com/t8y2/dbx",
-      "stars": 1084,
-      "pull_requests_merged_7d": 6,
-      "active_contributors_30d": 1,
-      "primary_language": "Vue",
+      "full_name": "ymyuuu/IPDB",
+      "url": "https://github.com/ymyuuu/IPDB",
+      "stars": 2456,
+      "pull_requests_merged_7d": 4,
+      "active_contributors_30d": 3,
       "rank": 12
     },
     {
-      "full_name": "needle-tools/needle-engine-support",
-      "url": "https://github.com/needle-tools/needle-engine-support",
-      "stars": 596,
-      "pull_requests_merged_7d": 3,
-      "active_contributors_30d": 1,
-      "primary_language": "JavaScript",
-      "rank": 13
-    },
-    {
-      "full_name": "docker-library/repo-info",
-      "url": "https://github.com/docker-library/repo-info",
-      "stars": 600,
-      "pull_requests_merged_7d": 2,
-      "active_contributors_30d": 1,
-      "primary_language": "Perl",
-      "rank": 14
-    },
-    {
-      "full_name": "rust-lang/crates.io-index",
-      "url": "https://github.com/rust-lang/crates.io-index",
-      "stars": 704,
+      "full_name": "SimplifyJobs/New-Grad-Positions",
+      "url": "https://github.com/SimplifyJobs/New-Grad-Positions",
+      "stars": 16876,
       "pull_requests_merged_7d": 1,
-      "active_contributors_30d": 1,
-      "primary_language": "Tcl",
-      "rank": 15
+      "active_contributors_30d": 23,
+      "rank": 13
     },
     {
       "full_name": "TylerTemp/SaintsField",
@@ -167,6 +148,24 @@
       "pull_requests_merged_7d": 1,
       "active_contributors_30d": 1,
       "primary_language": "C#",
+      "rank": 14
+    },
+    {
+      "full_name": "katanaml/sparrow",
+      "url": "https://github.com/katanaml/sparrow",
+      "stars": 5156,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 7,
+      "primary_language": "Python",
+      "rank": 15
+    },
+    {
+      "full_name": "xingpingcn/enhanced-FaaS-in-China",
+      "url": "https://github.com/xingpingcn/enhanced-FaaS-in-China",
+      "stars": 2952,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 4,
+      "primary_language": "Python",
       "rank": 16
     },
     {
@@ -179,20 +178,21 @@
       "rank": 17
     },
     {
-      "full_name": "Hommy-master/capcut-mate",
-      "url": "https://github.com/Hommy-master/capcut-mate",
-      "stars": 923,
+      "full_name": "bjw-s-labs/home-ops",
+      "url": "https://github.com/bjw-s-labs/home-ops",
+      "stars": 829,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "primary_language": "YAML",
       "rank": 18
     },
     {
-      "full_name": "ebrasha/free-v2ray-public-list",
-      "url": "https://github.com/ebrasha/free-v2ray-public-list",
-      "stars": 726,
+      "full_name": "thClaws/thClaws",
+      "url": "https://github.com/thClaws/thClaws",
+      "stars": 822,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "Rust",
       "rank": 19
     },
     {
