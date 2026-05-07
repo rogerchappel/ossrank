@@ -465,11 +465,18 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     'Project momentum prioritises recent merged PRs, recent commits, observed contributors, then stars.'
   ];
 
+  const globalContributorPool = [
+    ...global.users,
+    ...ts.users,
+    ...countryResults.flatMap((result) => result.users)
+  ];
+  const globalEntries = rankContributors([...new Map(globalContributorPool.map((user) => [user.login.toLowerCase(), user])).values()]).slice(0, limit);
+  const derivedGlobalStat = { query: 'derived from current country, language, and global contributor snapshots', total: globalContributorPool.length, accepted: Math.max(0, globalEntries.length - global.users.length) };
   const globalContributors: RankingSnapshot<RankedContributor> = {
     ...snapshotBase('global', 'contributors', 'Global', 'Top observed GitHub contributors globally', generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
-    candidate_count: global.total, caveats: contributorCaveats, discovery_queries: ['followers:>1000 repos:>20 type:user', 'repos:>100 followers:>500 type:user'], candidate_count_by_query: global.queryStats,
-    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [global.users.length], top_10_signal: [global.users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
-    entries: global.users
+    candidate_count: global.total + globalContributorPool.length, caveats: contributorCaveats, discovery_queries: ['followers:>1000 repos:>20 type:user', 'repos:>100 followers:>500 type:user', 'derived from current country and language contributor snapshots'], candidate_count_by_query: [...global.queryStats, derivedGlobalStat],
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [globalEntries.length], top_10_signal: [globalEntries.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
+    entries: globalEntries
   };
   const countries: Array<RankingSnapshot<RankedContributor>> = countryResults.map(({ config, total, users }) => ({
     ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
