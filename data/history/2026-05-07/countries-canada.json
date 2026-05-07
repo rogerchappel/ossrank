@@ -3,8 +3,8 @@
   "slug": "canada",
   "name": "Canada",
   "title": "Top observed GitHub contributors in Canada",
-  "generated_at": "2026-05-07T06:53:42.655Z",
-  "fresh_until": "2026-05-14T06:53:42.655Z",
+  "generated_at": "2026-05-07T06:55:40.995Z",
+  "fresh_until": "2026-05-14T06:55:40.995Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       12
     ],
     "top_10_signal": [
-      8418
+      10439
     ]
   },
   "code": "CA",
-  "candidate_count": 67329,
+  "candidate_count": 63063,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -59,6 +59,21 @@
       "rank": 2
     },
     {
+      "login": "jennybc",
+      "name": "Jennifer (Jenny) Bryan",
+      "profile_url": "https://github.com/jennybc",
+      "public_contributions": 2038,
+      "public_repos": 271,
+      "public_gists": 71,
+      "observed_public_commits": 2038,
+      "observed_public_pull_requests": 142,
+      "followers": 5635,
+      "location": "Vancouver, BC, Canada",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 3
+    },
+    {
       "login": "gorhill",
       "name": "Raymond Hill",
       "profile_url": "https://github.com/gorhill",
@@ -71,7 +86,7 @@
       "location": "Canada / Québec",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 4
     },
     {
       "login": "swankjesse",
@@ -86,7 +101,7 @@
       "location": "Waterloo, Ontario, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 5
     },
     {
       "login": "developit",
@@ -101,7 +116,7 @@
       "location": "Hamilton, Ontario, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 6
     },
     {
       "login": "rwightman",
@@ -116,7 +131,7 @@
       "location": "Vancouver, BC, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 7
     },
     {
       "login": "shiftkey",
@@ -131,7 +146,7 @@
       "location": "Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 8
     },
     {
       "login": "machadop1407",
@@ -146,7 +161,7 @@
       "location": "Vancouver, British Columbia, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 9
     },
     {
       "login": "adamwathan",
@@ -161,7 +176,7 @@
       "location": "Ontario, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 10
     },
     {
       "login": "dalindev",
@@ -176,7 +191,7 @@
       "location": "Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 11
     },
     {
       "login": "aneagoie",
@@ -189,21 +204,6 @@
       "observed_public_pull_requests": 0,
       "followers": 10710,
       "location": "Toronto, Canada",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 11
-    },
-    {
-      "login": "GrapheneOS",
-      "name": "GrapheneOS",
-      "profile_url": "https://github.com/GrapheneOS",
-      "public_contributions": 0,
-      "public_repos": 156,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 7778,
-      "location": "Toronto, Ontario, Canada",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 12

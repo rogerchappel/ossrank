@@ -3,8 +3,8 @@
   "slug": "germany",
   "name": "Germany",
   "title": "Top observed GitHub contributors in Germany",
-  "generated_at": "2026-05-07T06:53:42.655Z",
-  "fresh_until": "2026-05-14T06:53:42.655Z",
+  "generated_at": "2026-05-07T06:55:40.995Z",
+  "fresh_until": "2026-05-14T06:55:40.995Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -20,7 +20,7 @@
     ]
   },
   "code": "DE",
-  "candidate_count": 98833,
+  "candidate_count": 89639,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -194,16 +194,16 @@
       "rank": 11
     },
     {
-      "login": "n8n-io",
-      "name": "n8n - Workflow Automation",
-      "profile_url": "https://github.com/n8n-io",
+      "login": "android10",
+      "name": "Fernando Cejas",
+      "profile_url": "https://github.com/android10",
       "public_contributions": 0,
-      "public_repos": 40,
-      "public_gists": 0,
+      "public_repos": 81,
+      "public_gists": 23,
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
-      "followers": 13338,
-      "location": "Germany",
+      "followers": 6774,
+      "location": "Berlin, Germany",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 12

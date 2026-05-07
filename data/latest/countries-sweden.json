@@ -3,8 +3,8 @@
   "slug": "sweden",
   "name": "Sweden",
   "title": "Top observed GitHub contributors in Sweden",
-  "generated_at": "2026-05-07T06:53:42.655Z",
-  "fresh_until": "2026-05-14T06:53:42.655Z",
+  "generated_at": "2026-05-07T06:55:40.995Z",
+  "fresh_until": "2026-05-14T06:55:40.995Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       12
     ],
     "top_10_signal": [
-      8241
+      9873
     ]
   },
   "code": "SE",
-  "candidate_count": 25419,
+  "candidate_count": 23569,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -89,6 +89,36 @@
       "rank": 4
     },
     {
+      "login": "arvidn",
+      "name": "Arvid Norberg",
+      "profile_url": "https://github.com/arvidn",
+      "public_contributions": 1068,
+      "public_repos": 52,
+      "public_gists": 1,
+      "observed_public_commits": 1068,
+      "observed_public_pull_requests": 695,
+      "followers": 3351,
+      "location": "Stockholm, Sweden",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 5
+    },
+    {
+      "login": "emilybache",
+      "name": "Emily Bache",
+      "profile_url": "https://github.com/emilybache",
+      "public_contributions": 564,
+      "public_repos": 200,
+      "public_gists": 10,
+      "observed_public_commits": 564,
+      "observed_public_pull_requests": 4,
+      "followers": 3181,
+      "location": "Göteborg, Sweden",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 6
+    },
+    {
       "login": "hakimel",
       "name": "Hakim El Hattab",
       "profile_url": "https://github.com/hakimel",
@@ -101,7 +131,7 @@
       "location": "Sweden",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 7
     },
     {
       "login": "FreyaHolmer",
@@ -116,7 +146,7 @@
       "location": "Sweden",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 8
     },
     {
       "login": "mpj",
@@ -131,52 +161,7 @@
       "location": "Stockholm, Sweden",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 7
-    },
-    {
-      "login": "grafana",
-      "name": "Grafana Labs",
-      "profile_url": "https://github.com/grafana",
-      "public_contributions": 0,
-      "public_repos": 994,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 6699,
-      "location": "Sweden",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 8
-    },
-    {
-      "login": "spotify",
-      "name": "Spotify",
-      "profile_url": "https://github.com/spotify",
-      "public_contributions": 0,
-      "public_repos": 283,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 4823,
-      "location": "Stockholm, Sweden",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
       "rank": 9
-    },
-    {
-      "login": "Mojang",
-      "name": "Mojang",
-      "profile_url": "https://github.com/Mojang",
-      "public_contributions": 0,
-      "public_repos": 88,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 3741,
-      "location": "Stockholm, Sweden + Redmond, WA + many other places",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 10
     },
     {
       "login": "emmabostian",
@@ -189,6 +174,21 @@
       "observed_public_pull_requests": 0,
       "followers": 7778,
       "location": "Stockholm, Sweden",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 10
+    },
+    {
+      "login": "vandadnp",
+      "name": "Vandad Nahavandipoor",
+      "profile_url": "https://github.com/vandadnp",
+      "public_contributions": 0,
+      "public_repos": 53,
+      "public_gists": 1,
+      "observed_public_commits": 0,
+      "observed_public_pull_requests": 0,
+      "followers": 3370,
+      "location": "Sweden",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 11

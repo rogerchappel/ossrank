@@ -3,8 +3,8 @@
   "slug": "australia",
   "name": "Australia",
   "title": "Top observed GitHub contributors in Australia",
-  "generated_at": "2026-05-07T06:53:42.655Z",
-  "fresh_until": "2026-05-14T06:53:42.655Z",
+  "generated_at": "2026-05-07T06:55:40.995Z",
+  "fresh_until": "2026-05-14T06:55:40.995Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       12
     ],
     "top_10_signal": [
-      7037
+      7193
     ]
   },
   "code": "AU",
-  "candidate_count": 37672,
+  "candidate_count": 34548,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -47,10 +47,10 @@
       "login": "rogerchappel",
       "name": "Roger Chappel",
       "profile_url": "https://github.com/rogerchappel",
-      "public_contributions": 2540,
+      "public_contributions": 2541,
       "public_repos": 94,
       "public_gists": 0,
-      "observed_public_commits": 2540,
+      "observed_public_commits": 2541,
       "observed_public_pull_requests": 585,
       "followers": 7,
       "location": "Australia",
@@ -74,6 +74,21 @@
       "rank": 3
     },
     {
+      "login": "markdalgleish",
+      "name": "Mark Dalgleish",
+      "profile_url": "https://github.com/markdalgleish",
+      "public_contributions": 160,
+      "public_repos": 259,
+      "public_gists": 8,
+      "observed_public_commits": 160,
+      "observed_public_pull_requests": 168,
+      "followers": 3282,
+      "location": "Melbourne, Australia",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 4
+    },
+    {
       "login": "nicknochnack",
       "name": "Nicholas Renotte",
       "profile_url": "https://github.com/nicknochnack",
@@ -86,7 +101,7 @@
       "location": "Sydney, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 5
     },
     {
       "login": "codingo",
@@ -101,7 +116,7 @@
       "location": "Brisbane, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 6
     },
     {
       "login": "davecheney",
@@ -116,7 +131,7 @@
       "location": "Sydney, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 7
     },
     {
       "login": "0vm",
@@ -131,7 +146,7 @@
       "location": "Sydney, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 8
     },
     {
       "login": "TheCherno",
@@ -146,7 +161,7 @@
       "location": "Melbourne, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 9
     },
     {
       "login": "basarat",
@@ -161,7 +176,7 @@
       "location": "Melbourne, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 10
     },
     {
       "login": "hakluke",
@@ -176,7 +191,7 @@
       "location": "Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 11
     },
     {
       "login": "brendangregg",
@@ -189,21 +204,6 @@
       "observed_public_pull_requests": 0,
       "followers": 8743,
       "location": "Sydney, Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 11
-    },
-    {
-      "login": "cornflourblue",
-      "name": "Jason Watmore",
-      "profile_url": "https://github.com/cornflourblue",
-      "public_contributions": 0,
-      "public_repos": 187,
-      "public_gists": 7,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 6713,
-      "location": "Sydney Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 12

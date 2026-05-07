@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T06:53:42.655Z",
-  "fresh_until": "2026-05-14T06:53:42.655Z",
+  "generated_at": "2026-05-07T06:55:40.995Z",
+  "fresh_until": "2026-05-14T06:55:40.995Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,10 +16,10 @@
       12
     ],
     "top_10_signal": [
-      1
+      6
     ]
   },
-  "candidate_count": 111055,
+  "candidate_count": 111056,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,108 +27,108 @@
   ],
   "entries": [
     {
-      "full_name": "amirfish1/claude-command-center",
-      "url": "https://github.com/amirfish1/claude-command-center",
-      "stars": 24,
-      "pull_requests_merged_7d": 1,
+      "full_name": "daintreehq/daintree",
+      "url": "https://github.com/daintreehq/daintree",
+      "stars": 32,
+      "pull_requests_merged_7d": 6,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "primary_language": "TypeScript",
       "rank": 1
     },
     {
-      "full_name": "Dicklesworthstone/ntm",
-      "url": "https://github.com/Dicklesworthstone/ntm",
-      "stars": 272,
+      "full_name": "AISquare-Studio/office",
+      "url": "https://github.com/AISquare-Studio/office",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Go",
       "rank": 2
     },
     {
-      "full_name": "poizzytech/OpenScientist",
-      "url": "https://github.com/poizzytech/OpenScientist",
-      "stars": 1,
+      "full_name": "bodymassindexdacoit284/claudecode-local-sync",
+      "url": "https://github.com/bodymassindexdacoit284/claudecode-local-sync",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "JavaScript",
+      "primary_language": "Python",
       "rank": 3
     },
     {
-      "full_name": "Bitter-ryeergot519/promptref",
-      "url": "https://github.com/Bitter-ryeergot519/promptref",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 4
-    },
-    {
-      "full_name": "CHENJIAMIAN/codex-autopilot-npm",
-      "url": "https://github.com/CHENJIAMIAN/codex-autopilot-npm",
+      "full_name": "Harby3816/BeadsMCP",
+      "url": "https://github.com/Harby3816/BeadsMCP",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "JavaScript",
+      "rank": 4
+    },
+    {
+      "full_name": "harshramg5007/agentspaces",
+      "url": "https://github.com/harshramg5007/agentspaces",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "Go",
       "rank": 5
     },
     {
-      "full_name": "kingbroskingbros41-a11y/cman",
-      "url": "https://github.com/kingbroskingbros41-a11y/cman",
+      "full_name": "Horatiusbridgeable99/ruyynn-services",
+      "url": "https://github.com/Horatiusbridgeable99/ruyynn-services",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
       "rank": 6
     },
     {
-      "full_name": "koaung8629/mcp-browser",
-      "url": "https://github.com/koaung8629/mcp-browser",
+      "full_name": "JosephElaro/worktree",
+      "url": "https://github.com/JosephElaro/worktree",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "primary_language": "Rust",
       "rank": 7
     },
     {
-      "full_name": "m3dicinegaming6-bot/burn-token",
-      "url": "https://github.com/m3dicinegaming6-bot/burn-token",
+      "full_name": "Justnessresponse962/ai-dev-framework",
+      "url": "https://github.com/Justnessresponse962/ai-dev-framework",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "rank": 8
     },
     {
-      "full_name": "Mamtamahe3975/gazectl",
-      "url": "https://github.com/Mamtamahe3975/gazectl",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Swift",
-      "rank": 9
-    },
-    {
-      "full_name": "Mohamm732/skillpilot-releases",
-      "url": "https://github.com/Mohamm732/skillpilot-releases",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 10
-    },
-    {
-      "full_name": "Pragmatical-transshipment598/claude-code-workflows",
-      "url": "https://github.com/Pragmatical-transshipment598/claude-code-workflows",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 11
-    },
-    {
-      "full_name": "taxpayerreunification534/codex-autoresearch",
-      "url": "https://github.com/taxpayerreunification534/codex-autoresearch",
+      "full_name": "Open330/context-compress",
+      "url": "https://github.com/Open330/context-compress",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "TypeScript",
+      "rank": 9
+    },
+    {
+      "full_name": "Rimaglottidisspacewalk319/claude-meter",
+      "url": "https://github.com/Rimaglottidisspacewalk319/claude-meter",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "Python",
+      "rank": 10
+    },
+    {
+      "full_name": "TettoLabs/anatomia",
+      "url": "https://github.com/TettoLabs/anatomia",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 11
+    },
+    {
+      "full_name": "Thomdental995/ArchiveKit",
+      "url": "https://github.com/Thomdental995/ArchiveKit",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "Python",
       "rank": 12
     }
   ]

@@ -3,8 +3,8 @@
   "slug": "netherlands",
   "name": "Netherlands",
   "title": "Top observed GitHub contributors in Netherlands",
-  "generated_at": "2026-05-07T06:53:42.655Z",
-  "fresh_until": "2026-05-14T06:53:42.655Z",
+  "generated_at": "2026-05-07T06:55:40.995Z",
+  "fresh_until": "2026-05-14T06:55:40.995Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -20,7 +20,7 @@
     ]
   },
   "code": "NL",
-  "candidate_count": 31390,
+  "candidate_count": 28082,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -179,6 +179,21 @@
       "rank": 10
     },
     {
+      "login": "AmirBayat0",
+      "name": "FlexZ",
+      "profile_url": "https://github.com/AmirBayat0",
+      "public_contributions": 73,
+      "public_repos": 113,
+      "public_gists": 0,
+      "observed_public_commits": 73,
+      "observed_public_pull_requests": 0,
+      "followers": 3197,
+      "location": "Netherlands",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 11
+    },
+    {
       "login": "lucasmontano",
       "name": "Lucas Montano",
       "profile_url": "https://github.com/lucasmontano",
@@ -189,21 +204,6 @@
       "observed_public_pull_requests": 1,
       "followers": 9517,
       "location": "Amsterdam, The Netherlands",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 11
-    },
-    {
-      "login": "JetBrains",
-      "name": "JetBrains",
-      "profile_url": "https://github.com/JetBrains",
-      "public_contributions": 0,
-      "public_repos": 816,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 12951,
-      "location": "Netherlands",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 12

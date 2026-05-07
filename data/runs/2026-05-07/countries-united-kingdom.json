@@ -3,8 +3,8 @@
   "slug": "united-kingdom",
   "name": "United Kingdom",
   "title": "Top observed GitHub contributors in United Kingdom",
-  "generated_at": "2026-05-07T06:53:42.655Z",
-  "fresh_until": "2026-05-14T06:53:42.655Z",
+  "generated_at": "2026-05-07T06:55:40.995Z",
+  "fresh_until": "2026-05-14T06:55:40.995Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
@@ -16,11 +16,11 @@
       12
     ],
     "top_10_signal": [
-      5859
+      8083
     ]
   },
   "code": "GB",
-  "candidate_count": 33796,
+  "candidate_count": 29226,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -28,6 +28,21 @@
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "entries": [
+    {
+      "login": "segunadebayo",
+      "name": "Segun Adebayo",
+      "profile_url": "https://github.com/segunadebayo",
+      "public_contributions": 2221,
+      "public_repos": 36,
+      "public_gists": 34,
+      "observed_public_commits": 2221,
+      "observed_public_pull_requests": 53,
+      "followers": 4402,
+      "location": "United Kingdom",
+      "location_confidence": "profile-text-match",
+      "notable_repositories": [],
+      "rank": 1
+    },
     {
       "login": "alexellis",
       "name": "Alex Ellis",
@@ -41,7 +56,7 @@
       "location": "United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 2
     },
     {
       "login": "nilbuild",
@@ -56,7 +71,7 @@
       "location": "United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 3
     },
     {
       "login": "samuelcolvin",
@@ -71,7 +86,7 @@
       "location": "London, United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 4
     },
     {
       "login": "trueadm",
@@ -86,7 +101,7 @@
       "location": "London, United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 5
     },
     {
       "login": "GrahamCampbell",
@@ -101,7 +116,7 @@
       "location": "York, United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 6
     },
     {
       "login": "frontend-joe",
@@ -116,7 +131,7 @@
       "location": "United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 7
     },
     {
       "login": "iamshaunjp",
@@ -131,7 +146,7 @@
       "location": "United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 8
     },
     {
       "login": "mlabonne",
@@ -146,22 +161,22 @@
       "location": "London, United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 9
     },
     {
-      "login": "Stability-AI",
-      "name": "Stability AI",
-      "profile_url": "https://github.com/Stability-AI",
-      "public_contributions": 0,
-      "public_repos": 101,
-      "public_gists": 0,
-      "observed_public_commits": 0,
+      "login": "florina-muntenescu",
+      "name": "Florina Muntenescu",
+      "profile_url": "https://github.com/florina-muntenescu",
+      "public_contributions": 3,
+      "public_repos": 19,
+      "public_gists": 6,
+      "observed_public_commits": 3,
       "observed_public_pull_requests": 0,
-      "followers": 13584,
-      "location": "United Kingdom",
+      "followers": 4321,
+      "location": "London, United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 10
     },
     {
       "login": "jgilfelt",
@@ -174,21 +189,6 @@
       "observed_public_pull_requests": 0,
       "followers": 4717,
       "location": "London, United Kingdom",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 10
-    },
-    {
-      "login": "jgraph",
-      "name": "draw.io",
-      "profile_url": "https://github.com/jgraph",
-      "public_contributions": 0,
-      "public_repos": 32,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 4762,
-      "location": "United Kingdom",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
       "rank": 11

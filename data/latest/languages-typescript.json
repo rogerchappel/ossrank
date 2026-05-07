@@ -3,8 +3,8 @@
   "slug": "typescript",
   "name": "TypeScript",
   "title": "Top observed TypeScript open-source contributors",
-  "generated_at": "2026-05-07T06:53:42.655Z",
-  "fresh_until": "2026-05-14T06:53:42.655Z",
+  "generated_at": "2026-05-07T06:55:40.995Z",
+  "fresh_until": "2026-05-14T06:55:40.995Z",
   "status": "fresh",
   "method": "github-rest-raw-public-metrics",
   "source_run": "2026-05-07",
@@ -16,10 +16,10 @@
       12
     ],
     "top_10_signal": [
-      3459
+      17554
     ]
   },
-  "candidate_count": 7999,
+  "candidate_count": 6192,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -27,6 +27,21 @@
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "entries": [
+    {
+      "login": "ruvnet",
+      "name": "rUv",
+      "profile_url": "https://github.com/ruvnet",
+      "public_contributions": 10303,
+      "public_repos": 174,
+      "public_gists": 322,
+      "observed_public_commits": 10303,
+      "observed_public_pull_requests": 691,
+      "followers": 7555,
+      "location": "0x",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 1
+    },
     {
       "login": "kamilmysliwiec",
       "name": "Kamil Mysliwiec",
@@ -40,7 +55,37 @@
       "location": "Poland",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 2
+    },
+    {
+      "login": "kijai",
+      "name": "Jukka Seppänen",
+      "profile_url": "https://github.com/kijai",
+      "public_contributions": 1713,
+      "public_repos": 106,
+      "public_gists": 0,
+      "observed_public_commits": 1713,
+      "observed_public_pull_requests": 60,
+      "followers": 6048,
+      "location": "Finland",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 3
+    },
+    {
+      "login": "Brooooooklyn",
+      "name": "LongYinan",
+      "profile_url": "https://github.com/Brooooooklyn",
+      "public_contributions": 1696,
+      "public_repos": 297,
+      "public_gists": 5,
+      "observed_public_commits": 1696,
+      "observed_public_pull_requests": 904,
+      "followers": 5017,
+      "location": "Singapore",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 4
     },
     {
       "login": "idimetrix",
@@ -55,7 +100,22 @@
       "location": "New York",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 5
+    },
+    {
+      "login": "sonnysangha",
+      "name": "Sonny Sangha",
+      "profile_url": "https://github.com/sonnysangha",
+      "public_contributions": 383,
+      "public_repos": 64,
+      "public_gists": 0,
+      "observed_public_commits": 383,
+      "observed_public_pull_requests": 43,
+      "followers": 5129,
+      "location": "Dubai, UAE",
+      "location_confidence": "unknown",
+      "notable_repositories": [],
+      "rank": 6
     },
     {
       "login": "Klerith",
@@ -70,7 +130,7 @@
       "location": "Costa Rica",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 7
     },
     {
       "login": "trekhleb",
@@ -85,7 +145,7 @@
       "location": "San Francisco Bay Area",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 8
     },
     {
       "login": "gopinav",
@@ -100,7 +160,7 @@
       "location": "India",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 9
     },
     {
       "login": "mosh-hamedani",
@@ -115,89 +175,32 @@
       "location": "Los Angeles",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 6
-    },
-    {
-      "login": "langchain-ai",
-      "name": "LangChain",
-      "profile_url": "https://github.com/langchain-ai",
-      "public_contributions": 0,
-      "public_repos": 239,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 18805,
-      "location": "United States of America",
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 7
-    },
-    {
-      "login": "openclaw",
-      "name": "openclaw",
-      "profile_url": "https://github.com/openclaw",
-      "public_contributions": 0,
-      "public_repos": 54,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 20776,
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 8
-    },
-    {
-      "login": "bluesky-social",
-      "profile_url": "https://github.com/bluesky-social",
-      "public_contributions": 0,
-      "public_repos": 47,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 8766,
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 9
-    },
-    {
-      "login": "modelcontextprotocol",
-      "name": "Model Context Protocol",
-      "profile_url": "https://github.com/modelcontextprotocol",
-      "public_contributions": 0,
-      "public_repos": 42,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 46639,
-      "location_confidence": "unknown",
-      "notable_repositories": [],
       "rank": 10
     },
     {
-      "login": "TanStack",
-      "name": "TanStack",
-      "profile_url": "https://github.com/TanStack",
-      "public_contributions": 0,
-      "public_repos": 24,
+      "login": "mahseema",
+      "name": "Mahsima Dastan",
+      "profile_url": "https://github.com/mahseema",
+      "public_contributions": 1,
+      "public_repos": 13,
       "public_gists": 0,
-      "observed_public_commits": 0,
+      "observed_public_commits": 1,
       "observed_public_pull_requests": 0,
-      "followers": 10319,
+      "followers": 6314,
+      "location": "San Francisco",
       "location_confidence": "unknown",
       "notable_repositories": [],
       "rank": 11
     },
     {
-      "login": "desktop",
-      "name": "GitHub Desktop",
-      "profile_url": "https://github.com/desktop",
+      "login": "gaqx",
+      "profile_url": "https://github.com/gaqx",
       "public_contributions": 0,
-      "public_repos": 18,
+      "public_repos": 15,
       "public_gists": 0,
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
-      "followers": 9359,
-      "location": "Everywhere",
+      "followers": 7124,
       "location_confidence": "unknown",
       "notable_repositories": [],
       "rank": 12

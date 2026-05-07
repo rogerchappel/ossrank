@@ -15,7 +15,7 @@ interface GitHubSearchResponse<T> {
   items: T[];
 }
 
-interface GitHubUserSearchItem { login: string; html_url: string; }
+interface GitHubUserSearchItem { login: string; html_url: string; type?: string; }
 interface GitHubRepoSearchItem {
   full_name: string;
   html_url: string;
@@ -103,6 +103,10 @@ function encodeQuery(query: string, limit: number): string {
   return `q=${encodeURIComponent(query)}&per_page=${Math.min(100, Math.max(1, limit))}`;
 }
 
+function userQuery(query: string): string {
+  return /(^|\s)type:user(\s|$)/.test(query) ? query : `${query} type:user`;
+}
+
 function matchesLocation(location: string | null, terms: string[]): boolean {
   if (!location) return false;
   const lower = location.toLowerCase();
@@ -152,9 +156,9 @@ async function collectUsers(client: GitHubClient, queries: string | string[], li
   const details = new Map<string, { user: GitHubUserDetail; seeded: boolean }>();
   let total = 0;
   for (const query of searchQueries) {
-    const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(query, limit)}`);
+    const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(userQuery(query), limit)}`);
     total += search.total_count;
-    const unseen = search.items.slice(0, limit).filter((item) => !details.has(item.login.toLowerCase()));
+    const unseen = search.items.slice(0, limit).filter((item) => item.type !== 'Organization' && !details.has(item.login.toLowerCase()));
     const fetched = await Promise.all(unseen.map(async (item) => client.get<GitHubUserDetail>(`/users/${encodeURIComponent(item.login)}`)));
     for (const detail of fetched) {
       if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: false });
