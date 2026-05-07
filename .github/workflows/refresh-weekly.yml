@@ -21,7 +21,13 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - name: Refresh fixture snapshot until live GitHub mode is enabled
+      - name: Confirm GitHub token is available
+        env:
+          OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN || github.token }}
+        run: pnpm exec tsx src/cli.ts token-check
+      - name: Refresh OSSRank snapshots with CLI pipeline
+        env:
+          OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN || github.token }}
         run: pnpm run refresh:fixtures
       - run: pnpm run validate:data
       - run: pnpm run build

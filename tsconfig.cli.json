@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist-cli",
+    "noEmit": false
+  },
+  "include": ["src/cli.ts", "src/lib/**/*.ts"]
+}
