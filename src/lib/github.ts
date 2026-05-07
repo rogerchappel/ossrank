@@ -40,6 +40,19 @@ interface GitHubPublicEvent {
     action?: string;
   };
 }
+interface GitHubGraphqlResponse<T> {
+  data?: T;
+  errors?: Array<{ message: string }>;
+}
+interface GitHubContributionTotalsResponse {
+  user: {
+    contributionsCollection: {
+      totalCommitContributions: number;
+      totalPullRequestContributions: number;
+    };
+  } | null;
+  rateLimit?: { remaining?: number; cost?: number };
+}
 
 export class GitHubClient {
   remaining?: number;
@@ -61,6 +74,26 @@ export class GitHubClient {
 
   async search<T>(path: string): Promise<GitHubSearchResponse<T>> {
     return await this.get<GitHubSearchResponse<T>>(path);
+  }
+
+  async graphql<T>(query: string, variables: Record<string, unknown>): Promise<T> {
+    if (!this.token) throw new Error('GitHub GraphQL requires OSSRANK_GITHUB_TOKEN');
+    const response = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+        'User-Agent': 'ossrank/0.1.0',
+        Authorization: `Bearer ${this.token}`
+      },
+      body: JSON.stringify({ query, variables })
+    });
+    const remaining = response.headers.get('x-ratelimit-remaining');
+    if (remaining) this.remaining = Number(remaining);
+    const body = await response.json() as GitHubGraphqlResponse<T>;
+    if (!response.ok || body.errors?.length) throw new Error(`GitHub GraphQL failed: ${body.errors?.map((error) => error.message).join('; ') ?? response.statusText}`);
+    if (!body.data) throw new Error('GitHub GraphQL returned no data');
+    return body.data;
   }
 }
 
@@ -87,7 +120,32 @@ async function publicActivityCounts(client: GitHubClient, login: string): Promis
   }, { commits: 0, pullRequests: 0 });
 }
 
-async function collectUsers(client: GitHubClient, query: string, limit: number, locationTerms?: string[], seedLogins: string[] = []): Promise<{ total: number; users: RankedContributor[] }> {
+function oneYearWindow(generatedAt: string): { from: string; to: string } {
+  const to = new Date(generatedAt);
+  const from = new Date(to);
+  from.setUTCFullYear(from.getUTCFullYear() - 1);
+  return { from: from.toISOString(), to: to.toISOString() };
+}
+
+async function contributionTotals(client: GitHubClient, login: string, generatedAt: string): Promise<{ commits: number; pullRequests: number }> {
+  const window = oneYearWindow(generatedAt);
+  const data = await client.graphql<GitHubContributionTotalsResponse>(`query OssrankContributionTotals($login: String!, $from: DateTime!, $to: DateTime!) {
+    user(login: $login) {
+      contributionsCollection(from: $from, to: $to) {
+        totalCommitContributions
+        totalPullRequestContributions
+      }
+    }
+    rateLimit { remaining cost }
+  }`, { login, from: window.from, to: window.to });
+  if (data.rateLimit?.remaining !== undefined) client.remaining = data.rateLimit.remaining;
+  return {
+    commits: data.user?.contributionsCollection.totalCommitContributions ?? 0,
+    pullRequests: data.user?.contributionsCollection.totalPullRequestContributions ?? 0
+  };
+}
+
+async function collectUsers(client: GitHubClient, query: string, limit: number, generatedAt: string, locationTerms?: string[], seedLogins: string[] = []): Promise<{ total: number; users: RankedContributor[] }> {
   const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(query, limit)}`);
   const details = new Map<string, { user: GitHubUserDetail; seeded: boolean }>();
   for (const item of search.items.slice(0, limit)) {
@@ -101,12 +159,17 @@ async function collectUsers(client: GitHubClient, query: string, limit: number, 
   }
   const entries = [];
   for (const { user, seeded } of details.values()) {
-    const activity = await publicActivityCounts(client, user.login);
+    let activity: { commits: number; pullRequests: number };
+    try {
+      activity = await contributionTotals(client, user.login, generatedAt);
+    } catch {
+      activity = await publicActivityCounts(client, user.login);
+    }
     entries.push({
       login: user.login,
       name: user.name ?? undefined,
       profile_url: user.html_url,
-      public_contributions: contributionScore(user),
+      public_contributions: activity.commits,
       public_repos: user.public_repos,
       public_gists: user.public_gists,
       observed_public_commits: activity.commits,
@@ -145,15 +208,15 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const client = new GitHubClient(options.token);
   const limit = Math.max(1, options.limit);
 
-  const au = await collectUsers(client, 'location:Australia repos:>5', limit, ['Australia', 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Canberra', 'Hobart', 'Darwin'], ['rogerchappel']);
-  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit);
+  const au = await collectUsers(client, 'location:Australia repos:>5', limit, generatedAt, ['Australia', 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Canberra', 'Hobart', 'Darwin'], ['rogerchappel']);
+  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt);
   const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit);
   const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false'], limit);
 
   const contributorCaveats = [
     'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',
     'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.',
-    'Contributor pages expose raw public repository counts plus observed recent public commits and pull requests from GitHub public events. Public events are a recent visible activity sample, not an all-time contribution graph.',
+    'Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.',
     'The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages.'
   ];
   const projectCaveats = [

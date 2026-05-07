@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T06:02:25.022Z",
-  "fresh_until": "2026-05-14T06:02:25.022Z",
+  "generated_at": "2026-05-07T06:18:44.246Z",
+  "fresh_until": "2026-05-14T06:18:44.246Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -16,7 +16,7 @@
       20
     ],
     "top_10_signal": [
-      92
+      11
     ]
   },
   "candidate_count": 111048,
@@ -27,178 +27,179 @@
   ],
   "entries": [
     {
-      "full_name": "juspay/neurolink",
-      "url": "https://github.com/juspay/neurolink",
-      "stars": 87,
-      "pull_requests_merged_7d": 92,
+      "full_name": "sipyourdrink-ltd/bernstein",
+      "url": "https://github.com/sipyourdrink-ltd/bernstein",
+      "stars": 284,
+      "pull_requests_merged_7d": 8,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "primary_language": "Python",
       "rank": 1
     },
     {
-      "full_name": "Arseeth/skills-for-vibe-coder",
-      "url": "https://github.com/Arseeth/skills-for-vibe-coder",
-      "stars": 4,
-      "pull_requests_merged_7d": 0,
+      "full_name": "lightfastai/lightfast",
+      "url": "https://github.com/lightfastai/lightfast",
+      "stars": 15,
+      "pull_requests_merged_7d": 3,
       "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
       "rank": 2
     },
     {
-      "full_name": "Harshx07/grepai",
-      "url": "https://github.com/Harshx07/grepai",
-      "stars": 3,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Go",
-      "rank": 3
-    },
-    {
-      "full_name": "ChisomNwokoro/andy-universal-agent-rules",
-      "url": "https://github.com/ChisomNwokoro/andy-universal-agent-rules",
-      "stars": 2,
+      "full_name": "shinpr/sub-agents-skills",
+      "url": "https://github.com/shinpr/sub-agents-skills",
+      "stars": 25,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "Python",
+      "rank": 3
+    },
+    {
+      "full_name": "jie-worldstatelabs/stagent",
+      "url": "https://github.com/jie-worldstatelabs/stagent",
+      "stars": 2,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "Shell",
       "rank": 4
     },
     {
-      "full_name": "hallucinatemd/hallucinate.md",
-      "url": "https://github.com/hallucinatemd/hallucinate.md",
-      "stars": 2,
+      "full_name": "galibutdenzelbryan-alt/openclaw-tool-call-viewer",
+      "url": "https://github.com/galibutdenzelbryan-alt/openclaw-tool-call-viewer",
+      "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "JavaScript",
+      "primary_language": "HTML",
       "rank": 5
     },
     {
-      "full_name": "KWAMIVAVA/RefCheck",
-      "url": "https://github.com/KWAMIVAVA/RefCheck",
-      "stars": 2,
+      "full_name": "hacker3537uh/Streamliner-AI",
+      "url": "https://github.com/hacker3537uh/Streamliner-AI",
+      "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "primary_language": "Python",
       "rank": 6
     },
     {
-      "full_name": "ayushh2k/turbine",
-      "url": "https://github.com/ayushh2k/turbine",
+      "full_name": "javadamrooki96/claude-yolo",
+      "url": "https://github.com/javadamrooki96/claude-yolo",
       "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
       "rank": 7
     },
     {
-      "full_name": "Kuestenlogik/Bowire",
-      "url": "https://github.com/Kuestenlogik/Bowire",
+      "full_name": "labrynx/envctl",
+      "url": "https://github.com/labrynx/envctl",
       "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "C#",
+      "primary_language": "Python",
       "rank": 8
     },
     {
-      "full_name": "oliverquaye23/claude-hooks",
-      "url": "https://github.com/oliverquaye23/claude-hooks",
+      "full_name": "lero003/hazakura-habitat",
+      "url": "https://github.com/lero003/hazakura-habitat",
       "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "CSS",
+      "primary_language": "Swift",
       "rank": 9
     },
     {
-      "full_name": "AISquare-Studio/office",
-      "url": "https://github.com/AISquare-Studio/office",
-      "stars": 0,
+      "full_name": "sablive25/IranPipFix",
+      "url": "https://github.com/sablive25/IranPipFix",
+      "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "Python",
       "rank": 10
     },
     {
-      "full_name": "AltNoob010472/posovia-ui-mock",
-      "url": "https://github.com/AltNoob010472/posovia-ui-mock",
-      "stars": 0,
+      "full_name": "saintneedem/claude-md-templates",
+      "url": "https://github.com/saintneedem/claude-md-templates",
+      "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "rank": 11
     },
     {
-      "full_name": "cinoindo/smart-xdebug-mcp",
-      "url": "https://github.com/cinoindo/smart-xdebug-mcp",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
-      "rank": 12
-    },
-    {
-      "full_name": "GekoYumi/OmniSolve-AI_System",
-      "url": "https://github.com/GekoYumi/OmniSolve-AI_System",
+      "full_name": "AdonisbyNPA1/Coinstack",
+      "url": "https://github.com/AdonisbyNPA1/Coinstack",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "Python",
-      "rank": 13
+      "rank": 12
     },
     {
-      "full_name": "Icolfyou/RTCPilot",
-      "url": "https://github.com/Icolfyou/RTCPilot",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "C++",
-      "rank": 14
-    },
-    {
-      "full_name": "jul-mokel/debug-effort-estimator",
-      "url": "https://github.com/jul-mokel/debug-effort-estimator",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Jupyter Notebook",
-      "rank": 15
-    },
-    {
-      "full_name": "ManuelGonzalessalas/orbiqd-briefkit",
-      "url": "https://github.com/ManuelGonzalessalas/orbiqd-briefkit",
+      "full_name": "arnarg/crushout",
+      "url": "https://github.com/arnarg/crushout",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "Go",
-      "rank": 16
+      "rank": 13
     },
     {
-      "full_name": "Matt201306/buildinpublic-bot",
-      "url": "https://github.com/Matt201306/buildinpublic-bot",
+      "full_name": "kxrmahermano-ux/ax-score",
+      "url": "https://github.com/kxrmahermano-ux/ax-score",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "primary_language": "HTML",
+      "rank": 14
+    },
+    {
+      "full_name": "Open330/context-compress",
+      "url": "https://github.com/Open330/context-compress",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 15
+    },
+    {
+      "full_name": "rileypriddle-sketch/stackup",
+      "url": "https://github.com/rileypriddle-sketch/stackup",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
+      "rank": 16
+    },
+    {
+      "full_name": "TettoLabs/anatomia",
+      "url": "https://github.com/TettoLabs/anatomia",
+      "stars": 0,
+      "pull_requests_merged_7d": 0,
+      "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
       "rank": 17
     },
     {
-      "full_name": "reochoi109/reochoi109",
-      "url": "https://github.com/reochoi109/reochoi109",
+      "full_name": "theyenvychada/agent-skills",
+      "url": "https://github.com/theyenvychada/agent-skills",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "rank": 18
     },
     {
-      "full_name": "Somaliking3/weevean",
-      "url": "https://github.com/Somaliking3/weevean",
+      "full_name": "tunmichboye/no-solutions",
+      "url": "https://github.com/tunmichboye/no-solutions",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "CSS",
       "rank": 19
     },
     {
-      "full_name": "talalhassankhan18/SlowedLab",
-      "url": "https://github.com/talalhassankhan18/SlowedLab",
+      "full_name": "xxxsoekarno-lab/ai-research-copilot",
+      "url": "https://github.com/xxxsoekarno-lab/ai-research-copilot",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "Python",
       "rank": 20
     }
   ]

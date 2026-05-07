@@ -2,7 +2,7 @@ import type { RankedContributor, RankedProject } from './types.js';
 
 export function rankContributors(entries: Omit<RankedContributor, 'rank'>[]): RankedContributor[] {
   return [...entries]
-    .sort((a, b) => b.public_contributions - a.public_contributions || b.followers - a.followers || a.login.localeCompare(b.login))
+    .sort((a, b) => (b.observed_public_commits ?? b.public_contributions) - (a.observed_public_commits ?? a.public_contributions) || (b.observed_public_pull_requests ?? 0) - (a.observed_public_pull_requests ?? 0) || (b.public_repos ?? 0) - (a.public_repos ?? 0) || b.followers - a.followers || a.login.localeCompare(b.login))
     .map((entry, index) => ({ ...entry, rank: index + 1 }));
 }
 

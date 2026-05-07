@@ -74,7 +74,7 @@ OSSRank must stay honest:
 
 - Use official GitHub APIs only; never scrape GitHub HTML.
 - Treat GitHub profile location text as unverified free text.
-- Rank observed public signals, not private contributions. V1 contributor pages prioritize commits, public pull requests, repository count, and followers. Current commit/PR counts are observed from recent public GitHub events until deeper GraphQL collection lands.
+- Rank observed public signals, not private contributions. V1 contributor pages prioritize one-year GitHub GraphQL commit totals, one-year public pull request totals, repository count, and followers.
 - Preserve last-known-good data when refreshes fail.
 - Keep the product flow simple: choose a country, view contributors, sort by commits/public PRs/repos/followers, or view the single projects page.
 - Avoid claims of complete global coverage, endorsement, nationality, employment status, or identity attributes.
