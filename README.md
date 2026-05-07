@@ -1,8 +1,8 @@
 # OSSRank
 
-A static-first public data product for finding top GitHub contributors by country using simple public metrics: commits, public pull requests, and followers.
+A static-first public data product for finding top GitHub contributors by country using simple public metrics: commits, public pull requests, repositories, and followers.
 
-OSSRank is designed for <https://ossrank.dev>. V1 includes a conservative live GitHub REST collector plus fixture mode for deterministic tests. The primary user flow is home page country selection → country contributor table, sorted by commits by default and sortable by public PRs or followers. A single projects page is included separately.
+OSSRank is designed for <https://ossrank.dev>. V1 includes a conservative live GitHub REST collector plus fixture mode for deterministic tests. The primary user flow is home page country selection → country contributor table, sorted by commits by default and sortable by public PRs, repo count, or followers. A single projects page is included separately.
 
 ## What it builds
 
@@ -74,9 +74,9 @@ OSSRank must stay honest:
 
 - Use official GitHub APIs only; never scrape GitHub HTML.
 - Treat GitHub profile location text as unverified free text.
-- Rank observed public signals, not private contributions. V1 contributor pages prioritize commits, public pull requests, and followers. Current commit/PR counts are observed from recent public GitHub events until deeper GraphQL collection lands.
+- Rank observed public signals, not private contributions. V1 contributor pages prioritize commits, public pull requests, repository count, and followers. Current commit/PR counts are observed from recent public GitHub events until deeper GraphQL collection lands.
 - Preserve last-known-good data when refreshes fail.
-- Keep the product flow simple: choose a country, view contributors, sort by commits/public PRs/followers, or view the single projects page.
+- Keep the product flow simple: choose a country, view contributors, sort by commits/public PRs/repos/followers, or view the single projects page.
 - Avoid claims of complete global coverage, endorsement, nationality, employment status, or identity attributes.
 
 ## Roadmap
