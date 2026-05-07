@@ -35,7 +35,7 @@ export interface TrendSeries {
 }
 
 export interface RankingSnapshot<TEntry> {
-  kind: 'country' | 'language' | 'category' | 'projects';
+  kind: 'country' | 'global' | 'language' | 'category' | 'projects';
   slug: string;
   code?: string;
   name: string;

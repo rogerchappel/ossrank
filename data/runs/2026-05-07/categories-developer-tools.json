@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T06:55:40.995Z",
-  "fresh_until": "2026-05-14T06:55:40.995Z",
+  "generated_at": "2026-05-07T07:14:07.725Z",
+  "fresh_until": "2026-05-14T07:14:07.725Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -13,13 +13,13 @@
       "2026-05-07"
     ],
     "ranked_items": [
-      12
+      20
     ],
     "top_10_signal": [
-      6
+      6741
     ]
   },
-  "candidate_count": 111056,
+  "candidate_count": 26824,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,109 +27,183 @@
   ],
   "entries": [
     {
-      "full_name": "daintreehq/daintree",
-      "url": "https://github.com/daintreehq/daintree",
-      "stars": 32,
-      "pull_requests_merged_7d": 6,
-      "active_contributors_30d": 1,
+      "full_name": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "stars": 369179,
+      "pull_requests_merged_7d": 2453,
+      "active_contributors_30d": 492,
       "primary_language": "TypeScript",
       "rank": 1
     },
     {
-      "full_name": "AISquare-Studio/office",
-      "url": "https://github.com/AISquare-Studio/office",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
+      "full_name": "appsmithorg/appsmith",
+      "url": "https://github.com/appsmithorg/appsmith",
+      "stars": 39755,
+      "pull_requests_merged_7d": 1485,
+      "active_contributors_30d": 53,
+      "primary_language": "TypeScript",
       "rank": 2
     },
     {
-      "full_name": "bodymassindexdacoit284/claudecode-local-sync",
-      "url": "https://github.com/bodymassindexdacoit284/claudecode-local-sync",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "full_name": "usebruno/bruno",
+      "url": "https://github.com/usebruno/bruno",
+      "stars": 43552,
+      "pull_requests_merged_7d": 551,
+      "active_contributors_30d": 58,
+      "primary_language": "JavaScript",
       "rank": 3
     },
     {
-      "full_name": "Harby3816/BeadsMCP",
-      "url": "https://github.com/Harby3816/BeadsMCP",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "JavaScript",
+      "full_name": "streamlit/streamlit",
+      "url": "https://github.com/streamlit/streamlit",
+      "stars": 44474,
+      "pull_requests_merged_7d": 431,
+      "active_contributors_30d": 59,
+      "primary_language": "Python",
       "rank": 4
     },
     {
-      "full_name": "harshramg5007/agentspaces",
-      "url": "https://github.com/harshramg5007/agentspaces",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Go",
+      "full_name": "koalaman/shellcheck",
+      "url": "https://github.com/koalaman/shellcheck",
+      "stars": 39388,
+      "pull_requests_merged_7d": 411,
+      "active_contributors_30d": 53,
+      "primary_language": "Haskell",
       "rank": 5
     },
     {
-      "full_name": "Horatiusbridgeable99/ruyynn-services",
-      "url": "https://github.com/Horatiusbridgeable99/ruyynn-services",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
+      "full_name": "GoogleContainerTools/skaffold",
+      "url": "https://github.com/GoogleContainerTools/skaffold",
+      "stars": 15820,
+      "pull_requests_merged_7d": 294,
+      "active_contributors_30d": 21,
+      "primary_language": "Go",
       "rank": 6
     },
     {
-      "full_name": "JosephElaro/worktree",
-      "url": "https://github.com/JosephElaro/worktree",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
+      "full_name": "lapce/lapce",
+      "url": "https://github.com/lapce/lapce",
+      "stars": 38339,
+      "pull_requests_merged_7d": 293,
+      "active_contributors_30d": 51,
       "primary_language": "Rust",
       "rank": 7
     },
     {
-      "full_name": "Justnessresponse962/ai-dev-framework",
-      "url": "https://github.com/Justnessresponse962/ai-dev-framework",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
+      "full_name": "agno-agi/agno",
+      "url": "https://github.com/agno-agi/agno",
+      "stars": 39960,
+      "pull_requests_merged_7d": 286,
+      "active_contributors_30d": 53,
+      "primary_language": "Python",
       "rank": 8
     },
     {
-      "full_name": "Open330/context-compress",
-      "url": "https://github.com/Open330/context-compress",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "full_name": "rtk-ai/rtk",
+      "url": "https://github.com/rtk-ai/rtk",
+      "stars": 43263,
+      "pull_requests_merged_7d": 275,
+      "active_contributors_30d": 58,
+      "primary_language": "Rust",
       "rank": 9
     },
     {
-      "full_name": "Rimaglottidisspacewalk319/claude-meter",
-      "url": "https://github.com/Rimaglottidisspacewalk319/claude-meter",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "full_name": "CorentinTh/it-tools",
+      "url": "https://github.com/CorentinTh/it-tools",
+      "stars": 38397,
+      "pull_requests_merged_7d": 262,
+      "active_contributors_30d": 51,
+      "primary_language": "Vue",
       "rank": 10
     },
     {
-      "full_name": "TettoLabs/anatomia",
-      "url": "https://github.com/TettoLabs/anatomia",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
+      "full_name": "superset-sh/superset",
+      "url": "https://github.com/superset-sh/superset",
+      "stars": 10418,
+      "pull_requests_merged_7d": 253,
+      "active_contributors_30d": 14,
       "primary_language": "TypeScript",
       "rank": 11
     },
     {
-      "full_name": "Thomdental995/ArchiveKit",
-      "url": "https://github.com/Thomdental995/ArchiveKit",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "full_name": "sweepai/sweep",
+      "url": "https://github.com/sweepai/sweep",
+      "stars": 7712,
+      "pull_requests_merged_7d": 250,
+      "active_contributors_30d": 10,
+      "primary_language": "Jupyter Notebook",
       "rank": 12
+    },
+    {
+      "full_name": "hoppscotch/hoppscotch",
+      "url": "https://github.com/hoppscotch/hoppscotch",
+      "stars": 79121,
+      "pull_requests_merged_7d": 235,
+      "active_contributors_30d": 105,
+      "primary_language": "TypeScript",
+      "rank": 13
+    },
+    {
+      "full_name": "continuedev/continue",
+      "url": "https://github.com/continuedev/continue",
+      "stars": 33013,
+      "pull_requests_merged_7d": 230,
+      "active_contributors_30d": 44,
+      "primary_language": "TypeScript",
+      "rank": 14
+    },
+    {
+      "full_name": "surrealdb/surrealdb",
+      "url": "https://github.com/surrealdb/surrealdb",
+      "stars": 32037,
+      "pull_requests_merged_7d": 219,
+      "active_contributors_30d": 43,
+      "primary_language": "Rust",
+      "rank": 15
+    },
+    {
+      "full_name": "voxel51/fiftyone",
+      "url": "https://github.com/voxel51/fiftyone",
+      "stars": 10639,
+      "pull_requests_merged_7d": 217,
+      "active_contributors_30d": 14,
+      "primary_language": "Python",
+      "rank": 16
+    },
+    {
+      "full_name": "marimo-team/marimo",
+      "url": "https://github.com/marimo-team/marimo",
+      "stars": 20824,
+      "pull_requests_merged_7d": 204,
+      "active_contributors_30d": 28,
+      "primary_language": "Python",
+      "rank": 17
+    },
+    {
+      "full_name": "GitHubDaily/GitHubDaily",
+      "url": "https://github.com/GitHubDaily/GitHubDaily",
+      "stars": 46361,
+      "pull_requests_merged_7d": 195,
+      "active_contributors_30d": 62,
+      "rank": 18
+    },
+    {
+      "full_name": "ComposioHQ/awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "stars": 58421,
+      "pull_requests_merged_7d": 192,
+      "active_contributors_30d": 78,
+      "primary_language": "Python",
+      "rank": 19
+    },
+    {
+      "full_name": "GoogleChrome/lighthouse",
+      "url": "https://github.com/GoogleChrome/lighthouse",
+      "stars": 30158,
+      "pull_requests_merged_7d": 174,
+      "active_contributors_30d": 40,
+      "primary_language": "JavaScript",
+      "rank": 20
     }
   ]
 }

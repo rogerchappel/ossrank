@@ -25,6 +25,7 @@ interface GitHubRepoSearchItem {
   pushed_at: string;
   owner: { login: string };
 }
+interface SeedRepo { full_name: string; }
 interface GitHubUserDetail {
   login: string;
   name: string | null;
@@ -56,12 +57,30 @@ interface GitHubContributionTotalsResponse {
   rateLimit?: { remaining?: number; cost?: number };
 }
 
+
+async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Promise<Response> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetch(url, init);
+      if (response.status !== 502 && response.status !== 503 && response.status !== 504 && response.status !== 429) return response;
+      lastError = new Error(`GitHub ${response.status} for ${url}`);
+      const retryAfter = Number(response.headers.get('retry-after') ?? 0) * 1000;
+      await new Promise((resolve) => setTimeout(resolve, retryAfter || attempt * 1000));
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
+    }
+  }
+  throw lastError instanceof Error ? lastError : new Error(String(lastError));
+}
+
 export class GitHubClient {
   remaining?: number;
   constructor(private readonly token?: string) {}
 
   async get<T>(path: string): Promise<T> {
-    const response = await fetch(`https://api.github.com${path}`, {
+    const response = await fetchWithRetry(`https://api.github.com${path}`, {
       headers: {
         Accept: 'application/vnd.github+json',
         'User-Agent': 'ossrank/0.1.0',
@@ -80,7 +99,7 @@ export class GitHubClient {
 
   async graphql<T>(query: string, variables: Record<string, unknown>): Promise<T> {
     if (!this.token) throw new Error('GitHub GraphQL requires OSSRANK_GITHUB_TOKEN');
-    const response = await fetch('https://api.github.com/graphql', {
+    const response = await fetchWithRetry('https://api.github.com/graphql', {
       method: 'POST',
       headers: {
         Accept: 'application/vnd.github+json',
@@ -99,8 +118,8 @@ export class GitHubClient {
   }
 }
 
-function encodeQuery(query: string, limit: number): string {
-  return `q=${encodeURIComponent(query)}&per_page=${Math.min(100, Math.max(1, limit))}`;
+function encodeQuery(query: string, limit: number, sort?: string, order = 'desc'): string {
+  return `q=${encodeURIComponent(query)}&per_page=${Math.min(100, Math.max(1, limit))}${sort ? `&sort=${encodeURIComponent(sort)}&order=${encodeURIComponent(order)}` : ''}`;
 }
 
 function userQuery(query: string): string {
@@ -151,14 +170,17 @@ async function contributionTotals(client: GitHubClient, login: string, generated
   };
 }
 
-async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, locationTerms?: string[], seedLogins: string[] = []): Promise<{ total: number; users: RankedContributor[] }> {
+async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, locationTerms?: string[], seedLogins: string[] = [], candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; users: RankedContributor[] }> {
   const searchQueries = Array.isArray(queries) ? queries : [queries];
   const details = new Map<string, { user: GitHubUserDetail; seeded: boolean }>();
   let total = 0;
   for (const query of searchQueries) {
-    const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(userQuery(query), limit)}`);
+    const remaining = Math.max(0, candidateLimit - details.size);
+    if (remaining === 0) break;
+    const searchLimit = Math.min(100, Math.max(limit, remaining));
+    const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(userQuery(query), searchLimit, 'followers')}`);
     total += search.total_count;
-    const unseen = search.items.slice(0, limit).filter((item) => item.type !== 'Organization' && !details.has(item.login.toLowerCase()));
+    const unseen = search.items.slice(0, remaining).filter((item) => item.type !== 'Organization' && !details.has(item.login.toLowerCase()));
     const fetched = await Promise.all(unseen.map(async (item) => client.get<GitHubUserDetail>(`/users/${encodeURIComponent(item.login)}`)));
     for (const detail of fetched) {
       if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: false });
@@ -195,23 +217,31 @@ async function collectUsers(client: GitHubClient, queries: string | string[], li
   return { total: total + seedLogins.length, users: ranked };
 }
 
-async function collectRepos(client: GitHubClient, queries: string[], limit: number): Promise<{ total: number; projects: RankedProject[] }> {
+async function collectRepos(client: GitHubClient, queries: string[], limit: number, seedRepos: SeedRepo[] = [], candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; projects: RankedProject[] }> {
   const byName = new Map<string, GitHubRepoSearchItem>();
   let total = 0;
   for (const query of queries) {
-    const search = await client.search<GitHubRepoSearchItem>(`/search/repositories?${encodeQuery(query, limit)}&sort=updated&order=desc`);
+    const remaining = Math.max(0, candidateLimit - byName.size);
+    if (remaining === 0) break;
+    const searchLimit = Math.min(100, Math.max(limit, remaining));
+    const search = await client.search<GitHubRepoSearchItem>(`/search/repositories?${encodeQuery(query, searchLimit, 'stars')}`);
     total += search.total_count;
     for (const repo of search.items) byName.set(repo.full_name, repo);
   }
-  const projects = rankProjects([...byName.values()].slice(0, limit).map((repo) => ({
+  for (const seed of seedRepos) {
+    if (byName.has(seed.full_name)) continue;
+    const repo = await client.get<GitHubRepoSearchItem>(`/repos/${seed.full_name}`);
+    byName.set(repo.full_name, repo);
+  }
+  const projects = rankProjects([...byName.values()].map((repo) => ({
     full_name: repo.full_name,
     url: repo.html_url,
     stars: repo.stargazers_count,
     pull_requests_merged_7d: Math.max(0, Math.round(repo.open_issues_count / 3)),
     active_contributors_30d: Math.max(1, Math.min(1000, Math.round(repo.stargazers_count / 750))),
     primary_language: repo.language ?? undefined
-  })));
-  return { total, projects };
+  }))).slice(0, limit);
+  return { total: total + seedRepos.length, projects };
 }
 
 export async function collectLiveSnapshots(options: GitHubCollectorOptions): Promise<{ snapshots: RankingSnapshot<unknown>[]; remaining?: number }> {
@@ -223,12 +253,13 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const countryConfigs = COUNTRY_CONFIGS.slice(0, options.maxCountries ?? COUNTRY_CONFIGS.length);
   for (const config of countryConfigs) {
     process.stderr.write(`Refreshing ${config.name}...\n`);
-    const result = await collectUsers(client, config.queries, limit, generatedAt, config.locationTerms, config.seedLogins ?? []);
+    const result = await collectUsers(client, config.queries, limit, generatedAt, config.locationTerms, config.seedLogins ?? [], config.candidateLimit ?? Math.max(50, limit * 5));
     countryResults.push({ config, ...result });
   }
-  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt);
-  const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit);
-  const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false'], limit);
+  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, undefined, ['steipete'], Math.max(100, limit * 8));
+  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, undefined, [], Math.max(50, limit * 5));
+  const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit, [{ full_name: 'openclaw/openclaw' }]);
+  const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, [{ full_name: 'openclaw/openclaw' }], Math.max(100, limit * 8));
 
   const contributorCaveats = [
     'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',
@@ -242,6 +273,12 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     'Project momentum prioritises recent activity, rough collaboration signal, then stars.'
   ];
 
+  const globalContributors: RankingSnapshot<RankedContributor> = {
+    ...snapshotBase('global', 'contributors', 'Global', 'Top observed GitHub contributors globally', generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
+    candidate_count: global.total, caveats: contributorCaveats,
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [global.users.length], top_10_signal: [global.users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
+    entries: global.users
+  };
   const countries: Array<RankingSnapshot<RankedContributor>> = countryResults.map(({ config, total, users }) => ({
     ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
     code: config.code, candidate_count: total, caveats: contributorCaveats,
@@ -267,5 +304,5 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     entries: growing.projects
   };
 
-  return { snapshots: [...countries, language, category, projects], remaining: client.remaining };
+  return { snapshots: [globalContributors, ...countries, language, category, projects], remaining: client.remaining };
 }

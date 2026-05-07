@@ -26,7 +26,7 @@ export function sourceCommit(root = process.cwd()): string {
 }
 
 export function shardFilename(snapshot: RankingSnapshot<unknown>): string {
-  const prefix = snapshot.kind === 'country' ? 'countries' : snapshot.kind === 'language' ? 'languages' : snapshot.kind === 'category' ? 'categories' : 'projects';
+  const prefix = snapshot.kind === 'country' ? 'countries' : snapshot.kind === 'global' ? 'global' : snapshot.kind === 'language' ? 'languages' : snapshot.kind === 'category' ? 'categories' : 'projects';
   return `${prefix}-${snapshot.slug}.json`;
 }
 

@@ -3,8 +3,8 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T06:55:40.995Z",
-  "fresh_until": "2026-05-14T06:55:40.995Z",
+  "generated_at": "2026-05-07T07:14:07.725Z",
+  "fresh_until": "2026-05-14T07:14:07.725Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -13,13 +13,13 @@
       "2026-05-07"
     ],
     "ranked_items": [
-      12
+      20
     ],
     "top_10_signal": [
-      9327
+      40949
     ]
   },
-  "candidate_count": 34480,
+  "candidate_count": 38111,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,111 +27,184 @@
   ],
   "entries": [
     {
-      "full_name": "NixOS/nixpkgs",
-      "url": "https://github.com/NixOS/nixpkgs",
-      "stars": 24612,
-      "pull_requests_merged_7d": 6752,
-      "active_contributors_30d": 33,
-      "primary_language": "Nix",
+      "full_name": "pytorch/pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "stars": 99712,
+      "pull_requests_merged_7d": 6185,
+      "active_contributors_30d": 133,
+      "primary_language": "Python",
       "rank": 1
     },
     {
-      "full_name": "zed-industries/zed",
-      "url": "https://github.com/zed-industries/zed",
-      "stars": 82054,
-      "pull_requests_merged_7d": 965,
-      "active_contributors_30d": 109,
-      "primary_language": "Rust",
+      "full_name": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot",
+      "stars": 110384,
+      "pull_requests_merged_7d": 6060,
+      "active_contributors_30d": 147,
+      "primary_language": "C++",
       "rank": 2
     },
     {
-      "full_name": "microsoft/winget-pkgs",
-      "url": "https://github.com/microsoft/winget-pkgs",
-      "stars": 10550,
-      "pull_requests_merged_7d": 515,
-      "active_contributors_30d": 14,
+      "full_name": "microsoft/vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "stars": 184629,
+      "pull_requests_merged_7d": 5767,
+      "active_contributors_30d": 246,
+      "primary_language": "TypeScript",
       "rank": 3
     },
     {
-      "full_name": "vaadin/flow",
-      "url": "https://github.com/vaadin/flow",
-      "stars": 739,
-      "pull_requests_merged_7d": 440,
-      "active_contributors_30d": 1,
-      "primary_language": "Java",
+      "full_name": "flutter/flutter",
+      "url": "https://github.com/flutter/flutter",
+      "stars": 176202,
+      "pull_requests_merged_7d": 4195,
+      "active_contributors_30d": 235,
+      "primary_language": "Dart",
       "rank": 4
     },
     {
-      "full_name": "uutils/coreutils",
-      "url": "https://github.com/uutils/coreutils",
-      "stars": 23211,
-      "pull_requests_merged_7d": 298,
-      "active_contributors_30d": 31,
+      "full_name": "rust-lang/rust",
+      "url": "https://github.com/rust-lang/rust",
+      "stars": 112582,
+      "pull_requests_merged_7d": 4115,
+      "active_contributors_30d": 150,
       "primary_language": "Rust",
       "rank": 5
     },
     {
-      "full_name": "gitbutlerapp/gitbutler",
-      "url": "https://github.com/gitbutlerapp/gitbutler",
-      "stars": 20760,
-      "pull_requests_merged_7d": 219,
-      "active_contributors_30d": 28,
-      "primary_language": "Rust",
+      "full_name": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 121111,
+      "pull_requests_merged_7d": 3598,
+      "active_contributors_30d": 161,
+      "primary_language": "Shell",
       "rank": 6
     },
     {
-      "full_name": "NovaSky-AI/SkyRL",
-      "url": "https://github.com/NovaSky-AI/SkyRL",
-      "stars": 1809,
-      "pull_requests_merged_7d": 110,
-      "active_contributors_30d": 2,
-      "primary_language": "Python",
+      "full_name": "golang/go",
+      "url": "https://github.com/golang/go",
+      "stars": 133757,
+      "pull_requests_merged_7d": 3371,
+      "active_contributors_30d": 178,
+      "primary_language": "Go",
       "rank": 7
     },
     {
-      "full_name": "alibaba/OpenSandbox",
-      "url": "https://github.com/alibaba/OpenSandbox",
-      "stars": 10468,
-      "pull_requests_merged_7d": 20,
-      "active_contributors_30d": 14,
+      "full_name": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "stars": 136475,
+      "pull_requests_merged_7d": 2905,
+      "active_contributors_30d": 182,
       "primary_language": "Python",
       "rank": 8
     },
     {
-      "full_name": "mthcht/awesome-lists",
-      "url": "https://github.com/mthcht/awesome-lists",
-      "stars": 1441,
-      "pull_requests_merged_7d": 7,
-      "active_contributors_30d": 2,
-      "primary_language": "YARA",
+      "full_name": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "stars": 369179,
+      "pull_requests_merged_7d": 2453,
+      "active_contributors_30d": 492,
+      "primary_language": "TypeScript",
       "rank": 9
     },
     {
-      "full_name": "rust-lang/crates.io-index",
-      "url": "https://github.com/rust-lang/crates.io-index",
-      "stars": 704,
-      "pull_requests_merged_7d": 1,
-      "active_contributors_30d": 1,
-      "primary_language": "Tcl",
+      "full_name": "microsoft/PowerToys",
+      "url": "https://github.com/microsoft/PowerToys",
+      "stars": 132897,
+      "pull_requests_merged_7d": 2300,
+      "active_contributors_30d": 177,
+      "primary_language": "C#",
       "rank": 10
     },
     {
-      "full_name": "blender/blender",
-      "url": "https://github.com/blender/blender",
-      "stars": 18321,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 24,
-      "primary_language": "C++",
+      "full_name": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "stars": 156037,
+      "pull_requests_merged_7d": 2115,
+      "active_contributors_30d": 208,
+      "primary_language": "TypeScript",
       "rank": 11
     },
     {
-      "full_name": "0xMarcio/cve",
-      "url": "https://github.com/0xMarcio/cve",
-      "stars": 1246,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 2,
-      "primary_language": "Python",
+      "full_name": "microsoft/TypeScript",
+      "url": "https://github.com/microsoft/TypeScript",
+      "stars": 108767,
+      "pull_requests_merged_7d": 1677,
+      "active_contributors_30d": 145,
+      "primary_language": "TypeScript",
       "rank": 12
+    },
+    {
+      "full_name": "tensorflow/tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "stars": 195026,
+      "pull_requests_merged_7d": 1651,
+      "active_contributors_30d": 260,
+      "primary_language": "C++",
+      "rank": 13
+    },
+    {
+      "full_name": "Comfy-Org/ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "stars": 111707,
+      "pull_requests_merged_7d": 1331,
+      "active_contributors_30d": 149,
+      "primary_language": "Python",
+      "rank": 14
+    },
+    {
+      "full_name": "vercel/next.js",
+      "url": "https://github.com/vercel/next.js",
+      "stars": 139308,
+      "pull_requests_merged_7d": 1297,
+      "active_contributors_30d": 186,
+      "primary_language": "JavaScript",
+      "rank": 15
+    },
+    {
+      "full_name": "openai/codex",
+      "url": "https://github.com/openai/codex",
+      "stars": 80517,
+      "pull_requests_merged_7d": 1287,
+      "active_contributors_30d": 107,
+      "primary_language": "Rust",
+      "rank": 16
+    },
+    {
+      "full_name": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "stars": 63140,
+      "pull_requests_merged_7d": 1119,
+      "active_contributors_30d": 84,
+      "primary_language": "TypeScript",
+      "rank": 17
+    },
+    {
+      "full_name": "ollama/ollama",
+      "url": "https://github.com/ollama/ollama",
+      "stars": 170894,
+      "pull_requests_merged_7d": 1068,
+      "active_contributors_30d": 228,
+      "primary_language": "Go",
+      "rank": 18
+    },
+    {
+      "full_name": "excalidraw/excalidraw",
+      "url": "https://github.com/excalidraw/excalidraw",
+      "stars": 122660,
+      "pull_requests_merged_7d": 1010,
+      "active_contributors_30d": 164,
+      "primary_language": "TypeScript",
+      "rank": 19
+    },
+    {
+      "full_name": "Genymobile/scrcpy",
+      "url": "https://github.com/Genymobile/scrcpy",
+      "stars": 139522,
+      "pull_requests_merged_7d": 931,
+      "active_contributors_30d": 186,
+      "primary_language": "C",
+      "rank": 20
     }
   ]
 }
