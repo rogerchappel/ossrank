@@ -1,4 +1,4 @@
-import { rankContributors, rankProjects } from './ranking.js';
+import { rankContributors, rankProjectMomentum, rankProjects, rankRisingContributors } from './ranking.js';
 import { COUNTRY_CONFIGS, type CountryConfig } from './countries.js';
 import { snapshotBase } from './snapshots.js';
 import type { RankedContributor, RankedProject, RankingSnapshot } from './types.js';
@@ -447,6 +447,10 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, undefined, undefined, Math.max(50, limit * 5));
   const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit, generatedAt);
   const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, generatedAt, Math.max(100, limit * 8));
+  const agentic = await collectRepos(client, ['agentic archived:false pushed:>=2026-04-01', 'topic:ai-agents archived:false', 'topic:llm-agents archived:false', 'topic:mcp archived:false', 'agent framework archived:false stars:>100'], limit, generatedAt, Math.max(80, limit * 5));
+  const claude = await collectRepos(client, ['claude archived:false pushed:>=2026-04-01', 'claude-code archived:false', 'topic:claude archived:false', 'anthropic claude archived:false stars:>50'], limit, generatedAt, Math.max(60, limit * 4));
+  const codex = await collectRepos(client, ['codex archived:false pushed:>=2026-04-01', 'openai codex archived:false', 'topic:codex archived:false', 'codex cli archived:false'], limit, generatedAt, Math.max(60, limit * 4));
+  const openclaw = await collectRepos(client, ['openclaw archived:false', 'topic:openclaw archived:false', 'openclaw agent archived:false'], limit, generatedAt, Math.max(40, limit * 3));
 
   const contributorCaveats = [
     'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',
@@ -491,6 +495,48 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [growing.projects.length], top_10_signal: [growing.projects.slice(0, 10).reduce((sum, project) => sum + project.pull_requests_merged_7d, 0)] },
     entries: growing.projects
   };
+  const agenticProjects: RankingSnapshot<RankedProject> = {
+    ...snapshotBase('category', 'agentic-projects', 'Agentic Projects', 'Top observed agentic open-source projects', generatedAt, 'fresh', 'github-rest-search-agentic-project-signals'),
+    candidate_count: agentic.total, caveats: projectCaveats, discovery_queries: agentic.queryStats.map((stat) => stat.query), candidate_count_by_query: agentic.queryStats,
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [agentic.projects.length], top_10_signal: [agentic.projects.slice(0, 10).reduce((sum, project) => sum + (project.pull_requests_merged_30d ?? project.pull_requests_merged_7d), 0)] },
+    entries: agentic.projects
+  };
+  const claudeProjects: RankingSnapshot<RankedProject> = {
+    ...snapshotBase('category', 'claude-projects', 'Claude Projects', 'Top observed Claude-related open-source projects', generatedAt, 'fresh', 'github-rest-search-agentic-project-signals'),
+    candidate_count: claude.total, caveats: projectCaveats, discovery_queries: claude.queryStats.map((stat) => stat.query), candidate_count_by_query: claude.queryStats,
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [claude.projects.length], top_10_signal: [claude.projects.slice(0, 10).reduce((sum, project) => sum + (project.pull_requests_merged_30d ?? project.pull_requests_merged_7d), 0)] },
+    entries: claude.projects
+  };
+  const codexProjects: RankingSnapshot<RankedProject> = {
+    ...snapshotBase('category', 'codex-projects', 'Codex Projects', 'Top observed Codex-related open-source projects', generatedAt, 'fresh', 'github-rest-search-agentic-project-signals'),
+    candidate_count: codex.total, caveats: projectCaveats, discovery_queries: codex.queryStats.map((stat) => stat.query), candidate_count_by_query: codex.queryStats,
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [codex.projects.length], top_10_signal: [codex.projects.slice(0, 10).reduce((sum, project) => sum + (project.pull_requests_merged_30d ?? project.pull_requests_merged_7d), 0)] },
+    entries: codex.projects
+  };
+  const openclawProjects: RankingSnapshot<RankedProject> = {
+    ...snapshotBase('category', 'openclaw-projects', 'OpenClaw Projects', 'Top observed OpenClaw-related open-source projects', generatedAt, 'fresh', 'github-rest-search-agentic-project-signals'),
+    candidate_count: openclaw.total, caveats: projectCaveats, discovery_queries: openclaw.queryStats.map((stat) => stat.query), candidate_count_by_query: openclaw.queryStats,
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [openclaw.projects.length], top_10_signal: [openclaw.projects.slice(0, 10).reduce((sum, project) => sum + (project.pull_requests_merged_30d ?? project.pull_requests_merged_7d), 0)] },
+    entries: openclaw.projects
+  };
+  const allProjects = [...growing.projects, ...devtools.projects, ...agentic.projects, ...claude.projects, ...codex.projects, ...openclaw.projects];
+  const uniqueProjects = [...new Map(allProjects.map((project) => [project.full_name, project])).values()];
+  const momentumProjects = rankProjectMomentum(uniqueProjects).slice(0, limit);
+  const momentum: RankingSnapshot<RankedProject> = {
+    ...snapshotBase('momentum', 'project-momentum-map', 'Project Momentum Map', 'Momentum versus legitimacy map for observed open-source projects', generatedAt, 'fresh', 'derived-github-public-project-signals'),
+    candidate_count: uniqueProjects.length, caveats: projectCaveats, discovery_queries: ['derived from current project/category snapshots'], candidate_count_by_query: [],
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [momentumProjects.length], top_10_signal: [momentumProjects.slice(0, 10).reduce((sum, project) => sum + (project.pull_requests_merged_30d ?? project.pull_requests_merged_7d), 0)] },
+    entries: momentumProjects
+  };
+  const allUsers = [...global.users, ...ts.users, ...countryResults.flatMap((result) => result.users)];
+  const uniqueUsers = [...new Map(allUsers.map((user) => [user.login.toLowerCase(), user])).values()];
+  const risingUsers = rankRisingContributors(uniqueUsers).slice(0, limit);
+  const rising: RankingSnapshot<RankedContributor> = {
+    ...snapshotBase('rising', 'contributors', 'Rising Contributors', 'High-signal observed GitHub contributors with strong activity relative to audience size', generatedAt, 'fresh', 'derived-github-graphql-one-year-contribution-totals'),
+    candidate_count: uniqueUsers.length, caveats: contributorCaveats, discovery_queries: ['derived from current contributor snapshots'], candidate_count_by_query: [],
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [risingUsers.length], top_10_signal: [risingUsers.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
+    entries: risingUsers
+  };
 
-  return { snapshots: [globalContributors, ...countries, language, category, projects], remaining: client.remaining };
+  return { snapshots: [globalContributors, ...countries, language, category, projects, agenticProjects, claudeProjects, codexProjects, openclawProjects, momentum, rising], remaining: client.remaining };
 }
