@@ -3,8 +3,8 @@
   "slug": "fastest-growing-open-source-projects",
   "name": "Fastest Growing Open Source Projects",
   "title": "Fastest growing observed open-source projects",
-  "generated_at": "2026-05-07T06:18:44.246Z",
-  "fresh_until": "2026-05-14T06:18:44.246Z",
+  "generated_at": "2026-05-07T06:53:42.655Z",
+  "fresh_until": "2026-05-14T06:53:42.655Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -13,13 +13,13 @@
       "2026-05-07"
     ],
     "ranked_items": [
-      20
+      12
     ],
     "top_10_signal": [
-      8515
+      1027
     ]
   },
-  "candidate_count": 34471,
+  "candidate_count": 34480,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,165 +27,93 @@
   ],
   "entries": [
     {
-      "full_name": "elastic/kibana",
-      "url": "https://github.com/elastic/kibana",
-      "stars": 21075,
-      "pull_requests_merged_7d": 4780,
-      "active_contributors_30d": 28,
-      "primary_language": "TypeScript",
+      "full_name": "void-linux/void-packages",
+      "url": "https://github.com/void-linux/void-packages",
+      "stars": 3209,
+      "pull_requests_merged_7d": 416,
+      "active_contributors_30d": 4,
+      "primary_language": "Shell",
       "rank": 1
     },
     {
-      "full_name": "camunda/camunda",
-      "url": "https://github.com/camunda/camunda",
-      "stars": 4108,
-      "pull_requests_merged_7d": 923,
-      "active_contributors_30d": 5,
-      "primary_language": "Java",
+      "full_name": "istoreos/istoreos",
+      "url": "https://github.com/istoreos/istoreos",
+      "stars": 7647,
+      "pull_requests_merged_7d": 246,
+      "active_contributors_30d": 10,
+      "primary_language": "C",
       "rank": 2
     },
     {
-      "full_name": "Expensify/App",
-      "url": "https://github.com/Expensify/App",
-      "stars": 4845,
-      "pull_requests_merged_7d": 773,
-      "active_contributors_30d": 6,
-      "primary_language": "TypeScript",
+      "full_name": "google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "stars": 13371,
+      "pull_requests_merged_7d": 111,
+      "active_contributors_30d": 18,
+      "primary_language": "C++",
       "rank": 3
     },
     {
-      "full_name": "pnpm/pnpm",
-      "url": "https://github.com/pnpm/pnpm",
-      "stars": 34858,
-      "pull_requests_merged_7d": 735,
-      "active_contributors_30d": 46,
-      "primary_language": "TypeScript",
+      "full_name": "warewulf/warewulf",
+      "url": "https://github.com/warewulf/warewulf",
+      "stars": 638,
+      "pull_requests_merged_7d": 83,
+      "active_contributors_30d": 1,
+      "primary_language": "Go",
       "rank": 4
     },
     {
-      "full_name": "microsoft/winget-pkgs",
-      "url": "https://github.com/microsoft/winget-pkgs",
-      "stars": 10550,
-      "pull_requests_merged_7d": 529,
-      "active_contributors_30d": 14,
+      "full_name": "spantaleev/matrix-docker-ansible-deploy",
+      "url": "https://github.com/spantaleev/matrix-docker-ansible-deploy",
+      "stars": 6343,
+      "pull_requests_merged_7d": 80,
+      "active_contributors_30d": 8,
+      "primary_language": "Jinja",
       "rank": 5
     },
     {
-      "full_name": "Comfy-Org/ComfyUI_frontend",
-      "url": "https://github.com/Comfy-Org/ComfyUI_frontend",
-      "stars": 1788,
-      "pull_requests_merged_7d": 505,
-      "active_contributors_30d": 2,
-      "primary_language": "TypeScript",
+      "full_name": "discourse/discourse",
+      "url": "https://github.com/discourse/discourse",
+      "stars": 46974,
+      "pull_requests_merged_7d": 47,
+      "active_contributors_30d": 63,
+      "primary_language": "Ruby",
       "rank": 6
     },
     {
-      "full_name": "homarr-labs/homarr",
-      "url": "https://github.com/homarr-labs/homarr",
-      "stars": 3724,
-      "pull_requests_merged_7d": 91,
-      "active_contributors_30d": 5,
-      "primary_language": "TypeScript",
+      "full_name": "ericbuess/claude-code-docs",
+      "url": "https://github.com/ericbuess/claude-code-docs",
+      "stars": 892,
+      "pull_requests_merged_7d": 26,
+      "active_contributors_30d": 1,
+      "primary_language": "Shell",
       "rank": 7
     },
     {
-      "full_name": "nexu-io/open-design",
-      "url": "https://github.com/nexu-io/open-design",
-      "stars": 30985,
-      "pull_requests_merged_7d": 87,
-      "active_contributors_30d": 41,
+      "full_name": "TanStack/cli",
+      "url": "https://github.com/TanStack/cli",
+      "stars": 1245,
+      "pull_requests_merged_7d": 10,
+      "active_contributors_30d": 2,
       "primary_language": "TypeScript",
       "rank": 8
     },
     {
-      "full_name": "uxmal/reko",
-      "url": "https://github.com/uxmal/reko",
-      "stars": 2560,
-      "pull_requests_merged_7d": 55,
-      "active_contributors_30d": 3,
-      "primary_language": "C#",
+      "full_name": "nomi-sec/PoC-in-GitHub",
+      "url": "https://github.com/nomi-sec/PoC-in-GitHub",
+      "stars": 7709,
+      "pull_requests_merged_7d": 6,
+      "active_contributors_30d": 10,
       "rank": 9
     },
     {
-      "full_name": "google/osv-scanner",
-      "url": "https://github.com/google/osv-scanner",
-      "stars": 10076,
-      "pull_requests_merged_7d": 37,
-      "active_contributors_30d": 13,
-      "primary_language": "Go",
-      "rank": 10
-    },
-    {
-      "full_name": "wizarrrr/wizarr",
-      "url": "https://github.com/wizarrrr/wizarr",
-      "stars": 2821,
-      "pull_requests_merged_7d": 36,
-      "active_contributors_30d": 4,
-      "primary_language": "Python",
-      "rank": 11
-    },
-    {
-      "full_name": "thedotmack/claude-mem",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "stars": 73059,
-      "pull_requests_merged_7d": 29,
-      "active_contributors_30d": 97,
-      "primary_language": "TypeScript",
-      "rank": 12
-    },
-    {
-      "full_name": "MarketSquare/robotframework-browser",
-      "url": "https://github.com/MarketSquare/robotframework-browser",
-      "stars": 646,
-      "pull_requests_merged_7d": 15,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 13
-    },
-    {
-      "full_name": "litexlang/golitex",
-      "url": "https://github.com/litexlang/golitex",
-      "stars": 647,
-      "pull_requests_merged_7d": 13,
-      "active_contributors_30d": 1,
-      "primary_language": "Rust",
-      "rank": 14
-    },
-    {
-      "full_name": "appergb/openless",
-      "url": "https://github.com/appergb/openless",
-      "stars": 923,
-      "pull_requests_merged_7d": 12,
-      "active_contributors_30d": 1,
-      "primary_language": "HTML",
-      "rank": 15
-    },
-    {
-      "full_name": "bytedance/xgplayer",
-      "url": "https://github.com/bytedance/xgplayer",
-      "stars": 9173,
-      "pull_requests_merged_7d": 9,
-      "active_contributors_30d": 12,
-      "primary_language": "JavaScript",
-      "rank": 16
-    },
-    {
-      "full_name": "specta-rs/specta",
-      "url": "https://github.com/specta-rs/specta",
-      "stars": 576,
-      "pull_requests_merged_7d": 5,
-      "active_contributors_30d": 1,
-      "primary_language": "Rust",
-      "rank": 17
-    },
-    {
-      "full_name": "defeat-beta/defeatbeta-api",
-      "url": "https://github.com/defeat-beta/defeatbeta-api",
-      "stars": 611,
+      "full_name": "kkzzhizhou/scoop-apps",
+      "url": "https://github.com/kkzzhizhou/scoop-apps",
+      "stars": 536,
       "pull_requests_merged_7d": 2,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 18
+      "primary_language": "templ",
+      "rank": 10
     },
     {
       "full_name": "rust-lang/crates.io-index",
@@ -194,16 +122,15 @@
       "pull_requests_merged_7d": 1,
       "active_contributors_30d": 1,
       "primary_language": "Tcl",
-      "rank": 19
+      "rank": 11
     },
     {
-      "full_name": "MeowDump/Integrity-Box",
-      "url": "https://github.com/MeowDump/Integrity-Box",
-      "stars": 2101,
+      "full_name": "LOWERTOP/Shadowrocket-First",
+      "url": "https://github.com/LOWERTOP/Shadowrocket-First",
+      "stars": 2838,
       "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 3,
-      "primary_language": "HTML",
-      "rank": 20
+      "active_contributors_30d": 4,
+      "rank": 12
     }
   ]
 }

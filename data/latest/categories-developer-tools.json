@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-07T06:18:44.246Z",
-  "fresh_until": "2026-05-14T06:18:44.246Z",
+  "generated_at": "2026-05-07T06:53:42.655Z",
+  "fresh_until": "2026-05-14T06:53:42.655Z",
   "status": "fresh",
   "method": "github-rest-repository-search-momentum-proxy",
   "source_run": "2026-05-07",
@@ -13,13 +13,13 @@
       "2026-05-07"
     ],
     "ranked_items": [
-      20
+      12
     ],
     "top_10_signal": [
-      11
+      1
     ]
   },
-  "candidate_count": 111048,
+  "candidate_count": 111055,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Merged PR and active contributor values are conservative proxies until deeper GraphQL collection lands.",
@@ -27,180 +27,109 @@
   ],
   "entries": [
     {
-      "full_name": "sipyourdrink-ltd/bernstein",
-      "url": "https://github.com/sipyourdrink-ltd/bernstein",
-      "stars": 284,
-      "pull_requests_merged_7d": 8,
+      "full_name": "amirfish1/claude-command-center",
+      "url": "https://github.com/amirfish1/claude-command-center",
+      "stars": 24,
+      "pull_requests_merged_7d": 1,
       "active_contributors_30d": 1,
       "primary_language": "Python",
       "rank": 1
     },
     {
-      "full_name": "lightfastai/lightfast",
-      "url": "https://github.com/lightfastai/lightfast",
-      "stars": 15,
-      "pull_requests_merged_7d": 3,
+      "full_name": "Dicklesworthstone/ntm",
+      "url": "https://github.com/Dicklesworthstone/ntm",
+      "stars": 272,
+      "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
+      "primary_language": "Go",
       "rank": 2
     },
     {
-      "full_name": "shinpr/sub-agents-skills",
-      "url": "https://github.com/shinpr/sub-agents-skills",
-      "stars": 25,
+      "full_name": "poizzytech/OpenScientist",
+      "url": "https://github.com/poizzytech/OpenScientist",
+      "stars": 1,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "primary_language": "JavaScript",
       "rank": 3
     },
     {
-      "full_name": "jie-worldstatelabs/stagent",
-      "url": "https://github.com/jie-worldstatelabs/stagent",
-      "stars": 2,
+      "full_name": "Bitter-ryeergot519/promptref",
+      "url": "https://github.com/Bitter-ryeergot519/promptref",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Shell",
+      "primary_language": "Python",
       "rank": 4
     },
     {
-      "full_name": "galibutdenzelbryan-alt/openclaw-tool-call-viewer",
-      "url": "https://github.com/galibutdenzelbryan-alt/openclaw-tool-call-viewer",
-      "stars": 1,
+      "full_name": "CHENJIAMIAN/codex-autopilot-npm",
+      "url": "https://github.com/CHENJIAMIAN/codex-autopilot-npm",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "HTML",
+      "primary_language": "JavaScript",
       "rank": 5
     },
     {
-      "full_name": "hacker3537uh/Streamliner-AI",
-      "url": "https://github.com/hacker3537uh/Streamliner-AI",
-      "stars": 1,
+      "full_name": "kingbroskingbros41-a11y/cman",
+      "url": "https://github.com/kingbroskingbros41-a11y/cman",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "Python",
       "rank": 6
     },
     {
-      "full_name": "javadamrooki96/claude-yolo",
-      "url": "https://github.com/javadamrooki96/claude-yolo",
-      "stars": 1,
+      "full_name": "koaung8629/mcp-browser",
+      "url": "https://github.com/koaung8629/mcp-browser",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
+      "primary_language": "TypeScript",
       "rank": 7
     },
     {
-      "full_name": "labrynx/envctl",
-      "url": "https://github.com/labrynx/envctl",
-      "stars": 1,
+      "full_name": "m3dicinegaming6-bot/burn-token",
+      "url": "https://github.com/m3dicinegaming6-bot/burn-token",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
       "rank": 8
     },
     {
-      "full_name": "lero003/hazakura-habitat",
-      "url": "https://github.com/lero003/hazakura-habitat",
-      "stars": 1,
+      "full_name": "Mamtamahe3975/gazectl",
+      "url": "https://github.com/Mamtamahe3975/gazectl",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "primary_language": "Swift",
       "rank": 9
     },
     {
-      "full_name": "sablive25/IranPipFix",
-      "url": "https://github.com/sablive25/IranPipFix",
-      "stars": 1,
+      "full_name": "Mohamm732/skillpilot-releases",
+      "url": "https://github.com/Mohamm732/skillpilot-releases",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
       "rank": 10
     },
     {
-      "full_name": "saintneedem/claude-md-templates",
-      "url": "https://github.com/saintneedem/claude-md-templates",
-      "stars": 1,
+      "full_name": "Pragmatical-transshipment598/claude-code-workflows",
+      "url": "https://github.com/Pragmatical-transshipment598/claude-code-workflows",
+      "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
       "rank": 11
     },
     {
-      "full_name": "AdonisbyNPA1/Coinstack",
-      "url": "https://github.com/AdonisbyNPA1/Coinstack",
+      "full_name": "taxpayerreunification534/codex-autoresearch",
+      "url": "https://github.com/taxpayerreunification534/codex-autoresearch",
       "stars": 0,
       "pull_requests_merged_7d": 0,
       "active_contributors_30d": 1,
-      "primary_language": "Python",
+      "primary_language": "TypeScript",
       "rank": 12
-    },
-    {
-      "full_name": "arnarg/crushout",
-      "url": "https://github.com/arnarg/crushout",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Go",
-      "rank": 13
-    },
-    {
-      "full_name": "kxrmahermano-ux/ax-score",
-      "url": "https://github.com/kxrmahermano-ux/ax-score",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "HTML",
-      "rank": 14
-    },
-    {
-      "full_name": "Open330/context-compress",
-      "url": "https://github.com/Open330/context-compress",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
-      "rank": 15
-    },
-    {
-      "full_name": "rileypriddle-sketch/stackup",
-      "url": "https://github.com/rileypriddle-sketch/stackup",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
-      "rank": 16
-    },
-    {
-      "full_name": "TettoLabs/anatomia",
-      "url": "https://github.com/TettoLabs/anatomia",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "TypeScript",
-      "rank": 17
-    },
-    {
-      "full_name": "theyenvychada/agent-skills",
-      "url": "https://github.com/theyenvychada/agent-skills",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 18
-    },
-    {
-      "full_name": "tunmichboye/no-solutions",
-      "url": "https://github.com/tunmichboye/no-solutions",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "rank": 19
-    },
-    {
-      "full_name": "xxxsoekarno-lab/ai-research-copilot",
-      "url": "https://github.com/xxxsoekarno-lab/ai-research-copilot",
-      "stars": 0,
-      "pull_requests_merged_7d": 0,
-      "active_contributors_30d": 1,
-      "primary_language": "Python",
-      "rank": 20
     }
   ]
 }

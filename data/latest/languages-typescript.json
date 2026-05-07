@@ -3,8 +3,8 @@
   "slug": "typescript",
   "name": "TypeScript",
   "title": "Top observed TypeScript open-source contributors",
-  "generated_at": "2026-05-07T06:18:44.246Z",
-  "fresh_until": "2026-05-14T06:18:44.246Z",
+  "generated_at": "2026-05-07T06:53:42.655Z",
+  "fresh_until": "2026-05-14T06:53:42.655Z",
   "status": "fresh",
   "method": "github-rest-raw-public-metrics",
   "source_run": "2026-05-07",
@@ -13,10 +13,10 @@
       "2026-05-07"
     ],
     "ranked_items": [
-      20
+      12
     ],
     "top_10_signal": [
-      15475
+      3459
     ]
   },
   "candidate_count": 7999,
@@ -27,21 +27,6 @@
     "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "entries": [
-    {
-      "login": "ruvnet",
-      "name": "rUv",
-      "profile_url": "https://github.com/ruvnet",
-      "public_contributions": 10303,
-      "public_repos": 174,
-      "public_gists": 322,
-      "observed_public_commits": 10303,
-      "observed_public_pull_requests": 691,
-      "followers": 7553,
-      "location": "0x",
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 1
-    },
     {
       "login": "kamilmysliwiec",
       "name": "Kamil Mysliwiec",
@@ -55,22 +40,7 @@
       "location": "Poland",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 2
-    },
-    {
-      "login": "kijai",
-      "name": "Jukka Seppänen",
-      "profile_url": "https://github.com/kijai",
-      "public_contributions": 1712,
-      "public_repos": 106,
-      "public_gists": 0,
-      "observed_public_commits": 1712,
-      "observed_public_pull_requests": 60,
-      "followers": 6048,
-      "location": "Finland",
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 3
+      "rank": 1
     },
     {
       "login": "idimetrix",
@@ -85,7 +55,7 @@
       "location": "New York",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 2
     },
     {
       "login": "Klerith",
@@ -100,7 +70,7 @@
       "location": "Costa Rica",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 3
     },
     {
       "login": "trekhleb",
@@ -111,11 +81,11 @@
       "public_gists": 0,
       "observed_public_commits": 228,
       "observed_public_pull_requests": 2,
-      "followers": 17852,
+      "followers": 17853,
       "location": "San Francisco Bay Area",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 4
     },
     {
       "login": "gopinav",
@@ -130,7 +100,7 @@
       "location": "India",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 5
     },
     {
       "login": "mosh-hamedani",
@@ -145,36 +115,7 @@
       "location": "Los Angeles",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 8
-    },
-    {
-      "login": "mahseema",
-      "name": "Mahsima Dastan",
-      "profile_url": "https://github.com/mahseema",
-      "public_contributions": 1,
-      "public_repos": 13,
-      "public_gists": 0,
-      "observed_public_commits": 1,
-      "observed_public_pull_requests": 0,
-      "followers": 6314,
-      "location": "San Francisco",
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 9
-    },
-    {
-      "login": "vercel-labs",
-      "name": "Vercel Labs",
-      "profile_url": "https://github.com/vercel-labs",
-      "public_contributions": 0,
-      "public_repos": 269,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 6232,
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 10
+      "rank": 6
     },
     {
       "login": "langchain-ai",
@@ -185,39 +126,11 @@
       "public_gists": 0,
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
-      "followers": 18804,
+      "followers": 18805,
       "location": "United States of America",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 11
-    },
-    {
-      "login": "worldcoin",
-      "name": "Worldcoin",
-      "profile_url": "https://github.com/worldcoin",
-      "public_contributions": 0,
-      "public_repos": 146,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 8118,
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 12
-    },
-    {
-      "login": "unjs",
-      "name": "UnJS",
-      "profile_url": "https://github.com/unjs",
-      "public_contributions": 0,
-      "public_repos": 82,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 5973,
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 13
+      "rank": 7
     },
     {
       "login": "openclaw",
@@ -228,10 +141,10 @@
       "public_gists": 0,
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
-      "followers": 20769,
+      "followers": 20776,
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 8
     },
     {
       "login": "bluesky-social",
@@ -244,7 +157,7 @@
       "followers": 8766,
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 9
     },
     {
       "login": "modelcontextprotocol",
@@ -255,25 +168,10 @@
       "public_gists": 0,
       "observed_public_commits": 0,
       "observed_public_pull_requests": 0,
-      "followers": 46637,
+      "followers": 46639,
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 16
-    },
-    {
-      "login": "EddieHubCommunity",
-      "name": "EddieHub",
-      "profile_url": "https://github.com/EddieHubCommunity",
-      "public_contributions": 0,
-      "public_repos": 31,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 7246,
-      "location": "0.0.0.0",
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 17
+      "rank": 10
     },
     {
       "login": "TanStack",
@@ -287,7 +185,7 @@
       "followers": 10319,
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 11
     },
     {
       "login": "desktop",
@@ -302,20 +200,7 @@
       "location": "Everywhere",
       "location_confidence": "unknown",
       "notable_repositories": [],
-      "rank": 19
-    },
-    {
-      "login": "gaqx",
-      "profile_url": "https://github.com/gaqx",
-      "public_contributions": 0,
-      "public_repos": 15,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 7124,
-      "location_confidence": "unknown",
-      "notable_repositories": [],
-      "rank": 20
+      "rank": 12
     }
   ]
 }

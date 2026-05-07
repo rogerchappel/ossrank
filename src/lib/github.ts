@@ -1,4 +1,5 @@
 import { rankContributors, rankProjects } from './ranking.js';
+import { COUNTRY_CONFIGS, type CountryConfig } from './countries.js';
 import { snapshotBase } from './snapshots.js';
 import type { RankedContributor, RankedProject, RankingSnapshot } from './types.js';
 
@@ -6,6 +7,7 @@ export interface GitHubCollectorOptions {
   token?: string;
   limit: number;
   generatedAt?: string;
+  maxCountries?: number;
 }
 
 interface GitHubSearchResponse<T> {
@@ -145,27 +147,32 @@ async function contributionTotals(client: GitHubClient, login: string, generated
   };
 }
 
-async function collectUsers(client: GitHubClient, query: string, limit: number, generatedAt: string, locationTerms?: string[], seedLogins: string[] = []): Promise<{ total: number; users: RankedContributor[] }> {
-  const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(query, limit)}`);
+async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, locationTerms?: string[], seedLogins: string[] = []): Promise<{ total: number; users: RankedContributor[] }> {
+  const searchQueries = Array.isArray(queries) ? queries : [queries];
   const details = new Map<string, { user: GitHubUserDetail; seeded: boolean }>();
-  for (const item of search.items.slice(0, limit)) {
-    const detail = await client.get<GitHubUserDetail>(`/users/${encodeURIComponent(item.login)}`);
-    if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: false });
+  let total = 0;
+  for (const query of searchQueries) {
+    const search = await client.search<GitHubUserSearchItem>(`/search/users?${encodeQuery(query, limit)}`);
+    total += search.total_count;
+    const unseen = search.items.slice(0, limit).filter((item) => !details.has(item.login.toLowerCase()));
+    const fetched = await Promise.all(unseen.map(async (item) => client.get<GitHubUserDetail>(`/users/${encodeURIComponent(item.login)}`)));
+    for (const detail of fetched) {
+      if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: false });
+    }
   }
   for (const login of seedLogins) {
     if (details.has(login.toLowerCase())) continue;
     const detail = await client.get<GitHubUserDetail>(`/users/${encodeURIComponent(login)}`);
     if (!locationTerms || matchesLocation(detail.location, locationTerms)) details.set(detail.login.toLowerCase(), { user: detail, seeded: true });
   }
-  const entries = [];
-  for (const { user, seeded } of details.values()) {
+  const entries = await Promise.all([...details.values()].map(async ({ user, seeded }) => {
     let activity: { commits: number; pullRequests: number };
     try {
       activity = await contributionTotals(client, user.login, generatedAt);
     } catch {
       activity = await publicActivityCounts(client, user.login);
     }
-    entries.push({
+    return {
       login: user.login,
       name: user.name ?? undefined,
       profile_url: user.html_url,
@@ -178,10 +185,10 @@ async function collectUsers(client: GitHubClient, query: string, limit: number, 
       location: user.location ?? undefined,
       location_confidence: locationTerms ? (seeded ? 'curated' as const : 'profile-text-match' as const) : 'unknown' as const,
       notable_repositories: []
-    });
-  }
+    };
+  }));
   const ranked = rankContributors(entries).slice(0, limit);
-  return { total: search.total_count + seedLogins.length, users: ranked };
+  return { total: total + seedLogins.length, users: ranked };
 }
 
 async function collectRepos(client: GitHubClient, queries: string[], limit: number): Promise<{ total: number; projects: RankedProject[] }> {
@@ -208,7 +215,13 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const client = new GitHubClient(options.token);
   const limit = Math.max(1, options.limit);
 
-  const au = await collectUsers(client, 'location:Australia repos:>5', limit, generatedAt, ['Australia', 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Canberra', 'Hobart', 'Darwin'], ['rogerchappel']);
+  const countryResults: Array<{ config: CountryConfig; total: number; users: RankedContributor[] }> = [];
+  const countryConfigs = COUNTRY_CONFIGS.slice(0, options.maxCountries ?? COUNTRY_CONFIGS.length);
+  for (const config of countryConfigs) {
+    process.stderr.write(`Refreshing ${config.name}...\n`);
+    const result = await collectUsers(client, config.queries, limit, generatedAt, config.locationTerms, config.seedLogins ?? []);
+    countryResults.push({ config, ...result });
+  }
   const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt);
   const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit);
   const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false'], limit);
@@ -225,12 +238,12 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     'Project momentum prioritises recent activity, rough collaboration signal, then stars.'
   ];
 
-  const country: RankingSnapshot<RankedContributor> = {
-    ...snapshotBase('country', 'australia', 'Australia', 'Top observed GitHub contributors in Australia', generatedAt, 'fresh', 'github-rest-raw-public-metrics'),
-    code: 'AU', candidate_count: au.total, caveats: contributorCaveats,
-    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [au.users.length], top_10_signal: [au.users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
-    entries: au.users
-  };
+  const countries: Array<RankingSnapshot<RankedContributor>> = countryResults.map(({ config, total, users }) => ({
+    ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
+    code: config.code, candidate_count: total, caveats: contributorCaveats,
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [users.length], top_10_signal: [users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
+    entries: users
+  }));
   const language: RankingSnapshot<RankedContributor> = {
     ...snapshotBase('language', 'typescript', 'TypeScript', 'Top observed TypeScript open-source contributors', generatedAt, 'fresh', 'github-rest-raw-public-metrics'),
     candidate_count: ts.total, caveats: contributorCaveats,
@@ -250,5 +263,5 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     entries: growing.projects
   };
 
-  return { snapshots: [country, language, category, projects], remaining: client.remaining };
+  return { snapshots: [...countries, language, category, projects], remaining: client.remaining };
 }

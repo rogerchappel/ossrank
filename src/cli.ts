@@ -15,6 +15,7 @@ interface CliOptions {
   format: 'json' | 'table';
   mode: 'fixture' | 'live';
   token?: string;
+  maxCountries?: number;
 }
 
 function usage(): string {
@@ -33,6 +34,7 @@ Options:
   --format <json|table> Output format (default: json)
   --mode <fixture|live> Refresh mode (default: live for refresh)
   --token <token>       GitHub token; defaults to OSSRANK_GITHUB_TOKEN or GITHUB_TOKEN
+  --max-countries <n>   Refresh only the first n configured countries
 
 Live mode uses GitHub REST search with conservative limits and writes the same
 OSSRank data/latest snapshot contract used by the static website.
@@ -53,6 +55,7 @@ function parseArgs(argv: string[]): CliOptions {
     if (arg === '--format') { options.format = value === 'table' ? 'table' : 'json'; index += 1; continue; }
     if (arg === '--mode') { options.mode = value === 'fixture' ? 'fixture' : 'live'; index += 1; continue; }
     if (arg === '--token') { options.token = value; index += 1; continue; }
+    if (arg === '--max-countries') { options.maxCountries = Number(value); index += 1; continue; }
     if (arg === '--help' || arg === '-h') options.command = 'help';
   }
   return options;
@@ -105,7 +108,7 @@ async function main(): Promise<void> {
     }
     const started = Date.now();
     const token = options.token ?? process.env.OSSRANK_GITHUB_TOKEN ?? process.env.GITHUB_TOKEN;
-    const { snapshots, remaining } = await collectLiveSnapshots({ token, limit: options.limit });
+    const { snapshots, remaining } = await collectLiveSnapshots({ token, limit: options.limit, maxCountries: options.maxCountries });
     const manifest = await writeSnapshots(snapshots, { method: 'github-live-refresh', mode: 'live', durationMs: Date.now() - started, remaining });
     await emit(manifest, options);
     return;

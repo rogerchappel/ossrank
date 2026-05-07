@@ -3,24 +3,24 @@
   "slug": "australia",
   "name": "Australia",
   "title": "Top observed GitHub contributors in Australia",
-  "generated_at": "2026-05-07T06:18:44.246Z",
-  "fresh_until": "2026-05-14T06:18:44.246Z",
+  "generated_at": "2026-05-07T06:53:42.655Z",
+  "fresh_until": "2026-05-14T06:53:42.655Z",
   "status": "fresh",
-  "method": "github-rest-raw-public-metrics",
+  "method": "github-graphql-one-year-contribution-totals",
   "source_run": "2026-05-07",
   "history": {
     "weeks": [
       "2026-05-07"
     ],
     "ranked_items": [
-      20
+      12
     ],
     "top_10_signal": [
-      14851
+      7037
     ]
   },
   "code": "AU",
-  "candidate_count": 37671,
+  "candidate_count": 37672,
   "caveats": [
     "Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -44,64 +44,19 @@
       "rank": 1
     },
     {
-      "login": "ghuntley",
-      "name": "Geoffrey Huntley",
-      "profile_url": "https://github.com/ghuntley",
-      "public_contributions": 3715,
-      "public_repos": 801,
-      "public_gists": 227,
-      "observed_public_commits": 3715,
-      "observed_public_pull_requests": 15,
-      "followers": 2710,
-      "location": "Kangaroo Island, Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 2
-    },
-    {
-      "login": "robjhyndman",
-      "name": "Rob J Hyndman",
-      "profile_url": "https://github.com/robjhyndman",
-      "public_contributions": 2753,
-      "public_repos": 156,
-      "public_gists": 6,
-      "observed_public_commits": 2753,
-      "observed_public_pull_requests": 17,
-      "followers": 3092,
-      "location": "Wurundjeri country, Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 3
-    },
-    {
       "login": "rogerchappel",
       "name": "Roger Chappel",
       "profile_url": "https://github.com/rogerchappel",
-      "public_contributions": 2539,
+      "public_contributions": 2540,
       "public_repos": 94,
       "public_gists": 0,
-      "observed_public_commits": 2539,
+      "observed_public_commits": 2540,
       "observed_public_pull_requests": 585,
       "followers": 7,
       "location": "Australia",
       "location_confidence": "curated",
       "notable_repositories": [],
-      "rank": 4
-    },
-    {
-      "login": "rvagg",
-      "name": "Rod Vagg",
-      "profile_url": "https://github.com/rvagg",
-      "public_contributions": 980,
-      "public_repos": 216,
-      "public_gists": 77,
-      "observed_public_commits": 980,
-      "observed_public_pull_requests": 547,
-      "followers": 2579,
-      "location": "NSW, Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 5
+      "rank": 2
     },
     {
       "login": "jasontaylordev",
@@ -116,37 +71,7 @@
       "location": "Brisbane, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 6
-    },
-    {
-      "login": "JakeLin",
-      "name": "Jake Lin",
-      "profile_url": "https://github.com/JakeLin",
-      "public_contributions": 269,
-      "public_repos": 78,
-      "public_gists": 6,
-      "observed_public_commits": 269,
-      "observed_public_pull_requests": 2,
-      "followers": 2687,
-      "location": "Melbourne, Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 7
-    },
-    {
-      "login": "markdalgleish",
-      "name": "Mark Dalgleish",
-      "profile_url": "https://github.com/markdalgleish",
-      "public_contributions": 160,
-      "public_repos": 259,
-      "public_gists": 8,
-      "observed_public_commits": 160,
-      "observed_public_pull_requests": 168,
-      "followers": 3282,
-      "location": "Melbourne, Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 8
+      "rank": 3
     },
     {
       "login": "nicknochnack",
@@ -161,7 +86,7 @@
       "location": "Sydney, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 4
     },
     {
       "login": "codingo",
@@ -176,7 +101,7 @@
       "location": "Brisbane, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 5
     },
     {
       "login": "davecheney",
@@ -191,7 +116,7 @@
       "location": "Sydney, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 6
     },
     {
       "login": "0vm",
@@ -206,7 +131,7 @@
       "location": "Sydney, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 7
     },
     {
       "login": "TheCherno",
@@ -217,11 +142,11 @@
       "public_gists": 3,
       "observed_public_commits": 7,
       "observed_public_pull_requests": 1,
-      "followers": 12816,
+      "followers": 12817,
       "location": "Melbourne, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 8
     },
     {
       "login": "basarat",
@@ -236,7 +161,7 @@
       "location": "Melbourne, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 9
     },
     {
       "login": "hakluke",
@@ -251,22 +176,7 @@
       "location": "Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 15
-    },
-    {
-      "login": "carlcastanas",
-      "name": "Carl Andrew Castañas",
-      "profile_url": "https://github.com/carlcastanas",
-      "public_contributions": 4,
-      "public_repos": 55,
-      "public_gists": 1,
-      "observed_public_commits": 4,
-      "observed_public_pull_requests": 0,
-      "followers": 3141,
-      "location": "Moscow, Russia | Perth, Australia | BGC, Philippines",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 16
+      "rank": 10
     },
     {
       "login": "brendangregg",
@@ -281,22 +191,7 @@
       "location": "Sydney, Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 17
-    },
-    {
-      "login": "Endermanch",
-      "name": "Andrew",
-      "profile_url": "https://github.com/Endermanch",
-      "public_contributions": 1,
-      "public_repos": 19,
-      "public_gists": 3,
-      "observed_public_commits": 1,
-      "observed_public_pull_requests": 0,
-      "followers": 3268,
-      "location": "Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 18
+      "rank": 11
     },
     {
       "login": "cornflourblue",
@@ -311,22 +206,7 @@
       "location": "Sydney Australia",
       "location_confidence": "profile-text-match",
       "notable_repositories": [],
-      "rank": 19
-    },
-    {
-      "login": "fastai",
-      "name": "fast.ai",
-      "profile_url": "https://github.com/fastai",
-      "public_contributions": 0,
-      "public_repos": 124,
-      "public_gists": 0,
-      "observed_public_commits": 0,
-      "observed_public_pull_requests": 0,
-      "followers": 5220,
-      "location": "Australia",
-      "location_confidence": "profile-text-match",
-      "notable_repositories": [],
-      "rank": 20
+      "rank": 12
     }
   ]
 }
