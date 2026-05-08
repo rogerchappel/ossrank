@@ -63,6 +63,19 @@ bash scripts/validate.sh    # StackForge validation wrapper
 
 Live refreshes use GitHub GraphQL search and contribution APIs. GitHub Actions' default `GITHUB_TOKEN` is an integration token and can return `Resource not accessible by integration`; configure a repository secret named `OSSRANK_GITHUB_TOKEN` with a classic or fine-grained PAT that can read public repository/user metadata.
 
+### GitHub Actions secrets and environment
+
+Configure these repository secrets before running refresh/deploy workflows:
+
+- `OSSRANK_GITHUB_TOKEN` — GitHub PAT used by weekly/manual live refresh. Needs read-only access to public repository/user metadata and GraphQL search/contribution APIs.
+- `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account id for Pages deploys. Stored as a secret so the public repo does not hardcode account metadata.
+- `CLOUDFLARE_API_TOKEN` — Cloudflare API token for Wrangler Pages deploys. Scope it to the `ossrank` Pages project where possible.
+
+Optional runtime/build variables:
+
+- `OSSRANK_SITE_URL` — canonical production URL, defaults to `https://ossrank.dev`.
+- `OSSRANK_LIMIT` — candidate limit for live refresh runs; workflow dispatch defaults to `20`.
+
 ## Cloudflare Pages
 
 `wrangler.toml` sets `pages_build_output_dir = "dist"` and the deploy script runs:
