@@ -2,11 +2,12 @@
 
 A static-first public data product for finding top GitHub contributors by country using simple public metrics: commits, public pull requests, repositories, and followers.
 
-OSSRank is designed for <https://ossrank.dev>. V1 includes a conservative live GitHub REST collector plus fixture mode for deterministic tests. The primary user flow is home page country selection → country contributor table, sorted by commits by default and sortable by public PRs, repo count, or followers. A single projects page is included separately.
+OSSRank is designed for <https://ossrank.dev/>. Set `OSSRANK_SITE_URL` in Cloudflare Pages if the production host changes so generated canonical URLs, Open Graph URLs, `robots.txt`, and `sitemap.xml` stay aligned with the live domain. V1 includes a conservative live GitHub REST/GraphQL collector plus fixture mode for deterministic tests. The primary user flow is home page country selection → country contributor table, sorted by commits by default and sortable by public PRs, repo count, or followers. A single projects page is included separately.
 
 ## What it builds
 
 - A polished static website in `dist/` ready for Cloudflare Pages.
+- Generated SEO assets: per-route canonical URLs, Open Graph/Twitter metadata, `robots.txt`, `sitemap.xml`, Cloudflare Pages `_headers`, and duplicate-route `_redirects`.
 - Versioned JSON snapshots under `data/latest/` and immutable run snapshots under `data/runs/<date>/`.
 - A public manifest at `/data/latest/manifest.json` with completed shards, failed shards, stale pages, API mode, duration, and source commit.
 - A focused country-selection homepage, country contributor pages, one projects page, methodology, badges, and raw JSON.
@@ -16,8 +17,14 @@ OSSRank is designed for <https://ossrank.dev>. V1 includes a conservative live G
 
 - `/`
 - `/countries/australia/top-github-contributors/`
-- `/countries/australia/`
+- `/countries/australia/` redirects to `/countries/australia/top-github-contributors/`
+- `/global/`
 - `/projects/`
+- `/agentic/`
+- `/momentum/`
+- `/rising/`
+- `/sitemap.xml`
+- `/robots.txt`
 - `/methodology/`
 - `/badges/users/octo-kiwi/au.svg`
 - `/data/latest/manifest.json`
@@ -69,6 +76,7 @@ For a connected Git deployment, configure Cloudflare Pages with:
 - Build command: `pnpm run build`
 - Build output directory: `dist`
 - Node version: `22`
+- Environment variable: `OSSRANK_SITE_URL=https://ossrank.dev`
 
 ## Methodology guardrails
 
