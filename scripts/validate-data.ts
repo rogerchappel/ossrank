@@ -20,7 +20,7 @@ assert(manifest.completed_shards.length > 0, 'manifest must include at least one
 
 for (const shard of manifest.completed_shards) {
   const filename = shard.path.replace('/data/latest/', '');
-  const snapshot = JSON.parse(await readFile(join(dataDir, filename), 'utf8')) as RankingSnapshot<{ rank: number; login?: string; full_name?: string }>;
+  const snapshot = JSON.parse(await readFile(join(dataDir, filename), 'utf8')) as RankingSnapshot<{ rank: number; login?: string; full_name?: string; previous_rank?: unknown }>;
   assert(snapshot.kind === shard.kind, `${filename}: kind must match manifest`);
   assert(snapshot.slug === shard.slug, `${filename}: slug must match manifest`);
   assert(isIso(snapshot.generated_at), `${filename}: generated_at must be ISO`);
@@ -30,6 +30,9 @@ for (const shard of manifest.completed_shards) {
   const seen = new Set<string>();
   snapshot.entries.forEach((entry, index) => {
     assert(entry.rank === index + 1, `${filename}: rank ${entry.rank} should equal row ${index + 1}`);
+    if (entry.previous_rank !== undefined) {
+      assert(typeof entry.previous_rank === 'number' && Number.isInteger(entry.previous_rank) && entry.previous_rank > 0, `${filename}: previous_rank for row ${index + 1} must be a positive integer when present`);
+    }
     const key = entry.login ?? entry.full_name;
     assert(key, `${filename}: entry ${index + 1} needs login or full_name`);
     if (key) {

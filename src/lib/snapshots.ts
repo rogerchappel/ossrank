@@ -1,8 +1,8 @@
-import { cp, mkdir, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { execSync } from 'node:child_process';
 import { addDays } from './freshness.js';
-import type { Manifest, ManifestShard, RankingSnapshot } from './types.js';
+import type { Manifest, ManifestShard, RankedContributor, RankingSnapshot } from './types.js';
 
 export interface SnapshotWriteOptions {
   root?: string;
@@ -30,6 +30,51 @@ export function shardFilename(snapshot: RankingSnapshot<unknown>): string {
   return `${prefix}-${snapshot.slug}.json`;
 }
 
+function isContributorSnapshot(snapshot: RankingSnapshot<unknown>): snapshot is RankingSnapshot<RankedContributor> {
+  return (snapshot.kind === 'global' || snapshot.kind === 'country') && snapshot.entries.every((entry) => typeof (entry as Partial<RankedContributor>).login === 'string');
+}
+
+async function readPreviousSnapshot(filename: string, latestDir: string, historyDir: string): Promise<RankingSnapshot<RankedContributor> | undefined> {
+  try {
+    return JSON.parse(await readFile(join(latestDir, filename), 'utf8')) as RankingSnapshot<RankedContributor>;
+  } catch {
+    // Fall back to dated history when latest is unavailable, e.g. a fresh checkout
+    // with only archived runs present.
+  }
+
+  try {
+    const runIds = (await readdir(historyDir, { withFileTypes: true }))
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name)
+      .sort((a, b) => b.localeCompare(a));
+    for (const runId of runIds) {
+      try {
+        return JSON.parse(await readFile(join(historyDir, runId, filename), 'utf8')) as RankingSnapshot<RankedContributor>;
+      } catch {
+        // Keep walking backwards until a shard for this board exists.
+      }
+    }
+  } catch {
+    // No history yet. New boards should simply render without movement.
+  }
+  return undefined;
+}
+
+async function addPreviousContributorRanks(snapshot: RankingSnapshot<unknown>, latestDir: string, historyDir: string): Promise<RankingSnapshot<unknown>> {
+  if (!isContributorSnapshot(snapshot)) return snapshot;
+  const previous = await readPreviousSnapshot(shardFilename(snapshot), latestDir, historyDir);
+  if (!previous?.entries?.length) return snapshot;
+
+  const previousRanks = new Map(previous.entries.map((entry) => [entry.login.toLowerCase(), entry.rank]));
+  return {
+    ...snapshot,
+    entries: snapshot.entries.map((entry) => ({
+      ...entry,
+      previous_rank: previousRanks.get(entry.login.toLowerCase())
+    }))
+  };
+}
+
 export async function writeSnapshots(snapshots: RankingSnapshot<unknown>[], options: SnapshotWriteOptions): Promise<Manifest> {
   const root = options.root ?? process.cwd();
   const generatedAt = options.generatedAt ?? new Date().toISOString();
@@ -42,8 +87,10 @@ export async function writeSnapshots(snapshots: RankingSnapshot<unknown>[], opti
   await mkdir(runDir, { recursive: true });
   await mkdir(historyDir, { recursive: true });
 
+  const snapshotsWithMovement = await Promise.all(snapshots.map((snapshot) => addPreviousContributorRanks(snapshot, latestDir, historyDir)));
+
   const completed: ManifestShard[] = [];
-  for (const snapshot of snapshots) {
+  for (const snapshot of snapshotsWithMovement) {
     const filename = shardFilename(snapshot);
     const pretty = JSON.stringify(snapshot, null, 2) + '\n';
     await writeFile(join(latestDir, filename), pretty);
@@ -60,7 +107,7 @@ export async function writeSnapshots(snapshots: RankingSnapshot<unknown>[], opti
     });
   }
 
-  const stalePages = snapshots.filter((snapshot) => snapshot.status === 'stale' || snapshot.status === 'failed').map((snapshot) => snapshot.slug);
+  const stalePages = snapshotsWithMovement.filter((snapshot) => snapshot.status === 'stale' || snapshot.status === 'failed').map((snapshot) => snapshot.slug);
   const manifest: Manifest = {
     generated_at: generatedAt,
     source_commit: sourceCommit(root),
