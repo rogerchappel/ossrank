@@ -44,6 +44,6 @@ jobs:
           file_pattern: 'data'
       - name: Deploy refreshed site to Cloudflare Pages
         env:
-          CLOUDFLARE_ACCOUNT_ID: 003510fea2869efc30f097949c7db453
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: pnpm exec wrangler pages deploy dist --project-name ossrank
