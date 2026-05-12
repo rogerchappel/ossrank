@@ -632,17 +632,20 @@ async function saveCountrySnapshot(
   process.stderr.write(`  ✓ Saved ${config.name} → ${filename}\n`);
 }
 
-async function loadSavedCountrySlugs(saveDir: GitHubCollectorSaveDir, generatedAt: string): Promise<Set<string>> {
+async function loadSavedCountrySnapshots(saveDir: GitHubCollectorSaveDir, generatedAt: string): Promise<Map<string, RankingSnapshot<RankedContributor>>> {
   const { readdir } = await import('node:fs/promises');
-  const saved = new Set<string>();
+  const saved = new Map<string, RankingSnapshot<RankedContributor>>();
+  const runDir = join(saveDir.historyDir, generatedAt.slice(0, 10));
   try {
-    const files = await readdir(saveDir.latestDir);
-    for (const f of files) {
-      const m = f.match(/^countries-(.+)\.json$/);
-      if (m) saved.add(m[1]);
+    const files = await readdir(runDir);
+    for (const file of files) {
+      const match = file.match(/^countries-(.+)\.json$/);
+      if (!match) continue;
+      const snapshot = JSON.parse(await readFile(join(runDir, file), 'utf8')) as RankingSnapshot<RankedContributor>;
+      if (snapshot.kind === 'country' && snapshot.slug === match[1]) saved.set(match[1], snapshot);
     }
   } catch {
-    // No saved state yet
+    // No resumable country snapshots for this run yet.
   }
   return saved;
 }
@@ -664,20 +667,22 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
 
   const limit = Math.max(1, options.limit);
 
-  // Incremental save: load already-saved country slugs so we can resume.
+  // Incremental save: load already-saved country snapshots for this run so
+  // interrupted refreshes can resume without dropping skipped countries from
+  // the final manifest/site build.
   const saveDir = options.saveDir;
-  const savedSlugs = saveDir ? await loadSavedCountrySlugs(saveDir, generatedAt) : new Set<string>();
-  if (savedSlugs.size > 0) {
-    process.stderr.write(`[resume] Found ${savedSlugs.size} previously saved countries, skipping.\n`);
+  const savedCountrySnapshots = saveDir ? await loadSavedCountrySnapshots(saveDir, generatedAt) : new Map<string, RankingSnapshot<RankedContributor>>();
+  if (savedCountrySnapshots.size > 0) {
+    process.stderr.write(`[resume] Found ${savedCountrySnapshots.size} previously saved countries for this run, skipping and reusing them.\n`);
   }
 
   const countryResults: CountryResult[] = [];
   const countryConfigs = COUNTRY_CONFIGS.slice(0, options.maxCountries ?? COUNTRY_CONFIGS.length);
 
   for (const config of countryConfigs) {
-    // Skip already-saved countries (resume support)
-    if (saveDir && savedSlugs.has(config.slug)) {
-      process.stderr.write(`Skipping ${config.name} (already saved).\n`);
+    // Skip already-saved countries for this run only (resume support).
+    if (saveDir && savedCountrySnapshots.has(config.slug)) {
+      process.stderr.write(`Skipping ${config.name} (already saved for this run).\n`);
       continue;
     }
 
@@ -713,9 +718,11 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     'Project momentum prioritises recent merged PRs, recent commits, observed contributors, then stars.'
   ];
 
+  const savedCountryEntries = [...savedCountrySnapshots.values()].flatMap((snapshot) => snapshot.entries);
   const globalContributorPool = [
     ...global.users,
     ...ts.users,
+    ...savedCountryEntries,
     ...countryResults.flatMap((result) => result.users)
   ];
   const globalEntries = rankContributors([...new Map(globalContributorPool.map((user) => [user.login.toLowerCase(), user])).values()]).slice(0, limit);
@@ -726,12 +733,17 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [globalEntries.length], top_10_signal: [globalEntries.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
     entries: globalEntries
   };
-  const countries: Array<RankingSnapshot<RankedContributor>> = countryResults.map(({ config, total, users }) => ({
+  const refreshedCountries: Array<RankingSnapshot<RankedContributor>> = countryResults.map(({ config, total, users }) => ({
     ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
     code: config.code, candidate_count: total, caveats: contributorCaveats, discovery_queries: config.queries.map(userQuery), candidate_count_by_query: (countryResults.find((r) => r.config.slug === config.slug)?.queryStats ?? []),
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [users.length], top_10_signal: [users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
     entries: users
   }));
+  const countrySnapshotBySlug = new Map<string, RankingSnapshot<RankedContributor>>([
+    ...[...savedCountrySnapshots.entries()],
+    ...refreshedCountries.map((snapshot) => [snapshot.slug, snapshot] as const)
+  ]);
+  const countries = countryConfigs.map((config) => countrySnapshotBySlug.get(config.slug)).filter((snapshot): snapshot is RankingSnapshot<RankedContributor> => Boolean(snapshot));
   const language: RankingSnapshot<RankedContributor> = {
     ...snapshotBase('language', 'typescript', 'TypeScript', 'Top observed TypeScript open-source contributors', generatedAt, 'fresh', 'github-rest-raw-public-metrics'),
     candidate_count: ts.total, caveats: contributorCaveats, discovery_queries: ['language:TypeScript repos:>10 followers:>25 type:user'], candidate_count_by_query: ts.queryStats,
@@ -783,7 +795,7 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [momentumProjects.length], top_10_signal: [momentumProjects.slice(0, 10).reduce((sum, project) => sum + (project.pull_requests_merged_30d ?? project.pull_requests_merged_7d), 0)] },
     entries: momentumProjects
   };
-  const allUsers = [...global.users, ...ts.users, ...countryResults.flatMap((result) => result.users)];
+  const allUsers = [...global.users, ...ts.users, ...savedCountryEntries, ...countryResults.flatMap((result) => result.users)];
   const uniqueUsers = [...new Map(allUsers.map((user) => [user.login.toLowerCase(), user])).values()];
   const risingUsers = rankRisingContributors(uniqueUsers).slice(0, limit);
   const rising: RankingSnapshot<RankedContributor> = {
