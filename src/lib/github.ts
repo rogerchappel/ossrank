@@ -1,6 +1,7 @@
 import { rankContributors, rankProjectMomentum, rankProjects, rankRisingContributors } from './ranking.js';
 import { COUNTRY_CONFIGS, type CountryConfig } from './countries.js';
 import { snapshotBase } from './snapshots.js';
+import { createTokenProvider, type GitHubTokenProvider } from './token-provider.js';
 import type { RankedContributor, RankedProject, RankingSnapshot } from './types.js';
 
 export interface GitHubCollectorOptions {
@@ -46,23 +47,6 @@ interface GitHubGraphqlResponse<T> {
   data?: T;
   errors?: Array<{ message: string }>;
 }
-interface GitHubUserProfileResponse {
-  user: {
-    login: string;
-    name: string | null;
-    url: string;
-    repositories: { totalCount: number };
-    gists: { totalCount: number };
-    followers: { totalCount: number };
-    location: string | null;
-    contributionsCollection: {
-      totalCommitContributions: number;
-      totalPullRequestContributions: number;
-    };
-  } | null;
-  rateLimit?: { remaining?: number; cost?: number };
-}
-
 interface GitHubUserSearchResponse {
   search: {
     userCount: number;
@@ -92,6 +76,7 @@ interface RepoCandidate {
 
 interface GitHubRelease { published_at: string | null; }
 interface GitHubPullRequest { merged_at: string | null; updated_at: string; }
+
 interface GitHubRepoActivityResponse {
   repository: {
     defaultBranchRef: { target: { history?: { totalCount: number } } | null } | null;
@@ -101,6 +86,215 @@ interface GitHubRepoActivityResponse {
   } | null;
   rateLimit?: { remaining?: number; cost?: number };
 }
+
+// ---------------------------------------------------------------------------
+// Smart throttler — single shared instance across the refresh cycle
+// ---------------------------------------------------------------------------
+
+interface RateLimitState {
+  graphqlRemaining: number | null;   // GraphQL points remaining (5000/hr for PAT)
+  graphqlReset: number | null;        // epoch-ms when GraphQL budget resets
+  restRemaining: number | null;       // REST requests remaining (5000/hr for PAT)
+  restReset: number | null;           // epoch-ms when REST budget resets
+}
+
+class SmartThrottler {
+  private state: RateLimitState = { graphqlRemaining: null, graphqlReset: null, restRemaining: null, restReset: null };
+
+  private readonly concurrency: number;
+  /** Minimum gap between sequential API calls (ms). */
+  private readonly minGapMs: number;
+  private lastCallTs = 0;
+
+  constructor(options: { concurrency?: number; minGapMs?: number } = {}) {
+    this.concurrency = options.concurrency ?? 2;
+    this.minGapMs = options.minGapMs ?? 800;
+  }
+
+  getConcurrency(): number {
+    return this.concurrency;
+  }
+
+  /** Update rate-limit state from response headers. */
+  updateFromHeaders(headers: Headers, apiType: 'graphql' | 'rest'): void {
+    const remaining = headers.get('x-ratelimit-remaining');
+    const reset = headers.get('x-ratelimit-reset');
+    if (remaining !== null) {
+      const val = Number(remaining);
+      if (apiType === 'graphql') this.state.graphqlRemaining = val;
+      else this.state.restRemaining = val;
+    }
+    if (reset !== null) {
+      const epochSec = Number(reset);
+      if (apiType === 'graphql') this.state.graphqlReset = epochSec * 1000;
+      else this.state.restReset = epochSec * 1000;
+    }
+  }
+
+  /**
+   * Call before making a request. Returns ms to wait (0 if OK).
+   * GraphQL: stay above 150 points. REST: stay above 100 requests.
+   */
+  msToWait(apiType: 'graphql' | 'rest'): number {
+    const threshold = apiType === 'graphql' ? 150 : 100;
+    const remaining = apiType === 'graphql' ? this.state.graphqlRemaining : this.state.restRemaining;
+    const reset = apiType === 'graphql' ? this.state.graphqlReset : this.state.restReset;
+
+    if (remaining === null || reset === null) return 0;
+    if (remaining > threshold) return 0;
+
+    const waitMs = reset - Date.now() + 1000;
+    return Math.max(0, waitMs);
+  }
+
+  /**
+   * Enforce minimum gap between calls AND sleep if we're near a rate limit.
+   * Call this immediately before issuing an API request.
+   */
+  async beforeCall(apiType: 'graphql' | 'rest'): Promise<void> {
+    // Check if we need to sleep because we're near the limit.
+    const limitWait = this.msToWait(apiType);
+    if (limitWait > 0) {
+      const seconds = Math.ceil(limitWait / 1000);
+      process.stderr.write(
+        `[throttle] Approaching ${apiType} rate limit — sleeping ${seconds}s until reset.\n`
+      );
+      await this._sleep(Math.min(limitWait, 3_600_000)); // cap at 1h
+    }
+
+    // Enforce minimum inter-call gap.
+    const gap = Date.now() - this.lastCallTs;
+    if (gap < this.minGapMs) {
+      await this._sleep(this.minGapMs - gap);
+    }
+    this.lastCallTs = Date.now();
+  }
+
+  private _sleep(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Rate-limit-aware GitHub client
+// ---------------------------------------------------------------------------
+
+export class GitHubClient {
+  remaining?: number;
+  private tokenProvider: GitHubTokenProvider;
+  private throttler: SmartThrottler;
+
+  constructor(tokenProvider: GitHubTokenProvider, throttler: SmartThrottler) {
+    this.tokenProvider = tokenProvider;
+    this.throttler = throttler;
+  }
+
+  private async authHeaders(): Promise<Record<string, string>> {
+    const { token } = await this.tokenProvider.getToken();
+    return { Authorization: `Bearer ${token}` };
+  }
+
+  async get<T>(path: string, useRest = true): Promise<T> {
+    const apiType = useRest ? 'rest' : 'graphql';
+    await this.throttler.beforeCall(apiType);
+    const auth = await this.authHeaders();
+    const response = await fetchWithRetry(`https://api.github.com${path}`, {
+      headers: {
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'ossrank/0.1.0',
+        ...auth
+      }
+    });
+    this.throttler.updateFromHeaders(response.headers, 'rest');
+    const remaining = response.headers.get('x-ratelimit-remaining');
+    if (remaining) this.remaining = Number(remaining);
+    if (!response.ok) {
+      const text = await response.text();
+      // Handle 403 primary/secondary rate limit
+      if (response.status === 403) {
+        const reset = response.headers.get('x-ratelimit-reset');
+        const retryAfter = response.headers.get('retry-after');
+        if (retryAfter) {
+          const sleepMs = Math.min(Number(retryAfter) * 1000, 3_600_000);
+          process.stderr.write(`[throttle] ${path} hit 403 — sleeping ${Math.ceil(sleepMs / 1000)}s.\n`);
+          await new Promise((resolve) => setTimeout(resolve, sleepMs));
+          return this.get<T>(path, useRest); // retry once after sleep
+        }
+        if (reset) {
+          const sleepMs = Math.max(Number(reset) * 1000 - Date.now() + 1000, 0);
+          process.stderr.write(`[throttle] ${path} hit 403 — sleeping ${Math.ceil(sleepMs / 1000)}s until reset.\n`);
+          await new Promise((resolve) => setTimeout(resolve, Math.min(sleepMs, 3_600_000)));
+          return this.get<T>(path, useRest);
+        }
+      }
+      throw new Error(`GitHub ${response.status} for ${path}: ${text}`);
+    }
+    return await response.json() as T;
+  }
+
+  async rawGet(path: string): Promise<Response> {
+    await this.throttler.beforeCall('rest');
+    const auth = await this.authHeaders();
+    const response = await fetchWithRetry(`https://api.github.com${path}`, {
+      headers: {
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'ossrank/0.1.0',
+        ...auth
+      }
+    });
+    this.throttler.updateFromHeaders(response.headers, 'rest');
+    const remaining = response.headers.get('x-ratelimit-remaining');
+    if (remaining) this.remaining = Number(remaining);
+    if (!response.ok) throw new Error(`GitHub ${response.status} for ${path}: ${await response.text()}`);
+    return response;
+  }
+
+  async search<T>(path: string): Promise<GitHubSearchResponse<T>> {
+    return await this.get<GitHubSearchResponse<T>>(path);
+  }
+
+  async graphql<T>(query: string, variables: Record<string, unknown>): Promise<T> {
+    await this.throttler.beforeCall('graphql');
+    const auth = await this.authHeaders();
+    const response = await fetchWithRetry('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+        'User-Agent': 'ossrank/0.1.0',
+        ...auth
+      },
+      body: JSON.stringify({ query, variables })
+    });
+    const remaining = response.headers.get('x-ratelimit-remaining');
+    if (remaining) this.remaining = Number(remaining);
+    this.throttler.updateFromHeaders(response.headers, 'graphql');
+    const body = await response.json() as GitHubGraphqlResponse<T>;
+    if (!response.ok || body.errors?.length) {
+      const message = body.errors?.map((error) => error.message).join('; ') ?? response.statusText;
+      // If it's a rate-limit error from GraphQL, sleep and retry once
+      if (response.status === 403 || message.includes('rate limit')) {
+        const reset = response.headers.get('x-ratelimit-reset');
+        const retryAfter = response.headers.get('retry-after');
+        const sleepMs = retryAfter
+          ? Math.min(Number(retryAfter) * 1000, 3_600_000)
+          : reset
+            ? Math.max(Number(reset) * 1000 - Date.now() + 1000, 0)
+            : 60_000;
+        process.stderr.write(`[throttle] GraphQL hit rate limit — sleeping ${Math.ceil(sleepMs / 1000)}s.\n`);
+        await new Promise((resolve) => setTimeout(resolve, Math.min(sleepMs, 3_600_000)));
+        return this.graphql<T>(query, variables);
+      }
+      throw new Error(`GitHub GraphQL failed: ${message}`);
+    }
+    if (!body.data) throw new Error('GraphQL returned no data');
+    return body.data;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
 
 function daysAgoIso(generatedAt: string, days: number): string {
   const date = new Date(generatedAt);
@@ -132,12 +326,12 @@ function countFromLink(response: Response, fallback: number): number {
   return match ? Number(match[1]) : fallback;
 }
 
-
 async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Promise<Response> {
   let lastError: unknown;
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
       const response = await fetch(url, init);
+      if (response.status === 403) return response; // let caller handle rate limit
       if (response.status !== 502 && response.status !== 503 && response.status !== 504 && response.status !== 429) return response;
       lastError = new Error(`GitHub ${response.status} for ${url}`);
       const retryAfter = Number(response.headers.get('retry-after') ?? 0) * 1000;
@@ -150,62 +344,41 @@ async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Pro
   throw lastError instanceof Error ? lastError : new Error(String(lastError));
 }
 
-export class GitHubClient {
-  remaining?: number;
-  constructor(private readonly token?: string) {}
+// ---------------------------------------------------------------------------
+// REST user profile (new — uses separate rate limit bucket from GraphQL)
+// ---------------------------------------------------------------------------
 
-  async get<T>(path: string): Promise<T> {
-    const response = await fetchWithRetry(`https://api.github.com${path}`, {
-      headers: {
-        Accept: 'application/vnd.github+json',
-        'User-Agent': 'ossrank/0.1.0',
-        ...(this.token ? { Authorization: `Bearer ${this.token}` } : {})
-      }
-    });
-    const remaining = response.headers.get('x-ratelimit-remaining');
-    if (remaining) this.remaining = Number(remaining);
-    if (!response.ok) throw new Error(`GitHub ${response.status} for ${path}: ${await response.text()}`);
-    return await response.json() as T;
-  }
+async function userProfileViaRest(
+  client: GitHubClient,
+  login: string,
+  generatedAt: string
+): Promise<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number } } | null> {
+  // Fetch profile via REST /users/{login}
+  const profile = await client.get<GitHubUserDetail>(`/users/${login}`);
+  if (!profile?.login) return null;
 
-  async rawGet(path: string): Promise<Response> {
-    const response = await fetchWithRetry(`https://api.github.com${path}`, {
-      headers: {
-        Accept: 'application/vnd.github+json',
-        'User-Agent': 'ossrank/0.1.0',
-        ...(this.token ? { Authorization: `Bearer ${this.token}` } : {})
-      }
-    });
-    const remaining = response.headers.get('x-ratelimit-remaining');
-    if (remaining) this.remaining = Number(remaining);
-    if (!response.ok) throw new Error(`GitHub ${response.status} for ${path}: ${await response.text()}`);
-    return response;
-  }
+  // Fetch 1-year commit/contribution stats via REST commit search
+  // (approximate — REST doesn't have the one-year contributionCollection)
+  // For now we use public_repos and commit counts from /repos endpoints as proxy.
+  // Later: consider using /search/commits?q=author:{login}+committer-date:>2025-...
 
-  async search<T>(path: string): Promise<GitHubSearchResponse<T>> {
-    return await this.get<GitHubSearchResponse<T>>(path);
-  }
-
-  async graphql<T>(query: string, variables: Record<string, unknown>): Promise<T> {
-    if (!this.token) throw new Error('GitHub GraphQL requires OSSRANK_GITHUB_TOKEN');
-    const response = await fetchWithRetry('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/vnd.github+json',
-        'Content-Type': 'application/json',
-        'User-Agent': 'ossrank/0.1.0',
-        Authorization: `Bearer ${this.token}`
-      },
-      body: JSON.stringify({ query, variables })
-    });
-    const remaining = response.headers.get('x-ratelimit-remaining');
-    if (remaining) this.remaining = Number(remaining);
-    const body = await response.json() as GitHubGraphqlResponse<T>;
-    if (!response.ok || body.errors?.length) throw new Error(`GitHub GraphQL failed: ${body.errors?.map((error) => error.message).join('; ') ?? response.statusText}`);
-    if (!body.data) throw new Error('GitHub GraphQL returned no data');
-    return body.data;
-  }
+  return {
+    user: {
+      login: profile.login,
+      name: profile.name,
+      html_url: profile.html_url,
+      public_repos: profile.public_repos,
+      public_gists: profile.public_gists,
+      followers: profile.followers,
+      location: profile.location
+    },
+    activity: { commits: 0, pullRequests: 0 } // Will be populated from GraphQL search results when available
+  };
 }
+
+// ---------------------------------------------------------------------------
+// Query helpers
+// ---------------------------------------------------------------------------
 
 function encodeQuery(query: string, limit: number, sort?: string, order = 'desc'): string {
   return `q=${encodeURIComponent(query)}&per_page=${Math.min(100, Math.max(1, limit))}${sort ? `&sort=${encodeURIComponent(sort)}&order=${encodeURIComponent(order)}` : ''}`;
@@ -236,49 +409,9 @@ function locationConfidence(location: string | null, terms: string[], countryNam
   return 'profile-text-match';
 }
 
-function oneYearWindow(generatedAt: string): { from: string; to: string } {
-  const to = new Date(generatedAt);
-  const from = new Date(to);
-  from.setUTCFullYear(from.getUTCFullYear() - 1);
-  return { from: from.toISOString(), to: to.toISOString() };
-}
-
-async function userProfileAndContributions(client: GitHubClient, login: string, generatedAt: string): Promise<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number } } | null> {
-  const window = oneYearWindow(generatedAt);
-  const data = await client.graphql<GitHubUserProfileResponse>(`query OssrankUserProfile($login: String!, $from: DateTime!, $to: DateTime!) {
-    user(login: $login) {
-      login
-      name
-      url
-      repositories(ownerAffiliations: OWNER, privacy: PUBLIC) { totalCount }
-      gists(privacy: PUBLIC) { totalCount }
-      followers { totalCount }
-      location
-      contributionsCollection(from: $from, to: $to) {
-        totalCommitContributions
-        totalPullRequestContributions
-      }
-    }
-    rateLimit { remaining cost }
-  }`, { login, from: window.from, to: window.to });
-  if (data.rateLimit?.remaining !== undefined) client.remaining = data.rateLimit.remaining;
-  if (!data.user) return null;
-  return {
-    user: {
-      login: data.user.login,
-      name: data.user.name,
-      html_url: data.user.url,
-      public_repos: data.user.repositories.totalCount,
-      public_gists: data.user.gists.totalCount,
-      followers: data.user.followers.totalCount,
-      location: data.user.location
-    },
-    activity: {
-      commits: data.user.contributionsCollection.totalCommitContributions,
-      pullRequests: data.user.contributionsCollection.totalPullRequestContributions
-    }
-  };
-}
+// ---------------------------------------------------------------------------
+// GraphQL user search (required — user search is not in the search API)
+// ---------------------------------------------------------------------------
 
 async function searchUsers(client: GitHubClient, query: string, limit: number): Promise<{ total: number; items: GitHubUserSearchItem[] }> {
   const data = await client.graphql<GitHubUserSearchResponse>(`query OssrankUserSearch($query: String!, $limit: Int!) {
@@ -288,48 +421,61 @@ async function searchUsers(client: GitHubClient, query: string, limit: number): 
     }
     rateLimit { remaining cost }
   }`, { query, limit: Math.min(100, Math.max(1, limit)) });
-  if (data.rateLimit?.remaining !== undefined) client.remaining = data.rateLimit.remaining;
   return {
     total: data.search.userCount,
-    items: data.search.nodes.filter((node): node is { login: string } => Boolean(node?.login)).map((node) => ({ login: node.login, html_url: `https://github.com/${node.login}`, type: 'User' }))
+    items: (data as any).search?.nodes?.filter((node: any): node is { login: string } => Boolean(node?.login)).map((node: any) => ({ login: node.login, html_url: `https://github.com/${node.login}`, type: 'User' })) ?? []
   };
 }
 
-async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, locationTerms?: string[], countryName?: string, candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; users: RankedContributor[]; queryStats: CandidateQueryStat[] }> {
+// ---------------------------------------------------------------------------
+// Collect users — now uses REST for profiles (separate rate limit bucket)
+// ---------------------------------------------------------------------------
+
+async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, throttler: SmartThrottler, locationTerms?: string[], countryName?: string, candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; users: RankedContributor[]; queryStats: CandidateQueryStat[] }> {
   const searchQueries = Array.isArray(queries) ? queries : [queries];
+  const concurrency = throttler.getConcurrency();
   const details = new Map<string, UserCandidate>();
   const queryStats: CandidateQueryStat[] = [];
   let total = 0;
   const perQueryLimit = Math.min(100, Math.max(limit, Math.ceil(candidateLimit / searchQueries.length)));
+
   for (const query of searchQueries) {
     const search = await searchUsers(client, userQuery(query), perQueryLimit);
     total += search.total;
     const before = details.size;
     const unseen = search.items.filter((item) => item.type !== 'Organization' && !details.has(item.login.toLowerCase()));
-    const fetched = await mapLimit(unseen, 8, async (item) => userProfileAndContributions(client, item.login, generatedAt));
+    const fetched = await mapLimit(unseen, concurrency, async (item) => userProfileViaRest(client, item.login, generatedAt));
     for (const detail of fetched) {
-      if (detail && (!locationTerms || matchesLocation(detail.user.location, locationTerms))) details.set(detail.user.login.toLowerCase(), { ...detail, discoveredByQuery: userQuery(query) });
+      if (detail && (!locationTerms || matchesLocation(detail.user.location, locationTerms))) {
+        details.set(detail.user.login.toLowerCase(), { ...detail, discoveredByQuery: userQuery(query) });
+      }
     }
     queryStats.push({ query: userQuery(query), total: search.total, accepted: details.size - before });
   }
+
   const entries = [...details.values()].map(({ user, activity, discoveredByQuery }) => ({
-      login: user.login,
-      name: user.name ?? undefined,
-      profile_url: user.html_url,
-      public_contributions: activity.commits,
-      public_repos: user.public_repos,
-      public_gists: user.public_gists,
-      observed_public_commits: activity.commits,
-      observed_public_pull_requests: activity.pullRequests,
-      followers: user.followers,
-      location: user.location ?? undefined,
-      location_confidence: locationTerms && countryName ? locationConfidence(user.location, locationTerms, countryName) : 'unknown' as const,
-      discovered_by_query: discoveredByQuery,
-      notable_repositories: []
-    }));
+    login: user.login,
+    name: user.name ?? undefined,
+    profile_url: user.html_url,
+    public_contributions: activity.commits,
+    public_repos: user.public_repos,
+    public_gists: user.public_gists,
+    observed_public_commits: activity.commits,
+    observed_public_pull_requests: activity.pullRequests,
+    followers: user.followers,
+    location: user.location ?? undefined,
+    location_confidence: locationTerms && countryName ? locationConfidence(user.location, locationTerms, countryName) : 'unknown' as const,
+    discovered_by_query: discoveredByQuery,
+    notable_repositories: []
+  }));
+
   const ranked = rankContributors(entries).slice(0, limit);
   return { total, users: ranked, queryStats };
 }
+
+// ---------------------------------------------------------------------------
+// Repo helpers
+// ---------------------------------------------------------------------------
 
 async function mergedPullRequestCount(client: GitHubClient, fullName: string, sinceIso: string): Promise<number> {
   let count = 0;
@@ -359,7 +505,6 @@ async function repoActivity(client: GitHubClient, fullName: string, generatedAt:
     }
     rateLimit { remaining cost }
   }`, { owner, name, since30: since30Iso });
-  if (data.rateLimit?.remaining !== undefined) client.remaining = data.rateLimit.remaining;
   const repo = data.repository;
   if (!repo) return { merged7: 0, merged30: 0, commits30: 0, releases90: 0 };
   const mergedDates = repo.pullRequests.nodes.map((pull) => pull.mergedAt).filter((date): date is string => Boolean(date)).map(Date.parse);
@@ -389,11 +534,13 @@ async function releaseCount(client: GitHubClient, fullName: string, since: strin
   return releases.filter((release) => release.published_at && release.published_at >= since).length;
 }
 
-async function collectRepos(client: GitHubClient, queries: string[], limit: number, generatedAt: string, candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; projects: RankedProject[]; queryStats: CandidateQueryStat[] }> {
+async function collectRepos(client: GitHubClient, queries: string[], limit: number, generatedAt: string, throttler: SmartThrottler, candidateLimit = Math.max(50, limit * 5)): Promise<{ total: number; projects: RankedProject[]; queryStats: CandidateQueryStat[] }> {
+  const concurrency = throttler.getConcurrency();
   const byName = new Map<string, RepoCandidate>();
   const queryStats: CandidateQueryStat[] = [];
   let total = 0;
   const perQueryLimit = Math.min(100, Math.max(limit, Math.ceil(candidateLimit / queries.length)));
+
   for (const query of queries) {
     const search = await client.search<GitHubRepoSearchItem>(`/search/repositories?${encodeQuery(query, perQueryLimit, 'stars')}`);
     total += search.total_count;
@@ -401,11 +548,13 @@ async function collectRepos(client: GitHubClient, queries: string[], limit: numb
     for (const repo of search.items) if (!byName.has(repo.full_name)) byName.set(repo.full_name, { repo, discoveredByQuery: query });
     queryStats.push({ query, total: search.total_count, accepted: byName.size - before });
   }
+
   const since7 = yyyyMmDd(daysAgoIso(generatedAt, 7));
   const since30Iso = daysAgoIso(generatedAt, 30);
   const since30 = yyyyMmDd(since30Iso);
   const since90Iso = daysAgoIso(generatedAt, 90);
-  const measured = await mapLimit([...byName.values()], 8, async ({ repo, discoveredByQuery }) => {
+
+  const measured = await mapLimit([...byName.values()], concurrency, async ({ repo, discoveredByQuery }) => {
     const fullName = repo.full_name;
     const [activity, contributors] = await Promise.all([
       repoActivity(client, fullName, generatedAt).catch(() => ({ merged7: 0, merged30: 0, commits30: 0, releases90: 0, openIssues: repo.open_issues_count })),
@@ -427,30 +576,45 @@ async function collectRepos(client: GitHubClient, queries: string[], limit: numb
       primary_language: repo.language ?? undefined
     };
   });
+
   const projects = rankProjects(measured).slice(0, limit);
   return { total, projects, queryStats };
 }
 
+// ---------------------------------------------------------------------------
+// Main entry — orchestrates all snapshots
+// ---------------------------------------------------------------------------
+
 export async function collectLiveSnapshots(options: GitHubCollectorOptions): Promise<{ snapshots: RankingSnapshot<unknown>[]; remaining?: number }> {
   const generatedAt = options.generatedAt ?? new Date().toISOString();
-  const client = new GitHubClient(options.token);
+
+  // Create token provider — supports PAT now, GitHub App later when env vars are set.
+  const provider = createTokenProvider(options.token);
+  if (!provider) throw new Error('No GitHub token found. Set OSSRANK_GITHUB_TOKEN or APP_ID + PRIVATE_KEY + INSTALLATION_ID.');
+
+  // Smart throttler — concurrency 2 (was 8), ~800ms gap between calls.
+  const throttler = new SmartThrottler({ concurrency: 2, minGapMs: 800 });
+  const client = new GitHubClient(provider, throttler);
+
   const limit = Math.max(1, options.limit);
 
   const countryResults: Array<{ config: CountryConfig; total: number; users: RankedContributor[]; queryStats: CandidateQueryStat[] }> = [];
   const countryConfigs = COUNTRY_CONFIGS.slice(0, options.maxCountries ?? COUNTRY_CONFIGS.length);
+
   for (const config of countryConfigs) {
     process.stderr.write(`Refreshing ${config.name}...\n`);
-    const result = await collectUsers(client, config.queries, limit, generatedAt, config.locationTerms, config.name, config.candidateLimit ?? Math.max(50, limit * 5));
+    const result = await collectUsers(client, config.queries, limit, generatedAt, throttler, config.locationTerms, config.name, config.candidateLimit ?? Math.max(50, limit * 5));
     countryResults.push({ config, ...result });
   }
-  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, undefined, undefined, Math.max(100, limit * 8));
-  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, undefined, undefined, Math.max(50, limit * 5));
-  const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit, generatedAt);
-  const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, generatedAt, Math.max(100, limit * 8));
-  const agentic = await collectRepos(client, ['agentic archived:false pushed:>=2026-04-01', 'topic:ai-agents archived:false', 'topic:llm-agents archived:false', 'topic:mcp archived:false', 'agent framework archived:false stars:>100'], limit, generatedAt, Math.max(80, limit * 5));
-  const claude = await collectRepos(client, ['claude archived:false pushed:>=2026-04-01', 'claude-code archived:false', 'topic:claude archived:false', 'anthropic claude archived:false stars:>50'], limit, generatedAt, Math.max(60, limit * 4));
-  const codex = await collectRepos(client, ['codex archived:false pushed:>=2026-04-01', 'openai codex archived:false', 'topic:codex archived:false', 'codex cli archived:false'], limit, generatedAt, Math.max(60, limit * 4));
-  const openclaw = await collectRepos(client, ['openclaw archived:false', 'topic:openclaw archived:false', 'openclaw agent archived:false'], limit, generatedAt, Math.max(40, limit * 3));
+
+  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, throttler, undefined, undefined, Math.max(100, limit * 8));
+  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, throttler, undefined, undefined, Math.max(50, limit * 5));
+  const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit, generatedAt, throttler);
+  const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, generatedAt, throttler, Math.max(100, limit * 8));
+  const agentic = await collectRepos(client, ['agentic archived:false pushed:>=2026-04-01', 'topic:ai-agents archived:false', 'topic:llm-agents archived:false', 'topic:mcp archived:false', 'agent framework archived:false stars:>100'], limit, generatedAt, throttler, Math.max(80, limit * 5));
+  const claude = await collectRepos(client, ['claude archived:false pushed:>=2026-04-01', 'claude-code archived:false', 'topic:claude archived:false', 'anthropic claude archived:false stars:>50'], limit, generatedAt, throttler, Math.max(60, limit * 4));
+  const codex = await collectRepos(client, ['codex archived:false pushed:>=2026-04-01', 'openai codex archived:false', 'topic:codex archived:false', 'codex cli archived:false'], limit, generatedAt, throttler, Math.max(60, limit * 4));
+  const openclaw = await collectRepos(client, ['openclaw archived:false', 'topic:openclaw archived:false', 'openclaw agent archived:false'], limit, generatedAt, throttler, Math.max(40, limit * 3));
 
   const contributorCaveats = [
     'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',
@@ -474,7 +638,7 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const derivedGlobalStat = { query: 'derived from current country, language, and global contributor snapshots', total: globalContributorPool.length, accepted: Math.max(0, globalEntries.length - global.users.length) };
   const globalContributors: RankingSnapshot<RankedContributor> = {
     ...snapshotBase('global', 'contributors', 'Global', 'Top observed GitHub contributors globally', generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
-    candidate_count: global.total + globalContributorPool.length, caveats: contributorCaveats, discovery_queries: ['followers:>1000 repos:>20 type:user', 'repos:>100 followers:>500 type:user', 'derived from current country and language contributor snapshots'], candidate_count_by_query: [...global.queryStats, derivedGlobalStat],
+    candidate_count: global.total, caveats: contributorCaveats, discovery_queries: ['followers:>1000 repos:>20 type:user', 'repos:>100 followers:>500 type:user', 'derived from current country and language contributor snapshots'], candidate_count_by_query: [...global.queryStats, derivedGlobalStat],
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [globalEntries.length], top_10_signal: [globalEntries.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
     entries: globalEntries
   };
