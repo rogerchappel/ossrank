@@ -3,8 +3,8 @@
   "slug": "openclaw-projects",
   "name": "OpenClaw Projects",
   "title": "Top observed OpenClaw-related open-source projects",
-  "generated_at": "2026-05-12T21:40:21.889Z",
-  "fresh_until": "2026-05-19T21:40:21.889Z",
+  "generated_at": "2026-05-12T22:48:50.172Z",
+  "fresh_until": "2026-05-19T22:48:50.172Z",
   "status": "fresh",
   "method": "github-rest-search-agentic-project-signals",
   "source_run": "2026-05-12",
@@ -16,10 +16,10 @@
       20
     ],
     "top_10_signal": [
-      995
+      996
     ]
   },
-  "candidate_count": 82472,
+  "candidate_count": 82494,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Project PR counts use recent merged pull requests visible through GitHub GraphQL; high-volume repositories may be capped by the first 100 recently updated merged PRs per snapshot.",
@@ -34,7 +34,7 @@
   "candidate_count_by_query": [
     {
       "query": "openclaw archived:false",
-      "total": 60745,
+      "total": 60760,
       "accepted": 20
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "query": "openclaw agent archived:false",
-      "total": 14431,
+      "total": 14438,
       "accepted": 5
     }
   ],
@@ -52,15 +52,15 @@
     {
       "full_name": "nanocoai/nanoclaw",
       "url": "https://github.com/nanocoai/nanoclaw",
-      "stars": 28813,
-      "pull_requests_merged_7d": 35,
+      "stars": 28814,
+      "pull_requests_merged_7d": 33,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 845,
+      "recent_commits_30d": 846,
       "active_contributors_30d": 83,
       "total_contributors_observed": 83,
       "releases_90d": 0,
       "open_issues": 307,
-      "pushed_at": "2026-05-12T17:17:43Z",
+      "pushed_at": "2026-05-12T22:16:41Z",
       "discovered_by_query": "openclaw archived:false",
       "primary_language": "TypeScript",
       "rank": 1
@@ -68,14 +68,14 @@
     {
       "full_name": "mksglu/context-mode",
       "url": "https://github.com/mksglu/context-mode",
-      "stars": 14512,
+      "stars": 14517,
       "pull_requests_merged_7d": 39,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 705,
       "active_contributors_30d": 69,
       "total_contributors_observed": 69,
       "releases_90d": 100,
-      "open_issues": 4,
+      "open_issues": 6,
       "pushed_at": "2026-05-12T21:01:24Z",
       "discovered_by_query": "openclaw agent archived:false",
       "primary_language": "TypeScript",
@@ -84,7 +84,7 @@
     {
       "full_name": "HKUDS/nanobot",
       "url": "https://github.com/HKUDS/nanobot",
-      "stars": 42274,
+      "stars": 42278,
       "pull_requests_merged_7d": 47,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 530,
@@ -100,7 +100,7 @@
     {
       "full_name": "zeroclaw-labs/zeroclaw",
       "url": "https://github.com/zeroclaw-labs/zeroclaw",
-      "stars": 31288,
+      "stars": 31289,
       "pull_requests_merged_7d": 66,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 303,
@@ -116,7 +116,7 @@
     {
       "full_name": "iOfficeAI/AionUi",
       "url": "https://github.com/iOfficeAI/AionUi",
-      "stars": 24878,
+      "stars": 24881,
       "pull_requests_merged_7d": 48,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 227,
@@ -132,15 +132,15 @@
     {
       "full_name": "garrytan/gbrain",
       "url": "https://github.com/garrytan/gbrain",
-      "stars": 15156,
+      "stars": 15169,
       "pull_requests_merged_7d": 42,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 112,
       "active_contributors_30d": 4,
       "total_contributors_observed": 4,
       "releases_90d": 0,
-      "open_issues": 142,
-      "pushed_at": "2026-05-12T22:04:50Z",
+      "open_issues": 143,
+      "pushed_at": "2026-05-12T22:26:27Z",
       "discovered_by_query": "openclaw agent archived:false",
       "primary_language": "TypeScript",
       "rank": 6
@@ -148,7 +148,7 @@
     {
       "full_name": "1Panel-dev/1Panel",
       "url": "https://github.com/1Panel-dev/1Panel",
-      "stars": 35408,
+      "stars": 35409,
       "pull_requests_merged_7d": 31,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 90,
@@ -162,9 +162,25 @@
       "rank": 7
     },
     {
+      "full_name": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "stars": 146826,
+      "pull_requests_merged_7d": 99,
+      "pull_requests_merged_30d": 99,
+      "recent_commits_30d": 4083,
+      "active_contributors_30d": 383,
+      "total_contributors_observed": 383,
+      "releases_90d": 12,
+      "open_issues": 3629,
+      "pushed_at": "2026-05-12T23:42:55Z",
+      "discovered_by_query": "openclaw archived:false",
+      "primary_language": "Python",
+      "rank": 8
+    },
+    {
       "full_name": "volcengine/OpenViking",
       "url": "https://github.com/volcengine/OpenViking",
-      "stars": 23827,
+      "stars": 23830,
       "pull_requests_merged_7d": 97,
       "pull_requests_merged_30d": 99,
       "recent_commits_30d": 341,
@@ -175,44 +191,28 @@
       "pushed_at": "2026-05-12T16:08:18Z",
       "discovered_by_query": "topic:openclaw archived:false",
       "primary_language": "Python",
-      "rank": 8
+      "rank": 9
     },
     {
       "full_name": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": 371264,
+      "stars": 371276,
       "pull_requests_merged_7d": 93,
       "pull_requests_merged_30d": 98,
-      "recent_commits_30d": 17763,
+      "recent_commits_30d": 17816,
       "active_contributors_30d": 368,
       "total_contributors_observed": 368,
       "releases_90d": 100,
-      "open_issues": 3704,
-      "pushed_at": "2026-05-12T22:02:38Z",
+      "open_issues": 3708,
+      "pushed_at": "2026-05-12T23:41:55Z",
       "discovered_by_query": "openclaw archived:false",
       "primary_language": "TypeScript",
-      "rank": 9
-    },
-    {
-      "full_name": "NousResearch/hermes-agent",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 146769,
-      "pull_requests_merged_7d": 98,
-      "pull_requests_merged_30d": 98,
-      "recent_commits_30d": 4059,
-      "active_contributors_30d": 383,
-      "total_contributors_observed": 383,
-      "releases_90d": 12,
-      "open_issues": 3627,
-      "pushed_at": "2026-05-12T22:03:02Z",
-      "discovered_by_query": "openclaw archived:false",
-      "primary_language": "Python",
       "rank": 10
     },
     {
       "full_name": "moeru-ai/airi",
       "url": "https://github.com/moeru-ai/airi",
-      "stars": 39224,
+      "stars": 39225,
       "pull_requests_merged_7d": 19,
       "pull_requests_merged_30d": 98,
       "recent_commits_30d": 227,
@@ -228,7 +228,7 @@
     {
       "full_name": "CherryHQ/cherry-studio",
       "url": "https://github.com/CherryHQ/cherry-studio",
-      "stars": 45522,
+      "stars": 45523,
       "pull_requests_merged_7d": 41,
       "pull_requests_merged_30d": 98,
       "recent_commits_30d": 92,
@@ -244,7 +244,7 @@
     {
       "full_name": "AstrBotDevs/AstrBot",
       "url": "https://github.com/AstrBotDevs/AstrBot",
-      "stars": 31996,
+      "stars": 31998,
       "pull_requests_merged_7d": 26,
       "pull_requests_merged_30d": 97,
       "recent_commits_30d": 175,
@@ -260,8 +260,8 @@
     {
       "full_name": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": 75212,
-      "pull_requests_merged_7d": 12,
+      "stars": 75219,
+      "pull_requests_merged_7d": 11,
       "pull_requests_merged_30d": 73,
       "recent_commits_30d": 217,
       "active_contributors_30d": 95,
@@ -276,7 +276,7 @@
     {
       "full_name": "farion1231/cc-switch",
       "url": "https://github.com/farion1231/cc-switch",
-      "stars": 68591,
+      "stars": 68604,
       "pull_requests_merged_7d": 3,
       "pull_requests_merged_30d": 59,
       "recent_commits_30d": 196,
@@ -292,7 +292,7 @@
     {
       "full_name": "mvanhorn/last30days-skill",
       "url": "https://github.com/mvanhorn/last30days-skill",
-      "stars": 25641,
+      "stars": 25649,
       "pull_requests_merged_7d": 3,
       "pull_requests_merged_30d": 59,
       "recent_commits_30d": 97,
@@ -308,7 +308,7 @@
     {
       "full_name": "safishamsi/graphify",
       "url": "https://github.com/safishamsi/graphify",
-      "stars": 47194,
+      "stars": 47219,
       "pull_requests_merged_7d": 22,
       "pull_requests_merged_30d": 42,
       "recent_commits_30d": 276,
@@ -324,7 +324,7 @@
     {
       "full_name": "alirezarezvani/claude-skills",
       "url": "https://github.com/alirezarezvani/claude-skills",
-      "stars": 14555,
+      "stars": 14559,
       "pull_requests_merged_7d": 18,
       "pull_requests_merged_30d": 39,
       "recent_commits_30d": 86,
@@ -340,7 +340,7 @@
     {
       "full_name": "RightNow-AI/openfang",
       "url": "https://github.com/RightNow-AI/openfang",
-      "stars": 17476,
+      "stars": 17477,
       "pull_requests_merged_7d": 9,
       "pull_requests_merged_30d": 38,
       "recent_commits_30d": 145,

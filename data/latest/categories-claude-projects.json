@@ -3,8 +3,8 @@
   "slug": "claude-projects",
   "name": "Claude Projects",
   "title": "Top observed Claude-related open-source projects",
-  "generated_at": "2026-05-12T21:40:21.889Z",
-  "fresh_until": "2026-05-19T21:40:21.889Z",
+  "generated_at": "2026-05-12T22:48:50.172Z",
+  "fresh_until": "2026-05-19T22:48:50.172Z",
   "status": "fresh",
   "method": "github-rest-search-agentic-project-signals",
   "source_run": "2026-05-12",
@@ -19,7 +19,7 @@
       995
     ]
   },
-  "candidate_count": 287319,
+  "candidate_count": 287525,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Project PR counts use recent merged pull requests visible through GitHub GraphQL; high-volume repositories may be capped by the first 100 recently updated merged PRs per snapshot.",
@@ -35,17 +35,17 @@
   "candidate_count_by_query": [
     {
       "query": "claude archived:false pushed:>=2026-04-01",
-      "total": 127267,
+      "total": 127398,
       "accepted": 20
     },
     {
       "query": "claude-code archived:false",
-      "total": 138254,
+      "total": 138316,
       "accepted": 4
     },
     {
       "query": "topic:claude archived:false",
-      "total": 21272,
+      "total": 21285,
       "accepted": 8
     },
     {
@@ -58,15 +58,15 @@
     {
       "full_name": "gsd-build/get-shit-done",
       "url": "https://github.com/gsd-build/get-shit-done",
-      "stars": 61767,
+      "stars": 61771,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 744,
+      "recent_commits_30d": 746,
       "active_contributors_30d": 136,
       "total_contributors_observed": 136,
       "releases_90d": 56,
-      "open_issues": 50,
-      "pushed_at": "2026-05-12T21:34:49Z",
+      "open_issues": 46,
+      "pushed_at": "2026-05-12T23:33:35Z",
       "discovered_by_query": "claude archived:false pushed:>=2026-04-01",
       "primary_language": "JavaScript",
       "rank": 1
@@ -74,7 +74,7 @@
     {
       "full_name": "lobehub/lobehub",
       "url": "https://github.com/lobehub/lobehub",
-      "stars": 76935,
+      "stars": 76936,
       "pull_requests_merged_7d": 99,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 651,
@@ -90,15 +90,15 @@
     {
       "full_name": "nexu-io/open-design",
       "url": "https://github.com/nexu-io/open-design",
-      "stars": 38353,
+      "stars": 38375,
       "pull_requests_merged_7d": 99,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 618,
       "active_contributors_30d": 182,
       "total_contributors_observed": 182,
       "releases_90d": 7,
-      "open_issues": 236,
-      "pushed_at": "2026-05-12T18:28:33Z",
+      "open_issues": 235,
+      "pushed_at": "2026-05-12T23:01:22Z",
       "discovered_by_query": "anthropic claude archived:false stars:>50",
       "primary_language": "TypeScript",
       "rank": 3
@@ -106,7 +106,7 @@
     {
       "full_name": "HKUDS/nanobot",
       "url": "https://github.com/HKUDS/nanobot",
-      "stars": 42274,
+      "stars": 42278,
       "pull_requests_merged_7d": 47,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 530,
@@ -122,15 +122,15 @@
     {
       "full_name": "promptfoo/promptfoo",
       "url": "https://github.com/promptfoo/promptfoo",
-      "stars": 21184,
+      "stars": 21186,
       "pull_requests_merged_7d": 92,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 493,
+      "recent_commits_30d": 486,
       "active_contributors_30d": 278,
       "total_contributors_observed": 278,
       "releases_90d": 16,
       "open_issues": 73,
-      "pushed_at": "2026-05-12T20:04:46Z",
+      "pushed_at": "2026-05-12T23:07:21Z",
       "discovered_by_query": "anthropic claude archived:false stars:>50",
       "primary_language": "TypeScript",
       "rank": 5
@@ -138,15 +138,15 @@
     {
       "full_name": "affaan-m/everything-claude-code",
       "url": "https://github.com/affaan-m/everything-claude-code",
-      "stars": 180437,
+      "stars": 180468,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 325,
+      "recent_commits_30d": 332,
       "active_contributors_30d": 165,
       "total_contributors_observed": 165,
       "releases_90d": 5,
       "open_issues": 0,
-      "pushed_at": "2026-05-12T21:52:24Z",
+      "pushed_at": "2026-05-12T23:28:27Z",
       "discovered_by_query": "claude archived:false pushed:>=2026-04-01",
       "primary_language": "JavaScript",
       "rank": 6
@@ -154,15 +154,15 @@
     {
       "full_name": "danny-avila/LibreChat",
       "url": "https://github.com/danny-avila/LibreChat",
-      "stars": 36930,
-      "pull_requests_merged_7d": 75,
+      "stars": 36932,
+      "pull_requests_merged_7d": 74,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 187,
+      "recent_commits_30d": 186,
       "active_contributors_30d": 335,
       "total_contributors_observed": 335,
       "releases_90d": 12,
       "open_issues": 258,
-      "pushed_at": "2026-05-12T21:54:42Z",
+      "pushed_at": "2026-05-12T22:00:01Z",
       "discovered_by_query": "anthropic claude archived:false stars:>50",
       "primary_language": "TypeScript",
       "rank": 7
@@ -170,7 +170,7 @@
     {
       "full_name": "code-yeongyu/oh-my-openagent",
       "url": "https://github.com/code-yeongyu/oh-my-openagent",
-      "stars": 57436,
+      "stars": 57440,
       "pull_requests_merged_7d": 77,
       "pull_requests_merged_30d": 99,
       "recent_commits_30d": 994,
@@ -186,15 +186,15 @@
     {
       "full_name": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 146762,
+      "stars": 146822,
       "pull_requests_merged_7d": 98,
       "pull_requests_merged_30d": 98,
-      "recent_commits_30d": 4052,
+      "recent_commits_30d": 4074,
       "active_contributors_30d": 383,
       "total_contributors_observed": 383,
       "releases_90d": 12,
-      "open_issues": 3629,
-      "pushed_at": "2026-05-12T19:58:14Z",
+      "open_issues": 3628,
+      "pushed_at": "2026-05-12T23:34:14Z",
       "discovered_by_query": "claude archived:false pushed:>=2026-04-01",
       "primary_language": "Python",
       "rank": 9
@@ -202,7 +202,7 @@
     {
       "full_name": "CherryHQ/cherry-studio",
       "url": "https://github.com/CherryHQ/cherry-studio",
-      "stars": 45522,
+      "stars": 45523,
       "pull_requests_merged_7d": 41,
       "pull_requests_merged_30d": 98,
       "recent_commits_30d": 92,
@@ -218,7 +218,7 @@
     {
       "full_name": "Significant-Gravitas/AutoGPT",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "stars": 184242,
+      "stars": 184243,
       "pull_requests_merged_7d": 58,
       "pull_requests_merged_30d": 97,
       "recent_commits_30d": 176,
@@ -226,7 +226,7 @@
       "total_contributors_observed": 430,
       "releases_90d": 11,
       "open_issues": 255,
-      "pushed_at": "2026-05-12T21:24:06Z",
+      "pushed_at": "2026-05-12T22:31:59Z",
       "discovered_by_query": "claude archived:false pushed:>=2026-04-01",
       "primary_language": "Python",
       "rank": 11
@@ -234,7 +234,7 @@
     {
       "full_name": "ruvnet/ruflo",
       "url": "https://github.com/ruvnet/ruflo",
-      "stars": 49693,
+      "stars": 49724,
       "pull_requests_merged_7d": 56,
       "pull_requests_merged_30d": 88,
       "recent_commits_30d": 340,
@@ -250,7 +250,7 @@
     {
       "full_name": "rtk-ai/rtk",
       "url": "https://github.com/rtk-ai/rtk",
-      "stars": 46694,
+      "stars": 46712,
       "pull_requests_merged_7d": 14,
       "pull_requests_merged_30d": 85,
       "recent_commits_30d": 172,
@@ -266,8 +266,8 @@
     {
       "full_name": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": 75211,
-      "pull_requests_merged_7d": 12,
+      "stars": 75218,
+      "pull_requests_merged_7d": 11,
       "pull_requests_merged_30d": 73,
       "recent_commits_30d": 217,
       "active_contributors_30d": 95,
@@ -282,7 +282,7 @@
     {
       "full_name": "yamadashy/repomix",
       "url": "https://github.com/yamadashy/repomix",
-      "stars": 24635,
+      "stars": 24636,
       "pull_requests_merged_7d": 14,
       "pull_requests_merged_30d": 67,
       "recent_commits_30d": 253,
@@ -298,7 +298,7 @@
     {
       "full_name": "farion1231/cc-switch",
       "url": "https://github.com/farion1231/cc-switch",
-      "stars": 68591,
+      "stars": 68603,
       "pull_requests_merged_7d": 3,
       "pull_requests_merged_30d": 59,
       "recent_commits_30d": 196,
@@ -314,7 +314,7 @@
     {
       "full_name": "garrytan/gstack",
       "url": "https://github.com/garrytan/gstack",
-      "stars": 94693,
+      "stars": 94754,
       "pull_requests_merged_7d": 13,
       "pull_requests_merged_30d": 59,
       "recent_commits_30d": 60,
@@ -330,7 +330,7 @@
     {
       "full_name": "jarrodwatts/claude-hud",
       "url": "https://github.com/jarrodwatts/claude-hud",
-      "stars": 22523,
+      "stars": 22525,
       "pull_requests_merged_7d": 11,
       "pull_requests_merged_30d": 54,
       "recent_commits_30d": 141,
@@ -346,7 +346,7 @@
     {
       "full_name": "santifer/career-ops",
       "url": "https://github.com/santifer/career-ops",
-      "stars": 44270,
+      "stars": 44276,
       "pull_requests_merged_7d": 7,
       "pull_requests_merged_30d": 52,
       "recent_commits_30d": 65,
@@ -362,7 +362,7 @@
     {
       "full_name": "safishamsi/graphify",
       "url": "https://github.com/safishamsi/graphify",
-      "stars": 47192,
+      "stars": 47215,
       "pull_requests_merged_7d": 22,
       "pull_requests_merged_30d": 42,
       "recent_commits_30d": 276,

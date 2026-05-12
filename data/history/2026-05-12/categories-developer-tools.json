@@ -3,8 +3,8 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-05-12T21:40:21.889Z",
-  "fresh_until": "2026-05-19T21:40:21.889Z",
+  "generated_at": "2026-05-12T22:48:50.172Z",
+  "fresh_until": "2026-05-19T22:48:50.172Z",
   "status": "fresh",
   "method": "github-rest-search-real-recent-project-signals",
   "source_run": "2026-05-12",
@@ -16,10 +16,10 @@
       20
     ],
     "top_10_signal": [
-      540
+      542
     ]
   },
-  "candidate_count": 113004,
+  "candidate_count": 113038,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Project PR counts use recent merged pull requests visible through GitHub GraphQL; high-volume repositories may be capped by the first 100 recently updated merged PRs per snapshot.",
@@ -34,17 +34,17 @@
   "candidate_count_by_query": [
     {
       "query": "topic:developer-tools archived:false",
-      "total": 27697,
+      "total": 27713,
       "accepted": 34
     },
     {
       "query": "topic:cli archived:false",
-      "total": 81283,
+      "total": 81299,
       "accepted": 29
     },
     {
       "query": "topic:devtools archived:false",
-      "total": 4024,
+      "total": 4026,
       "accepted": 33
     }
   ],
@@ -52,15 +52,15 @@
     {
       "full_name": "n8n-io/n8n",
       "url": "https://github.com/n8n-io/n8n",
-      "stars": 187599,
+      "stars": 187609,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 822,
       "active_contributors_30d": 428,
       "total_contributors_observed": 428,
       "releases_90d": 91,
-      "open_issues": 420,
-      "pushed_at": "2026-05-12T20:05:23Z",
+      "open_issues": 421,
+      "pushed_at": "2026-05-12T23:15:25Z",
       "discovered_by_query": "topic:cli archived:false",
       "primary_language": "TypeScript",
       "rank": 1
@@ -68,15 +68,15 @@
     {
       "full_name": "affaan-m/everything-claude-code",
       "url": "https://github.com/affaan-m/everything-claude-code",
-      "stars": 180436,
+      "stars": 180462,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 324,
+      "recent_commits_30d": 331,
       "active_contributors_30d": 165,
       "total_contributors_observed": 165,
       "releases_90d": 5,
       "open_issues": 0,
-      "pushed_at": "2026-05-12T21:31:29Z",
+      "pushed_at": "2026-05-12T23:15:15Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "JavaScript",
       "rank": 2
@@ -101,14 +101,14 @@
       "full_name": "streamlit/streamlit",
       "url": "https://github.com/streamlit/streamlit",
       "stars": 44564,
-      "pull_requests_merged_7d": 78,
+      "pull_requests_merged_7d": 79,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 192,
       "active_contributors_30d": 306,
       "total_contributors_observed": 306,
       "releases_90d": 3,
       "open_issues": 1100,
-      "pushed_at": "2026-05-12T21:03:02Z",
+      "pushed_at": "2026-05-12T23:18:54Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 4
@@ -116,15 +116,15 @@
     {
       "full_name": "reflex-dev/reflex",
       "url": "https://github.com/reflex-dev/reflex",
-      "stars": 28407,
+      "stars": 28408,
       "pull_requests_merged_7d": 25,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 104,
+      "recent_commits_30d": 105,
       "active_contributors_30d": 198,
       "total_contributors_observed": 198,
       "releases_90d": 100,
       "open_issues": 226,
-      "pushed_at": "2026-05-12T21:36:34Z",
+      "pushed_at": "2026-05-12T23:09:39Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 5
@@ -148,7 +148,7 @@
     {
       "full_name": "ComposioHQ/composio",
       "url": "https://github.com/ComposioHQ/composio",
-      "stars": 28189,
+      "stars": 28190,
       "pull_requests_merged_7d": 42,
       "pull_requests_merged_30d": 99,
       "recent_commits_30d": 415,
@@ -164,15 +164,15 @@
     {
       "full_name": "google-gemini/gemini-cli",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "stars": 103801,
-      "pull_requests_merged_7d": 76,
+      "stars": 103804,
+      "pull_requests_merged_7d": 77,
       "pull_requests_merged_30d": 98,
-      "recent_commits_30d": 312,
+      "recent_commits_30d": 316,
       "active_contributors_30d": 446,
       "total_contributors_observed": 446,
       "releases_90d": 100,
       "open_issues": 1576,
-      "pushed_at": "2026-05-12T21:42:05Z",
+      "pushed_at": "2026-05-12T23:07:09Z",
       "discovered_by_query": "topic:cli archived:false",
       "primary_language": "TypeScript",
       "rank": 8
@@ -180,7 +180,7 @@
     {
       "full_name": "ultralytics/ultralytics",
       "url": "https://github.com/ultralytics/ultralytics",
-      "stars": 57054,
+      "stars": 57055,
       "pull_requests_merged_7d": 31,
       "pull_requests_merged_30d": 98,
       "recent_commits_30d": 119,
@@ -196,15 +196,15 @@
     {
       "full_name": "agno-agi/agno",
       "url": "https://github.com/agno-agi/agno",
-      "stars": 40084,
+      "stars": 40085,
       "pull_requests_merged_7d": 18,
       "pull_requests_merged_30d": 97,
       "recent_commits_30d": 139,
       "active_contributors_30d": 421,
       "total_contributors_observed": 421,
       "releases_90d": 24,
-      "open_issues": 403,
-      "pushed_at": "2026-05-12T21:00:03Z",
+      "open_issues": 404,
+      "pushed_at": "2026-05-12T23:11:05Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 10
@@ -212,15 +212,15 @@
     {
       "full_name": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": 39363,
+      "stars": 39364,
       "pull_requests_merged_7d": 29,
       "pull_requests_merged_30d": 97,
       "recent_commits_30d": 110,
       "active_contributors_30d": 85,
       "total_contributors_observed": 85,
       "releases_90d": 16,
-      "open_issues": 77,
-      "pushed_at": "2026-05-12T21:30:11Z",
+      "open_issues": 78,
+      "pushed_at": "2026-05-12T23:20:01Z",
       "discovered_by_query": "topic:devtools archived:false",
       "primary_language": "TypeScript",
       "rank": 11
@@ -228,15 +228,15 @@
     {
       "full_name": "OpenHands/OpenHands",
       "url": "https://github.com/OpenHands/OpenHands",
-      "stars": 73286,
-      "pull_requests_merged_7d": 27,
+      "stars": 73291,
+      "pull_requests_merged_7d": 28,
       "pull_requests_merged_30d": 96,
-      "recent_commits_30d": 240,
+      "recent_commits_30d": 241,
       "active_contributors_30d": 463,
       "total_contributors_observed": 463,
       "releases_90d": 4,
       "open_issues": 201,
-      "pushed_at": "2026-05-12T20:56:50Z",
+      "pushed_at": "2026-05-12T23:16:56Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 12
@@ -244,7 +244,7 @@
     {
       "full_name": "puppeteer/puppeteer",
       "url": "https://github.com/puppeteer/puppeteer",
-      "stars": 94303,
+      "stars": 94302,
       "pull_requests_merged_7d": 42,
       "pull_requests_merged_30d": 93,
       "recent_commits_30d": 93,
@@ -258,9 +258,25 @@
       "rank": 13
     },
     {
+      "full_name": "cli/cli",
+      "url": "https://github.com/cli/cli",
+      "stars": 44358,
+      "pull_requests_merged_7d": 16,
+      "pull_requests_merged_30d": 87,
+      "recent_commits_30d": 199,
+      "active_contributors_30d": 383,
+      "total_contributors_observed": 383,
+      "releases_90d": 10,
+      "open_issues": 958,
+      "pushed_at": "2026-05-12T22:59:26Z",
+      "discovered_by_query": "topic:cli archived:false",
+      "primary_language": "Go",
+      "rank": 14
+    },
+    {
       "full_name": "rtk-ai/rtk",
       "url": "https://github.com/rtk-ai/rtk",
-      "stars": 46692,
+      "stars": 46710,
       "pull_requests_merged_7d": 14,
       "pull_requests_merged_30d": 85,
       "recent_commits_30d": 172,
@@ -271,22 +287,6 @@
       "pushed_at": "2026-05-12T15:52:19Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Rust",
-      "rank": 14
-    },
-    {
-      "full_name": "cli/cli",
-      "url": "https://github.com/cli/cli",
-      "stars": 44353,
-      "pull_requests_merged_7d": 13,
-      "pull_requests_merged_30d": 84,
-      "recent_commits_30d": 193,
-      "active_contributors_30d": 383,
-      "total_contributors_observed": 383,
-      "releases_90d": 10,
-      "open_issues": 958,
-      "pushed_at": "2026-05-12T19:29:24Z",
-      "discovered_by_query": "topic:cli archived:false",
-      "primary_language": "Go",
       "rank": 15
     },
     {
@@ -308,7 +308,7 @@
     {
       "full_name": "yamadashy/repomix",
       "url": "https://github.com/yamadashy/repomix",
-      "stars": 24635,
+      "stars": 24636,
       "pull_requests_merged_7d": 14,
       "pull_requests_merged_30d": 67,
       "recent_commits_30d": 253,
@@ -324,14 +324,14 @@
     {
       "full_name": "usebruno/bruno",
       "url": "https://github.com/usebruno/bruno",
-      "stars": 43712,
+      "stars": 43714,
       "pull_requests_merged_7d": 19,
       "pull_requests_merged_30d": 60,
       "recent_commits_30d": 56,
       "active_contributors_30d": 412,
       "total_contributors_observed": 412,
       "releases_90d": 8,
-      "open_issues": 1290,
+      "open_issues": 1291,
       "pushed_at": "2026-05-12T09:48:06Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "JavaScript",
@@ -340,7 +340,7 @@
     {
       "full_name": "sickn33/antigravity-awesome-skills",
       "url": "https://github.com/sickn33/antigravity-awesome-skills",
-      "stars": 37316,
+      "stars": 37320,
       "pull_requests_merged_7d": 9,
       "pull_requests_merged_30d": 53,
       "recent_commits_30d": 223,
@@ -356,7 +356,7 @@
     {
       "full_name": "santifer/career-ops",
       "url": "https://github.com/santifer/career-ops",
-      "stars": 44270,
+      "stars": 44273,
       "pull_requests_merged_7d": 7,
       "pull_requests_merged_30d": 52,
       "recent_commits_30d": 65,
