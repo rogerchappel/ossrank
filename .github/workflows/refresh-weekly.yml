@@ -56,7 +56,7 @@ jobs:
       - run: pnpm run build
       - name: Push data to branch and create PR
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -71,14 +71,19 @@ jobs:
           fi
           git commit -m "data: refresh ossrank live snapshots (${DATE})"
           git push origin "${BRANCH}" --force
-          gh pr create \
-            --head "${BRANCH}" \
-            --base main \
-            --title "data: weekly ossrank live refresh (${DATE})" \
-            --body "Automated weekly OSSRank data refresh. Review and merge." \
-            2>/dev/null || gh pr edit "${BRANCH}" \
-            --title "data: weekly ossrank live refresh (${DATE})" \
-            --body "Automated weekly OSSRank data refresh (updated)."
+          PR_NUMBER=$(gh pr view "${BRANCH}" --json number --jq .number 2>/dev/null || true)
+          if [ -n "${PR_NUMBER}" ]; then
+            gh pr edit "${PR_NUMBER}" \
+              --title "data: weekly ossrank live refresh (${DATE})" \
+              --body "Automated weekly OSSRank data refresh (updated)."
+          else
+            echo "No existing PR found for ${BRANCH}; creating one."
+            gh pr create \
+              --head "${BRANCH}" \
+              --base main \
+              --title "data: weekly ossrank live refresh (${DATE})" \
+              --body "Automated weekly OSSRank data refresh. Review and merge."
+          fi
       - name: Deploy refreshed site to Cloudflare Pages
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
