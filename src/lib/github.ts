@@ -1,14 +1,22 @@
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 import { rankContributors, rankProjectMomentum, rankProjects, rankRisingContributors } from './ranking.js';
 import { COUNTRY_CONFIGS, type CountryConfig } from './countries.js';
 import { snapshotBase } from './snapshots.js';
 import { createTokenProvider, type GitHubTokenProvider } from './token-provider.js';
 import type { RankedContributor, RankedProject, RankingSnapshot } from './types.js';
 
+export interface GitHubCollectorSaveDir {
+  latestDir: string;
+  historyDir: string;
+}
+
 export interface GitHubCollectorOptions {
   token?: string;
   limit: number;
   generatedAt?: string;
   maxCountries?: number;
+  saveDir?: GitHubCollectorSaveDir;
 }
 
 interface GitHubSearchResponse<T> {
@@ -582,6 +590,64 @@ async function collectRepos(client: GitHubClient, queries: string[], limit: numb
 }
 
 // ---------------------------------------------------------------------------
+// Per-country incremental save helper
+// ---------------------------------------------------------------------------
+
+interface CountryResult {
+  config: CountryConfig;
+  total: number;
+  users: RankedContributor[];
+  queryStats: CandidateQueryStat[];
+}
+
+async function saveCountrySnapshot(
+  saveDir: GitHubCollectorSaveDir,
+  generatedAt: string,
+  result: CountryResult
+): Promise<void> {
+  const { config, total, users, queryStats } = result;
+  const snapshot: RankingSnapshot<RankedContributor> = {
+    ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
+    code: config.code,
+    candidate_count: total,
+    caveats: [
+      'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',
+      'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.'
+    ],
+    discovery_queries: config.queries.map(userQuery),
+    candidate_count_by_query: queryStats,
+    history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [users.length], top_10_signal: [users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
+    entries: users
+  };
+
+  const filename = `countries-${config.slug}.json`;
+  await mkdir(saveDir.latestDir, { recursive: true });
+  await writeFile(join(saveDir.latestDir, filename), JSON.stringify(snapshot, null, 2) + '\n');
+
+  const runId = generatedAt.slice(0, 10);
+  const runDir = join(saveDir.historyDir, runId);
+  await mkdir(runDir, { recursive: true });
+  await writeFile(join(runDir, filename), JSON.stringify(snapshot, null, 2) + '\n');
+
+  process.stderr.write(`  ✓ Saved ${config.name} → ${filename}\n`);
+}
+
+async function loadSavedCountrySlugs(saveDir: GitHubCollectorSaveDir, generatedAt: string): Promise<Set<string>> {
+  const { readdir } = await import('node:fs/promises');
+  const saved = new Set<string>();
+  try {
+    const files = await readdir(saveDir.latestDir);
+    for (const f of files) {
+      const m = f.match(/^countries-(.+)\.json$/);
+      if (m) saved.add(m[1]);
+    }
+  } catch {
+    // No saved state yet
+  }
+  return saved;
+}
+
+// ---------------------------------------------------------------------------
 // Main entry — orchestrates all snapshots
 // ---------------------------------------------------------------------------
 
@@ -598,13 +664,31 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
 
   const limit = Math.max(1, options.limit);
 
-  const countryResults: Array<{ config: CountryConfig; total: number; users: RankedContributor[]; queryStats: CandidateQueryStat[] }> = [];
+  // Incremental save: load already-saved country slugs so we can resume.
+  const saveDir = options.saveDir;
+  const savedSlugs = saveDir ? await loadSavedCountrySlugs(saveDir, generatedAt) : new Set<string>();
+  if (savedSlugs.size > 0) {
+    process.stderr.write(`[resume] Found ${savedSlugs.size} previously saved countries, skipping.\n`);
+  }
+
+  const countryResults: CountryResult[] = [];
   const countryConfigs = COUNTRY_CONFIGS.slice(0, options.maxCountries ?? COUNTRY_CONFIGS.length);
 
   for (const config of countryConfigs) {
+    // Skip already-saved countries (resume support)
+    if (saveDir && savedSlugs.has(config.slug)) {
+      process.stderr.write(`Skipping ${config.name} (already saved).\n`);
+      continue;
+    }
+
     process.stderr.write(`Refreshing ${config.name}...\n`);
     const result = await collectUsers(client, config.queries, limit, generatedAt, throttler, config.locationTerms, config.name, config.candidateLimit ?? Math.max(50, limit * 5));
     countryResults.push({ config, ...result });
+
+    // Save immediately after each country completes
+    if (saveDir) {
+      await saveCountrySnapshot(saveDir, generatedAt, { config, ...result });
+    }
   }
 
   const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, throttler, undefined, undefined, Math.max(100, limit * 8));
