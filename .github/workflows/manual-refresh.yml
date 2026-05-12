@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
       - uses: pnpm/action-setup@v4
         with:
           version: 10
@@ -35,11 +38,15 @@ jobs:
         run: pnpm run refresh:live
       - run: pnpm run validate:data
       - run: pnpm run build
+      - name: Pull latest before pushing data
+        run: git pull --rebase
       - name: Commit refreshed data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'data: manual ossrank live refresh'
           file_pattern: 'data'
+          push_options: '--force-with-lease'
+          disable_globally_locked: true
       - name: Deploy refreshed site to Cloudflare Pages
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
