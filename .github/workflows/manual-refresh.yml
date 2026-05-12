@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   refresh:
@@ -18,7 +19,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
       - uses: pnpm/action-setup@v4
         with:
           version: 10
@@ -38,15 +38,32 @@ jobs:
         run: pnpm run refresh:live
       - run: pnpm run validate:data
       - run: pnpm run build
-      - name: Pull latest before pushing data
-        run: git pull --rebase
-      - name: Commit refreshed data
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'data: manual ossrank live refresh'
-          file_pattern: 'data'
-          push_options: '--force-with-lease'
-          disable_globally_locked: true
+      - name: Push data to branch and create PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE=$(date +%Y-%m-%d)
+          BRANCH="data/refresh-${DATE}"
+          git checkout -B "${BRANCH}"
+          git add data
+          git diff --cached --stat
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git commit -m "data: manual ossrank live refresh (${DATE})"
+          git push origin "${BRANCH}" --force
+          # Create or update PR (idempotent — re-creates on the same branch)
+          gh pr create \
+            --head "${BRANCH}" \
+            --base main \
+            --title "data: weekly ossrank live refresh (${DATE})" \
+            --body "Automated data refresh via manual workflow dispatch. Review and merge." \
+            2>/dev/null || gh pr edit "${BRANCH}" \
+            --title "data: weekly ossrank live refresh (${DATE})" \
+            --body "Automated data refresh via manual workflow dispatch (updated)."
       - name: Deploy refreshed site to Cloudflare Pages
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
