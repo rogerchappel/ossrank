@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
+import { mkdir, readFile, writeFile, readdir } from 'node:fs/promises';
+import { dirname, join } from 'node:path';
 import { collectLiveSnapshots } from './lib/github.js';
 import { rankContributors, rankProjects } from './lib/ranking.js';
 import { writeSnapshots } from './lib/snapshots.js';
@@ -156,7 +156,10 @@ async function main(): Promise<void> {
     }
     const started = Date.now();
     const token = options.token ?? process.env.OSSRANK_GITHUB_TOKEN ?? process.env.GITHUB_TOKEN;
-    const { snapshots, remaining } = await collectLiveSnapshots({ token, limit: options.limit, maxCountries: options.maxCountries });
+    // Incremental save setup — country results are saved immediately so a
+    // crash/interruption doesn't lose hours of work. Re-run resumes where left off.
+    const root = process.cwd();
+    const { snapshots, remaining } = await collectLiveSnapshots({ token, limit: options.limit, maxCountries: options.maxCountries, saveDir: { latestDir: join(root, 'data/latest'), historyDir: join(root, 'data/history') } });
     const manifest = await writeSnapshots(snapshots, { method: 'github-live-refresh', mode: 'live', durationMs: Date.now() - started, remaining });
     await emit(manifest, options);
     return;
