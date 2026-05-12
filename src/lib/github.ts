@@ -642,7 +642,7 @@ async function loadSavedCountrySnapshots(saveDir: GitHubCollectorSaveDir, genera
       const match = file.match(/^countries-(.+)\.json$/);
       if (!match) continue;
       const snapshot = JSON.parse(await readFile(join(runDir, file), 'utf8')) as RankingSnapshot<RankedContributor>;
-      if (snapshot.kind === 'country' && snapshot.slug === match[1]) saved.set(match[1], snapshot);
+      if (snapshot.kind === 'country' && snapshot.slug === match[1] && snapshot.generated_at === generatedAt) saved.set(match[1], snapshot);
     }
   } catch {
     // No resumable country snapshots for this run yet.
