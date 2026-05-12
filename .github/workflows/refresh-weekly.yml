@@ -12,12 +12,15 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
         with:
           version: 10
@@ -51,11 +54,31 @@ jobs:
         run: pnpm run refresh:live
       - run: pnpm run validate:data
       - run: pnpm run build
-      - name: Commit refreshed data
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'data: refresh ossrank live snapshots'
-          file_pattern: 'data'
+      - name: Push data to branch and create PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE=$(date +%Y-%m-%d)
+          BRANCH="data/weekly-refresh-${DATE}"
+          git checkout -B "${BRANCH}"
+          git add data
+          git diff --cached --stat
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git commit -m "data: refresh ossrank live snapshots (${DATE})"
+          git push origin "${BRANCH}" --force
+          gh pr create \
+            --head "${BRANCH}" \
+            --base main \
+            --title "data: weekly ossrank live refresh (${DATE})" \
+            --body "Automated weekly OSSRank data refresh. Review and merge." \
+            2>/dev/null || gh pr edit "${BRANCH}" \
+            --title "data: weekly ossrank live refresh (${DATE})" \
+            --body "Automated weekly OSSRank data refresh (updated)."
       - name: Deploy refreshed site to Cloudflare Pages
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
