@@ -164,7 +164,7 @@
       "discovered_by_query": "location:Australia followers:<10 repos:120..200 type:user",
       "notable_repositories": [],
       "rank": 4,
-      "previous_rank": 4
+      "previous_rank": 18
     },
     {
       "login": "djouallah",
@@ -181,7 +181,7 @@
       "discovered_by_query": "location:Brisbane repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5,
-      "previous_rank": 5
+      "previous_rank": 4
     },
     {
       "login": "merill",
@@ -198,7 +198,7 @@
       "discovered_by_query": "location:Melbourne repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6,
-      "previous_rank": 6
+      "previous_rank": 5
     },
     {
       "login": "thomasdavis",
@@ -215,7 +215,7 @@
       "discovered_by_query": "location:Australia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7,
-      "previous_rank": 7
+      "previous_rank": 6
     },
     {
       "login": "McoreD",
@@ -350,7 +350,7 @@
       "discovered_by_query": "location:Sydney repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 15
+      "previous_rank": 16
     },
     {
       "login": "ghuntley",
@@ -367,7 +367,7 @@
       "discovered_by_query": "location:Australia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 16
+      "previous_rank": 15
     },
     {
       "login": "robjhyndman",
@@ -401,7 +401,7 @@
       "discovered_by_query": "location:Brisbane repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 18
+      "previous_rank": 20
     },
     {
       "login": "detectivesheepy",
@@ -417,8 +417,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Australia followers:<10 repos:120..200 type:user",
       "notable_repositories": [],
-      "rank": 19,
-      "previous_rank": 19
+      "rank": 19
     },
     {
       "login": "mnot",
@@ -434,8 +433,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Australia repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20,
-      "previous_rank": 20
+      "rank": 20
     }
   ]
 }
