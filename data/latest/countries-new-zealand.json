@@ -274,7 +274,7 @@
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 14
+      "previous_rank": 15
     },
     {
       "login": "gbmhunter",
@@ -291,7 +291,7 @@
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 15
+      "previous_rank": 14
     },
     {
       "login": "julianoes",
@@ -341,7 +341,7 @@
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 18
+      "previous_rank": 19
     },
     {
       "login": "memN0ps",
@@ -357,7 +357,7 @@
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 19
+      "previous_rank": 18
     },
     {
       "login": "schell",

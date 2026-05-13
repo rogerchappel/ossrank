@@ -104,7 +104,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4,
-      "previous_rank": 4
+      "previous_rank": 5
     },
     {
       "login": "maxandersen",
@@ -121,7 +121,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5,
-      "previous_rank": 5
+      "previous_rank": 6
     },
     {
       "login": "akien-mga",
@@ -138,7 +138,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6,
-      "previous_rank": 6
+      "previous_rank": 7
     },
     {
       "login": "davsclaus",
@@ -155,7 +155,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7,
-      "previous_rank": 7
+      "previous_rank": 8
     },
     {
       "login": "AJenbo",
@@ -172,7 +172,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8,
-      "previous_rank": 8
+      "previous_rank": 9
     },
     {
       "login": "athas",
@@ -189,7 +189,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 9
+      "previous_rank": 10
     },
     {
       "login": "freddydk",
@@ -206,7 +206,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10,
-      "previous_rank": 10
+      "previous_rank": 11
     },
     {
       "login": "FrederikBolding",
@@ -223,7 +223,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
-      "previous_rank": 11
+      "previous_rank": 12
     },
     {
       "login": "davidpdrsn",
@@ -240,7 +240,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 12
+      "previous_rank": 16
     },
     {
       "login": "gavinsimpson",
@@ -257,7 +257,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13,
-      "previous_rank": 13
+      "previous_rank": 14
     },
     {
       "login": "danmindru",
@@ -274,7 +274,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 14
+      "previous_rank": 15
     },
     {
       "login": "alexrp",
@@ -291,7 +291,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 15
+      "previous_rank": 13
     },
     {
       "login": "sepandhaghighi",
@@ -308,7 +308,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 16
+      "previous_rank": 18
     },
     {
       "login": "LunaTheFoxgirl",
@@ -342,7 +342,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 18
+      "previous_rank": 19
     },
     {
       "login": "mikker",
@@ -359,7 +359,7 @@
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 19
+      "previous_rank": 20
     },
     {
       "login": "simonbs",
@@ -375,8 +375,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Denmark repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20,
-      "previous_rank": 20
+      "rank": 20
     }
   ]
 }

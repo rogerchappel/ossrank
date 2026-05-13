@@ -229,7 +229,7 @@
       "discovered_by_query": "location:Paris repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
-      "previous_rank": 11
+      "previous_rank": 12
     },
     {
       "login": "Dimillian",
@@ -246,7 +246,7 @@
       "discovered_by_query": "location:France repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 12
+      "previous_rank": 11
     },
     {
       "login": "fabpot",

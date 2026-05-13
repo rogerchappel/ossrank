@@ -121,7 +121,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5,
-      "previous_rank": 5
+      "previous_rank": 7
     },
     {
       "login": "fandreuz",
@@ -138,7 +138,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6,
-      "previous_rank": 6
+      "previous_rank": 5
     },
     {
       "login": "ematipico",
@@ -155,7 +155,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7,
-      "previous_rank": 7
+      "previous_rank": 6
     },
     {
       "login": "urschrei",
@@ -172,7 +172,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8,
-      "previous_rank": 8
+      "previous_rank": 9
     },
     {
       "login": "afshinm",
@@ -189,7 +189,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 9
+      "previous_rank": 8
     },
     {
       "login": "vitaly-t",
@@ -325,7 +325,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 17
+      "previous_rank": 18
     },
     {
       "login": "sipsorcery",
@@ -342,7 +342,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 18
+      "previous_rank": 17
     },
     {
       "login": "mdibaiee",

@@ -207,7 +207,7 @@
       "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 9
+      "previous_rank": 10
     },
     {
       "login": "jennybc",
@@ -224,7 +224,7 @@
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10,
-      "previous_rank": 10
+      "previous_rank": 9
     },
     {
       "login": "nicobailon",
@@ -240,8 +240,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11,
-      "previous_rank": 11
+      "rank": 11
     },
     {
       "login": "tobi",
@@ -258,7 +257,7 @@
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 12
+      "previous_rank": 11
     },
     {
       "login": "Xe",
@@ -292,7 +291,7 @@
       "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 14
+      "previous_rank": 12
     },
     {
       "login": "richlander",
@@ -309,7 +308,7 @@
       "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 15
+      "previous_rank": 14
     },
     {
       "login": "dsherret",
@@ -326,7 +325,7 @@
       "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 16
+      "previous_rank": 15
     },
     {
       "login": "CamDavidsonPilon",
@@ -343,7 +342,7 @@
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 17
+      "previous_rank": 16
     },
     {
       "login": "gorhill",
@@ -360,7 +359,7 @@
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 18
+      "previous_rank": 17
     },
     {
       "login": "chris1111",
@@ -377,7 +376,7 @@
       "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 19
+      "previous_rank": 18
     },
     {
       "login": "fnando",
@@ -394,7 +393,7 @@
       "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 20
+      "previous_rank": 19
     }
   ]
 }

@@ -95,8 +95,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Italy repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3,
-      "previous_rank": 1
+      "rank": 3
     },
     {
       "login": "noahgift",
@@ -112,8 +111,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Spain repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4,
-      "previous_rank": 2
+      "rank": 4
     },
     {
       "login": "wizardforcel",
@@ -145,8 +143,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vienna repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6,
-      "previous_rank": 3
+      "rank": 6
     },
     {
       "login": "ryanbr",
@@ -162,8 +159,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 7,
-      "previous_rank": 4
+      "rank": 7
     },
     {
       "login": "yegor256",
@@ -195,8 +191,7 @@
       "location_confidence": "unknown",
       "discovered_by_query": "language:TypeScript repos:>10 followers:>25 type:user",
       "notable_repositories": [],
-      "rank": 9,
-      "previous_rank": 5
+      "rank": 9
     },
     {
       "login": "Correia-jpv",
@@ -228,8 +223,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Indonesia repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11,
-      "previous_rank": 6
+      "rank": 11
     },
     {
       "login": "peter279k",
@@ -245,8 +239,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12,
-      "previous_rank": 7
+      "rank": 12
     },
     {
       "login": "marcusramberg",
@@ -262,8 +255,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13,
-      "previous_rank": 8
+      "rank": 13
     },
     {
       "login": "Charles-Chrismann",
@@ -279,8 +271,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Paris repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14,
-      "previous_rank": 9
+      "rank": 14
     },
     {
       "login": "menacedjava",
@@ -328,8 +319,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Australia followers:<10 repos:80..120 type:user",
       "notable_repositories": [],
-      "rank": 17,
-      "previous_rank": 10
+      "rank": 17
     },
     {
       "login": "lupyuen",
@@ -361,8 +351,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Australia repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19,
-      "previous_rank": 11
+      "rank": 19
     },
     {
       "login": "leoloso",

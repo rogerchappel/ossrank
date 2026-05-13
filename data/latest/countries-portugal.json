@@ -52,8 +52,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 1,
-      "previous_rank": 1
+      "rank": 1
     },
     {
       "login": "pirapira",
@@ -69,8 +68,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2,
-      "previous_rank": 2
+      "rank": 2
     },
     {
       "login": "rcarmo",
@@ -86,8 +84,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3,
-      "previous_rank": 3
+      "rank": 3
     },
     {
       "login": "otaviojava",
@@ -104,7 +101,7 @@
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4,
-      "previous_rank": 4
+      "previous_rank": 1
     },
     {
       "login": "motanelson",
@@ -121,7 +118,7 @@
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5,
-      "previous_rank": 5
+      "previous_rank": 2
     },
     {
       "login": "DiogoRibeiro7",
@@ -137,8 +134,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6,
-      "previous_rank": 6
+      "rank": 6
     },
     {
       "login": "snipe",
@@ -155,7 +151,7 @@
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7,
-      "previous_rank": 7
+      "previous_rank": 3
     },
     {
       "login": "nunomaduro",
@@ -172,7 +168,7 @@
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8,
-      "previous_rank": 8
+      "previous_rank": 4
     },
     {
       "login": "bgcngm",
@@ -188,8 +184,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9,
-      "previous_rank": 9
+      "rank": 9
     },
     {
       "login": "pgte",
@@ -205,8 +200,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 10,
-      "previous_rank": 10
+      "rank": 10
     },
     {
       "login": "nelsonic",
@@ -223,7 +217,7 @@
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
-      "previous_rank": 11
+      "previous_rank": 5
     },
     {
       "login": "leafac",
@@ -239,8 +233,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12,
-      "previous_rank": 12
+      "rank": 12
     },
     {
       "login": "niquola",
@@ -256,8 +249,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13,
-      "previous_rank": 13
+      "rank": 13
     },
     {
       "login": "rochacbruno",
@@ -274,7 +266,7 @@
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 14
+      "previous_rank": 6
     },
     {
       "login": "stevenroose",
@@ -290,8 +282,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15,
-      "previous_rank": 15
+      "rank": 15
     },
     {
       "login": "macabeus",
@@ -307,8 +298,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 16,
-      "previous_rank": 16
+      "rank": 16
     },
     {
       "login": "diogocarrola",
@@ -324,8 +314,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 17,
-      "previous_rank": 17
+      "rank": 17
     },
     {
       "login": "apocas",
@@ -341,8 +330,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18,
-      "previous_rank": 18
+      "rank": 18
     },
     {
       "login": "tofumatt",
@@ -358,8 +346,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19,
-      "previous_rank": 19
+      "rank": 19
     },
     {
       "login": "joaotavora",
@@ -375,8 +362,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Portugal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20,
-      "previous_rank": 20
+      "rank": 20
     }
   ]
 }
