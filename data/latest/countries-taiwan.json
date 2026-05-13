@@ -69,8 +69,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2,
-      "previous_rank": 2
+      "rank": 2
     },
     {
       "login": "ronnywang",
@@ -86,8 +85,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3,
-      "previous_rank": 3
+      "rank": 3
     },
     {
       "login": "KohakuBlueleaf",
@@ -103,8 +101,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4,
-      "previous_rank": 4
+      "rank": 4
     },
     {
       "login": "appleboy",
@@ -121,7 +118,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5,
-      "previous_rank": 5
+      "previous_rank": 2
     },
     {
       "login": "vinta",
@@ -138,7 +135,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6,
-      "previous_rank": 6
+      "previous_rank": 3
     },
     {
       "login": "jserv",
@@ -155,7 +152,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7,
-      "previous_rank": 7
+      "previous_rank": 5
     },
     {
       "login": "hoochanlon",
@@ -172,7 +169,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8,
-      "previous_rank": 8
+      "previous_rank": 4
     },
     {
       "login": "zonble",
@@ -188,8 +185,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9,
-      "previous_rank": 9
+      "rank": 9
     },
     {
       "login": "doggy8088",
@@ -206,7 +202,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10,
-      "previous_rank": 10
+      "previous_rank": 6
     },
     {
       "login": "pan93412",
@@ -222,8 +218,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11,
-      "previous_rank": 11
+      "rank": 11
     },
     {
       "login": "recca0120",
@@ -239,8 +234,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12,
-      "previous_rank": 12
+      "rank": 12
     },
     {
       "login": "yorukot",
@@ -256,8 +250,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13,
-      "previous_rank": 13
+      "rank": 13
     },
     {
       "login": "hwchiu",
@@ -273,8 +266,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14,
-      "previous_rank": 14
+      "rank": 14
     },
     {
       "login": "audreyt",
@@ -291,7 +283,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 15
+      "previous_rank": 7
     },
     {
       "login": "tony1223",
@@ -307,8 +299,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 16,
-      "previous_rank": 16
+      "rank": 16
     },
     {
       "login": "twtrubiks",
@@ -324,7 +315,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 17
+      "previous_rank": 9
     },
     {
       "login": "steward-fu",
@@ -340,8 +331,7 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18,
-      "previous_rank": 18
+      "rank": 18
     },
     {
       "login": "c9s",
@@ -357,7 +347,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 19
+      "previous_rank": 8
     },
     {
       "login": "weihanglo",
@@ -373,8 +363,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20,
-      "previous_rank": 20
+      "rank": 20
     }
   ]
 }
