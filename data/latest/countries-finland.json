@@ -172,7 +172,7 @@
       "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8,
-      "previous_rank": 8
+      "previous_rank": 9
     },
     {
       "login": "brylie",
@@ -189,7 +189,7 @@
       "discovered_by_query": "location:Finland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 9
+      "previous_rank": 8
     },
     {
       "login": "mmalmi",
