@@ -113,17 +113,28 @@ async function validateGraphqlSearchToken(token: string): Promise<void> {
       Authorization: `Bearer ${token}`
     },
     body: JSON.stringify({
-      query: `query OssrankTokenCheck($query: String!) {
+      query: `query OssrankTokenCheck($query: String!, $login: String!, $from: DateTime!, $to: DateTime!) {
         search(type: USER, query: $query, first: 1) { userCount }
+        user(login: $login) {
+          contributionsCollection(from: $from, to: $to) {
+            totalCommitContributions
+            totalPullRequestContributions
+          }
+        }
         rateLimit { remaining cost }
       }`,
-      variables: { query: 'type:user repos:>0' }
+      variables: {
+        query: 'type:user repos:>0',
+        login: 'rogerchappel',
+        from: new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString(),
+        to: new Date().toISOString()
+      }
     })
   });
   const body = await response.json() as { errors?: Array<{ message: string }>; data?: unknown };
   if (!response.ok || body.errors?.length) {
     const message = body.errors?.map((error) => error.message).join('; ') ?? response.statusText;
-    throw new Error(`GitHub token cannot run OSSRank GraphQL search: ${message}`);
+    throw new Error(`GitHub token cannot run OSSRank GraphQL search/contribution queries: ${message}`);
   }
 }
 
@@ -144,7 +155,7 @@ async function main(): Promise<void> {
     if (options.requireGraphqlSearch) {
       await validateGraphqlSearchToken(token);
     }
-    await emit({ ok: true, provider: 'github', mode: options.requireGraphqlSearch ? 'graphql-search-access' : 'token-present' }, options);
+    await emit({ ok: true, provider: 'github', mode: options.requireGraphqlSearch ? 'graphql-search-and-contribution-access' : 'token-present' }, options);
     return;
   }
 
