@@ -19,6 +19,8 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       'location:Brisbane repos:>5',
       'location:Australia followers:<10 repos:80..120',
       'location:Australia followers:<20 repos:80..120',
+      'location:Australia followers:<10 repos:120..200',
+      'location:Australia followers:<20 repos:120..200',
       'location:Australia saas',
       'location:Australia automation',
       'location:Australia agentic'
