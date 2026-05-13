@@ -65,23 +65,6 @@ interface GitHubUserSearchResponse {
   rateLimit?: { remaining?: number; cost?: number };
 }
 
-interface GitHubUserDetailResponse {
-  user: {
-    login: string;
-    name: string | null;
-    url: string;
-    repositories: { totalCount: number };
-    gists: { totalCount: number };
-    followers: { totalCount: number };
-    location: string | null;
-    contributionsCollection: {
-      totalCommitContributions: number;
-      totalPullRequestContributions: number;
-    };
-  } | null;
-  rateLimit?: { remaining?: number; cost?: number };
-}
-
 interface CandidateQueryStat {
   query: string;
   total: number;
@@ -370,48 +353,49 @@ async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Pro
 }
 
 // ---------------------------------------------------------------------------
-// GraphQL user profile + contribution activity
+// REST user profile + public activity
 // ---------------------------------------------------------------------------
+
+async function publicActivityViaSearch(
+  client: GitHubClient,
+  login: string,
+  generatedAt: string
+): Promise<{ commits: number; pullRequests: number }> {
+  const fromDate = yyyyMmDd(daysAgoIso(generatedAt, 365));
+  const toDate = yyyyMmDd(generatedAt);
+  const commitQuery = `author:${login} committer-date:${fromDate}..${toDate}`;
+  const pullRequestQuery = `type:pr author:${login} created:${fromDate}..${toDate}`;
+
+  const [commitSearch, pullRequestSearch] = await Promise.all([
+    client.search<unknown>(`/search/commits?${encodeQuery(commitQuery, 1, 'committer-date')}`),
+    client.search<unknown>(`/search/issues?${encodeQuery(pullRequestQuery, 1, 'created')}`)
+  ]);
+
+  return {
+    commits: commitSearch.total_count,
+    pullRequests: pullRequestSearch.total_count
+  };
+}
 
 async function userProfileWithActivity(
   client: GitHubClient,
   login: string,
   generatedAt: string
 ): Promise<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number } } | null> {
-  const from = daysAgoIso(generatedAt, 365);
-  const data = await client.graphql<GitHubUserDetailResponse>(`query OssrankUserDetail($login: String!, $from: DateTime!, $to: DateTime!) {
-    user(login: $login) {
-      login
-      name
-      url
-      repositories(privacy: PUBLIC) { totalCount }
-      gists(privacy: PUBLIC) { totalCount }
-      followers { totalCount }
-      location
-      contributionsCollection(from: $from, to: $to) {
-        totalCommitContributions
-        totalPullRequestContributions
-      }
-    }
-    rateLimit { remaining cost }
-  }`, { login, from, to: generatedAt });
-
-  if (!data.user?.login) return null;
+  const profile = await client.get<GitHubUserDetail>(`/users/${login}`);
+  if (!profile?.login) return null;
 
   return {
     user: {
-      login: data.user.login,
-      name: data.user.name,
-      html_url: data.user.url,
-      public_repos: data.user.repositories.totalCount,
-      public_gists: data.user.gists.totalCount,
-      followers: data.user.followers.totalCount,
-      location: data.user.location
+      login: profile.login,
+      name: profile.name,
+      html_url: profile.html_url,
+      public_repos: profile.public_repos,
+      public_gists: profile.public_gists,
+      followers: profile.followers,
+      location: profile.location
     },
-    activity: {
-      commits: data.user.contributionsCollection.totalCommitContributions,
-      pullRequests: data.user.contributionsCollection.totalPullRequestContributions
-    }
+    activity: await publicActivityViaSearch(client, profile.login, generatedAt)
   };
 }
 
@@ -638,7 +622,7 @@ async function saveCountrySnapshot(
 ): Promise<void> {
   const { config, total, users, queryStats } = result;
   const snapshot: RankingSnapshot<RankedContributor> = {
-    ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
+    ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-rest-search-one-year-public-activity'),
     code: config.code,
     candidate_count: total,
     caveats: [
@@ -739,7 +723,7 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const contributorCaveats = [
     'Live data uses GitHub REST search plus public profile fields; it is an observed sample, not a complete census.',
     'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.',
-    'Contributor pages expose public repository counts plus one-year GitHub contribution totals for commits and pull requests from the official GitHub GraphQL API. These are not all-time totals.',
+    'Contributor pages expose public repository counts plus one-year public commit and pull request activity from GitHub REST search. These are not all-time totals and may differ from private/authenticated GitHub profile contribution graphs.',
     'The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages.'
   ];
   const projectCaveats = [
@@ -759,13 +743,13 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const globalEntries = rankContributors([...new Map(globalContributorPool.map((user) => [user.login.toLowerCase(), user])).values()]).slice(0, limit);
   const derivedGlobalStat = { query: 'derived from current country, language, and global contributor snapshots', total: globalContributorPool.length, accepted: Math.max(0, globalEntries.length - global.users.length) };
   const globalContributors: RankingSnapshot<RankedContributor> = {
-    ...snapshotBase('global', 'contributors', 'Global', 'Top observed GitHub contributors globally', generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
+    ...snapshotBase('global', 'contributors', 'Global', 'Top observed GitHub contributors globally', generatedAt, 'fresh', 'github-rest-search-one-year-public-activity'),
     candidate_count: global.total, caveats: contributorCaveats, discovery_queries: ['followers:>1000 repos:>20 type:user', 'repos:>100 followers:>500 type:user', 'derived from current country and language contributor snapshots'], candidate_count_by_query: [...global.queryStats, derivedGlobalStat],
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [globalEntries.length], top_10_signal: [globalEntries.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
     entries: globalEntries
   };
   const refreshedCountries: Array<RankingSnapshot<RankedContributor>> = countryResults.map(({ config, total, users }) => ({
-    ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-graphql-one-year-contribution-totals'),
+    ...snapshotBase('country', config.slug, config.name, `Top observed GitHub contributors in ${config.name}`, generatedAt, 'fresh', 'github-rest-search-one-year-public-activity'),
     code: config.code, candidate_count: total, caveats: contributorCaveats, discovery_queries: config.queries.map(userQuery), candidate_count_by_query: (countryResults.find((r) => r.config.slug === config.slug)?.queryStats ?? []),
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [users.length], top_10_signal: [users.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
     entries: users
@@ -830,7 +814,7 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const uniqueUsers = [...new Map(allUsers.map((user) => [user.login.toLowerCase(), user])).values()];
   const risingUsers = rankRisingContributors(uniqueUsers).slice(0, limit);
   const rising: RankingSnapshot<RankedContributor> = {
-    ...snapshotBase('rising', 'contributors', 'Rising Contributors', 'High-signal observed GitHub contributors with strong activity relative to audience size', generatedAt, 'fresh', 'derived-github-graphql-one-year-contribution-totals'),
+    ...snapshotBase('rising', 'contributors', 'Rising Contributors', 'High-signal observed GitHub contributors with strong activity relative to audience size', generatedAt, 'fresh', 'derived-github-rest-search-one-year-public-activity'),
     candidate_count: uniqueUsers.length, caveats: contributorCaveats, discovery_queries: ['derived from current contributor snapshots'], candidate_count_by_query: [],
     history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [risingUsers.length], top_10_signal: [risingUsers.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
     entries: risingUsers
