@@ -369,6 +369,24 @@ async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Pro
 // REST user profile + public activity
 // ---------------------------------------------------------------------------
 
+function isUnsearchableUserError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  return error.message.includes('GitHub 422 for /search/')
+    && error.message.includes('The listed users cannot be searched');
+}
+
+async function safeSearchTotal(client: GitHubClient, path: string, login: string, label: 'commits' | 'pull requests'): Promise<number> {
+  try {
+    return (await client.search<unknown>(path)).total_count;
+  } catch (error) {
+    if (isUnsearchableUserError(error)) {
+      process.stderr.write(`[warn] Skipping ${label} activity for ${login}: GitHub search says the user cannot be searched.\n`);
+      return 0;
+    }
+    throw error;
+  }
+}
+
 async function publicActivityViaSearch(
   client: GitHubClient,
   login: string,
@@ -379,13 +397,10 @@ async function publicActivityViaSearch(
   const commitQuery = `author:${login} committer-date:${fromDate}..${toDate}`;
   const pullRequestQuery = `type:pr author:${login} created:${fromDate}..${toDate}`;
 
-  const commitSearch = await client.search<unknown>(`/search/commits?${encodeQuery(commitQuery, 1, 'committer-date')}`);
-  const pullRequestSearch = await client.search<unknown>(`/search/issues?${encodeQuery(pullRequestQuery, 1, 'created')}`);
+  const commits = await safeSearchTotal(client, `/search/commits?${encodeQuery(commitQuery, 1, 'committer-date')}`, login, 'commits');
+  const pullRequests = await safeSearchTotal(client, `/search/issues?${encodeQuery(pullRequestQuery, 1, 'created')}`, login, 'pull requests');
 
-  return {
-    commits: commitSearch.total_count,
-    pullRequests: pullRequestSearch.total_count
-  };
+  return { commits, pullRequests };
 }
 
 async function userProfileWithActivity(
