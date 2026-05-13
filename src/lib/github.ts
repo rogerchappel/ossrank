@@ -65,6 +65,23 @@ interface GitHubUserSearchResponse {
   rateLimit?: { remaining?: number; cost?: number };
 }
 
+interface GitHubUserDetailResponse {
+  user: {
+    login: string;
+    name: string | null;
+    url: string;
+    repositories: { totalCount: number };
+    gists: { totalCount: number };
+    followers: { totalCount: number };
+    location: string | null;
+    contributionsCollection: {
+      totalCommitContributions: number;
+      totalPullRequestContributions: number;
+    };
+  } | null;
+  rateLimit?: { remaining?: number; cost?: number };
+}
+
 interface CandidateQueryStat {
   query: string;
   total: number;
@@ -353,34 +370,48 @@ async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Pro
 }
 
 // ---------------------------------------------------------------------------
-// REST user profile (new — uses separate rate limit bucket from GraphQL)
+// GraphQL user profile + contribution activity
 // ---------------------------------------------------------------------------
 
-async function userProfileViaRest(
+async function userProfileWithActivity(
   client: GitHubClient,
   login: string,
   generatedAt: string
 ): Promise<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number } } | null> {
-  // Fetch profile via REST /users/{login}
-  const profile = await client.get<GitHubUserDetail>(`/users/${login}`);
-  if (!profile?.login) return null;
+  const from = daysAgoIso(generatedAt, 365);
+  const data = await client.graphql<GitHubUserDetailResponse>(`query OssrankUserDetail($login: String!, $from: DateTime!, $to: DateTime!) {
+    user(login: $login) {
+      login
+      name
+      url
+      repositories(privacy: PUBLIC) { totalCount }
+      gists(privacy: PUBLIC) { totalCount }
+      followers { totalCount }
+      location
+      contributionsCollection(from: $from, to: $to) {
+        totalCommitContributions
+        totalPullRequestContributions
+      }
+    }
+    rateLimit { remaining cost }
+  }`, { login, from, to: generatedAt });
 
-  // Fetch 1-year commit/contribution stats via REST commit search
-  // (approximate — REST doesn't have the one-year contributionCollection)
-  // For now we use public_repos and commit counts from /repos endpoints as proxy.
-  // Later: consider using /search/commits?q=author:{login}+committer-date:>2025-...
+  if (!data.user?.login) return null;
 
   return {
     user: {
-      login: profile.login,
-      name: profile.name,
-      html_url: profile.html_url,
-      public_repos: profile.public_repos,
-      public_gists: profile.public_gists,
-      followers: profile.followers,
-      location: profile.location
+      login: data.user.login,
+      name: data.user.name,
+      html_url: data.user.url,
+      public_repos: data.user.repositories.totalCount,
+      public_gists: data.user.gists.totalCount,
+      followers: data.user.followers.totalCount,
+      location: data.user.location
     },
-    activity: { commits: 0, pullRequests: 0 } // Will be populated from GraphQL search results when available
+    activity: {
+      commits: data.user.contributionsCollection.totalCommitContributions,
+      pullRequests: data.user.contributionsCollection.totalPullRequestContributions
+    }
   };
 }
 
@@ -452,7 +483,7 @@ async function collectUsers(client: GitHubClient, queries: string | string[], li
     total += search.total;
     const before = details.size;
     const unseen = search.items.filter((item) => item.type !== 'Organization' && !details.has(item.login.toLowerCase()));
-    const fetched = await mapLimit(unseen, concurrency, async (item) => userProfileViaRest(client, item.login, generatedAt));
+    const fetched = await mapLimit(unseen, concurrency, async (item) => userProfileWithActivity(client, item.login, generatedAt));
     for (const detail of fetched) {
       if (detail && (!locationTerms || matchesLocation(detail.user.location, locationTerms))) {
         details.set(detail.user.login.toLowerCase(), { ...detail, discoveredByQuery: userQuery(query) });
