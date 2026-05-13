@@ -286,7 +286,7 @@
       "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 14
+      "previous_rank": 15
     },
     {
       "login": "nikgraf",
@@ -303,7 +303,7 @@
       "discovered_by_query": "location:Vienna repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 15
+      "previous_rank": 14
     },
     {
       "login": "mrothauer",
@@ -337,7 +337,7 @@
       "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 17
+      "previous_rank": 18
     },
     {
       "login": "untitaker",
@@ -354,7 +354,7 @@
       "discovered_by_query": "location:Austria repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 18
+      "previous_rank": 19
     },
     {
       "login": "DavidXanatos",
@@ -370,7 +370,7 @@
       "discovered_by_query": "location:Vienna repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 19
+      "previous_rank": 17
     },
     {
       "login": "schletz",
@@ -386,8 +386,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Wien repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20,
-      "previous_rank": 20
+      "rank": 20
     }
   ]
 }
