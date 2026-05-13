@@ -101,13 +101,15 @@ interface GitHubRepoActivityResponse {
 
 interface RateLimitState {
   graphqlRemaining: number | null;   // GraphQL points remaining (5000/hr for PAT)
+  graphqlLimit: number | null;
   graphqlReset: number | null;        // epoch-ms when GraphQL budget resets
-  restRemaining: number | null;       // REST requests remaining (5000/hr for PAT)
-  restReset: number | null;           // epoch-ms when REST budget resets
+  restRemaining: number | null;       // REST/search requests remaining
+  restLimit: number | null;
+  restReset: number | null;           // epoch-ms when REST/search budget resets
 }
 
 class SmartThrottler {
-  private state: RateLimitState = { graphqlRemaining: null, graphqlReset: null, restRemaining: null, restReset: null };
+  private state: RateLimitState = { graphqlRemaining: null, graphqlLimit: null, graphqlReset: null, restRemaining: null, restLimit: null, restReset: null };
 
   private readonly concurrency: number;
   /** Minimum gap between sequential API calls (ms). */
@@ -126,11 +128,17 @@ class SmartThrottler {
   /** Update rate-limit state from response headers. */
   updateFromHeaders(headers: Headers, apiType: 'graphql' | 'rest'): void {
     const remaining = headers.get('x-ratelimit-remaining');
+    const limit = headers.get('x-ratelimit-limit');
     const reset = headers.get('x-ratelimit-reset');
     if (remaining !== null) {
       const val = Number(remaining);
       if (apiType === 'graphql') this.state.graphqlRemaining = val;
       else this.state.restRemaining = val;
+    }
+    if (limit !== null) {
+      const val = Number(limit);
+      if (apiType === 'graphql') this.state.graphqlLimit = val;
+      else this.state.restLimit = val;
     }
     if (reset !== null) {
       const epochSec = Number(reset);
@@ -141,12 +149,17 @@ class SmartThrottler {
 
   /**
    * Call before making a request. Returns ms to wait (0 if OK).
-   * GraphQL: stay above 150 points. REST: stay above 100 requests.
+   * GraphQL: keep a larger safety buffer. REST/search buckets vary a lot
+   * (GitHub search is often only 30/min), so scale the buffer to the
+   * advertised bucket size instead of assuming a 5k core REST limit.
    */
   msToWait(apiType: 'graphql' | 'rest'): number {
-    const threshold = apiType === 'graphql' ? 150 : 100;
     const remaining = apiType === 'graphql' ? this.state.graphqlRemaining : this.state.restRemaining;
+    const limit = apiType === 'graphql' ? this.state.graphqlLimit : this.state.restLimit;
     const reset = apiType === 'graphql' ? this.state.graphqlReset : this.state.restReset;
+    const threshold = apiType === 'graphql'
+      ? 150
+      : Math.max(1, Math.min(100, Math.floor((limit ?? 5000) * 0.1)));
 
     if (remaining === null || reset === null) return 0;
     if (remaining > threshold) return 0;
@@ -366,10 +379,8 @@ async function publicActivityViaSearch(
   const commitQuery = `author:${login} committer-date:${fromDate}..${toDate}`;
   const pullRequestQuery = `type:pr author:${login} created:${fromDate}..${toDate}`;
 
-  const [commitSearch, pullRequestSearch] = await Promise.all([
-    client.search<unknown>(`/search/commits?${encodeQuery(commitQuery, 1, 'committer-date')}`),
-    client.search<unknown>(`/search/issues?${encodeQuery(pullRequestQuery, 1, 'created')}`)
-  ]);
+  const commitSearch = await client.search<unknown>(`/search/commits?${encodeQuery(commitQuery, 1, 'committer-date')}`);
+  const pullRequestSearch = await client.search<unknown>(`/search/issues?${encodeQuery(pullRequestQuery, 1, 'created')}`);
 
   return {
     commits: commitSearch.total_count,
