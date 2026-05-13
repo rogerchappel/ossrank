@@ -34,9 +34,14 @@ function isContributorSnapshot(snapshot: RankingSnapshot<unknown>): snapshot is 
   return (snapshot.kind === 'global' || snapshot.kind === 'country') && snapshot.entries.every((entry) => typeof (entry as Partial<RankedContributor>).login === 'string');
 }
 
-async function readPreviousSnapshot(filename: string, latestDir: string, historyDir: string): Promise<RankingSnapshot<RankedContributor> | undefined> {
+function isBeforeRun(snapshot: RankingSnapshot<RankedContributor>, currentRunId: string): boolean {
+  return snapshot.generated_at.slice(0, 10) < currentRunId;
+}
+
+async function readPreviousSnapshot(filename: string, latestDir: string, historyDir: string, currentRunId: string): Promise<RankingSnapshot<RankedContributor> | undefined> {
   try {
-    return JSON.parse(await readFile(join(latestDir, filename), 'utf8')) as RankingSnapshot<RankedContributor>;
+    const latest = JSON.parse(await readFile(join(latestDir, filename), 'utf8')) as RankingSnapshot<RankedContributor>;
+    if (isBeforeRun(latest, currentRunId)) return latest;
   } catch {
     // Fall back to dated history when latest is unavailable, e.g. a fresh checkout
     // with only archived runs present.
@@ -48,8 +53,10 @@ async function readPreviousSnapshot(filename: string, latestDir: string, history
       .map((entry) => entry.name)
       .sort((a, b) => b.localeCompare(a));
     for (const runId of runIds) {
+      if (runId >= currentRunId) continue;
       try {
-        return JSON.parse(await readFile(join(historyDir, runId, filename), 'utf8')) as RankingSnapshot<RankedContributor>;
+        const snapshot = JSON.parse(await readFile(join(historyDir, runId, filename), 'utf8')) as RankingSnapshot<RankedContributor>;
+        if (isBeforeRun(snapshot, currentRunId)) return snapshot;
       } catch {
         // Keep walking backwards until a shard for this board exists.
       }
@@ -60,9 +67,9 @@ async function readPreviousSnapshot(filename: string, latestDir: string, history
   return undefined;
 }
 
-async function addPreviousContributorRanks(snapshot: RankingSnapshot<unknown>, latestDir: string, historyDir: string): Promise<RankingSnapshot<unknown>> {
+async function addPreviousContributorRanks(snapshot: RankingSnapshot<unknown>, latestDir: string, historyDir: string, currentRunId: string): Promise<RankingSnapshot<unknown>> {
   if (!isContributorSnapshot(snapshot)) return snapshot;
-  const previous = await readPreviousSnapshot(shardFilename(snapshot), latestDir, historyDir);
+  const previous = await readPreviousSnapshot(shardFilename(snapshot), latestDir, historyDir, currentRunId);
   if (!previous?.entries?.length) return snapshot;
 
   const previousRanks = new Map(previous.entries.map((entry) => [entry.login.toLowerCase(), entry.rank]));
@@ -87,7 +94,7 @@ export async function writeSnapshots(snapshots: RankingSnapshot<unknown>[], opti
   await mkdir(runDir, { recursive: true });
   await mkdir(historyDir, { recursive: true });
 
-  const snapshotsWithMovement = await Promise.all(snapshots.map((snapshot) => addPreviousContributorRanks(snapshot, latestDir, historyDir)));
+  const snapshotsWithMovement = await Promise.all(snapshots.map((snapshot) => addPreviousContributorRanks(snapshot, latestDir, historyDir, runId)));
 
   const completed: ManifestShard[] = [];
   for (const snapshot of snapshotsWithMovement) {
