@@ -1,5 +1,15 @@
 export type FreshnessState = 'fresh' | 'stale' | 'failed' | 'demo';
 
+export interface ContributorBurstAdjustment {
+  raw_public_commits: number;
+  adjusted_public_commits: number;
+  baseline_daily_contributions: number;
+  daily_burst_cap: number;
+  capped_days: number;
+  excess_contributions: number;
+  reason: string;
+}
+
 export interface RankedContributor {
   rank: number;
   login: string;
@@ -9,6 +19,7 @@ export interface RankedContributor {
   public_repos?: number;
   public_gists?: number;
   observed_public_commits?: number;
+  contribution_burst_adjustment?: ContributorBurstAdjustment;
   observed_public_pull_requests?: number;
   followers: number;
   location?: string;

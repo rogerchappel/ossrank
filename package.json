@@ -9,12 +9,13 @@
     "refresh:fixtures": "tsx scripts/refresh-fixtures.ts",
     "validate:data": "tsx scripts/validate-data.ts data/latest",
     "build": "tsx scripts/build-site.ts --data data/latest --history data/history --out dist && pnpm run build:cli",
-    "test": "pnpm run check && pnpm run refresh:fixtures && pnpm run validate:data && pnpm run build && pnpm run smoke:cli",
+    "test": "pnpm run test:burst && pnpm run check && pnpm run refresh:fixtures && pnpm run validate:data && pnpm run build && pnpm run smoke:cli",
     "dev": "pnpm run build && npx --yes serve dist",
     "deploy:cloudflare": "pnpm run build && wrangler pages deploy dist --project-name ossrank",
     "build:cli": "tsc -p tsconfig.cli.json && node scripts/fix-cli-shebang.cjs",
     "smoke:cli": "pnpm run build:cli && node dist-cli/cli.js rank contributors --input fixtures/contributors.json --limit 2 --format table && node dist-cli/cli.js token-check --token demo && ! node dist-cli/cli.js rank contributors --input fixtures/contributors.json --limit nope",
-    "refresh:live": "tsx src/cli.ts refresh --mode live --limit ${OSSRANK_LIMIT:-20}"
+    "refresh:live": "tsx src/cli.ts refresh --mode live --limit ${OSSRANK_LIMIT:-20}",
+    "test:burst": "tsx scripts/verify-burst-adjustment.ts"
   },
   "dependencies": {},
   "devDependencies": {

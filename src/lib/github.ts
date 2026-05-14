@@ -1,6 +1,6 @@
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { rankContributors, rankProjectMomentum, rankProjects, rankRisingContributors } from './ranking.js';
+import { contributionBurstAdjustment, rankContributors, rankProjectMomentum, rankProjects, rankRisingContributors } from './ranking.js';
 import { COUNTRY_CONFIGS, type CountryConfig } from './countries.js';
 import { snapshotBase } from './snapshots.js';
 import { createTokenProvider, type GitHubTokenProvider } from './token-provider.js';
@@ -81,6 +81,7 @@ interface GitHubUserActivityNode {
   contributionsCollection: {
     totalCommitContributions: number;
     totalPullRequestContributions: number;
+    contributionCalendar: { weeks: Array<{ contributionDays: Array<{ contributionCount: number }> }> };
   };
 }
 
@@ -92,7 +93,7 @@ interface CandidateQueryStat {
 
 interface UserCandidate {
   user: GitHubUserDetail;
-  activity: { commits: number; pullRequests: number };
+  activity: { commits: number; pullRequests: number; dailyContributions: number[] };
   discoveredByQuery: string;
 }
 
@@ -394,7 +395,7 @@ function chunks<T>(items: T[], size: number): T[][] {
   return result;
 }
 
-function toUserCandidate(node: GitHubUserActivityNode): { user: GitHubUserDetail; activity: { commits: number; pullRequests: number } } {
+function toUserCandidate(node: GitHubUserActivityNode): { user: GitHubUserDetail; activity: { commits: number; pullRequests: number; dailyContributions: number[] } } {
   return {
     user: {
       login: node.login,
@@ -407,7 +408,8 @@ function toUserCandidate(node: GitHubUserActivityNode): { user: GitHubUserDetail
     },
     activity: {
       commits: node.contributionsCollection.totalCommitContributions,
-      pullRequests: node.contributionsCollection.totalPullRequestContributions
+      pullRequests: node.contributionsCollection.totalPullRequestContributions,
+      dailyContributions: node.contributionsCollection.contributionCalendar.weeks.flatMap((week) => week.contributionDays.map((day) => day.contributionCount))
     }
   };
 }
@@ -416,10 +418,10 @@ async function userProfilesWithActivityBatch(
   client: GitHubClient,
   logins: string[],
   generatedAt: string
-): Promise<Array<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number } }>> {
+): Promise<Array<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number; dailyContributions: number[] } }>> {
   const from = daysAgoIso(generatedAt, 365);
   const to = generatedAt;
-  const results: Array<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number } }> = [];
+  const results: Array<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number; dailyContributions: number[] } }> = [];
 
   for (const batch of chunks(logins, 5)) {
     const variableDefinitions = batch.map((_, index) => `$login${index}: String!`).join(', ');
@@ -435,6 +437,11 @@ async function userProfilesWithActivityBatch(
         contributionsCollection(from: $from, to: $to) {
           totalCommitContributions
           totalPullRequestContributions
+          contributionCalendar {
+            weeks {
+              contributionDays { contributionCount }
+            }
+          }
         }
       }`).join('');
     const variables: Record<string, unknown> = { from, to };
@@ -538,6 +545,7 @@ async function collectUsers(client: GitHubClient, queries: string | string[], li
     public_gists: user.public_gists,
     observed_public_commits: activity.commits,
     observed_public_pull_requests: activity.pullRequests,
+    contribution_burst_adjustment: contributionBurstAdjustment(activity.commits, activity.dailyContributions),
     followers: user.followers,
     location: user.location ?? undefined,
     location_confidence: locationTerms && countryName ? locationConfidence(user.location, locationTerms, countryName) : 'unknown' as const,
