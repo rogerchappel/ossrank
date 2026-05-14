@@ -31,7 +31,7 @@ export function shardFilename(snapshot: RankingSnapshot<unknown>): string {
 }
 
 function isContributorSnapshot(snapshot: RankingSnapshot<unknown>): snapshot is RankingSnapshot<RankedContributor> {
-  return (snapshot.kind === 'global' || snapshot.kind === 'country') && snapshot.entries.every((entry) => typeof (entry as Partial<RankedContributor>).login === 'string');
+  return (snapshot.kind === 'global' || snapshot.kind === 'country' || snapshot.kind === 'rising') && snapshot.entries.every((entry) => typeof (entry as Partial<RankedContributor>).login === 'string');
 }
 
 function isBeforeRun(snapshot: RankingSnapshot<RankedContributor>, currentRunId: string): boolean {
