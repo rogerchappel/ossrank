@@ -1,6 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { Manifest, RankingSnapshot } from '../src/lib/types.js';
+import type { ContributorBurstAdjustment, Manifest, RankingSnapshot } from '../src/lib/types.js';
 
 const dataDir = process.argv[2] ?? 'data/latest';
 const errors: string[] = [];
@@ -13,6 +13,18 @@ function isIso(value: unknown): boolean {
   return typeof value === 'string' && Number.isFinite(Date.parse(value));
 }
 
+
+function validateBurstAdjustment(filename: string, row: number, adjustment: ContributorBurstAdjustment): void {
+  assert(Number.isInteger(adjustment.raw_public_commits) && adjustment.raw_public_commits >= 0, `${filename}: burst raw_public_commits for row ${row} must be a non-negative integer`);
+  assert(Number.isInteger(adjustment.adjusted_public_commits) && adjustment.adjusted_public_commits >= 0, `${filename}: burst adjusted_public_commits for row ${row} must be a non-negative integer`);
+  assert(adjustment.adjusted_public_commits <= adjustment.raw_public_commits, `${filename}: burst adjusted commits for row ${row} must not exceed raw commits`);
+  assert(typeof adjustment.baseline_daily_contributions === 'number' && adjustment.baseline_daily_contributions > 0, `${filename}: burst baseline for row ${row} must be positive`);
+  assert(Number.isInteger(adjustment.daily_burst_cap) && adjustment.daily_burst_cap > 0, `${filename}: burst daily cap for row ${row} must be a positive integer`);
+  assert(Number.isInteger(adjustment.capped_days) && adjustment.capped_days > 0, `${filename}: burst capped_days for row ${row} must be positive`);
+  assert(Number.isInteger(adjustment.excess_contributions) && adjustment.excess_contributions > 0, `${filename}: burst excess_contributions for row ${row} must be positive`);
+  assert(typeof adjustment.reason === 'string' && adjustment.reason.length > 10, `${filename}: burst reason for row ${row} is required`);
+}
+
 const manifest = JSON.parse(await readFile(join(dataDir, 'manifest.json'), 'utf8')) as Manifest;
 assert(isIso(manifest.generated_at), 'manifest.generated_at must be ISO');
 assert(Array.isArray(manifest.completed_shards), 'manifest.completed_shards must be an array');
@@ -20,7 +32,7 @@ assert(manifest.completed_shards.length > 0, 'manifest must include at least one
 
 for (const shard of manifest.completed_shards) {
   const filename = shard.path.replace('/data/latest/', '');
-  const snapshot = JSON.parse(await readFile(join(dataDir, filename), 'utf8')) as RankingSnapshot<{ rank: number; login?: string; full_name?: string; previous_rank?: unknown }>;
+  const snapshot = JSON.parse(await readFile(join(dataDir, filename), 'utf8')) as RankingSnapshot<{ rank: number; login?: string; full_name?: string; previous_rank?: unknown; contribution_burst_adjustment?: ContributorBurstAdjustment }>;
   assert(snapshot.kind === shard.kind, `${filename}: kind must match manifest`);
   assert(snapshot.slug === shard.slug, `${filename}: slug must match manifest`);
   assert(isIso(snapshot.generated_at), `${filename}: generated_at must be ISO`);
@@ -32,6 +44,9 @@ for (const shard of manifest.completed_shards) {
     assert(entry.rank === index + 1, `${filename}: rank ${entry.rank} should equal row ${index + 1}`);
     if (entry.previous_rank !== undefined) {
       assert(typeof entry.previous_rank === 'number' && Number.isInteger(entry.previous_rank) && entry.previous_rank > 0, `${filename}: previous_rank for row ${index + 1} must be a positive integer when present`);
+    }
+    if (entry.contribution_burst_adjustment !== undefined) {
+      validateBurstAdjustment(filename, index + 1, entry.contribution_burst_adjustment);
     }
     const key = entry.login ?? entry.full_name;
     assert(key, `${filename}: entry ${index + 1} needs login or full_name`);
