@@ -47,13 +47,11 @@ jobs:
           DATE=$(date +%Y-%m-%d)
           BRANCH="data/refresh-${DATE}"
           git checkout -B "${BRANCH}"
-          git add data
-          git diff --cached --stat
-          if git diff --cached --quiet; then
-            echo "No data changes to commit."
+          BASE_COMMIT=$(git rev-parse HEAD)
+          bash .github/scripts/commit-refresh-data.sh "${DATE}" "data: manual refresh"
+          if [ "$(git rev-parse HEAD)" = "${BASE_COMMIT}" ]; then
             exit 0
           fi
-          git commit -m "data: manual ossrank live refresh (${DATE})"
           git push origin "${BRANCH}" --force
           # Create or update PR (idempotent — re-creates on the same branch)
           gh pr create \

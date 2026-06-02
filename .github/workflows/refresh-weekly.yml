@@ -63,13 +63,11 @@ jobs:
           DATE=$(date +%Y-%m-%d)
           BRANCH="data/weekly-refresh-${DATE}"
           git checkout -B "${BRANCH}"
-          git add data
-          git diff --cached --stat
-          if git diff --cached --quiet; then
-            echo "No data changes to commit."
+          BASE_COMMIT=$(git rev-parse HEAD)
+          bash .github/scripts/commit-refresh-data.sh "${DATE}" "data: refresh"
+          if [ "$(git rev-parse HEAD)" = "${BASE_COMMIT}" ]; then
             exit 0
           fi
-          git commit -m "data: refresh ossrank live snapshots (${DATE})"
           git push origin "${BRANCH}" --force
           PR_NUMBER=$(gh pr view "${BRANCH}" --json number --jq .number 2>/dev/null || true)
           if [ -n "${PR_NUMBER}" ]; then
