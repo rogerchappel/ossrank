@@ -48,20 +48,48 @@ jobs:
           OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
         run: pnpm exec tsx src/cli.ts token-check --require-graphql-search
       - name: Refresh OSSRank snapshots with live GitHub collector
+        id: refresh_live
+        continue-on-error: true
         env:
           OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
           OSSRANK_LIMIT: ${{ inputs.limit || '20' }}
         run: pnpm run refresh:live
-      - run: pnpm run validate:data
-      - run: pnpm run build
+      - name: Validate refreshed data
+        id: validate_data
+        if: steps.refresh_live.outcome == 'success'
+        continue-on-error: true
+        run: pnpm run validate:data
+      - name: Build refreshed site
+        id: build_site
+        if: steps.refresh_live.outcome == 'success' && steps.validate_data.outcome == 'success'
+        continue-on-error: true
+        run: pnpm run build
       - name: Push data to branch and create PR
+        if: always() && !cancelled()
         env:
           GH_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
+          REFRESH_OUTCOME: ${{ steps.refresh_live.outcome }}
+          VALIDATE_OUTCOME: ${{ steps.validate_data.outcome }}
+          BUILD_OUTCOME: ${{ steps.build_site.outcome }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           DATE=$(date +%Y-%m-%d)
           BRANCH="data/weekly-refresh-${DATE}"
+          REFRESH_OUTCOME="${REFRESH_OUTCOME:-unknown}"
+          VALIDATE_OUTCOME="${VALIDATE_OUTCOME:-skipped}"
+          BUILD_OUTCOME="${BUILD_OUTCOME:-skipped}"
+          if [ "${REFRESH_OUTCOME}" = "success" ] && [ "${VALIDATE_OUTCOME}" = "success" ] && [ "${BUILD_OUTCOME}" = "success" ]; then
+            PR_TITLE="data: weekly ossrank live refresh (${DATE})"
+            PR_SUMMARY="Automated weekly OSSRank data refresh completed successfully."
+            RISK_LOW="x"
+            RISK_MEDIUM=" "
+          else
+            PR_TITLE="data: partial weekly ossrank live refresh (${DATE})"
+            PR_SUMMARY="Automated weekly OSSRank data refresh did not complete cleanly. This PR preserves any data files written before failure for review and resume."
+            RISK_LOW=" "
+            RISK_MEDIUM="x"
+          fi
           git checkout -B "${BRANCH}"
           BASE_COMMIT=$(git rev-parse HEAD)
           bash .github/scripts/commit-refresh-data.sh "${DATE}" "data: refresh"
@@ -69,21 +97,62 @@ jobs:
             exit 0
           fi
           git push origin "${BRANCH}" --force
+          PR_BODY_FILE=$(mktemp)
+          cat > "${PR_BODY_FILE}" <<EOF
+          ## Summary
+
+          - ${PR_SUMMARY}
+          - Refresh outcome: ${REFRESH_OUTCOME}
+          - Data validation outcome: ${VALIDATE_OUTCOME}
+          - Site build outcome: ${BUILD_OUTCOME}
+
+          ## Verification
+
+          - [x] Tests or checks run: weekly refresh workflow attempted \`pnpm run refresh:live\`, \`pnpm run validate:data\`, and \`pnpm run build\` as applicable
+          - [ ] Manual review completed:
+
+          ## Risk Level
+
+          - [${RISK_LOW}] Low
+          - [${RISK_MEDIUM}] Medium
+          - [ ] High
+
+          Notes: Partial refresh PRs should be reviewed before merge because they may contain only the countries completed before the failure.
+
+          ## Rollback Plan
+
+          - Close this PR without merging, or revert the data refresh commits if already merged.
+
+          ## Human Decision Needed
+
+          - [ ] None
+          - [x] Maintainer review
+          - [ ] Product/design decision
+          - [ ] Security/privacy review
+          - [ ] Other:
+          EOF
+          cat "${PR_BODY_FILE}"
           PR_NUMBER=$(gh pr view "${BRANCH}" --json number --jq .number 2>/dev/null || true)
           if [ -n "${PR_NUMBER}" ]; then
             gh pr edit "${PR_NUMBER}" \
-              --title "data: weekly ossrank live refresh (${DATE})" \
-              --body "Automated weekly OSSRank data refresh (updated)."
+              --title "${PR_TITLE}" \
+              --body-file "${PR_BODY_FILE}"
           else
             echo "No existing PR found for ${BRANCH}; creating one."
             gh pr create \
               --head "${BRANCH}" \
               --base main \
-              --title "data: weekly ossrank live refresh (${DATE})" \
-              --body "Automated weekly OSSRank data refresh. Review and merge."
+              --title "${PR_TITLE}" \
+              --body-file "${PR_BODY_FILE}"
           fi
       - name: Deploy refreshed site to Cloudflare Pages
+        if: steps.refresh_live.outcome == 'success' && steps.validate_data.outcome == 'success' && steps.build_site.outcome == 'success'
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: pnpm exec wrangler pages deploy dist --project-name ossrank
+      - name: Fail workflow if refresh pipeline failed
+        if: always() && !cancelled() && (steps.refresh_live.outcome == 'failure' || steps.validate_data.outcome == 'failure' || steps.build_site.outcome == 'failure')
+        run: |
+          echo "::error::Weekly refresh did not complete cleanly. Any changed data files were pushed to the refresh PR before this failure."
+          exit 1
