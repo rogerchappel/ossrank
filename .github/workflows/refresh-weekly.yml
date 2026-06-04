@@ -94,8 +94,14 @@ jobs:
           BASE_COMMIT=$(git rev-parse HEAD)
           bash .github/scripts/commit-refresh-data.sh "${DATE}" "data: refresh"
           if [ "$(git rev-parse HEAD)" = "${BASE_COMMIT}" ]; then
+            echo "No data changed — nothing to push."
             exit 0
           fi
+          # Rebase onto latest main before pushing — the refresh step can take long
+          # enough for other PRs to land on main, leaving this branch behind.
+          echo "Rebasing onto latest main..."
+          git fetch origin main
+          git rebase origin/main || echo "Rebase conflict — falling back to direct push (PR may need manual merge)"
           git push origin "${BRANCH}" --force
           PR_BODY_FILE=$(mktemp)
           cat > "${PR_BODY_FILE}" <<EOF
