@@ -32,7 +32,8 @@
   "files": [
     "dist",
     "dist-cli",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "bin": {
     "ossrank": "dist-cli/cli.js"
