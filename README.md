@@ -116,3 +116,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Changes should be small, reviewable, and
 ## License
 
 MIT
+
+## Verification
+
+Run these checks before opening a PR or publishing a release:
+
+```bash
+pnpm test
+pnpm run package:smoke
+pnpm run release:check
+```
