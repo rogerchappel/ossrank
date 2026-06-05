@@ -36,5 +36,15 @@
   ],
   "bin": {
     "ossrank": "dist-cli/cli.js"
-  }
+  },
+  "author": "Roger Chappel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rogerchappel/ossrank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerchappel/ossrank/issues"
+  },
+  "homepage": "https://github.com/rogerchappel/ossrank#readme",
+  "license": "MIT"
 }
