@@ -41,7 +41,7 @@
   "author": "Roger Chappel",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rogerchappel/ossrank.git"
+    "url": "git+https://github.com/rogerchappel/ossrank.git"
   },
   "bugs": {
     "url": "https://github.com/rogerchappel/ossrank/issues"
