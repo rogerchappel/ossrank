@@ -3,27 +3,29 @@
   "slug": "hong-kong",
   "name": "Hong Kong",
   "title": "Top observed GitHub contributors in Hong Kong",
-  "generated_at": "2026-06-18T19:07:22.035Z",
-  "fresh_until": "2026-06-25T19:07:22.035Z",
+  "generated_at": "2026-06-19T02:52:11.424Z",
+  "fresh_until": "2026-06-26T02:52:11.424Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-06-18",
+  "source_run": "2026-06-19",
   "history": {
     "weeks": [
-      "2026-06-18"
+      "2026-06-19"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      39527
+      39512
     ]
   },
   "code": "HK",
-  "candidate_count": 8926,
+  "candidate_count": 8927,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
-    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence."
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.",
+    "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "discovery_queries": [
     "location:\"Hong Kong\" repos:>5 type:user"
@@ -31,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:\"Hong Kong\" repos:>5 type:user",
-      "total": 8926,
+      "total": 8927,
       "accepted": 100
     }
   ],
@@ -40,33 +42,35 @@
       "login": "Anduin2017",
       "name": "Anduin Xue",
       "profile_url": "https://github.com/Anduin2017",
-      "public_contributions": 10849,
+      "public_contributions": 10815,
       "public_repos": 148,
       "public_gists": 14,
-      "observed_public_commits": 10849,
+      "observed_public_commits": 10815,
       "observed_public_pull_requests": 17,
       "followers": 3527,
       "location": "Hong Kong SAR",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 1,
+      "previous_rank": 1
     },
     {
       "login": "JokerJohn",
       "name": "Catalina",
       "profile_url": "https://github.com/JokerJohn",
-      "public_contributions": 8836,
+      "public_contributions": 8883,
       "public_repos": 107,
       "public_gists": 1,
-      "observed_public_commits": 8836,
+      "observed_public_commits": 8883,
       "observed_public_pull_requests": 5,
       "followers": 1116,
       "location": "Hong Kong SAR, China",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 2,
+      "previous_rank": 2
     },
     {
       "login": "dirkarnez",
@@ -77,91 +81,97 @@
       "public_gists": 98,
       "observed_public_commits": 5634,
       "observed_public_pull_requests": 1,
-      "followers": 412,
+      "followers": 407,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "login": "kentang2017",
       "name": "Ken Tang",
       "profile_url": "https://github.com/kentang2017",
-      "public_contributions": 2642,
+      "public_contributions": 2641,
       "public_repos": 28,
       "public_gists": 0,
-      "observed_public_commits": 2642,
+      "observed_public_commits": 2641,
       "observed_public_pull_requests": 1,
-      "followers": 784,
+      "followers": 779,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 4,
+      "previous_rank": 4
     },
     {
       "login": "fuma-nama",
       "name": "Fuma Nama",
       "profile_url": "https://github.com/fuma-nama",
-      "public_contributions": 2384,
+      "public_contributions": 2382,
       "public_repos": 133,
       "public_gists": 0,
-      "observed_public_commits": 2384,
-      "observed_public_pull_requests": 440,
+      "observed_public_commits": 2382,
+      "observed_public_pull_requests": 439,
       "followers": 1619,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "login": "nelsonlaidev",
       "name": "Nelson Lai",
       "profile_url": "https://github.com/nelsonlaidev",
-      "public_contributions": 2153,
+      "public_contributions": 2151,
       "public_repos": 52,
       "public_gists": 1,
-      "observed_public_commits": 2153,
-      "observed_public_pull_requests": 238,
+      "observed_public_commits": 2151,
+      "observed_public_pull_requests": 237,
       "followers": 339,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "login": "0x676e67",
       "profile_url": "https://github.com/0x676e67",
-      "public_contributions": 1864,
+      "public_contributions": 1853,
       "public_repos": 100,
       "public_gists": 3,
-      "observed_public_commits": 1864,
-      "observed_public_pull_requests": 854,
+      "observed_public_commits": 1853,
+      "observed_public_pull_requests": 849,
       "followers": 777,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "login": "Sjj1024",
       "name": "1024xiaoshen",
       "profile_url": "https://github.com/Sjj1024",
-      "public_contributions": 1835,
+      "public_contributions": 1823,
       "public_repos": 68,
       "public_gists": 1,
-      "observed_public_commits": 1835,
+      "observed_public_commits": 1823,
       "observed_public_pull_requests": 3,
       "followers": 2755,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 8,
+      "previous_rank": 8
     },
     {
       "login": "DarkLight1337",
@@ -172,12 +182,13 @@
       "public_gists": 0,
       "observed_public_commits": 1753,
       "observed_public_pull_requests": 479,
-      "followers": 442,
+      "followers": 443,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 9,
+      "previous_rank": 9
     },
     {
       "login": "johnsoncodehk",
@@ -193,23 +204,25 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 10,
+      "previous_rank": 10
     },
     {
       "login": "ArgoZhang",
       "name": "Argo Zhang",
       "profile_url": "https://github.com/ArgoZhang",
-      "public_contributions": 1399,
+      "public_contributions": 1396,
       "public_repos": 118,
       "public_gists": 0,
-      "observed_public_commits": 1399,
+      "observed_public_commits": 1396,
       "observed_public_pull_requests": 1197,
       "followers": 1064,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 11,
+      "previous_rank": 11
     },
     {
       "login": "TianxingChen",
@@ -220,57 +233,60 @@
       "public_gists": 0,
       "observed_public_commits": 1191,
       "observed_public_pull_requests": 0,
-      "followers": 1511,
+      "followers": 1512,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 12,
+      "previous_rank": 12
     },
     {
       "login": "poyea",
       "name": "John Law",
       "profile_url": "https://github.com/poyea",
-      "public_contributions": 961,
+      "public_contributions": 966,
       "public_repos": 101,
       "public_gists": 8,
-      "observed_public_commits": 961,
+      "observed_public_commits": 966,
       "observed_public_pull_requests": 11,
       "followers": 863,
       "location": "London | Hong Kong",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 13,
+      "previous_rank": 13
     },
     {
       "login": "messense",
       "name": "messense",
       "profile_url": "https://github.com/messense",
-      "public_contributions": 803,
+      "public_contributions": 804,
       "public_repos": 143,
       "public_gists": 25,
-      "observed_public_commits": 803,
-      "observed_public_pull_requests": 246,
+      "observed_public_commits": 804,
+      "observed_public_pull_requests": 247,
       "followers": 2176,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
     },
     {
       "login": "Akagi201",
       "name": "Bob Liu",
       "profile_url": "https://github.com/Akagi201",
-      "public_contributions": 873,
+      "public_contributions": 874,
       "public_repos": 328,
       "public_gists": 1419,
-      "observed_public_commits": 873,
+      "observed_public_commits": 874,
       "observed_public_pull_requests": 32,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 873,
-        "adjusted_public_commits": 777,
+        "raw_public_commits": 874,
+        "adjusted_public_commits": 778,
         "baseline_daily_contributions": 6,
         "daily_burst_cap": 540,
         "capped_days": 1,
@@ -282,39 +298,25 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 15,
+      "previous_rank": 15
     },
     {
       "login": "he-yufeng",
       "name": "Yufeng He",
       "profile_url": "https://github.com/he-yufeng",
-      "public_contributions": 741,
+      "public_contributions": 768,
       "public_repos": 118,
       "public_gists": 0,
-      "observed_public_commits": 741,
-      "observed_public_pull_requests": 944,
+      "observed_public_commits": 768,
+      "observed_public_pull_requests": 945,
       "followers": 406,
       "location": "Hong Kong",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 16
-    },
-    {
-      "login": "pseudoyu",
-      "name": "pseudoyu",
-      "profile_url": "https://github.com/pseudoyu",
-      "public_contributions": 705,
-      "public_repos": 77,
-      "public_gists": 5,
-      "observed_public_commits": 705,
-      "observed_public_pull_requests": 26,
-      "followers": 1292,
-      "location": "Hong Kong",
-      "location_confidence": "exact-country",
-      "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 17
+      "rank": 16,
+      "previous_rank": 16
     },
     {
       "login": "tiann",
@@ -330,7 +332,8 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 17,
+      "previous_rank": 18
     },
     {
       "login": "heilcheng",
@@ -346,7 +349,25 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 18,
+      "previous_rank": 19
+    },
+    {
+      "login": "pseudoyu",
+      "name": "pseudoyu",
+      "profile_url": "https://github.com/pseudoyu",
+      "public_contributions": 692,
+      "public_repos": 77,
+      "public_gists": 5,
+      "observed_public_commits": 692,
+      "observed_public_pull_requests": 26,
+      "followers": 1292,
+      "location": "Hong Kong",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
+      "notable_repositories": [],
+      "rank": 19,
+      "previous_rank": 17
     },
     {
       "login": "kig",
@@ -362,7 +383,8 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"Hong Kong\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20
+      "rank": 20,
+      "previous_rank": 20
     }
   ]
 }
