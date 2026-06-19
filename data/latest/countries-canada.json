@@ -3,27 +3,29 @@
   "slug": "canada",
   "name": "Canada",
   "title": "Top observed GitHub contributors in Canada",
-  "generated_at": "2026-06-18T19:07:22.035Z",
-  "fresh_until": "2026-06-25T19:07:22.035Z",
+  "generated_at": "2026-06-19T02:52:11.424Z",
+  "fresh_until": "2026-06-26T02:52:11.424Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-06-18",
+  "source_run": "2026-06-19",
   "history": {
     "weeks": [
-      "2026-06-18"
+      "2026-06-19"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      40190
+      39414
     ]
   },
   "code": "CA",
-  "candidate_count": 125124,
+  "candidate_count": 125137,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
-    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence."
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.",
+    "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "discovery_queries": [
     "location:Canada repos:>5 type:user",
@@ -34,12 +36,12 @@
   "candidate_count_by_query": [
     {
       "query": "location:Canada repos:>5 type:user",
-      "total": 64012,
+      "total": 64019,
       "accepted": 25
     },
     {
       "query": "location:Toronto repos:>5 type:user",
-      "total": 34007,
+      "total": 34016,
       "accepted": 21
     },
     {
@@ -49,7 +51,7 @@
     },
     {
       "query": "location:Montreal repos:>5 type:user",
-      "total": 11132,
+      "total": 11129,
       "accepted": 24
     }
   ],
@@ -58,49 +60,52 @@
       "login": "rich-iannone",
       "name": "Richard Iannone",
       "profile_url": "https://github.com/rich-iannone",
-      "public_contributions": 8316,
+      "public_contributions": 8281,
       "public_repos": 117,
       "public_gists": 26,
-      "observed_public_commits": 8316,
+      "observed_public_commits": 8281,
       "observed_public_pull_requests": 407,
-      "followers": 1630,
+      "followers": 1631,
       "location": "Toronto, Canada",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 1,
+      "previous_rank": 1
     },
     {
       "login": "thestinger",
       "name": "Daniel Micay",
       "profile_url": "https://github.com/thestinger",
-      "public_contributions": 8115,
+      "public_contributions": 7362,
       "public_repos": 14,
       "public_gists": 50,
-      "observed_public_commits": 8115,
+      "observed_public_commits": 7362,
       "observed_public_pull_requests": 1,
-      "followers": 2115,
+      "followers": 2116,
       "location": "Toronto, Ontario, Canada",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 2,
+      "previous_rank": 2
     },
     {
       "login": "michaelklishin",
       "name": "Michael Klishin",
       "profile_url": "https://github.com/michaelklishin",
-      "public_contributions": 4910,
+      "public_contributions": 4927,
       "public_repos": 224,
       "public_gists": 344,
-      "observed_public_commits": 4910,
-      "observed_public_pull_requests": 355,
+      "observed_public_commits": 4927,
+      "observed_public_pull_requests": 357,
       "followers": 1999,
       "location": "Vancouver, British Columbia, Canada 🇨🇦",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "login": "brunoborges",
@@ -116,55 +121,59 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 4,
+      "previous_rank": 4
     },
     {
       "login": "jamiepine",
       "name": "Jamie Pine",
       "profile_url": "https://github.com/jamiepine",
-      "public_contributions": 3305,
+      "public_contributions": 3303,
       "public_repos": 36,
       "public_gists": 6,
-      "observed_public_commits": 3305,
+      "observed_public_commits": 3303,
       "observed_public_pull_requests": 232,
-      "followers": 2253,
+      "followers": 2256,
       "location": "Vancouver, BC",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "login": "lemire",
       "name": "Daniel Lemire",
       "profile_url": "https://github.com/lemire",
-      "public_contributions": 2922,
+      "public_contributions": 2906,
       "public_repos": 447,
       "public_gists": 96,
-      "observed_public_commits": 2922,
+      "observed_public_commits": 2906,
       "observed_public_pull_requests": 288,
-      "followers": 8115,
+      "followers": 8116,
       "location": "Montreal, Quebec, Canada",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "login": "meziantou",
       "name": "Gérald Barré",
       "profile_url": "https://github.com/meziantou",
-      "public_contributions": 2453,
+      "public_contributions": 2454,
       "public_repos": 77,
       "public_gists": 29,
-      "observed_public_commits": 2453,
+      "observed_public_commits": 2454,
       "observed_public_pull_requests": 1121,
       "followers": 863,
       "location": "Montreal",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "login": "tobi",
@@ -175,12 +184,13 @@
       "public_gists": 36,
       "observed_public_commits": 2448,
       "observed_public_pull_requests": 88,
-      "followers": 5122,
+      "followers": 5123,
       "location": "Ottawa, Canada",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 8,
+      "previous_rank": 8
     },
     {
       "login": "codereport",
@@ -196,167 +206,178 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9
-    },
-    {
-      "login": "jennybc",
-      "name": "Jennifer (Jenny) Bryan",
-      "profile_url": "https://github.com/jennybc",
-      "public_contributions": 2066,
-      "public_repos": 335,
-      "public_gists": 71,
-      "observed_public_commits": 2066,
-      "observed_public_pull_requests": 148,
-      "followers": 5652,
-      "location": "Vancouver, BC, Canada",
-      "location_confidence": "multi-location",
-      "discovered_by_query": "location:Canada repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 10
+      "rank": 9,
+      "previous_rank": 9
     },
     {
       "login": "vincentarelbundock",
       "name": "Vincent Arel-Bundock",
       "profile_url": "https://github.com/vincentarelbundock",
-      "public_contributions": 2052,
+      "public_contributions": 2078,
       "public_repos": 55,
       "public_gists": 42,
-      "observed_public_commits": 2052,
+      "observed_public_commits": 2078,
       "observed_public_pull_requests": 138,
       "followers": 835,
       "location": "Montreal, Canada",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 10,
+      "previous_rank": 11
+    },
+    {
+      "login": "jennybc",
+      "name": "Jennifer (Jenny) Bryan",
+      "profile_url": "https://github.com/jennybc",
+      "public_contributions": 2063,
+      "public_repos": 335,
+      "public_gists": 71,
+      "observed_public_commits": 2063,
+      "observed_public_pull_requests": 148,
+      "followers": 5653,
+      "location": "Vancouver, BC, Canada",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Canada repos:>5 type:user",
+      "notable_repositories": [],
+      "rank": 11,
+      "previous_rank": 10
     },
     {
       "login": "richlander",
       "name": "Rich Lander",
       "profile_url": "https://github.com/richlander",
-      "public_contributions": 1999,
+      "public_contributions": 2015,
       "public_repos": 246,
       "public_gists": 111,
-      "observed_public_commits": 1999,
-      "observed_public_pull_requests": 1012,
+      "observed_public_commits": 2015,
+      "observed_public_pull_requests": 1025,
       "followers": 1602,
       "location": "Seattle / Toronto",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 12,
+      "previous_rank": 12
     },
     {
       "login": "nicobailon",
       "name": "Nico Bailon",
       "profile_url": "https://github.com/nicobailon",
-      "public_contributions": 1895,
+      "public_contributions": 1888,
       "public_repos": 131,
       "public_gists": 26,
-      "observed_public_commits": 1895,
-      "observed_public_pull_requests": 174,
+      "observed_public_commits": 1888,
+      "observed_public_pull_requests": 172,
       "followers": 1601,
       "location": "Vancouver, BC",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vancouver repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 13,
+      "previous_rank": 13
     },
     {
       "login": "Xe",
       "name": "Xe Iaso",
       "profile_url": "https://github.com/Xe",
-      "public_contributions": 1781,
+      "public_contributions": 1782,
       "public_repos": 265,
       "public_gists": 83,
-      "observed_public_commits": 1781,
+      "observed_public_commits": 1782,
       "observed_public_pull_requests": 422,
-      "followers": 4109,
+      "followers": 4111,
       "location": "Canada",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
     },
     {
       "login": "dsherret",
       "name": "David Sherret",
       "profile_url": "https://github.com/dsherret",
-      "public_contributions": 1450,
+      "public_contributions": 1448,
       "public_repos": 184,
       "public_gists": 19,
-      "observed_public_commits": 1450,
-      "observed_public_pull_requests": 980,
+      "observed_public_commits": 1448,
+      "observed_public_pull_requests": 979,
       "followers": 2089,
       "location": "Toronto, Canada",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Toronto repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 15,
+      "previous_rank": 15
     },
     {
       "login": "CamDavidsonPilon",
       "name": "Cameron Davidson-Pilon",
       "profile_url": "https://github.com/CamDavidsonPilon",
-      "public_contributions": 1414,
+      "public_contributions": 1411,
       "public_repos": 105,
       "public_gists": 62,
-      "observed_public_commits": 1414,
-      "observed_public_pull_requests": 14,
-      "followers": 4794,
+      "observed_public_commits": 1411,
+      "observed_public_pull_requests": 13,
+      "followers": 4793,
       "location": "Waterloo, Canada",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 16
+      "rank": 16,
+      "previous_rank": 16
     },
     {
       "login": "chris1111",
       "name": "chris1111",
       "profile_url": "https://github.com/chris1111",
-      "public_contributions": 1349,
+      "public_contributions": 1358,
       "public_repos": 252,
       "public_gists": 10,
-      "observed_public_commits": 1349,
+      "observed_public_commits": 1358,
       "observed_public_pull_requests": 33,
       "followers": 1428,
       "location": "Montreal Canada",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Montreal repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 17
+      "rank": 17,
+      "previous_rank": 17
     },
     {
       "login": "standardgalactic",
       "name": "Cogito Ergo Sum",
       "profile_url": "https://github.com/standardgalactic",
-      "public_contributions": 1334,
+      "public_contributions": 1335,
       "public_repos": 24008,
       "public_gists": 113,
-      "observed_public_commits": 1334,
+      "observed_public_commits": 1335,
       "observed_public_pull_requests": 17,
-      "followers": 22503,
+      "followers": 22512,
       "location": "Canada",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 18,
+      "previous_rank": 18
     },
     {
       "login": "gorhill",
       "name": "Raymond Hill",
       "profile_url": "https://github.com/gorhill",
-      "public_contributions": 1278,
+      "public_contributions": 1274,
       "public_repos": 28,
       "public_gists": 8,
-      "observed_public_commits": 1278,
+      "observed_public_commits": 1274,
       "observed_public_pull_requests": 0,
-      "followers": 6697,
+      "followers": 6699,
       "location": "Canada / Québec",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 19,
+      "previous_rank": 19
     },
     {
       "login": "thedaviddias",
@@ -372,7 +393,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Canada repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20
+      "rank": 20,
+      "previous_rank": 20
     }
   ]
 }
