@@ -3,27 +3,29 @@
   "slug": "germany",
   "name": "Germany",
   "title": "Top observed GitHub contributors in Germany",
-  "generated_at": "2026-06-18T19:07:22.035Z",
-  "fresh_until": "2026-06-25T19:07:22.035Z",
+  "generated_at": "2026-06-19T02:52:11.424Z",
+  "fresh_until": "2026-06-26T02:52:11.424Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-06-18",
+  "source_run": "2026-06-19",
   "history": {
     "weeks": [
-      "2026-06-18"
+      "2026-06-19"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      41703
+      41683
     ]
   },
   "code": "DE",
-  "candidate_count": 132015,
+  "candidate_count": 132024,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
-    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence."
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.",
+    "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "discovery_queries": [
     "location:Germany repos:>5 type:user",
@@ -33,12 +35,12 @@
   "candidate_count_by_query": [
     {
       "query": "location:Germany repos:>5 type:user",
-      "total": 91645,
+      "total": 91653,
       "accepted": 34
     },
     {
       "query": "location:Berlin repos:>5 type:user",
-      "total": 29258,
+      "total": 29259,
       "accepted": 22
     },
     {
@@ -52,17 +54,18 @@
       "login": "alexeygrigorev",
       "name": "Alexey Grigorev",
       "profile_url": "https://github.com/alexeygrigorev",
-      "public_contributions": 10361,
-      "public_repos": 174,
+      "public_contributions": 10376,
+      "public_repos": 176,
       "public_gists": 40,
-      "observed_public_commits": 10361,
+      "observed_public_commits": 10376,
       "observed_public_pull_requests": 38,
-      "followers": 5782,
+      "followers": 5785,
       "location": "Berlin, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 1,
+      "previous_rank": 1
     },
     {
       "login": "changkun",
@@ -78,7 +81,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 2,
+      "previous_rank": 2
     },
     {
       "login": "schacon",
@@ -89,76 +93,81 @@
       "public_gists": 98,
       "observed_public_commits": 5375,
       "observed_public_pull_requests": 1072,
-      "followers": 14174,
+      "followers": 14175,
       "location": "Berlin, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "login": "sebastianbergmann",
       "name": "Sebastian Bergmann",
       "profile_url": "https://github.com/sebastianbergmann",
-      "public_contributions": 4412,
+      "public_contributions": 4390,
       "public_repos": 77,
       "public_gists": 10,
-      "observed_public_commits": 4412,
+      "observed_public_commits": 4390,
       "observed_public_pull_requests": 71,
       "followers": 7619,
       "location": "Siegburg, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 4,
+      "previous_rank": 4
     },
     {
       "login": "brillout",
       "name": "Rom",
       "profile_url": "https://github.com/brillout",
-      "public_contributions": 3975,
+      "public_contributions": 3970,
       "public_repos": 431,
       "public_gists": 3,
-      "observed_public_commits": 3975,
+      "observed_public_commits": 3970,
       "observed_public_pull_requests": 630,
       "followers": 1390,
       "location": "Germany, Munich",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "login": "orhun",
       "name": "Orhun Parmaksız",
       "profile_url": "https://github.com/orhun",
-      "public_contributions": 3148,
+      "public_contributions": 3142,
       "public_repos": 550,
       "public_gists": 10,
-      "observed_public_commits": 3148,
+      "observed_public_commits": 3142,
       "observed_public_pull_requests": 245,
       "followers": 5100,
       "location": "Berlin, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "login": "floooh",
       "name": "Andre Weissflog",
       "profile_url": "https://github.com/floooh",
-      "public_contributions": 2220,
+      "public_contributions": 2218,
       "public_repos": 163,
       "public_gists": 55,
-      "observed_public_commits": 2220,
+      "observed_public_commits": 2218,
       "observed_public_pull_requests": 131,
-      "followers": 3066,
+      "followers": 3065,
       "location": "Berlin",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "login": "posva",
@@ -169,12 +178,13 @@
       "public_gists": 18,
       "observed_public_commits": 2176,
       "observed_public_pull_requests": 91,
-      "followers": 6529,
+      "followers": 6530,
       "location": "Berlin",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 8,
+      "previous_rank": 8
     },
     {
       "login": "Leonxlnx",
@@ -185,12 +195,13 @@
       "public_gists": 0,
       "observed_public_commits": 2077,
       "observed_public_pull_requests": 29,
-      "followers": 1104,
+      "followers": 1105,
       "location": "Munich",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 9,
+      "previous_rank": 9
     },
     {
       "login": "KittyGiraudel",
@@ -206,71 +217,76 @@
       "location_confidence": "city-match",
       "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 10,
+      "previous_rank": 10
     },
     {
       "login": "pepelsbey",
       "name": "Vadim Makeev",
       "profile_url": "https://github.com/pepelsbey",
-      "public_contributions": 1672,
+      "public_contributions": 1671,
       "public_repos": 54,
       "public_gists": 111,
-      "observed_public_commits": 1672,
+      "observed_public_commits": 1671,
       "observed_public_pull_requests": 157,
       "followers": 2472,
       "location": "Berlin, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 11,
+      "previous_rank": 11
     },
     {
       "login": "aeneasr",
       "name": "hackerman",
       "profile_url": "https://github.com/aeneasr",
-      "public_contributions": 1483,
+      "public_contributions": 1480,
       "public_repos": 265,
       "public_gists": 43,
-      "observed_public_commits": 1483,
-      "observed_public_pull_requests": 161,
+      "observed_public_commits": 1480,
+      "observed_public_pull_requests": 160,
       "followers": 2059,
       "location": "Munich, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 12,
+      "previous_rank": 12
     },
     {
       "login": "leahneukirchen",
       "name": "Leah Neukirchen",
       "profile_url": "https://github.com/leahneukirchen",
-      "public_contributions": 1404,
+      "public_contributions": 1401,
       "public_repos": 217,
       "public_gists": 8,
-      "observed_public_commits": 1404,
+      "observed_public_commits": 1401,
       "observed_public_pull_requests": 26,
       "followers": 1496,
       "location": "Munich, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 13,
+      "previous_rank": 13
     },
     {
       "login": "IndrajeetPatil",
       "name": "Indrajeet Patil",
       "profile_url": "https://github.com/IndrajeetPatil",
-      "public_contributions": 1269,
+      "public_contributions": 1268,
       "public_repos": 31,
       "public_gists": 0,
-      "observed_public_commits": 1269,
+      "observed_public_commits": 1268,
       "observed_public_pull_requests": 329,
-      "followers": 1791,
+      "followers": 1786,
       "location": "Munich",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
     },
     {
       "login": "tiangolo",
@@ -286,7 +302,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 15,
+      "previous_rank": 15
     },
     {
       "login": "Lasim",
@@ -297,12 +314,13 @@
       "public_gists": 0,
       "observed_public_commits": 1061,
       "observed_public_pull_requests": 103,
-      "followers": 1174,
+      "followers": 1169,
       "location": "Munich, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 16
+      "rank": 16,
+      "previous_rank": 16
     },
     {
       "login": "tshemsedinov",
@@ -312,13 +330,14 @@
       "public_repos": 235,
       "public_gists": 8,
       "observed_public_commits": 1060,
-      "observed_public_pull_requests": 204,
+      "observed_public_pull_requests": 206,
       "followers": 5301,
       "location": "Earth, Europe, Ukraine, Kiev, Kyiv, USA, Spain, Germany, Italy, China",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 17
+      "rank": 17,
+      "previous_rank": 17
     },
     {
       "login": "sharkdp",
@@ -328,29 +347,31 @@
       "public_repos": 130,
       "public_gists": 37,
       "observed_public_commits": 942,
-      "observed_public_pull_requests": 542,
+      "observed_public_pull_requests": 541,
       "followers": 8111,
       "location": "Stuttgart, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Germany repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 18,
+      "previous_rank": 18
     },
     {
       "login": "aregtech",
       "name": "Aregtech",
       "profile_url": "https://github.com/aregtech",
-      "public_contributions": 920,
+      "public_contributions": 918,
       "public_repos": 18,
       "public_gists": 0,
-      "observed_public_commits": 920,
+      "observed_public_commits": 918,
       "observed_public_pull_requests": 184,
       "followers": 758,
       "location": "Munich, Germany",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Munich repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 19,
+      "previous_rank": 19
     },
     {
       "login": "marijnh",
@@ -370,12 +391,13 @@
         "excess_contributions": 75,
         "reason": "per-user daily contribution burst exceeded an adaptive baseline cap; raw public commits are preserved for audit"
       },
-      "followers": 7078,
+      "followers": 7077,
       "location": "Berlin",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Berlin repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20
+      "rank": 20,
+      "previous_rank": 20
     }
   ]
 }
