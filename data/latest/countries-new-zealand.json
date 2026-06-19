@@ -3,27 +3,29 @@
   "slug": "new-zealand",
   "name": "New Zealand",
   "title": "Top observed GitHub contributors in New Zealand",
-  "generated_at": "2026-06-18T19:07:22.035Z",
-  "fresh_until": "2026-06-25T19:07:22.035Z",
+  "generated_at": "2026-06-19T02:52:11.424Z",
+  "fresh_until": "2026-06-26T02:52:11.424Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-06-18",
+  "source_run": "2026-06-19",
   "history": {
     "weeks": [
-      "2026-06-18"
+      "2026-06-19"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      76751
+      76730
     ]
   },
   "code": "NZ",
-  "candidate_count": 9048,
+  "candidate_count": 9050,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
-    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence."
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.",
+    "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "discovery_queries": [
     "location:\"New Zealand\" repos:>5 type:user"
@@ -31,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:\"New Zealand\" repos:>5 type:user",
-      "total": 9048,
+      "total": 9050,
       "accepted": 100
     }
   ],
@@ -40,193 +42,205 @@
       "login": "ryanbr",
       "name": "Fanboynz",
       "profile_url": "https://github.com/ryanbr",
-      "public_contributions": 48072,
+      "public_contributions": 48068,
       "public_repos": 49,
       "public_gists": 0,
-      "observed_public_commits": 48072,
-      "observed_public_pull_requests": 668,
+      "observed_public_commits": 48068,
+      "observed_public_pull_requests": 665,
       "followers": 469,
       "location": "New Zealand",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 1,
+      "previous_rank": 1
     },
     {
       "login": "passcod",
       "name": "Félix Saparelli",
       "profile_url": "https://github.com/passcod",
-      "public_contributions": 6084,
+      "public_contributions": 6092,
       "public_repos": 312,
       "public_gists": 155,
-      "observed_public_commits": 6084,
-      "observed_public_pull_requests": 570,
+      "observed_public_commits": 6092,
+      "observed_public_pull_requests": 578,
       "followers": 308,
       "location": "New Zealand",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 2,
+      "previous_rank": 2
     },
     {
       "login": "ndbroadbent",
       "name": "Nathan Broadbent",
       "profile_url": "https://github.com/ndbroadbent",
-      "public_contributions": 4465,
-      "public_repos": 369,
+      "public_contributions": 4469,
+      "public_repos": 370,
       "public_gists": 98,
-      "observed_public_commits": 4465,
+      "observed_public_commits": 4469,
       "observed_public_pull_requests": 35,
       "followers": 357,
       "location": "Paihia, New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "login": "jwulf",
       "name": "Josh Wulf",
       "profile_url": "https://github.com/jwulf",
-      "public_contributions": 3438,
+      "public_contributions": 3434,
       "public_repos": 498,
       "public_gists": 150,
-      "observed_public_commits": 3438,
-      "observed_public_pull_requests": 638,
+      "observed_public_commits": 3434,
+      "observed_public_pull_requests": 637,
       "followers": 292,
       "location": "New Zealand",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 4,
+      "previous_rank": 4
     },
     {
       "login": "tim-smart",
       "name": "Tim",
       "profile_url": "https://github.com/tim-smart",
-      "public_contributions": 3120,
+      "public_contributions": 3121,
       "public_repos": 228,
       "public_gists": 177,
-      "observed_public_commits": 3120,
+      "observed_public_commits": 3121,
       "observed_public_pull_requests": 1373,
-      "followers": 835,
+      "followers": 836,
       "location": "Tauranga, New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "login": "cortesi",
       "name": "Aldo Cortesi",
       "profile_url": "https://github.com/cortesi",
-      "public_contributions": 3104,
+      "public_contributions": 3100,
       "public_repos": 47,
       "public_gists": 0,
-      "observed_public_commits": 3104,
+      "observed_public_commits": 3100,
       "observed_public_pull_requests": 293,
       "followers": 1007,
       "location": "Dunedin, New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "login": "ioquatix",
       "name": "Samuel Williams",
       "profile_url": "https://github.com/ioquatix",
-      "public_contributions": 2614,
+      "public_contributions": 2613,
       "public_repos": 358,
       "public_gists": 46,
-      "observed_public_commits": 2614,
+      "observed_public_commits": 2613,
       "observed_public_pull_requests": 112,
       "followers": 1406,
       "location": "Ōtautahi, New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "login": "PlagueHO",
       "name": "Daniel Scott-Raynsford",
       "profile_url": "https://github.com/PlagueHO",
-      "public_contributions": 2177,
+      "public_contributions": 2172,
       "public_repos": 143,
       "public_gists": 202,
-      "observed_public_commits": 2177,
+      "observed_public_commits": 2172,
       "observed_public_pull_requests": 68,
       "followers": 267,
       "location": "Auckland, New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 8,
+      "previous_rank": 8
     },
     {
       "login": "jesserockz",
       "name": "Jesse Hills",
       "profile_url": "https://github.com/jesserockz",
-      "public_contributions": 1992,
+      "public_contributions": 1977,
       "public_repos": 163,
       "public_gists": 5,
-      "observed_public_commits": 1992,
-      "observed_public_pull_requests": 949,
+      "observed_public_commits": 1977,
+      "observed_public_pull_requests": 947,
       "followers": 415,
       "location": "Wellington, New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 9,
+      "previous_rank": 9
     },
     {
       "login": "SmileyChris",
       "name": "Chris Beaven",
       "profile_url": "https://github.com/SmileyChris",
-      "public_contributions": 1685,
+      "public_contributions": 1684,
       "public_repos": 91,
       "public_gists": 36,
-      "observed_public_commits": 1685,
+      "observed_public_commits": 1684,
       "observed_public_pull_requests": 13,
       "followers": 419,
       "location": "New Zealand",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 10,
+      "previous_rank": 10
     },
     {
       "login": "alanrsoares",
       "name": "Alan",
       "profile_url": "https://github.com/alanrsoares",
-      "public_contributions": 1512,
+      "public_contributions": 1560,
       "public_repos": 175,
       "public_gists": 25,
-      "observed_public_commits": 1512,
-      "observed_public_pull_requests": 151,
+      "observed_public_commits": 1560,
+      "observed_public_pull_requests": 175,
       "followers": 313,
       "location": "Auckland, New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 11,
+      "previous_rank": 11
     },
     {
       "login": "odow",
       "name": "Oscar Dowson",
       "profile_url": "https://github.com/odow",
-      "public_contributions": 1167,
+      "public_contributions": 1166,
       "public_repos": 166,
       "public_gists": 20,
-      "observed_public_commits": 1167,
-      "observed_public_pull_requests": 851,
+      "observed_public_commits": 1166,
+      "observed_public_pull_requests": 853,
       "followers": 636,
       "location": "Auckland, New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 12,
+      "previous_rank": 12
     },
     {
       "login": "lukemurraynz",
@@ -242,23 +256,42 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 13,
+      "previous_rank": 13
     },
     {
       "login": "gbmhunter",
       "name": "Geoffrey Hunter",
       "profile_url": "https://github.com/gbmhunter",
-      "public_contributions": 877,
+      "public_contributions": 876,
       "public_repos": 104,
       "public_gists": 2,
-      "observed_public_commits": 877,
+      "observed_public_commits": 876,
       "observed_public_pull_requests": 56,
       "followers": 305,
       "location": "New Zealand",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
+    },
+    {
+      "login": "sebastien",
+      "name": "Sébastien Pierre",
+      "profile_url": "https://github.com/sebastien",
+      "public_contributions": 774,
+      "public_repos": 105,
+      "public_gists": 23,
+      "observed_public_commits": 774,
+      "observed_public_pull_requests": 0,
+      "followers": 241,
+      "location": "Wellington, New Zealand",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
+      "notable_repositories": [],
+      "rank": 15,
+      "previous_rank": 16
     },
     {
       "login": "schell",
@@ -274,23 +307,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15
-    },
-    {
-      "login": "sebastien",
-      "name": "Sébastien Pierre",
-      "profile_url": "https://github.com/sebastien",
-      "public_contributions": 771,
-      "public_repos": 105,
-      "public_gists": 23,
-      "observed_public_commits": 771,
-      "observed_public_pull_requests": 0,
-      "followers": 241,
-      "location": "Wellington, New Zealand",
-      "location_confidence": "multi-location",
-      "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 16
+      "rank": 16,
+      "previous_rank": 15
     },
     {
       "login": "julianoes",
@@ -306,7 +324,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 17
+      "rank": 17,
+      "previous_rank": 17
     },
     {
       "login": "RichardLitt",
@@ -317,12 +336,13 @@
       "public_gists": 54,
       "observed_public_commits": 561,
       "observed_public_pull_requests": 132,
-      "followers": 3195,
+      "followers": 3197,
       "location": "Pōneke Wellington, Aotearoa New Zealand",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 18,
+      "previous_rank": 18
     },
     {
       "login": "bnolan",
@@ -338,7 +358,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 19,
+      "previous_rank": 19
     },
     {
       "login": "ahdinosaur",
@@ -354,7 +375,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"New Zealand\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20
+      "rank": 20,
+      "previous_rank": 20
     }
   ]
 }
