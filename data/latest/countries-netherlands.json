@@ -3,27 +3,29 @@
   "slug": "netherlands",
   "name": "Netherlands",
   "title": "Top observed GitHub contributors in Netherlands",
-  "generated_at": "2026-06-18T19:07:22.035Z",
-  "fresh_until": "2026-06-25T19:07:22.035Z",
+  "generated_at": "2026-06-19T02:52:11.424Z",
+  "fresh_until": "2026-06-26T02:52:11.424Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-06-18",
+  "source_run": "2026-06-19",
   "history": {
     "weeks": [
-      "2026-06-18"
+      "2026-06-19"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      51013
+      51099
     ]
   },
   "code": "NL",
   "candidate_count": 40904,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
-    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence."
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.",
+    "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "discovery_queries": [
     "location:Netherlands repos:>5 type:user",
@@ -46,78 +48,82 @@
       "login": "alexey-milovidov",
       "name": "Alexey Milovidov",
       "profile_url": "https://github.com/alexey-milovidov",
-      "public_contributions": 14441,
+      "public_contributions": 14499,
       "public_repos": 87,
       "public_gists": 59,
-      "observed_public_commits": 14441,
-      "observed_public_pull_requests": 2293,
-      "followers": 2104,
+      "observed_public_commits": 14499,
+      "observed_public_pull_requests": 2297,
+      "followers": 2105,
       "location": "Amsterdam, Netherlands",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 1,
+      "previous_rank": 1
     },
     {
       "login": "can1357",
       "name": "Can Bölük",
       "profile_url": "https://github.com/can1357",
-      "public_contributions": 8656,
+      "public_contributions": 8724,
       "public_repos": 64,
       "public_gists": 0,
-      "observed_public_commits": 8656,
+      "observed_public_commits": 8724,
       "observed_public_pull_requests": 35,
-      "followers": 2681,
+      "followers": 2684,
       "location": "The Netherlands",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 2,
+      "previous_rank": 2
     },
     {
       "login": "Mytherin",
       "name": "Mark",
       "profile_url": "https://github.com/Mytherin",
-      "public_contributions": 5818,
+      "public_contributions": 5803,
       "public_repos": 108,
       "public_gists": 35,
-      "observed_public_commits": 5818,
-      "observed_public_pull_requests": 668,
-      "followers": 1300,
+      "observed_public_commits": 5803,
+      "observed_public_pull_requests": 667,
+      "followers": 1301,
       "location": "Amsterdam, Netherlands",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "login": "thaJeztah",
       "name": "Sebastiaan van Stijn",
       "profile_url": "https://github.com/thaJeztah",
-      "public_contributions": 4291,
+      "public_contributions": 4292,
       "public_repos": 444,
       "public_gists": 43,
-      "observed_public_commits": 4291,
-      "observed_public_pull_requests": 1996,
+      "observed_public_commits": 4292,
+      "observed_public_pull_requests": 1994,
       "followers": 1926,
       "location": "Netherlands",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 4,
+      "previous_rank": 4
     },
     {
       "login": "tr4m0ryp",
       "name": "Moussa Ouallaf",
       "profile_url": "https://github.com/tr4m0ryp",
-      "public_contributions": 4221,
+      "public_contributions": 4213,
       "public_repos": 108,
       "public_gists": 0,
-      "observed_public_commits": 4221,
+      "observed_public_commits": 4213,
       "observed_public_pull_requests": 17,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 4221,
-        "adjusted_public_commits": 3524,
+        "raw_public_commits": 4213,
+        "adjusted_public_commits": 3516,
         "baseline_daily_contributions": 4,
         "daily_burst_cap": 240,
         "capped_days": 4,
@@ -129,55 +135,59 @@
       "location_confidence": "city-match",
       "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "login": "pi0",
       "name": "Pooya Parsa",
       "profile_url": "https://github.com/pi0",
-      "public_contributions": 3461,
+      "public_contributions": 3458,
       "public_repos": 540,
       "public_gists": 84,
-      "observed_public_commits": 3461,
+      "observed_public_commits": 3458,
       "observed_public_pull_requests": 454,
-      "followers": 5032,
+      "followers": 5033,
       "location": "Netherlands",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "login": "Koenkk",
       "name": "Koen Kanters",
       "profile_url": "https://github.com/Koenkk",
-      "public_contributions": 2682,
+      "public_contributions": 2674,
       "public_repos": 115,
       "public_gists": 25,
-      "observed_public_commits": 2682,
-      "observed_public_pull_requests": 706,
+      "observed_public_commits": 2674,
+      "observed_public_pull_requests": 705,
       "followers": 2570,
       "location": "The Netherlands, Helmond",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "login": "jrfnl",
       "name": "Juliette",
       "profile_url": "https://github.com/jrfnl",
-      "public_contributions": 2671,
+      "public_contributions": 2662,
       "public_repos": 274,
       "public_gists": 22,
-      "observed_public_commits": 2671,
-      "observed_public_pull_requests": 1009,
+      "observed_public_commits": 2662,
+      "observed_public_pull_requests": 1008,
       "followers": 1362,
       "location": "Amsterdam, The Netherlands",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 8,
+      "previous_rank": 8
     },
     {
       "login": "medvednikov",
@@ -193,23 +203,25 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 9,
+      "previous_rank": 9
     },
     {
       "login": "masterking32",
       "name": "Amin Mahmoudi",
       "profile_url": "https://github.com/masterking32",
-      "public_contributions": 2110,
+      "public_contributions": 2112,
       "public_repos": 59,
       "public_gists": 3,
-      "observed_public_commits": 2110,
+      "observed_public_commits": 2112,
       "observed_public_pull_requests": 6,
       "followers": 1765,
       "location": "Amsterdam",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 10,
+      "previous_rank": 10
     },
     {
       "login": "jfversluis",
@@ -220,44 +232,47 @@
       "public_gists": 156,
       "observed_public_commits": 1604,
       "observed_public_pull_requests": 471,
-      "followers": 1912,
+      "followers": 1911,
       "location": "Netherlands",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 11,
+      "previous_rank": 11
     },
     {
       "login": "fonsp",
       "name": "Fons van der Plas",
       "profile_url": "https://github.com/fonsp",
-      "public_contributions": 1357,
+      "public_contributions": 1354,
       "public_repos": 297,
       "public_gists": 72,
-      "observed_public_commits": 1357,
+      "observed_public_commits": 1354,
       "observed_public_pull_requests": 311,
       "followers": 1513,
       "location": "Wageningen, Netherlands",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 12,
+      "previous_rank": 12
     },
     {
       "login": "koaning",
       "name": "vincent d warmerdam ",
       "profile_url": "https://github.com/koaning",
-      "public_contributions": 1335,
+      "public_contributions": 1333,
       "public_repos": 343,
       "public_gists": 72,
-      "observed_public_commits": 1335,
+      "observed_public_commits": 1333,
       "observed_public_pull_requests": 646,
       "followers": 2753,
       "location": "Amsterdam",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 13,
+      "previous_rank": 13
     },
     {
       "login": "JuliusBrussee",
@@ -268,44 +283,47 @@
       "public_gists": 0,
       "observed_public_commits": 1324,
       "observed_public_pull_requests": 85,
-      "followers": 1861,
+      "followers": 1864,
       "location": "Netherlands",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
     },
     {
       "login": "Kludex",
       "name": "Marcelo Trylesinski",
       "profile_url": "https://github.com/Kludex",
-      "public_contributions": 1210,
+      "public_contributions": 1207,
       "public_repos": 182,
       "public_gists": 28,
-      "observed_public_commits": 1210,
+      "observed_public_commits": 1207,
       "observed_public_pull_requests": 1047,
-      "followers": 3134,
+      "followers": 3133,
       "location": "Utrecht, Netherlands",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 15,
+      "previous_rank": 15
     },
     {
       "login": "mattgperry",
       "name": "Matt Perry",
       "profile_url": "https://github.com/mattgperry",
-      "public_contributions": 998,
+      "public_contributions": 986,
       "public_repos": 14,
       "public_gists": 19,
-      "observed_public_commits": 998,
-      "observed_public_pull_requests": 265,
+      "observed_public_commits": 986,
+      "observed_public_pull_requests": 264,
       "followers": 1649,
       "location": "Amsterdam",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 16
+      "rank": 16,
+      "previous_rank": 16
     },
     {
       "login": "karlhorky",
@@ -315,13 +333,14 @@
       "public_repos": 574,
       "public_gists": 110,
       "observed_public_commits": 947,
-      "observed_public_pull_requests": 313,
+      "observed_public_pull_requests": 320,
       "followers": 946,
       "location": "Amsterdam",
       "location_confidence": "city-match",
       "discovered_by_query": "location:Amsterdam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 17
+      "rank": 17,
+      "previous_rank": 17
     },
     {
       "login": "nvie",
@@ -337,39 +356,42 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 18,
+      "previous_rank": 18
     },
     {
       "login": "pajlada",
       "name": "pajlada",
       "profile_url": "https://github.com/pajlada",
-      "public_contributions": 824,
+      "public_contributions": 822,
       "public_repos": 213,
       "public_gists": 42,
-      "observed_public_commits": 824,
-      "observed_public_pull_requests": 541,
+      "observed_public_commits": 822,
+      "observed_public_pull_requests": 540,
       "followers": 1523,
       "location": "Netherlands",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 19,
+      "previous_rank": 19
     },
     {
       "login": "arendst",
       "name": "Theo Arends",
       "profile_url": "https://github.com/arendst",
-      "public_contributions": 777,
+      "public_contributions": 775,
       "public_repos": 35,
       "public_gists": 0,
-      "observed_public_commits": 777,
+      "observed_public_commits": 775,
       "observed_public_pull_requests": 0,
       "followers": 1690,
       "location": "Netherlands",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Netherlands repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20
+      "rank": 20,
+      "previous_rank": 20
     }
   ]
 }
