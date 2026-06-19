@@ -3,27 +3,29 @@
   "slug": "norway",
   "name": "Norway",
   "title": "Top observed GitHub contributors in Norway",
-  "generated_at": "2026-06-18T19:07:22.035Z",
-  "fresh_until": "2026-06-25T19:07:22.035Z",
+  "generated_at": "2026-06-19T02:52:11.424Z",
+  "fresh_until": "2026-06-26T02:52:11.424Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-06-18",
+  "source_run": "2026-06-19",
   "history": {
     "weeks": [
-      "2026-06-18"
+      "2026-06-19"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      67065
+      67344
     ]
   },
   "code": "NO",
-  "candidate_count": 11201,
+  "candidate_count": 11202,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
-    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence."
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.",
+    "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "discovery_queries": [
     "location:Norway repos:>5 type:user"
@@ -31,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Norway repos:>5 type:user",
-      "total": 11201,
+      "total": 11202,
       "accepted": 100
     }
   ],
@@ -40,17 +42,18 @@
       "login": "marcusramberg",
       "name": "Marcus Ramberg",
       "profile_url": "https://github.com/marcusramberg",
-      "public_contributions": 39233,
+      "public_contributions": 39560,
       "public_repos": 349,
       "public_gists": 320,
-      "observed_public_commits": 39233,
+      "observed_public_commits": 39560,
       "observed_public_pull_requests": 139,
       "followers": 356,
       "location": "Oslo, Norway",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 1,
+      "previous_rank": 1
     },
     {
       "login": "aurorascharff",
@@ -61,28 +64,30 @@
       "public_gists": 0,
       "observed_public_commits": 4872,
       "observed_public_pull_requests": 242,
-      "followers": 1123,
+      "followers": 1124,
       "location": "Oslo, Norway",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 2,
+      "previous_rank": 2
     },
     {
       "login": "oleavr",
       "name": "Ole André Vadla Ravnås",
       "profile_url": "https://github.com/oleavr",
-      "public_contributions": 4069,
+      "public_contributions": 4041,
       "public_repos": 102,
       "public_gists": 32,
-      "observed_public_commits": 4069,
-      "observed_public_pull_requests": 45,
-      "followers": 1935,
+      "observed_public_commits": 4041,
+      "observed_public_pull_requests": 44,
+      "followers": 1936,
       "location": "Stavanger, Norway",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "login": "eonist",
@@ -98,39 +103,42 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 4,
+      "previous_rank": 4
     },
     {
       "login": "Starefossen",
       "name": "Hans Kristian Flaatten",
       "profile_url": "https://github.com/Starefossen",
-      "public_contributions": 2945,
+      "public_contributions": 2946,
       "public_repos": 290,
       "public_gists": 72,
-      "observed_public_commits": 2945,
+      "observed_public_commits": 2946,
       "observed_public_pull_requests": 239,
       "followers": 387,
       "location": "Norway",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "login": "eried",
       "name": "Erwin Ried",
       "profile_url": "https://github.com/eried",
-      "public_contributions": 2909,
+      "public_contributions": 2912,
       "public_repos": 148,
       "public_gists": 1,
-      "observed_public_commits": 2909,
+      "observed_public_commits": 2912,
       "observed_public_pull_requests": 13,
       "followers": 533,
       "location": "Norway",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "login": "habedi",
@@ -146,23 +154,25 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "login": "shinokada",
       "name": "Shinichi Okada",
       "profile_url": "https://github.com/shinokada",
-      "public_contributions": 2447,
+      "public_contributions": 2434,
       "public_repos": 197,
       "public_gists": 724,
-      "observed_public_commits": 2447,
+      "observed_public_commits": 2434,
       "observed_public_pull_requests": 208,
       "followers": 362,
       "location": "Norway",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 8,
+      "previous_rank": 8
     },
     {
       "login": "bep",
@@ -178,103 +188,110 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 9,
+      "previous_rank": 9
     },
     {
       "login": "stipsan",
       "name": "Cody Olsen",
       "profile_url": "https://github.com/stipsan",
-      "public_contributions": 1911,
+      "public_contributions": 1900,
       "public_repos": 133,
       "public_gists": 37,
-      "observed_public_commits": 1911,
-      "observed_public_pull_requests": 562,
+      "observed_public_commits": 1900,
+      "observed_public_pull_requests": 556,
       "followers": 426,
       "location": "Oslo, Norway",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 10,
+      "previous_rank": 10
     },
     {
       "login": "mhjensen",
       "name": "Morten Hjorth-Jensen",
       "profile_url": "https://github.com/mhjensen",
-      "public_contributions": 1846,
+      "public_contributions": 1841,
       "public_repos": 50,
       "public_gists": 0,
-      "observed_public_commits": 1846,
+      "observed_public_commits": 1841,
       "observed_public_pull_requests": 0,
       "followers": 680,
       "location": "Oslo, Norway",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 11,
+      "previous_rank": 11
     },
     {
       "login": "TorsteinHonsi",
       "name": "Torstein Hønsi",
       "profile_url": "https://github.com/TorsteinHonsi",
-      "public_contributions": 1814,
+      "public_contributions": 1809,
       "public_repos": 16,
       "public_gists": 14,
-      "observed_public_commits": 1814,
+      "observed_public_commits": 1809,
       "observed_public_pull_requests": 115,
       "followers": 514,
       "location": "Vik i Sogn, Norway",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 12,
+      "previous_rank": 12
     },
     {
       "login": "Codehagen",
       "name": "Christer",
       "profile_url": "https://github.com/Codehagen",
-      "public_contributions": 1692,
+      "public_contributions": 1694,
       "public_repos": 63,
       "public_gists": 1,
-      "observed_public_commits": 1692,
+      "observed_public_commits": 1694,
       "observed_public_pull_requests": 147,
-      "followers": 363,
+      "followers": 364,
       "location": "Norway",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 13,
+      "previous_rank": 13
     },
     {
       "login": "ludeeus",
       "name": "Joakim Sørensen",
       "profile_url": "https://github.com/ludeeus",
-      "public_contributions": 1649,
+      "public_contributions": 1644,
       "public_repos": 129,
       "public_gists": 14,
-      "observed_public_commits": 1649,
-      "observed_public_pull_requests": 371,
+      "observed_public_commits": 1644,
+      "observed_public_pull_requests": 368,
       "followers": 703,
       "location": "Norway",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
     },
     {
       "login": "AmirhosseinHonardoust",
       "name": "Amir",
       "profile_url": "https://github.com/AmirhosseinHonardoust",
-      "public_contributions": 1622,
+      "public_contributions": 1623,
       "public_repos": 118,
       "public_gists": 1,
-      "observed_public_commits": 1622,
-      "observed_public_pull_requests": 85,
+      "observed_public_commits": 1623,
+      "observed_public_pull_requests": 86,
       "followers": 1556,
       "location": "Norway",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 15,
+      "previous_rank": 15
     },
     {
       "login": "raphw",
@@ -290,71 +307,76 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 16
+      "rank": 16,
+      "previous_rank": 16
     },
     {
       "login": "jonhoo",
       "name": "Jon Gjengset",
       "profile_url": "https://github.com/jonhoo",
-      "public_contributions": 1215,
+      "public_contributions": 1208,
       "public_repos": 284,
       "public_gists": 48,
-      "observed_public_commits": 1215,
-      "observed_public_pull_requests": 110,
-      "followers": 13678,
+      "observed_public_commits": 1208,
+      "observed_public_pull_requests": 107,
+      "followers": 13677,
       "location": "Oslo, Norway",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 17
+      "rank": 17,
+      "previous_rank": 17
     },
     {
       "login": "HansKristian-Work",
       "name": "Hans-Kristian Arntzen",
       "profile_url": "https://github.com/HansKristian-Work",
-      "public_contributions": 1141,
+      "public_contributions": 1134,
       "public_repos": 32,
       "public_gists": 10,
-      "observed_public_commits": 1141,
-      "observed_public_pull_requests": 323,
-      "followers": 1148,
+      "observed_public_commits": 1134,
+      "observed_public_pull_requests": 322,
+      "followers": 1149,
       "location": "Trondheim, Norway",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 18,
+      "previous_rank": 18
     },
     {
       "login": "christianalfoni",
       "name": "Christian Alfoni",
       "profile_url": "https://github.com/christianalfoni",
-      "public_contributions": 1092,
-      "public_repos": 390,
+      "public_contributions": 1091,
+      "public_repos": 388,
       "public_gists": 125,
-      "observed_public_commits": 1092,
-      "observed_public_pull_requests": 351,
+      "observed_public_commits": 1091,
+      "observed_public_pull_requests": 350,
       "followers": 967,
       "location": "Norway",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 19,
+      "previous_rank": 19
     },
     {
       "login": "bvssvni",
       "name": "Sven Nilsen",
       "profile_url": "https://github.com/bvssvni",
-      "public_contributions": 1057,
+      "public_contributions": 1054,
       "public_repos": 395,
       "public_gists": 104,
-      "observed_public_commits": 1057,
+      "observed_public_commits": 1054,
       "observed_public_pull_requests": 345,
       "followers": 322,
       "location": "Norway",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Norway repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20
+      "rank": 20,
+      "previous_rank": 20
     }
   ]
 }
