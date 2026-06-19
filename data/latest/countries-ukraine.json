@@ -3,27 +3,29 @@
   "slug": "ukraine",
   "name": "Ukraine",
   "title": "Top observed GitHub contributors in Ukraine",
-  "generated_at": "2026-06-18T19:07:22.035Z",
-  "fresh_until": "2026-06-25T19:07:22.035Z",
+  "generated_at": "2026-06-19T02:52:11.424Z",
+  "fresh_until": "2026-06-26T02:52:11.424Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-06-18",
+  "source_run": "2026-06-19",
   "history": {
     "weeks": [
-      "2026-06-18"
+      "2026-06-19"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      19434
+      19398
     ]
   },
   "code": "UA",
-  "candidate_count": 35288,
+  "candidate_count": 35290,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
-    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence."
+    "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
+    "Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.",
+    "The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages."
   ],
   "discovery_queries": [
     "location:Ukraine repos:>5 type:user"
@@ -31,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Ukraine repos:>5 type:user",
-      "total": 35288,
+      "total": 35290,
       "accepted": 100
     }
   ],
@@ -40,49 +42,52 @@
       "login": "5HT",
       "name": "Namdak Tonpa",
       "profile_url": "https://github.com/5HT",
-      "public_contributions": 5477,
+      "public_contributions": 5464,
       "public_repos": 217,
       "public_gists": 181,
-      "observed_public_commits": 5477,
+      "observed_public_commits": 5464,
       "observed_public_pull_requests": 16,
       "followers": 394,
       "location": "Kyiv, Ukraine",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 1
+      "rank": 1,
+      "previous_rank": 1
     },
     {
       "login": "LyoSU",
       "name": "Yuri Ly",
       "profile_url": "https://github.com/LyoSU",
-      "public_contributions": 1980,
+      "public_contributions": 1973,
       "public_repos": 53,
       "public_gists": 0,
-      "observed_public_commits": 1980,
+      "observed_public_commits": 1973,
       "observed_public_pull_requests": 6,
       "followers": 393,
       "location": "Ukraine",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 2
+      "rank": 2,
+      "previous_rank": 2
     },
     {
       "login": "ViktorSvertoka",
       "name": "Viktor Svertoka",
       "profile_url": "https://github.com/ViktorSvertoka",
-      "public_contributions": 1910,
+      "public_contributions": 1899,
       "public_repos": 222,
       "public_gists": 0,
-      "observed_public_commits": 1910,
+      "observed_public_commits": 1899,
       "observed_public_pull_requests": 448,
       "followers": 747,
       "location": "Ukraine, Kyiv",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 3
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "login": "javadev",
@@ -98,7 +103,8 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 4
+      "rank": 4,
+      "previous_rank": 4
     },
     {
       "login": "echasnovski",
@@ -114,23 +120,25 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "login": "rashevskyv",
       "name": "xHR",
       "profile_url": "https://github.com/rashevskyv",
-      "public_contributions": 1414,
+      "public_contributions": 1410,
       "public_repos": 100,
       "public_gists": 2,
-      "observed_public_commits": 1414,
+      "observed_public_commits": 1410,
       "observed_public_pull_requests": 6,
       "followers": 446,
       "location": "Ukraine",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "login": "Tyrrrz",
@@ -141,60 +149,64 @@
       "public_gists": 5,
       "observed_public_commits": 1359,
       "observed_public_pull_requests": 77,
-      "followers": 2880,
+      "followers": 2882,
       "location": "Kyiv, Ukraine",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 7
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "login": "web-padawan",
       "name": "Serhii Kulykov",
       "profile_url": "https://github.com/web-padawan",
-      "public_contributions": 1270,
+      "public_contributions": 1268,
       "public_repos": 122,
       "public_gists": 11,
-      "observed_public_commits": 1270,
-      "observed_public_pull_requests": 1206,
+      "observed_public_commits": 1268,
+      "observed_public_pull_requests": 1204,
       "followers": 490,
       "location": "Ukraine",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 8
+      "rank": 8,
+      "previous_rank": 8
     },
     {
       "login": "le0pard",
       "name": "Oleksii Vasyliev",
       "profile_url": "https://github.com/le0pard",
-      "public_contributions": 1252,
-      "public_repos": 82,
+      "public_contributions": 1257,
+      "public_repos": 83,
       "public_gists": 47,
-      "observed_public_commits": 1252,
+      "observed_public_commits": 1257,
       "observed_public_pull_requests": 18,
       "followers": 626,
       "location": "Kyiv, Ukraine",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 9
+      "rank": 9,
+      "previous_rank": 9
     },
     {
       "login": "hebasto",
       "name": "Hennadii Stepanov",
       "profile_url": "https://github.com/hebasto",
-      "public_contributions": 1220,
+      "public_contributions": 1216,
       "public_repos": 80,
       "public_gists": 27,
-      "observed_public_commits": 1220,
-      "observed_public_pull_requests": 463,
+      "observed_public_commits": 1216,
+      "observed_public_pull_requests": 462,
       "followers": 1261,
       "location": "Ukraine",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 10
+      "rank": 10,
+      "previous_rank": 10
     },
     {
       "login": "tshemsedinov",
@@ -204,13 +216,14 @@
       "public_repos": 235,
       "public_gists": 8,
       "observed_public_commits": 1060,
-      "observed_public_pull_requests": 204,
+      "observed_public_pull_requests": 206,
       "followers": 5301,
       "location": "Earth, Europe, Ukraine, Kiev, Kyiv, USA, Spain, Germany, Italy, China",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 11
+      "rank": 11,
+      "previous_rank": 11
     },
     {
       "login": "AChep",
@@ -226,23 +239,25 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12
+      "rank": 12,
+      "previous_rank": 12
     },
     {
       "login": "pavlohushuliak",
       "name": "Pavlo Hushuliak",
       "profile_url": "https://github.com/pavlohushuliak",
-      "public_contributions": 907,
+      "public_contributions": 898,
       "public_repos": 8,
       "public_gists": 0,
-      "observed_public_commits": 907,
+      "observed_public_commits": 898,
       "observed_public_pull_requests": 4,
       "followers": 451,
       "location": "Ukraine",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13
+      "rank": 13,
+      "previous_rank": 13
     },
     {
       "login": "makasim",
@@ -258,55 +273,59 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
     },
     {
       "login": "maksimKorzh",
       "name": "Code Monkey King",
       "profile_url": "https://github.com/maksimKorzh",
-      "public_contributions": 787,
+      "public_contributions": 786,
       "public_repos": 232,
       "public_gists": 33,
-      "observed_public_commits": 787,
+      "observed_public_commits": 786,
       "observed_public_pull_requests": 0,
       "followers": 351,
       "location": "Ukraine",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15
+      "rank": 15,
+      "previous_rank": 15
     },
     {
       "login": "olton",
       "name": "Serhii Pimenov",
       "profile_url": "https://github.com/olton",
-      "public_contributions": 753,
+      "public_contributions": 750,
       "public_repos": 151,
       "public_gists": 12,
-      "observed_public_commits": 753,
+      "observed_public_commits": 750,
       "observed_public_pull_requests": 0,
       "followers": 417,
       "location": "Kyiv, Ukraine",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 16
+      "rank": 16,
+      "previous_rank": 16
     },
     {
       "login": "yshmarov",
       "name": "Yaro Shm",
       "profile_url": "https://github.com/yshmarov",
-      "public_contributions": 509,
+      "public_contributions": 508,
       "public_repos": 43,
       "public_gists": 17,
-      "observed_public_commits": 509,
+      "observed_public_commits": 508,
       "observed_public_pull_requests": 96,
       "followers": 530,
       "location": "Chernihiv, Ukraine",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 17
+      "rank": 17,
+      "previous_rank": 17
     },
     {
       "login": "Snawoot",
@@ -322,36 +341,38 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 18,
+      "previous_rank": 18
     },
     {
       "login": "YK911",
       "name": "yaroslav.kosytsia",
       "profile_url": "https://github.com/YK911",
-      "public_contributions": 471,
+      "public_contributions": 473,
       "public_repos": 209,
       "public_gists": 2,
-      "observed_public_commits": 471,
+      "observed_public_commits": 473,
       "observed_public_pull_requests": 3,
-      "followers": 646,
+      "followers": 647,
       "location": "Ukraine",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 19,
+      "previous_rank": 19
     },
     {
-      "login": "idvoretskyi",
-      "name": "Ihor Dvoretskyi",
-      "profile_url": "https://github.com/idvoretskyi",
-      "public_contributions": 464,
-      "public_repos": 219,
-      "public_gists": 33,
-      "observed_public_commits": 464,
-      "observed_public_pull_requests": 224,
-      "followers": 494,
-      "location": "Ukraine",
-      "location_confidence": "exact-country",
+      "login": "denysdovhan",
+      "name": "Denys Dovhan",
+      "profile_url": "https://github.com/denysdovhan",
+      "public_contributions": 451,
+      "public_repos": 98,
+      "public_gists": 34,
+      "observed_public_commits": 451,
+      "observed_public_pull_requests": 69,
+      "followers": 2975,
+      "location": "Kyiv, Ukraine",
+      "location_confidence": "multi-location",
       "discovered_by_query": "location:Ukraine repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20
