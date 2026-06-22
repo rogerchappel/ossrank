@@ -34,7 +34,8 @@
     "dist",
     "dist-cli",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "bin": {
     "ossrank": "dist-cli/cli.js"
