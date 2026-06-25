@@ -67,6 +67,28 @@ Live refreshes use GitHub GraphQL search and contribution APIs. GitHub Actions' 
 `pnpm run release:check` runs the fixture refresh, data validation, static site
 build, CLI smoke, test burst verification, type checks, and `npm pack --dry-run`.
 
+## CLI usage
+
+After `pnpm run build:cli`, run deterministic ranking checks against the bundled
+fixtures:
+
+```sh
+node dist-cli/cli.js rank contributors --input fixtures/contributors.json --limit 5 --format table
+node dist-cli/cli.js rank projects --input fixtures/projects.json --limit 5 --format json
+```
+
+For live refreshes, provide a GitHub token through `OSSRANK_GITHUB_TOKEN` and
+start with a small limit:
+
+```sh
+OSSRANK_LIMIT=20 pnpm run refresh:live
+node dist-cli/cli.js token-check --require-graphql-search
+```
+
+Live refreshes write the same `data/latest` snapshot contract used by the
+static site. Review the generated manifest and caveats before publishing or
+deploying refreshed data.
+
 ### GitHub Actions secrets and environment
 
 Configure these repository secrets before running refresh/deploy workflows:
