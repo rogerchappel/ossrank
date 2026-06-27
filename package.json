@@ -15,7 +15,7 @@
     "deploy:cloudflare": "pnpm run build && wrangler pages deploy dist --project-name ossrank",
     "build:cli": "tsc -p tsconfig.cli.json && node scripts/fix-cli-shebang.cjs",
     "smoke:cli": "pnpm run build:cli && node dist-cli/cli.js rank contributors --input fixtures/contributors.json --limit 2 --format table && node dist-cli/cli.js token-check --token demo && ! node dist-cli/cli.js rank contributors --input fixtures/contributors.json --limit nope",
-    "package:smoke": "npm pack --dry-run",
+    "package:smoke": "node scripts/validate-package-manifest.mjs && npm pack --dry-run",
     "release:check": "pnpm test && pnpm run package:smoke",
     "refresh:live": "tsx src/cli.ts refresh --mode live --limit ${OSSRANK_LIMIT:-20}",
     "test:burst": "tsx scripts/verify-burst-adjustment.ts"
@@ -33,9 +33,12 @@
   "files": [
     "dist",
     "dist-cli",
+    "fixtures",
     "README.md",
     "LICENSE",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md"
   ],
   "bin": {
     "ossrank": "dist-cli/cli.js"
