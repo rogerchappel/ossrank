@@ -52,5 +52,12 @@
     "url": "https://github.com/rogerchappel/ossrank/issues"
   },
   "homepage": "https://github.com/rogerchappel/ossrank#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "open-source",
+    "rankings",
+    "github",
+    "contributors",
+    "cli"
+  ]
 }
