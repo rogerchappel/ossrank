@@ -14,6 +14,7 @@
     "dev": "pnpm run build && npx --yes serve dist",
     "deploy:cloudflare": "pnpm run build && wrangler pages deploy dist --project-name ossrank",
     "build:cli": "tsc -p tsconfig.cli.json && node scripts/fix-cli-shebang.cjs",
+    "smoke": "pnpm run smoke:cli",
     "smoke:cli": "pnpm run build:cli && node dist-cli/cli.js rank contributors --input fixtures/contributors.json --limit 2 --format table && node dist-cli/cli.js token-check --token demo && ! node dist-cli/cli.js rank contributors --input fixtures/contributors.json --limit nope",
     "package:smoke": "node scripts/validate-package-manifest.mjs && npm pack --dry-run",
     "release:check": "pnpm test && pnpm run package:smoke",
