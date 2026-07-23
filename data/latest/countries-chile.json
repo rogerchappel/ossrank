@@ -3,24 +3,24 @@
   "slug": "chile",
   "name": "Chile",
   "title": "Top observed GitHub contributors in Chile",
-  "generated_at": "2026-07-22T00:49:40.202Z",
-  "fresh_until": "2026-07-29T00:49:40.202Z",
+  "generated_at": "2026-07-23T19:46:34.048Z",
+  "fresh_until": "2026-07-30T19:46:34.048Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-07-22",
+  "source_run": "2026-07-23",
   "history": {
     "weeks": [
-      "2026-07-22"
+      "2026-07-23"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      29849
+      29860
     ]
   },
   "code": "CL",
-  "candidate_count": 15525,
+  "candidate_count": 15536,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Chile repos:>5 type:user",
-      "total": 15525,
+      "total": 15536,
       "accepted": 100
     }
   ],
@@ -42,10 +42,10 @@
       "login": "montoyamoraga",
       "name": "aarón montoya-moraga",
       "profile_url": "https://github.com/montoyamoraga",
-      "public_contributions": 5904,
+      "public_contributions": 5912,
       "public_repos": 189,
       "public_gists": 0,
-      "observed_public_commits": 5904,
+      "observed_public_commits": 5912,
       "observed_public_pull_requests": 3116,
       "followers": 558,
       "location": "Chile",
@@ -59,14 +59,14 @@
       "login": "richonguzman",
       "name": "Ricardo Guzman",
       "profile_url": "https://github.com/richonguzman",
-      "public_contributions": 4848,
+      "public_contributions": 4847,
       "public_repos": 18,
       "public_gists": 0,
-      "observed_public_commits": 4848,
+      "observed_public_commits": 4847,
       "observed_public_pull_requests": 19,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 4848,
-        "adjusted_public_commits": 4280,
+        "raw_public_commits": 4847,
+        "adjusted_public_commits": 4279,
         "baseline_daily_contributions": 4,
         "daily_burst_cap": 240,
         "capped_days": 5,
@@ -85,12 +85,12 @@
       "login": "rodyherrera",
       "name": "Rodolfo Herrera Hernandez",
       "profile_url": "https://github.com/rodyherrera",
-      "public_contributions": 3216,
+      "public_contributions": 3219,
       "public_repos": 37,
       "public_gists": 0,
-      "observed_public_commits": 3216,
+      "observed_public_commits": 3219,
       "observed_public_pull_requests": 1,
-      "followers": 231,
+      "followers": 232,
       "location": "Chile, Talca",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Chile repos:>5 type:user",
@@ -107,7 +107,7 @@
       "public_gists": 1,
       "observed_public_commits": 2220,
       "observed_public_pull_requests": 73,
-      "followers": 337,
+      "followers": 336,
       "location": "Concepcion, Chile",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Chile repos:>5 type:user",
@@ -119,26 +119,27 @@
       "login": "Jhoel777ar",
       "name": "Joel Andres C.",
       "profile_url": "https://github.com/Jhoel777ar",
-      "public_contributions": 2158,
+      "public_contributions": 2162,
       "public_repos": 418,
       "public_gists": 0,
-      "observed_public_commits": 2158,
+      "observed_public_commits": 2162,
       "observed_public_pull_requests": 7,
-      "followers": 708,
+      "followers": 706,
       "location": "Chile - Bolivia",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "login": "CamilaJaviera91",
       "name": "Camila Javiera Muñoz Navarro",
       "profile_url": "https://github.com/CamilaJaviera91",
-      "public_contributions": 1864,
+      "public_contributions": 1851,
       "public_repos": 26,
       "public_gists": 0,
-      "observed_public_commits": 1864,
+      "observed_public_commits": 1851,
       "observed_public_pull_requests": 18,
       "followers": 297,
       "location": "Chile",
@@ -146,7 +147,7 @@
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6,
-      "previous_rank": 5
+      "previous_rank": 6
     },
     {
       "login": "wajahat-ali-mir-dev",
@@ -172,16 +173,16 @@
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7,
-      "previous_rank": 6
+      "previous_rank": 7
     },
     {
       "login": "bastianolea",
       "name": "Bastián Olea Herera",
       "profile_url": "https://github.com/bastianolea",
-      "public_contributions": 1431,
+      "public_contributions": 1426,
       "public_repos": 110,
       "public_gists": 38,
-      "observed_public_commits": 1431,
+      "observed_public_commits": 1426,
       "observed_public_pull_requests": 2,
       "followers": 345,
       "location": "Santiago, Chile",
@@ -195,10 +196,10 @@
       "login": "bidah",
       "name": "Rodrigo Figueroa",
       "profile_url": "https://github.com/bidah",
-      "public_contributions": 1375,
+      "public_contributions": 1373,
       "public_repos": 803,
       "public_gists": 30,
-      "observed_public_commits": 1375,
+      "observed_public_commits": 1373,
       "observed_public_pull_requests": 7,
       "followers": 192,
       "location": "Maitencillo, Valparaiso, Chile.",
@@ -206,84 +207,84 @@
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 7
+      "previous_rank": 9
     },
     {
       "login": "cmartinezs",
       "name": "Carlos F. Martínez Sánchez",
       "profile_url": "https://github.com/cmartinezs",
-      "public_contributions": 1282,
+      "public_contributions": 1299,
       "public_repos": 52,
       "public_gists": 0,
-      "observed_public_commits": 1282,
-      "observed_public_pull_requests": 102,
+      "observed_public_commits": 1299,
+      "observed_public_pull_requests": 105,
       "followers": 182,
       "location": "Chile",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10,
-      "previous_rank": 9
+      "previous_rank": 10
     },
     {
       "login": "aledbf",
       "name": "Manuel Alejandro de Brito Fontes",
       "profile_url": "https://github.com/aledbf",
-      "public_contributions": 1073,
+      "public_contributions": 1074,
       "public_repos": 392,
       "public_gists": 27,
-      "observed_public_commits": 1073,
-      "observed_public_pull_requests": 115,
+      "observed_public_commits": 1074,
+      "observed_public_pull_requests": 116,
       "followers": 518,
       "location": "Santiago, Chile",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
+      "previous_rank": 11
+    },
+    {
+      "login": "maria-rcks",
+      "name": "maria",
+      "profile_url": "https://github.com/maria-rcks",
+      "public_contributions": 981,
+      "public_repos": 28,
+      "public_gists": 0,
+      "observed_public_commits": 981,
+      "observed_public_pull_requests": 112,
+      "followers": 287,
+      "location": "Santiago, Chile",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Chile repos:>5 type:user",
+      "notable_repositories": [],
+      "rank": 12,
       "previous_rank": 13
     },
     {
       "login": "jbkunst",
       "name": "Joshua Kunst",
       "profile_url": "https://github.com/jbkunst",
-      "public_contributions": 1085,
+      "public_contributions": 1091,
       "public_repos": 102,
       "public_gists": 3,
-      "observed_public_commits": 1085,
-      "observed_public_pull_requests": 40,
+      "observed_public_commits": 1091,
+      "observed_public_pull_requests": 42,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 1085,
-        "adjusted_public_commits": 967,
+        "raw_public_commits": 1091,
+        "adjusted_public_commits": 969,
         "baseline_daily_contributions": 2,
         "daily_burst_cap": 60,
         "capped_days": 4,
-        "excess_contributions": 118,
+        "excess_contributions": 122,
         "reason": "per-user daily contribution burst exceeded an adaptive baseline cap; raw public commits are preserved for audit"
       },
-      "followers": 515,
+      "followers": 514,
       "location": "Chile",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12,
-      "previous_rank": 15
-    },
-    {
-      "login": "maria-rcks",
-      "name": "maria",
-      "profile_url": "https://github.com/maria-rcks",
-      "public_contributions": 964,
-      "public_repos": 28,
-      "public_gists": 0,
-      "observed_public_commits": 964,
-      "observed_public_pull_requests": 105,
-      "followers": 276,
-      "location": "Santiago, Chile",
-      "location_confidence": "multi-location",
-      "discovered_by_query": "location:Chile repos:>5 type:user",
-      "notable_repositories": [],
       "rank": 13,
-      "previous_rank": 11
+      "previous_rank": 12
     },
     {
       "login": "CleoMenezesJr",
@@ -300,7 +301,7 @@
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 12
+      "previous_rank": 14
     },
     {
       "login": "Blandskron",
@@ -320,39 +321,39 @@
         "excess_contributions": 44,
         "reason": "per-user daily contribution burst exceeded an adaptive baseline cap; raw public commits are preserved for audit"
       },
-      "followers": 475,
+      "followers": 477,
       "location": "Santiago Chile",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 10
+      "previous_rank": 15
     },
     {
       "login": "DarkGhostHunter",
       "name": "Italo",
       "profile_url": "https://github.com/DarkGhostHunter",
-      "public_contributions": 807,
+      "public_contributions": 800,
       "public_repos": 59,
       "public_gists": 120,
-      "observed_public_commits": 807,
-      "observed_public_pull_requests": 107,
+      "observed_public_commits": 800,
+      "observed_public_pull_requests": 106,
       "followers": 270,
       "location": "Chile",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 14
+      "previous_rank": 16
     },
     {
       "login": "longemen3000",
       "name": "Andrés Riedemann",
       "profile_url": "https://github.com/longemen3000",
-      "public_contributions": 699,
+      "public_contributions": 697,
       "public_repos": 127,
       "public_gists": 4,
-      "observed_public_commits": 699,
+      "observed_public_commits": 697,
       "observed_public_pull_requests": 47,
       "followers": 153,
       "location": "Chile",
@@ -360,7 +361,7 @@
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 16
+      "previous_rank": 17
     },
     {
       "login": "sebastianbreguel",
@@ -371,13 +372,13 @@
       "public_gists": 2,
       "observed_public_commits": 658,
       "observed_public_pull_requests": 226,
-      "followers": 155,
+      "followers": 158,
       "location": " Santiago, Chile",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 17
+      "previous_rank": 18
     },
     {
       "login": "vicenteconejerosdelacruz",
@@ -394,16 +395,16 @@
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 18
+      "previous_rank": 19
     },
     {
       "login": "highercomve",
       "name": "Sergio Marin",
       "profile_url": "https://github.com/highercomve",
-      "public_contributions": 591,
+      "public_contributions": 592,
       "public_repos": 158,
       "public_gists": 55,
-      "observed_public_commits": 591,
+      "observed_public_commits": 592,
       "observed_public_pull_requests": 14,
       "followers": 151,
       "location": "Santiago, Chile",
@@ -411,7 +412,7 @@
       "discovered_by_query": "location:Chile repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 19
+      "previous_rank": 20
     }
   ]
 }
