@@ -3,24 +3,24 @@
   "slug": "brazil",
   "name": "Brazil",
   "title": "Top observed GitHub contributors in Brazil",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      26914
+      26956
     ]
   },
   "code": "BR",
-  "candidate_count": 94763,
+  "candidate_count": 94764,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Brazil repos:>5 type:user",
-      "total": 94763,
+      "total": 94764,
       "accepted": 100
     }
   ],
@@ -59,12 +59,12 @@
       "login": "akitaonrails",
       "name": "Fabio Akita",
       "profile_url": "https://github.com/akitaonrails",
-      "public_contributions": 3954,
+      "public_contributions": 4016,
       "public_repos": 188,
       "public_gists": 106,
-      "observed_public_commits": 3954,
+      "observed_public_commits": 4016,
       "observed_public_pull_requests": 96,
-      "followers": 19180,
+      "followers": 19182,
       "location": "Brazil",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Brazil repos:>5 type:user",
@@ -76,12 +76,12 @@
       "login": "caarlos0",
       "name": "Carlos Alexandro Becker",
       "profile_url": "https://github.com/caarlos0",
-      "public_contributions": 2839,
+      "public_contributions": 2829,
       "public_repos": 283,
       "public_gists": 50,
-      "observed_public_commits": 2839,
-      "observed_public_pull_requests": 660,
-      "followers": 4626,
+      "observed_public_commits": 2829,
+      "observed_public_pull_requests": 656,
+      "followers": 4627,
       "location": "Brazil",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Brazil repos:>5 type:user",
@@ -98,7 +98,7 @@
       "public_gists": 1256,
       "observed_public_commits": 2539,
       "observed_public_pull_requests": 4,
-      "followers": 3312,
+      "followers": 3313,
       "location": "Brazil",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Brazil repos:>5 type:user",
@@ -110,10 +110,10 @@
       "login": "luizomf",
       "name": "Otávio Miranda",
       "profile_url": "https://github.com/luizomf",
-      "public_contributions": 2174,
+      "public_contributions": 2170,
       "public_repos": 138,
       "public_gists": 169,
-      "observed_public_commits": 2174,
+      "observed_public_commits": 2170,
       "observed_public_pull_requests": 92,
       "followers": 9198,
       "location": "Boa Esperança, MG, Brazil",
@@ -127,11 +127,11 @@
       "login": "giggio",
       "name": "Giovanni Bassi",
       "profile_url": "https://github.com/giggio",
-      "public_contributions": 1456,
+      "public_contributions": 1455,
       "public_repos": 154,
       "public_gists": 63,
-      "observed_public_commits": 1456,
-      "observed_public_pull_requests": 4,
+      "observed_public_commits": 1455,
+      "observed_public_pull_requests": 5,
       "followers": 1990,
       "location": "Brazil",
       "location_confidence": "exact-country",
@@ -178,14 +178,14 @@
       "login": "wilsonfreitas",
       "name": "Wilson Freitas",
       "profile_url": "https://github.com/wilsonfreitas",
-      "public_contributions": 1331,
+      "public_contributions": 1330,
       "public_repos": 128,
       "public_gists": 76,
-      "observed_public_commits": 1331,
+      "observed_public_commits": 1330,
       "observed_public_pull_requests": 41,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 1331,
-        "adjusted_public_commits": 1147,
+        "raw_public_commits": 1330,
+        "adjusted_public_commits": 1146,
         "baseline_daily_contributions": 1,
         "daily_burst_cap": 20,
         "capped_days": 15,
@@ -204,10 +204,10 @@
       "login": "danielhe4rt",
       "name": "Daniel Reis",
       "profile_url": "https://github.com/danielhe4rt",
-      "public_contributions": 963,
+      "public_contributions": 959,
       "public_repos": 258,
       "public_gists": 48,
-      "observed_public_commits": 963,
+      "observed_public_commits": 959,
       "observed_public_pull_requests": 129,
       "followers": 4930,
       "location": "Brazil",
@@ -232,20 +232,20 @@
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
-      "previous_rank": 12
+      "previous_rank": 11
     },
     {
       "login": "argentinaluiz",
       "name": "Luiz Carlos",
       "profile_url": "https://github.com/argentinaluiz",
-      "public_contributions": 693,
+      "public_contributions": 690,
       "public_repos": 399,
       "public_gists": 60,
-      "observed_public_commits": 693,
+      "observed_public_commits": 690,
       "observed_public_pull_requests": 3,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 693,
-        "adjusted_public_commits": 672,
+        "raw_public_commits": 690,
+        "adjusted_public_commits": 669,
         "baseline_daily_contributions": 2,
         "daily_burst_cap": 60,
         "capped_days": 1,
@@ -258,7 +258,7 @@
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 11
+      "previous_rank": 12
     },
     {
       "login": "dunossauro",
@@ -300,7 +300,8 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
     },
     {
       "login": "VictorTaelin",
@@ -317,7 +318,7 @@
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 14
+      "previous_rank": 15
     },
     {
       "login": "diego3g",
@@ -334,7 +335,7 @@
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 15
+      "previous_rank": 16
     },
     {
       "login": "ErickWendel",
@@ -351,7 +352,7 @@
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 16
+      "previous_rank": 17
     },
     {
       "login": "joaocarpim",
@@ -367,16 +368,17 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
+      "rank": 18,
+      "previous_rank": 18
     },
     {
       "login": "turicas",
       "name": "Álvaro Justen",
       "profile_url": "https://github.com/turicas",
-      "public_contributions": 366,
+      "public_contributions": 382,
       "public_repos": 181,
       "public_gists": 128,
-      "observed_public_commits": 366,
+      "observed_public_commits": 382,
       "observed_public_pull_requests": 3,
       "followers": 2365,
       "location": "São Paulo, Brazil",
@@ -384,7 +386,7 @@
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 18
+      "previous_rank": 19
     },
     {
       "login": "WSTxda",
@@ -401,7 +403,7 @@
       "discovered_by_query": "location:Brazil repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 17
+      "previous_rank": 20
     }
   ]
 }
