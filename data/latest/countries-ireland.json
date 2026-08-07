@@ -3,20 +3,20 @@
   "slug": "ireland",
   "name": "Ireland",
   "title": "Top observed GitHub contributors in Ireland",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      27904
+      27886
     ]
   },
   "code": "IE",
@@ -42,14 +42,14 @@
       "login": "rjrodger",
       "name": "Richard Rodger",
       "profile_url": "https://github.com/rjrodger",
-      "public_contributions": 12888,
+      "public_contributions": 12889,
       "public_repos": 277,
       "public_gists": 13,
-      "observed_public_commits": 12888,
-      "observed_public_pull_requests": 1319,
+      "observed_public_commits": 12889,
+      "observed_public_pull_requests": 1320,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 12888,
-        "adjusted_public_commits": 11247,
+        "raw_public_commits": 12889,
+        "adjusted_public_commits": 11248,
         "baseline_daily_contributions": 7,
         "daily_burst_cap": 735,
         "capped_days": 6,
@@ -68,11 +68,11 @@
       "login": "guibranco",
       "name": "Guilherme Branco Stracini",
       "profile_url": "https://github.com/guibranco",
-      "public_contributions": 2796,
+      "public_contributions": 2784,
       "public_repos": 110,
       "public_gists": 82,
-      "observed_public_commits": 2796,
-      "observed_public_pull_requests": 804,
+      "observed_public_commits": 2784,
+      "observed_public_pull_requests": 803,
       "followers": 927,
       "location": "Dublin, Ireland",
       "location_confidence": "multi-location",
@@ -85,11 +85,11 @@
       "login": "stack72",
       "name": "Paul Stack",
       "profile_url": "https://github.com/stack72",
-      "public_contributions": 2696,
+      "public_contributions": 2692,
       "public_repos": 219,
       "public_gists": 78,
-      "observed_public_commits": 2696,
-      "observed_public_pull_requests": 1991,
+      "observed_public_commits": 2692,
+      "observed_public_pull_requests": 1988,
       "followers": 481,
       "location": "Derry, Ireland",
       "location_confidence": "multi-location",
@@ -102,10 +102,10 @@
       "login": "conorheffron",
       "name": "Conor Heffron",
       "profile_url": "https://github.com/conorheffron",
-      "public_contributions": 2030,
+      "public_contributions": 2028,
       "public_repos": 64,
       "public_gists": 4,
-      "observed_public_commits": 2030,
+      "observed_public_commits": 2028,
       "observed_public_pull_requests": 506,
       "followers": 565,
       "location": "Kilcock, Co. Kildare, Ireland",
@@ -113,7 +113,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4,
-      "previous_rank": 5
+      "previous_rank": 4
     },
     {
       "login": "joestump",
@@ -130,7 +130,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 5,
-      "previous_rank": 4
+      "previous_rank": 5
     },
     {
       "login": "urschrei",
@@ -153,11 +153,11 @@
       "login": "ematipico",
       "name": "Emanuele Stoppa",
       "profile_url": "https://github.com/ematipico",
-      "public_contributions": 1314,
+      "public_contributions": 1313,
       "public_repos": 107,
       "public_gists": 6,
-      "observed_public_commits": 1314,
-      "observed_public_pull_requests": 810,
+      "observed_public_commits": 1313,
+      "observed_public_pull_requests": 808,
       "followers": 905,
       "location": "Ireland",
       "location_confidence": "exact-country",
@@ -191,7 +191,7 @@
       "public_repos": 78,
       "public_gists": 2,
       "observed_public_commits": 994,
-      "observed_public_pull_requests": 94,
+      "observed_public_pull_requests": 93,
       "followers": 305,
       "location": "Dublin, Ireland",
       "location_confidence": "multi-location",
@@ -218,23 +218,6 @@
       "previous_rank": 10
     },
     {
-      "login": "vitaly-t",
-      "name": "Code Scratcher",
-      "profile_url": "https://github.com/vitaly-t",
-      "public_contributions": 573,
-      "public_repos": 221,
-      "public_gists": 40,
-      "observed_public_commits": 573,
-      "observed_public_pull_requests": 25,
-      "followers": 365,
-      "location": "Wicklow, Ireland",
-      "location_confidence": "multi-location",
-      "discovered_by_query": "location:Ireland repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 11,
-      "previous_rank": 11
-    },
-    {
       "login": "TravelTimN",
       "name": "Tim Nelson",
       "profile_url": "https://github.com/TravelTimN",
@@ -248,7 +231,7 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 12,
+      "rank": 11,
       "previous_rank": 12
     },
     {
@@ -265,59 +248,76 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 13,
-      "previous_rank": 16
+      "rank": 12,
+      "previous_rank": 13
     },
     {
       "login": "miguelgrinberg",
       "name": "Miguel Grinberg",
       "profile_url": "https://github.com/miguelgrinberg",
-      "public_contributions": 550,
+      "public_contributions": 553,
       "public_repos": 209,
       "public_gists": 23,
-      "observed_public_commits": 550,
+      "observed_public_commits": 553,
       "observed_public_pull_requests": 196,
       "followers": 12940,
       "location": "Ireland",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14,
-      "previous_rank": 13
+      "rank": 13,
+      "previous_rank": 14
     },
     {
       "login": "syxanash",
       "name": "Simone ☞ /^syx.*$/",
       "profile_url": "https://github.com/syxanash",
-      "public_contributions": 542,
+      "public_contributions": 540,
       "public_repos": 32,
       "public_gists": 17,
-      "observed_public_commits": 542,
+      "observed_public_commits": 540,
       "observed_public_pull_requests": 13,
       "followers": 277,
       "location": "Dublin, Ireland",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 15,
-      "previous_rank": 14
+      "rank": 14,
+      "previous_rank": 15
     },
     {
       "login": "arp242",
       "name": "Martin Tournoij",
       "profile_url": "https://github.com/arp242",
-      "public_contributions": 538,
+      "public_contributions": 536,
       "public_repos": 145,
       "public_gists": 17,
-      "observed_public_commits": 538,
-      "observed_public_pull_requests": 155,
+      "observed_public_commits": 536,
+      "observed_public_pull_requests": 154,
       "followers": 1006,
       "location": "Ireland",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
+      "rank": 15,
+      "previous_rank": 16
+    },
+    {
+      "login": "vitaly-t",
+      "name": "Code Scratcher",
+      "profile_url": "https://github.com/vitaly-t",
+      "public_contributions": 527,
+      "public_repos": 221,
+      "public_gists": 40,
+      "observed_public_commits": 527,
+      "observed_public_pull_requests": 25,
+      "followers": 365,
+      "location": "Wicklow, Ireland",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Ireland repos:>5 type:user",
+      "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 15
+      "previous_rank": 11
     },
     {
       "login": "tunetheweb",
@@ -367,16 +367,17 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 19,
+      "previous_rank": 19
     },
     {
       "login": "skooter500",
       "name": "Bryan Duggan",
       "profile_url": "https://github.com/skooter500",
-      "public_contributions": 442,
+      "public_contributions": 435,
       "public_repos": 342,
       "public_gists": 0,
-      "observed_public_commits": 442,
+      "observed_public_commits": 435,
       "observed_public_pull_requests": 0,
       "followers": 423,
       "location": "Ireland",
@@ -384,7 +385,7 @@
       "discovered_by_query": "location:Ireland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 19
+      "previous_rank": 20
     }
   ]
 }
