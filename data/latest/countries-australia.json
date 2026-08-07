@@ -3,24 +3,24 @@
   "slug": "australia",
   "name": "Australia",
   "title": "Top observed GitHub contributors in Australia",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      108204
+      108276
     ]
   },
   "code": "AU",
-  "candidate_count": 73793,
+  "candidate_count": 73794,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -53,7 +53,7 @@
     },
     {
       "query": "location:Melbourne repos:>5 type:user",
-      "total": 15265,
+      "total": 15266,
       "accepted": 64
     },
     {
@@ -102,11 +102,11 @@
       "login": "rogerchappel",
       "name": "Roger Chappel",
       "profile_url": "https://github.com/rogerchappel",
-      "public_contributions": 29629,
+      "public_contributions": 29800,
       "public_repos": 400,
       "public_gists": 0,
-      "observed_public_commits": 29629,
-      "observed_public_pull_requests": 8997,
+      "observed_public_commits": 29800,
+      "observed_public_pull_requests": 9048,
       "followers": 14,
       "location": "Australia",
       "location_confidence": "exact-country",
@@ -119,11 +119,11 @@
       "login": "SimonCropp",
       "name": "Simon Cropp",
       "profile_url": "https://github.com/SimonCropp",
-      "public_contributions": 23239,
+      "public_contributions": 23218,
       "public_repos": 197,
       "public_gists": 57,
-      "observed_public_commits": 23239,
-      "observed_public_pull_requests": 1502,
+      "observed_public_commits": 23218,
+      "observed_public_pull_requests": 1498,
       "followers": 1125,
       "location": "Canberra, ACT, Australia",
       "location_confidence": "multi-location",
@@ -136,10 +136,10 @@
       "login": "djouallah",
       "name": "Mimoune",
       "profile_url": "https://github.com/djouallah",
-      "public_contributions": 11193,
+      "public_contributions": 11195,
       "public_repos": 98,
       "public_gists": 24,
-      "observed_public_commits": 11193,
+      "observed_public_commits": 11195,
       "observed_public_pull_requests": 43,
       "followers": 202,
       "location": "brisbane",
@@ -153,10 +153,10 @@
       "login": "adrianwedd",
       "name": "Adrian Wedd",
       "profile_url": "https://github.com/adrianwedd",
-      "public_contributions": 9778,
+      "public_contributions": 9696,
       "public_repos": 280,
       "public_gists": 0,
-      "observed_public_commits": 9778,
+      "observed_public_commits": 9696,
       "observed_public_pull_requests": 485,
       "followers": 21,
       "location": "Cygnet, Tasmania, Australia",
@@ -204,10 +204,10 @@
       "login": "jph00",
       "name": "Jeremy Howard",
       "profile_url": "https://github.com/jph00",
-      "public_contributions": 5602,
+      "public_contributions": 5619,
       "public_repos": 95,
       "public_gists": 91,
-      "observed_public_commits": 5602,
+      "observed_public_commits": 5619,
       "observed_public_pull_requests": 60,
       "followers": 7558,
       "location": "Brisbane, Australia",
@@ -215,7 +215,7 @@
       "discovered_by_query": "location:Australia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7,
-      "previous_rank": 9
+      "previous_rank": 7
     },
     {
       "login": "madhavajay",
@@ -232,16 +232,16 @@
       "discovered_by_query": "location:Brisbane repos:>5 type:user",
       "notable_repositories": [],
       "rank": 8,
-      "previous_rank": 7
+      "previous_rank": 8
     },
     {
       "login": "merill",
       "name": "Merill Fernando",
       "profile_url": "https://github.com/merill",
-      "public_contributions": 5442,
+      "public_contributions": 5421,
       "public_repos": 83,
       "public_gists": 7,
-      "observed_public_commits": 5442,
+      "observed_public_commits": 5421,
       "observed_public_pull_requests": 89,
       "followers": 886,
       "location": "Melbourne, Australia",
@@ -249,34 +249,34 @@
       "discovered_by_query": "location:Melbourne repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 8
+      "previous_rank": 9
     },
     {
       "login": "mekenthompson",
       "name": "Ken Thompson",
       "profile_url": "https://github.com/mekenthompson",
-      "public_contributions": 5257,
+      "public_contributions": 5263,
       "public_repos": 61,
       "public_gists": 1,
-      "observed_public_commits": 5257,
-      "observed_public_pull_requests": 3288,
+      "observed_public_commits": 5263,
+      "observed_public_pull_requests": 3297,
       "followers": 29,
       "location": "Melbourne, Australia",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Australia automation type:user",
       "notable_repositories": [],
       "rank": 10,
-      "previous_rank": 12
+      "previous_rank": 10
     },
     {
       "login": "harlan-zw",
       "name": "Harlan Wilton",
       "profile_url": "https://github.com/harlan-zw",
-      "public_contributions": 5149,
+      "public_contributions": 5152,
       "public_repos": 132,
       "public_gists": 0,
-      "observed_public_commits": 5149,
-      "observed_public_pull_requests": 1042,
+      "observed_public_commits": 5152,
+      "observed_public_pull_requests": 1043,
       "followers": 1155,
       "location": "Australia",
       "location_confidence": "exact-country",
@@ -294,22 +294,22 @@
       "public_gists": 3,
       "observed_public_commits": 4999,
       "observed_public_pull_requests": 158,
-      "followers": 161,
+      "followers": 160,
       "location": "Australia",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Australia automation type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 10
+      "previous_rank": 12
     },
     {
       "login": "ajsutton",
       "name": "Adrian Sutton",
       "profile_url": "https://github.com/ajsutton",
-      "public_contributions": 4805,
+      "public_contributions": 4809,
       "public_repos": 105,
       "public_gists": 33,
-      "observed_public_commits": 4805,
+      "observed_public_commits": 4809,
       "observed_public_pull_requests": 1511,
       "followers": 330,
       "location": "Brisbane, Australia",
@@ -334,16 +334,16 @@
       "discovered_by_query": "location:Australia followers:<20 repos:120..200 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 17
+      "previous_rank": 14
     },
     {
       "login": "Quackster",
       "name": "Quackster",
       "profile_url": "https://github.com/Quackster",
-      "public_contributions": 4250,
+      "public_contributions": 4249,
       "public_repos": 135,
       "public_gists": 15,
-      "observed_public_commits": 4250,
+      "observed_public_commits": 4249,
       "observed_public_pull_requests": 4,
       "followers": 281,
       "location": "Brisbane, Australia",
@@ -351,40 +351,40 @@
       "discovered_by_query": "location:Brisbane repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 16
+      "previous_rank": 15
     },
     {
       "login": "jxom",
       "profile_url": "https://github.com/jxom",
-      "public_contributions": 3995,
+      "public_contributions": 3994,
       "public_repos": 239,
       "public_gists": 9,
-      "observed_public_commits": 3995,
-      "observed_public_pull_requests": 1462,
+      "observed_public_commits": 3994,
+      "observed_public_pull_requests": 1461,
       "followers": 1218,
       "location": "Melbourne, Australia",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Australia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 15
+      "previous_rank": 16
     },
     {
       "login": "mnot",
       "name": "Mark Nottingham",
       "profile_url": "https://github.com/mnot",
-      "public_contributions": 3979,
+      "public_contributions": 3974,
       "public_repos": 92,
       "public_gists": 49,
-      "observed_public_commits": 3979,
-      "observed_public_pull_requests": 378,
+      "observed_public_commits": 3974,
+      "observed_public_pull_requests": 379,
       "followers": 1337,
       "location": "Melbourne, Australia",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Australia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 14
+      "previous_rank": 17
     },
     {
       "login": "007revad",
@@ -401,16 +401,16 @@
       "discovered_by_query": "location:Australia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 20
+      "previous_rank": 18
     },
     {
       "login": "aaronparker",
       "name": "Aaron Parker",
       "profile_url": "https://github.com/aaronparker",
-      "public_contributions": 3430,
+      "public_contributions": 3418,
       "public_repos": 35,
       "public_gists": 31,
-      "observed_public_commits": 3430,
+      "observed_public_commits": 3418,
       "observed_public_pull_requests": 172,
       "followers": 418,
       "location": "Melbourne, Australia",
@@ -418,16 +418,16 @@
       "discovered_by_query": "location:Melbourne repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 18
+      "previous_rank": 19
     },
     {
       "login": "LTLA",
       "name": "Aaron Lun",
       "profile_url": "https://github.com/LTLA",
-      "public_contributions": 3399,
+      "public_contributions": 3384,
       "public_repos": 292,
       "public_gists": 13,
-      "observed_public_commits": 3399,
+      "observed_public_commits": 3384,
       "observed_public_pull_requests": 71,
       "followers": 486,
       "location": "Sydney",
@@ -435,7 +435,7 @@
       "discovered_by_query": "location:Sydney repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 19
+      "previous_rank": 20
     }
   ]
 }
