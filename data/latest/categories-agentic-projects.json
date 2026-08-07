@@ -3,14 +3,14 @@
   "slug": "agentic-projects",
   "name": "Agentic Projects",
   "title": "Top observed agentic open-source projects",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-rest-search-agentic-project-signals",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
@@ -19,7 +19,7 @@
       1000
     ]
   },
-  "candidate_count": 649082,
+  "candidate_count": 649222,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Project PR counts use recent merged pull requests visible through GitHub GraphQL; high-volume repositories may be capped by the first 100 recently updated merged PRs per snapshot.",
@@ -36,22 +36,22 @@
   "candidate_count_by_query": [
     {
       "query": "agentic archived:false pushed:>=2026-04-01",
-      "total": 521638,
+      "total": 521747,
       "accepted": 20
     },
     {
       "query": "topic:ai-agents archived:false",
-      "total": 65413,
+      "total": 65431,
       "accepted": 14
     },
     {
       "query": "topic:llm-agents archived:false",
-      "total": 3462,
+      "total": 3466,
       "accepted": 20
     },
     {
       "query": "topic:mcp archived:false",
-      "total": 57864,
+      "total": 57873,
       "accepted": 15
     },
     {
@@ -64,15 +64,15 @@
     {
       "full_name": "heygen-com/hyperframes",
       "url": "https://github.com/heygen-com/hyperframes",
-      "stars": 39789,
-      "pull_requests_merged_7d": 81,
+      "stars": 39793,
+      "pull_requests_merged_7d": 83,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 1436,
+      "recent_commits_30d": 1443,
       "active_contributors_30d": 51,
       "total_contributors_observed": 51,
       "releases_90d": 100,
       "open_issues": 24,
-      "pushed_at": "2026-08-06T23:31:43Z",
+      "pushed_at": "2026-08-07T01:01:07Z",
       "discovered_by_query": "agent framework archived:false stars:>100",
       "primary_language": "TypeScript",
       "rank": 1
@@ -80,7 +80,7 @@
     {
       "full_name": "n8n-io/n8n",
       "url": "https://github.com/n8n-io/n8n",
-      "stars": 199622,
+      "stars": 199625,
       "pull_requests_merged_7d": 99,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 1124,
@@ -88,7 +88,7 @@
       "total_contributors_observed": 426,
       "releases_90d": 100,
       "open_issues": 334,
-      "pushed_at": "2026-08-06T23:29:27Z",
+      "pushed_at": "2026-08-07T00:51:22Z",
       "discovered_by_query": "topic:mcp archived:false",
       "primary_language": "TypeScript",
       "rank": 2
@@ -96,15 +96,15 @@
     {
       "full_name": "mastra-ai/mastra",
       "url": "https://github.com/mastra-ai/mastra",
-      "stars": 26993,
+      "stars": 26994,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 1096,
+      "recent_commits_30d": 1108,
       "active_contributors_30d": 463,
       "total_contributors_observed": 463,
       "releases_90d": 22,
-      "open_issues": 318,
-      "pushed_at": "2026-08-06T23:32:07Z",
+      "open_issues": 312,
+      "pushed_at": "2026-08-07T00:59:47Z",
       "discovered_by_query": "agent framework archived:false stars:>100",
       "primary_language": "TypeScript",
       "rank": 3
@@ -112,15 +112,15 @@
     {
       "full_name": "openai/codex",
       "url": "https://github.com/openai/codex",
-      "stars": 104426,
+      "stars": 104432,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 974,
+      "recent_commits_30d": 979,
       "active_contributors_30d": 472,
       "total_contributors_observed": 472,
       "releases_90d": 100,
-      "open_issues": 11620,
-      "pushed_at": "2026-08-06T22:03:26Z",
+      "open_issues": 11623,
+      "pushed_at": "2026-08-07T01:01:13Z",
       "discovered_by_query": "agentic archived:false pushed:>=2026-04-01",
       "primary_language": "Rust",
       "rank": 4
@@ -128,7 +128,7 @@
     {
       "full_name": "infiniflow/ragflow",
       "url": "https://github.com/infiniflow/ragflow",
-      "stars": 86977,
+      "stars": 86978,
       "pull_requests_merged_7d": 95,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 831,
@@ -144,15 +144,15 @@
     {
       "full_name": "langgenius/dify",
       "url": "https://github.com/langgenius/dify",
-      "stars": 151590,
+      "stars": 151596,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 790,
+      "recent_commits_30d": 792,
       "active_contributors_30d": 457,
       "total_contributors_observed": 457,
       "releases_90d": 6,
-      "open_issues": 289,
-      "pushed_at": "2026-08-06T22:09:58Z",
+      "open_issues": 288,
+      "pushed_at": "2026-08-07T01:01:04Z",
       "discovered_by_query": "agentic archived:false pushed:>=2026-04-01",
       "primary_language": "TypeScript",
       "rank": 6
@@ -163,12 +163,12 @@
       "stars": 81340,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 777,
+      "recent_commits_30d": 779,
       "active_contributors_30d": 344,
       "total_contributors_observed": 344,
       "releases_90d": 100,
       "open_issues": 248,
-      "pushed_at": "2026-08-06T22:16:52Z",
+      "pushed_at": "2026-08-07T00:59:50Z",
       "discovered_by_query": "topic:mcp archived:false",
       "primary_language": "TypeScript",
       "rank": 7
@@ -176,7 +176,7 @@
     {
       "full_name": "koala73/worldmonitor",
       "url": "https://github.com/koala73/worldmonitor",
-      "stars": 79390,
+      "stars": 79402,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 683,
@@ -192,7 +192,7 @@
     {
       "full_name": "HKUDS/nanobot",
       "url": "https://github.com/HKUDS/nanobot",
-      "stars": 46706,
+      "stars": 46709,
       "pull_requests_merged_7d": 50,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 491,
@@ -200,7 +200,7 @@
       "total_contributors_observed": 357,
       "releases_90d": 4,
       "open_issues": 190,
-      "pushed_at": "2026-08-06T11:32:24Z",
+      "pushed_at": "2026-08-06T23:55:40Z",
       "discovered_by_query": "topic:llm-agents archived:false",
       "primary_language": "Python",
       "rank": 9
@@ -208,7 +208,7 @@
     {
       "full_name": "bytedance/deer-flow",
       "url": "https://github.com/bytedance/deer-flow",
-      "stars": 79423,
+      "stars": 79427,
       "pull_requests_merged_7d": 45,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 423,
@@ -222,6 +222,22 @@
       "rank": 10
     },
     {
+      "full_name": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "stars": 28446,
+      "pull_requests_merged_7d": 99,
+      "pull_requests_merged_30d": 100,
+      "recent_commits_30d": 297,
+      "active_contributors_30d": 331,
+      "total_contributors_observed": 331,
+      "releases_90d": 17,
+      "open_issues": 12,
+      "pushed_at": "2026-08-07T00:46:41Z",
+      "discovered_by_query": "agent framework archived:false stars:>100",
+      "primary_language": "Python",
+      "rank": 11
+    },
+    {
       "full_name": "strukto-ai/mirage",
       "url": "https://github.com/strukto-ai/mirage",
       "stars": 3386,
@@ -232,25 +248,9 @@
       "total_contributors_observed": 22,
       "releases_90d": 3,
       "open_issues": 98,
-      "pushed_at": "2026-08-06T18:40:15Z",
+      "pushed_at": "2026-08-07T00:59:56Z",
       "discovered_by_query": "topic:llm-agents archived:false",
       "primary_language": "TypeScript",
-      "rank": 11
-    },
-    {
-      "full_name": "openai/openai-agents-python",
-      "url": "https://github.com/openai/openai-agents-python",
-      "stars": 28445,
-      "pull_requests_merged_7d": 100,
-      "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 294,
-      "active_contributors_30d": 329,
-      "total_contributors_observed": 329,
-      "releases_90d": 17,
-      "open_issues": 13,
-      "pushed_at": "2026-08-06T23:06:59Z",
-      "discovered_by_query": "agent framework archived:false stars:>100",
-      "primary_language": "Python",
       "rank": 12
     },
     {
@@ -272,15 +272,15 @@
     {
       "full_name": "aaif-goose/goose",
       "url": "https://github.com/aaif-goose/goose",
-      "stars": 52469,
+      "stars": 52472,
       "pull_requests_merged_7d": 68,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 262,
+      "recent_commits_30d": 261,
       "active_contributors_30d": 453,
       "total_contributors_observed": 453,
       "releases_90d": 13,
       "open_issues": 150,
-      "pushed_at": "2026-08-06T23:21:53Z",
+      "pushed_at": "2026-08-07T00:30:45Z",
       "discovered_by_query": "topic:mcp archived:false",
       "primary_language": "Rust",
       "rank": 14
@@ -304,7 +304,7 @@
     {
       "full_name": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": 91901,
+      "stars": 91902,
       "pull_requests_merged_7d": 1,
       "pull_requests_merged_30d": 99,
       "recent_commits_30d": 1222,
@@ -319,15 +319,15 @@
     {
       "full_name": "anomalyco/opencode",
       "url": "https://github.com/anomalyco/opencode",
-      "stars": 194311,
+      "stars": 194325,
       "pull_requests_merged_7d": 98,
       "pull_requests_merged_30d": 99,
       "recent_commits_30d": 508,
       "active_contributors_30d": 456,
       "total_contributors_observed": 456,
       "releases_90d": 65,
-      "open_issues": 3789,
-      "pushed_at": "2026-08-06T23:37:26Z",
+      "open_issues": 3790,
+      "pushed_at": "2026-08-07T01:01:08Z",
       "discovered_by_query": "agentic archived:false pushed:>=2026-04-01",
       "primary_language": "TypeScript",
       "rank": 17
@@ -335,15 +335,15 @@
     {
       "full_name": "nexu-io/open-design",
       "url": "https://github.com/nexu-io/open-design",
-      "stars": 84187,
+      "stars": 84203,
       "pull_requests_merged_7d": 97,
       "pull_requests_merged_30d": 99,
-      "recent_commits_30d": 454,
+      "recent_commits_30d": 455,
       "active_contributors_30d": 389,
       "total_contributors_observed": 389,
       "releases_90d": 17,
       "open_issues": 455,
-      "pushed_at": "2026-08-06T23:33:15Z",
+      "pushed_at": "2026-08-07T01:01:07Z",
       "discovered_by_query": "topic:ai-agents archived:false",
       "primary_language": "TypeScript",
       "rank": 18
@@ -354,7 +354,7 @@
       "stars": 23002,
       "pull_requests_merged_7d": 8,
       "pull_requests_merged_30d": 99,
-      "recent_commits_30d": 230,
+      "recent_commits_30d": 229,
       "active_contributors_30d": 185,
       "total_contributors_observed": 185,
       "releases_90d": 42,
@@ -368,14 +368,14 @@
       "full_name": "langflow-ai/langflow",
       "url": "https://github.com/langflow-ai/langflow",
       "stars": 152898,
-      "pull_requests_merged_7d": 58,
+      "pull_requests_merged_7d": 57,
       "pull_requests_merged_30d": 99,
-      "recent_commits_30d": 228,
+      "recent_commits_30d": 227,
       "active_contributors_30d": 349,
       "total_contributors_observed": 349,
       "releases_90d": 11,
       "open_issues": 212,
-      "pushed_at": "2026-08-06T22:12:34Z",
+      "pushed_at": "2026-08-07T01:00:19Z",
       "discovered_by_query": "agentic archived:false pushed:>=2026-04-01",
       "primary_language": "Python",
       "rank": 20
