@@ -3,20 +3,20 @@
   "slug": "malaysia",
   "name": "Malaysia",
   "title": "Top observed GitHub contributors in Malaysia",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      39278
+      39244
     ]
   },
   "code": "MY",
@@ -42,11 +42,11 @@
       "login": "leoloso",
       "name": "Leonardo Losoviz",
       "profile_url": "https://github.com/leoloso",
-      "public_contributions": 15746,
+      "public_contributions": 15739,
       "public_repos": 112,
       "public_gists": 11,
-      "observed_public_commits": 15746,
-      "observed_public_pull_requests": 260,
+      "observed_public_commits": 15739,
+      "observed_public_pull_requests": 259,
       "followers": 138,
       "location": "Kuala Lumpur, Malaysia",
       "location_confidence": "multi-location",
@@ -59,10 +59,10 @@
       "login": "syarief02",
       "name": "Syarief Azman",
       "profile_url": "https://github.com/syarief02",
-      "public_contributions": 7043,
+      "public_contributions": 7030,
       "public_repos": 67,
       "public_gists": 0,
-      "observed_public_commits": 7043,
+      "observed_public_commits": 7030,
       "observed_public_pull_requests": 0,
       "followers": 450,
       "location": "Malaysia",
@@ -76,10 +76,10 @@
       "login": "data-gov-my",
       "name": "data.gov.my",
       "profile_url": "https://github.com/data-gov-my",
-      "public_contributions": 6702,
+      "public_contributions": 6703,
       "public_repos": 6,
       "public_gists": 0,
-      "observed_public_commits": 6702,
+      "observed_public_commits": 6703,
       "observed_public_pull_requests": 36,
       "followers": 252,
       "location": "Putrajaya, Malaysia",
@@ -127,10 +127,10 @@
       "login": "rob0pup",
       "name": "Robin",
       "profile_url": "https://github.com/rob0pup",
-      "public_contributions": 1550,
+      "public_contributions": 1543,
       "public_repos": 27,
       "public_gists": 0,
-      "observed_public_commits": 1550,
+      "observed_public_commits": 1543,
       "observed_public_pull_requests": 67,
       "followers": 2332,
       "location": "Malaysia / Singapore / Japan / US",
@@ -161,11 +161,11 @@
       "login": "crynobone",
       "name": "Mior Muhammad Zaki",
       "profile_url": "https://github.com/crynobone",
-      "public_contributions": 1190,
+      "public_contributions": 1185,
       "public_repos": 194,
       "public_gists": 31,
-      "observed_public_commits": 1190,
-      "observed_public_pull_requests": 328,
+      "observed_public_commits": 1185,
+      "observed_public_pull_requests": 326,
       "followers": 1780,
       "location": "Malaysia",
       "location_confidence": "exact-country",
@@ -195,10 +195,10 @@
       "login": "huseinzol05",
       "name": "HUSEIN ZOLKEPLI",
       "profile_url": "https://github.com/huseinzol05",
-      "public_contributions": 761,
+      "public_contributions": 758,
       "public_repos": 67,
       "public_gists": 66,
-      "observed_public_commits": 761,
+      "observed_public_commits": 758,
       "observed_public_pull_requests": 0,
       "followers": 1894,
       "location": "Kedah, Malaysia",
@@ -223,7 +223,7 @@
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
-      "previous_rank": 12
+      "previous_rank": 11
     },
     {
       "login": "amirahnasihah",
@@ -240,16 +240,16 @@
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 13
+      "previous_rank": 12
     },
     {
       "login": "Innocentsax",
       "name": "INNOCENT UDO ",
       "profile_url": "https://github.com/Innocentsax",
-      "public_contributions": 565,
+      "public_contributions": 564,
       "public_repos": 71,
       "public_gists": 0,
-      "observed_public_commits": 565,
+      "observed_public_commits": 564,
       "observed_public_pull_requests": 2,
       "followers": 1356,
       "location": "Kuala Lumpur, Malaysia",
@@ -257,7 +257,7 @@
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13,
-      "previous_rank": 11
+      "previous_rank": 13
     },
     {
       "login": "od3n",
@@ -273,7 +273,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14
+      "rank": 14,
+      "previous_rank": 14
     },
     {
       "login": "mfrashad",
@@ -290,16 +291,16 @@
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 14
+      "previous_rank": 15
     },
     {
       "login": "rc-chuah",
       "name": "RC Chuah",
       "profile_url": "https://github.com/rc-chuah",
-      "public_contributions": 450,
+      "public_contributions": 451,
       "public_repos": 1078,
       "public_gists": 53,
-      "observed_public_commits": 450,
+      "observed_public_commits": 451,
       "observed_public_pull_requests": 148,
       "followers": 1736,
       "location": "Shah Alam, Selangor, Malaysia",
@@ -307,7 +308,7 @@
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 15
+      "previous_rank": 16
     },
     {
       "login": "mkhairi",
@@ -324,7 +325,7 @@
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 16
+      "previous_rank": 17
     },
     {
       "login": "limxuan",
@@ -341,7 +342,7 @@
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 17
+      "previous_rank": 18
     },
     {
       "login": "zernonia",
@@ -351,7 +352,7 @@
       "public_repos": 69,
       "public_gists": 0,
       "observed_public_commits": 380,
-      "observed_public_pull_requests": 90,
+      "observed_public_pull_requests": 91,
       "followers": 946,
       "location": "Malaysia",
       "location_confidence": "exact-country",
@@ -364,10 +365,10 @@
       "login": "cchitsiang",
       "name": "Chew Chit Siang",
       "profile_url": "https://github.com/cchitsiang",
-      "public_contributions": 335,
+      "public_contributions": 334,
       "public_repos": 100,
       "public_gists": 51,
-      "observed_public_commits": 335,
+      "observed_public_commits": 334,
       "observed_public_pull_requests": 3,
       "followers": 163,
       "location": "Kuala Lumpur, Malaysia",
@@ -375,7 +376,7 @@
       "discovered_by_query": "location:Malaysia repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 18
+      "previous_rank": 20
     }
   ]
 }
