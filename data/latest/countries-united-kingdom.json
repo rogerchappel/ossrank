@@ -3,24 +3,24 @@
   "slug": "united-kingdom",
   "name": "United Kingdom",
   "title": "Top observed GitHub contributors in United Kingdom",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      113600
+      113434
     ]
   },
   "code": "GB",
-  "candidate_count": 99170,
+  "candidate_count": 99176,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -36,12 +36,12 @@
   "candidate_count_by_query": [
     {
       "query": "location:\"United Kingdom\" repos:>5 type:user",
-      "total": 30521,
+      "total": 30524,
       "accepted": 25
     },
     {
       "query": "location:London repos:>5 type:user",
-      "total": 58163,
+      "total": 58166,
       "accepted": 20
     },
     {
@@ -60,11 +60,11 @@
       "login": "steipete",
       "name": "Peter Steinberger",
       "profile_url": "https://github.com/steipete",
-      "public_contributions": 67334,
+      "public_contributions": 67264,
       "public_repos": 215,
       "public_gists": 304,
-      "observed_public_commits": 67334,
-      "observed_public_pull_requests": 9531,
+      "observed_public_commits": 67264,
+      "observed_public_pull_requests": 9532,
       "followers": 52644,
       "location": "London / San Francisco",
       "location_confidence": "multi-location",
@@ -77,10 +77,10 @@
       "login": "HariSekhon",
       "name": "Hari Sekhon",
       "profile_url": "https://github.com/HariSekhon",
-      "public_contributions": 14883,
+      "public_contributions": 14833,
       "public_repos": 209,
       "public_gists": 362,
-      "observed_public_commits": 14883,
+      "observed_public_commits": 14833,
       "observed_public_pull_requests": 3,
       "followers": 2211,
       "location": "London, United Kingdom",
@@ -105,33 +105,33 @@
       "discovered_by_query": "location:Scotland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 3,
-      "previous_rank": 4
+      "previous_rank": 3
     },
     {
       "login": "MikeMcQuaid",
       "name": "Mike McQuaid",
       "profile_url": "https://github.com/MikeMcQuaid",
-      "public_contributions": 7673,
+      "public_contributions": 7655,
       "public_repos": 47,
       "public_gists": 0,
-      "observed_public_commits": 7673,
-      "observed_public_pull_requests": 1038,
+      "observed_public_commits": 7655,
+      "observed_public_pull_requests": 1036,
       "followers": 4413,
       "location": "Edinburgh, Scotland",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Scotland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 4,
-      "previous_rank": 3
+      "previous_rank": 4
     },
     {
       "login": "issus",
       "name": "Mark",
       "profile_url": "https://github.com/issus",
-      "public_contributions": 3971,
+      "public_contributions": 3956,
       "public_repos": 78,
       "public_gists": 0,
-      "observed_public_commits": 3971,
+      "observed_public_commits": 3956,
       "observed_public_pull_requests": 0,
       "followers": 527,
       "location": "Scotland",
@@ -145,10 +145,10 @@
       "login": "championswimmer",
       "name": "Arnav Gupta",
       "profile_url": "https://github.com/championswimmer",
-      "public_contributions": 2838,
+      "public_contributions": 2837,
       "public_repos": 423,
       "public_gists": 67,
-      "observed_public_commits": 2838,
+      "observed_public_commits": 2837,
       "observed_public_pull_requests": 135,
       "followers": 5086,
       "location": "London, UK",
@@ -162,11 +162,11 @@
       "login": "lissy93",
       "name": "Alicia Sykes",
       "profile_url": "https://github.com/lissy93",
-      "public_contributions": 2197,
+      "public_contributions": 2188,
       "public_repos": 142,
       "public_gists": 22,
-      "observed_public_commits": 2197,
-      "observed_public_pull_requests": 245,
+      "observed_public_commits": 2188,
+      "observed_public_pull_requests": 244,
       "followers": 7371,
       "location": "London, UK",
       "location_confidence": "multi-location",
@@ -179,10 +179,10 @@
       "login": "nilbuild",
       "name": "Kamran Ahmed",
       "profile_url": "https://github.com/nilbuild",
-      "public_contributions": 2091,
+      "public_contributions": 2090,
       "public_repos": 130,
       "public_gists": 26,
-      "observed_public_commits": 2091,
+      "observed_public_commits": 2090,
       "observed_public_pull_requests": 34,
       "followers": 40679,
       "location": "United Kingdom",
@@ -213,10 +213,10 @@
       "login": "mvdan",
       "name": "Daniel Martí",
       "profile_url": "https://github.com/mvdan",
-      "public_contributions": 1954,
+      "public_contributions": 1952,
       "public_repos": 83,
       "public_gists": 5,
-      "observed_public_commits": 1954,
+      "observed_public_commits": 1952,
       "observed_public_pull_requests": 34,
       "followers": 2553,
       "location": "London, United Kingdom",
@@ -230,10 +230,10 @@
       "login": "alexellis",
       "name": "Alex Ellis",
       "profile_url": "https://github.com/alexellis",
-      "public_contributions": 1836,
+      "public_contributions": 1833,
       "public_repos": 514,
       "public_gists": 218,
-      "observed_public_commits": 1836,
+      "observed_public_commits": 1833,
       "observed_public_pull_requests": 61,
       "followers": 5171,
       "location": "United Kingdom",
@@ -247,10 +247,10 @@
       "login": "segunadebayo",
       "name": "Segun Adebayo",
       "profile_url": "https://github.com/segunadebayo",
-      "public_contributions": 1693,
+      "public_contributions": 1687,
       "public_repos": 45,
       "public_gists": 34,
-      "observed_public_commits": 1693,
+      "observed_public_commits": 1687,
       "observed_public_pull_requests": 73,
       "followers": 4406,
       "location": "United Kingdom",
@@ -264,10 +264,10 @@
       "login": "keithamus",
       "name": "Keith Cirkel",
       "profile_url": "https://github.com/keithamus",
-      "public_contributions": 1578,
+      "public_contributions": 1577,
       "public_repos": 397,
       "public_gists": 11,
-      "observed_public_commits": 1578,
+      "observed_public_commits": 1577,
       "observed_public_pull_requests": 853,
       "followers": 1804,
       "location": "London, England",
@@ -292,16 +292,16 @@
       "discovered_by_query": "location:\"United Kingdom\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 15
+      "previous_rank": 14
     },
     {
       "login": "threepointone",
       "name": "Sunil Pai",
       "profile_url": "https://github.com/threepointone",
-      "public_contributions": 1534,
+      "public_contributions": 1533,
       "public_repos": 392,
       "public_gists": 65,
-      "observed_public_commits": 1534,
+      "observed_public_commits": 1533,
       "observed_public_pull_requests": 689,
       "followers": 4450,
       "location": "Newcastle Upon Tyne, England",
@@ -309,7 +309,7 @@
       "discovered_by_query": "location:England repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 14
+      "previous_rank": 15
     },
     {
       "login": "wenkokke",
@@ -332,10 +332,10 @@
       "login": "eviltester",
       "name": "Alan Richardson",
       "profile_url": "https://github.com/eviltester",
-      "public_contributions": 1222,
+      "public_contributions": 1221,
       "public_repos": 112,
       "public_gists": 27,
-      "observed_public_commits": 1222,
+      "observed_public_commits": 1221,
       "observed_public_pull_requests": 157,
       "followers": 1001,
       "location": "London, England",
@@ -343,7 +343,7 @@
       "discovered_by_query": "location:England repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 18
+      "previous_rank": 17
     },
     {
       "login": "safishamsi",
@@ -360,33 +360,33 @@
       "discovered_by_query": "location:\"United Kingdom\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 17
+      "previous_rank": 18
     },
     {
       "login": "peterjc",
       "name": "Peter Cock",
       "profile_url": "https://github.com/peterjc",
-      "public_contributions": 1136,
+      "public_contributions": 1128,
       "public_repos": 263,
       "public_gists": 19,
-      "observed_public_commits": 1136,
-      "observed_public_pull_requests": 212,
+      "observed_public_commits": 1128,
+      "observed_public_pull_requests": 210,
       "followers": 512,
       "location": "Dundee, Scotland, UK",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Scotland repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 20
+      "previous_rank": 19
     },
     {
       "login": "surma",
       "name": "Surma",
       "profile_url": "https://github.com/surma",
-      "public_contributions": 1123,
+      "public_contributions": 1122,
       "public_repos": 115,
       "public_gists": 69,
-      "observed_public_commits": 1123,
+      "observed_public_commits": 1122,
       "observed_public_pull_requests": 152,
       "followers": 4603,
       "location": "Bristol, England",
@@ -394,7 +394,7 @@
       "discovered_by_query": "location:England repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 19
+      "previous_rank": 20
     }
   ]
 }
