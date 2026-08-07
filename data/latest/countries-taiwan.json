@@ -3,20 +3,20 @@
   "slug": "taiwan",
   "name": "Taiwan",
   "title": "Top observed GitHub contributors in Taiwan",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      63628
+      63502
     ]
   },
   "code": "TW",
@@ -42,10 +42,10 @@
       "login": "peter279k",
       "name": "Chun-Sheng, Li",
       "profile_url": "https://github.com/peter279k",
-      "public_contributions": 25219,
+      "public_contributions": 25123,
       "public_repos": 1022,
       "public_gists": 349,
-      "observed_public_commits": 25219,
+      "observed_public_commits": 25123,
       "observed_public_pull_requests": 32,
       "followers": 2241,
       "location": "Taipei, Taiwan",
@@ -76,10 +76,10 @@
       "login": "KohakuBlueleaf",
       "name": "Kohaku-Blueleaf",
       "profile_url": "https://github.com/KohakuBlueleaf",
-      "public_contributions": 4776,
+      "public_contributions": 4786,
       "public_repos": 107,
       "public_gists": 12,
-      "observed_public_commits": 4776,
+      "observed_public_commits": 4786,
       "observed_public_pull_requests": 23,
       "followers": 973,
       "location": "Hsinchu, Taiwan",
@@ -90,71 +90,55 @@
       "previous_rank": 3
     },
     {
-      "login": "roberthsu2003",
-      "name": "徐國堂",
-      "profile_url": "https://github.com/roberthsu2003",
-      "public_contributions": 4527,
-      "public_repos": 97,
-      "public_gists": 1,
-      "observed_public_commits": 4527,
-      "observed_public_pull_requests": 7,
-      "followers": 733,
-      "location": "Taipei/Taiwan",
-      "location_confidence": "multi-location",
-      "discovered_by_query": "location:Taiwan repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 4,
-      "previous_rank": 4
-    },
-    {
       "login": "ronnywang",
       "name": "Ronny Wang",
       "profile_url": "https://github.com/ronnywang",
-      "public_contributions": 4514,
+      "public_contributions": 4505,
       "public_repos": 238,
       "public_gists": 137,
-      "observed_public_commits": 4514,
+      "observed_public_commits": 4505,
       "observed_public_pull_requests": 0,
       "followers": 461,
       "location": "Taiwan",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 5,
+      "rank": 4,
       "previous_rank": 5
+    },
+    {
+      "login": "roberthsu2003",
+      "name": "徐國堂",
+      "profile_url": "https://github.com/roberthsu2003",
+      "public_contributions": 4500,
+      "public_repos": 97,
+      "public_gists": 1,
+      "observed_public_commits": 4500,
+      "observed_public_pull_requests": 7,
+      "followers": 733,
+      "location": "Taipei/Taiwan",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Taiwan repos:>5 type:user",
+      "notable_repositories": [],
+      "rank": 5,
+      "previous_rank": 4
     },
     {
       "login": "hydai",
       "name": "hydai",
       "profile_url": "https://github.com/hydai",
-      "public_contributions": 3822,
+      "public_contributions": 3832,
       "public_repos": 277,
       "public_gists": 34,
-      "observed_public_commits": 3822,
-      "observed_public_pull_requests": 597,
+      "observed_public_commits": 3832,
+      "observed_public_pull_requests": 595,
       "followers": 404,
       "location": "Taiwan",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 6
-    },
-    {
-      "login": "yorukot",
-      "name": "Yorukot",
-      "profile_url": "https://github.com/yorukot",
-      "public_contributions": 3453,
-      "public_repos": 151,
-      "public_gists": 0,
-      "observed_public_commits": 3453,
-      "observed_public_pull_requests": 135,
-      "followers": 663,
-      "location": "Taiwan",
-      "location_confidence": "exact-country",
-      "discovered_by_query": "location:Taiwan repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 7,
-      "previous_rank": 7
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "login": "audreyt",
@@ -170,8 +154,25 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
+      "rank": 7,
+      "previous_rank": 8
+    },
+    {
+      "login": "yorukot",
+      "name": "Yorukot",
+      "profile_url": "https://github.com/yorukot",
+      "public_contributions": 3438,
+      "public_repos": 151,
+      "public_gists": 0,
+      "observed_public_commits": 3438,
+      "observed_public_pull_requests": 135,
+      "followers": 663,
+      "location": "Taiwan",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Taiwan repos:>5 type:user",
+      "notable_repositories": [],
       "rank": 8,
-      "previous_rank": 6
+      "previous_rank": 7
     },
     {
       "login": "hoochanlon",
@@ -188,16 +189,16 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 8
+      "previous_rank": 9
     },
     {
       "login": "zonble",
       "name": "Weizhong Yang a.k.a zonble",
       "profile_url": "https://github.com/zonble",
-      "public_contributions": 3137,
+      "public_contributions": 3138,
       "public_repos": 165,
       "public_gists": 100,
-      "observed_public_commits": 3137,
+      "observed_public_commits": 3138,
       "observed_public_pull_requests": 75,
       "followers": 697,
       "location": "Taipei, Taiwan",
@@ -205,41 +206,41 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10,
-      "previous_rank": 9
+      "previous_rank": 10
     },
     {
       "login": "jserv",
       "name": "Jim Huang",
       "profile_url": "https://github.com/jserv",
-      "public_contributions": 2839,
+      "public_contributions": 2818,
       "public_repos": 187,
       "public_gists": 21,
-      "observed_public_commits": 2839,
-      "observed_public_pull_requests": 751,
+      "observed_public_commits": 2818,
+      "observed_public_pull_requests": 748,
       "followers": 4449,
       "location": "Taipei City, Taiwan",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
-      "previous_rank": 10
+      "previous_rank": 11
     },
     {
       "login": "appleboy",
       "name": "Bo-Yi Wu",
       "profile_url": "https://github.com/appleboy",
-      "public_contributions": 2724,
+      "public_contributions": 2722,
       "public_repos": 643,
       "public_gists": 62,
-      "observed_public_commits": 2724,
-      "observed_public_pull_requests": 250,
+      "observed_public_commits": 2722,
+      "observed_public_pull_requests": 249,
       "followers": 7515,
       "location": "Hsinchu, Taiwan",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 11
+      "previous_rank": 12
     },
     {
       "login": "vinta",
@@ -262,10 +263,10 @@
       "login": "doggy8088",
       "name": "Will 保哥",
       "profile_url": "https://github.com/doggy8088",
-      "public_contributions": 2590,
+      "public_contributions": 2592,
       "public_repos": 822,
       "public_gists": 44,
-      "observed_public_commits": 2590,
+      "observed_public_commits": 2592,
       "observed_public_pull_requests": 89,
       "followers": 4531,
       "location": "Taipei, Taiwan",
@@ -273,7 +274,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 14,
-      "previous_rank": 12
+      "previous_rank": 14
     },
     {
       "login": "hwchiu",
@@ -290,7 +291,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 14
+      "previous_rank": 15
     },
     {
       "login": "tony1223",
@@ -307,16 +308,16 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 15
+      "previous_rank": 16
     },
     {
       "login": "seadog007",
       "name": "尤理衡 (Li-Heng Yu)",
       "profile_url": "https://github.com/seadog007",
-      "public_contributions": 1841,
+      "public_contributions": 1842,
       "public_repos": 202,
       "public_gists": 22,
-      "observed_public_commits": 1841,
+      "observed_public_commits": 1842,
       "observed_public_pull_requests": 18,
       "followers": 1493,
       "location": "Taipei, Taiwan",
@@ -324,15 +325,15 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 16
+      "previous_rank": 17
     },
     {
       "login": "twtrubiks",
       "profile_url": "https://github.com/twtrubiks",
-      "public_contributions": 1690,
+      "public_contributions": 1689,
       "public_repos": 146,
       "public_gists": 0,
-      "observed_public_commits": 1690,
+      "observed_public_commits": 1689,
       "observed_public_pull_requests": 2,
       "followers": 2401,
       "location": "Taiwan",
@@ -340,7 +341,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 17
+      "previous_rank": 18
     },
     {
       "login": "weihanglo",
@@ -357,7 +358,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 18
+      "previous_rank": 19
     },
     {
       "login": "pan93412",
@@ -374,7 +375,7 @@
       "discovered_by_query": "location:Taiwan repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 19
+      "previous_rank": 20
     }
   ]
 }
