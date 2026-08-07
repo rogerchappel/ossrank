@@ -3,20 +3,20 @@
   "slug": "united-arab-emirates",
   "name": "United Arab Emirates",
   "title": "Top observed GitHub contributors in United Arab Emirates",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      76061
+      75960
     ]
   },
   "code": "AE",
@@ -59,11 +59,11 @@
       "login": "HavenDV",
       "name": "Konstantin S.",
       "profile_url": "https://github.com/HavenDV",
-      "public_contributions": 16412,
+      "public_contributions": 16421,
       "public_repos": 156,
       "public_gists": 7,
-      "observed_public_commits": 16412,
-      "observed_public_pull_requests": 9723,
+      "observed_public_commits": 16421,
+      "observed_public_pull_requests": 9690,
       "followers": 208,
       "location": "Dubai, United Arab Emirates",
       "location_confidence": "multi-location",
@@ -76,11 +76,11 @@
       "login": "tschm",
       "name": "Thomas Schmelzer",
       "profile_url": "https://github.com/tschm",
-      "public_contributions": 12661,
+      "public_contributions": 12618,
       "public_repos": 98,
       "public_gists": 17,
-      "observed_public_commits": 12661,
-      "observed_public_pull_requests": 3879,
+      "observed_public_commits": 12618,
+      "observed_public_pull_requests": 3869,
       "followers": 348,
       "location": "Abu Dhabi, United Arab Emirates",
       "location_confidence": "multi-location",
@@ -93,14 +93,14 @@
       "login": "menacedjava",
       "name": "Madumarov Davron ",
       "profile_url": "https://github.com/menacedjava",
-      "public_contributions": 19712,
+      "public_contributions": 19657,
       "public_repos": 344,
       "public_gists": 0,
-      "observed_public_commits": 19712,
+      "observed_public_commits": 19657,
       "observed_public_pull_requests": 0,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 19712,
-        "adjusted_public_commits": 3396,
+        "raw_public_commits": 19657,
+        "adjusted_public_commits": 3341,
         "baseline_daily_contributions": 2,
         "daily_burst_cap": 60,
         "capped_days": 46,
@@ -153,10 +153,10 @@
       "login": "FrayxRulez",
       "name": "Fela",
       "profile_url": "https://github.com/FrayxRulez",
-      "public_contributions": 1574,
+      "public_contributions": 1566,
       "public_repos": 35,
       "public_gists": 4,
-      "observed_public_commits": 1574,
+      "observed_public_commits": 1566,
       "observed_public_pull_requests": 7,
       "followers": 362,
       "location": "Dubai, United Arab Emirates",
@@ -196,11 +196,11 @@
       "login": "klkvr",
       "name": "Arsenii Kulikov",
       "profile_url": "https://github.com/klkvr",
-      "public_contributions": 1018,
+      "public_contributions": 1014,
       "public_repos": 54,
       "public_gists": 0,
-      "observed_public_commits": 1018,
-      "observed_public_pull_requests": 637,
+      "observed_public_commits": 1014,
+      "observed_public_pull_requests": 636,
       "followers": 252,
       "location": "Dubai, United Arab Emirates",
       "location_confidence": "multi-location",
@@ -241,7 +241,7 @@
       "discovered_by_query": "location:\"United Arab Emirates\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
-      "previous_rank": 12
+      "previous_rank": 11
     },
     {
       "login": "Ramahadam",
@@ -258,7 +258,7 @@
       "discovered_by_query": "location:\"United Arab Emirates\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 11
+      "previous_rank": 12
     },
     {
       "login": "NajiElKotob",
@@ -343,7 +343,7 @@
       "discovered_by_query": "location:\"United Arab Emirates\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 18
+      "previous_rank": 17
     },
     {
       "login": "DeadPackets",
@@ -360,7 +360,7 @@
       "discovered_by_query": "location:\"United Arab Emirates\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 19
+      "previous_rank": 18
     },
     {
       "login": "madiedgar",
@@ -376,7 +376,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"United Arab Emirates\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19
+      "rank": 19,
+      "previous_rank": 19
     },
     {
       "login": "yousafkhamza",
@@ -392,7 +393,8 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"United Arab Emirates\" repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20
+      "rank": 20,
+      "previous_rank": 20
     }
   ]
 }
