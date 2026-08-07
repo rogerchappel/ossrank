@@ -3,24 +3,24 @@
   "slug": "vietnam",
   "name": "Vietnam",
   "title": "Top observed GitHub contributors in Vietnam",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      73232
+      72768
     ]
   },
   "code": "VN",
-  "candidate_count": 16887,
+  "candidate_count": 16886,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Vietnam repos:>5 type:user",
-      "total": 16887,
+      "total": 16886,
       "accepted": 100
     }
   ],
@@ -42,11 +42,11 @@
       "login": "tamnd",
       "name": "Tam Nguyen Duc",
       "profile_url": "https://github.com/tamnd",
-      "public_contributions": 45244,
+      "public_contributions": 44801,
       "public_repos": 964,
       "public_gists": 7,
-      "observed_public_commits": 45244,
-      "observed_public_pull_requests": 8913,
+      "observed_public_commits": 44801,
+      "observed_public_pull_requests": 9006,
       "followers": 271,
       "location": "Ho Chi Minh City, Vietnam",
       "location_confidence": "multi-location",
@@ -59,10 +59,10 @@
       "login": "vinhnx",
       "name": "Vinh Nguyen",
       "profile_url": "https://github.com/vinhnx",
-      "public_contributions": 7492,
+      "public_contributions": 7484,
       "public_repos": 245,
       "public_gists": 250,
-      "observed_public_commits": 7492,
+      "observed_public_commits": 7484,
       "observed_public_pull_requests": 413,
       "followers": 593,
       "location": "Chau Doc, An Giang. Vietnam",
@@ -110,14 +110,14 @@
       "login": "dopaemon",
       "name": "Trần Nguyễn Tuấn Anh",
       "profile_url": "https://github.com/dopaemon",
-      "public_contributions": 3502,
+      "public_contributions": 3497,
       "public_repos": 309,
       "public_gists": 9,
-      "observed_public_commits": 3502,
+      "observed_public_commits": 3497,
       "observed_public_pull_requests": 7,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 3502,
-        "adjusted_public_commits": 2459,
+        "raw_public_commits": 3497,
+        "adjusted_public_commits": 2454,
         "baseline_daily_contributions": 5,
         "daily_burst_cap": 375,
         "capped_days": 1,
@@ -153,21 +153,21 @@
       "login": "trinhminhtriet",
       "name": "Triet Trinh",
       "profile_url": "https://github.com/trinhminhtriet",
-      "public_contributions": 1923,
+      "public_contributions": 1917,
       "public_repos": 99,
       "public_gists": 4,
-      "observed_public_commits": 1923,
+      "observed_public_commits": 1917,
       "observed_public_pull_requests": 11,
       "contribution_burst_adjustment": {
-        "raw_public_commits": 1923,
-        "adjusted_public_commits": 1853,
+        "raw_public_commits": 1917,
+        "adjusted_public_commits": 1847,
         "baseline_daily_contributions": 2,
         "daily_burst_cap": 60,
         "capped_days": 2,
         "excess_contributions": 70,
         "reason": "per-user daily contribution burst exceeded an adaptive baseline cap; raw public commits are preserved for audit"
       },
-      "followers": 7405,
+      "followers": 7407,
       "location": "Vietnam",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Vietnam repos:>5 type:user",
@@ -196,10 +196,10 @@
       "login": "hoc081098",
       "name": "Petrus Nguyễn Thái Học",
       "profile_url": "https://github.com/hoc081098",
-      "public_contributions": 1412,
+      "public_contributions": 1410,
       "public_repos": 180,
       "public_gists": 138,
-      "observed_public_commits": 1412,
+      "observed_public_commits": 1410,
       "observed_public_pull_requests": 16,
       "followers": 920,
       "location": "Da Nang, Vietnam",
@@ -207,7 +207,7 @@
       "discovered_by_query": "location:Vietnam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 10
+      "previous_rank": 9
     },
     {
       "login": "hathach",
@@ -224,7 +224,7 @@
       "discovered_by_query": "location:Vietnam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10,
-      "previous_rank": 9
+      "previous_rank": 10
     },
     {
       "login": "vietanhdev",
@@ -247,35 +247,18 @@
       "login": "hunghg255",
       "name": "Hung Hoang",
       "profile_url": "https://github.com/hunghg255",
-      "public_contributions": 1088,
+      "public_contributions": 1086,
       "public_repos": 571,
       "public_gists": 67,
-      "observed_public_commits": 1088,
+      "observed_public_commits": 1086,
       "observed_public_pull_requests": 18,
-      "followers": 369,
+      "followers": 370,
       "location": "Hanoi, Vietnam",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vietnam repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
       "previous_rank": 12
-    },
-    {
-      "login": "hoangtien2k3",
-      "name": "Hoàng Anh Tiến",
-      "profile_url": "https://github.com/hoangtien2k3",
-      "public_contributions": 1062,
-      "public_repos": 58,
-      "public_gists": 2,
-      "observed_public_commits": 1062,
-      "observed_public_pull_requests": 9,
-      "followers": 282,
-      "location": "Hanoi, Vietnam",
-      "location_confidence": "multi-location",
-      "discovered_by_query": "location:Vietnam repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 13,
-      "previous_rank": 13
     },
     {
       "login": "daohoangson",
@@ -291,8 +274,25 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Vietnam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 14,
+      "rank": 13,
       "previous_rank": 14
+    },
+    {
+      "login": "hoangtien2k3",
+      "name": "Hoàng Anh Tiến",
+      "profile_url": "https://github.com/hoangtien2k3",
+      "public_contributions": 1061,
+      "public_repos": 58,
+      "public_gists": 2,
+      "observed_public_commits": 1061,
+      "observed_public_pull_requests": 9,
+      "followers": 282,
+      "location": "Hanoi, Vietnam",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Vietnam repos:>5 type:user",
+      "notable_repositories": [],
+      "rank": 14,
+      "previous_rank": 13
     },
     {
       "login": "rilwis",
@@ -359,40 +359,42 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Vietnam repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 18
-    },
-    {
-      "login": "AskAlexSharov",
-      "name": "Alex Sharov",
-      "profile_url": "https://github.com/AskAlexSharov",
-      "public_contributions": 831,
-      "public_repos": 64,
-      "public_gists": 4,
-      "observed_public_commits": 831,
-      "observed_public_pull_requests": 1014,
-      "followers": 444,
-      "location": "Vietnam",
-      "location_confidence": "exact-country",
-      "discovered_by_query": "location:Vietnam repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 19
+      "rank": 18,
+      "previous_rank": 18
     },
     {
       "login": "monokaijs",
       "name": "Nguyễn Anh Nhân",
       "profile_url": "https://github.com/monokaijs",
-      "public_contributions": 828,
+      "public_contributions": 836,
       "public_repos": 216,
       "public_gists": 51,
-      "observed_public_commits": 828,
+      "observed_public_commits": 836,
       "observed_public_pull_requests": 31,
       "followers": 336,
       "location": "Hanoi, Vietnam",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Vietnam repos:>5 type:user",
       "notable_repositories": [],
+      "rank": 19,
+      "previous_rank": 20
+    },
+    {
+      "login": "AskAlexSharov",
+      "name": "Alex Sharov",
+      "profile_url": "https://github.com/AskAlexSharov",
+      "public_contributions": 830,
+      "public_repos": 64,
+      "public_gists": 4,
+      "observed_public_commits": 830,
+      "observed_public_pull_requests": 1013,
+      "followers": 444,
+      "location": "Vietnam",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Vietnam repos:>5 type:user",
+      "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 18
+      "previous_rank": 19
     }
   ]
 }
