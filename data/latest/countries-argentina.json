@@ -3,24 +3,24 @@
   "slug": "argentina",
   "name": "Argentina",
   "title": "Top observed GitHub contributors in Argentina",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      25566
+      25527
     ]
   },
   "code": "AR",
-  "candidate_count": 42404,
+  "candidate_count": 42408,
   "caveats": [
     "Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.",
     "Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.",
@@ -33,7 +33,7 @@
   "candidate_count_by_query": [
     {
       "query": "location:Argentina repos:>5 type:user",
-      "total": 42404,
+      "total": 42408,
       "accepted": 100
     }
   ],
@@ -59,10 +59,10 @@
       "login": "solidsnk86",
       "name": "Gabriel Calcagni",
       "profile_url": "https://github.com/solidsnk86",
-      "public_contributions": 5082,
+      "public_contributions": 5067,
       "public_repos": 58,
       "public_gists": 0,
-      "observed_public_commits": 5082,
+      "observed_public_commits": 5067,
       "observed_public_pull_requests": 19,
       "followers": 336,
       "location": "Concarán, San luis, Argentina.",
@@ -93,10 +93,10 @@
       "login": "imlauera",
       "name": "Andrés Imlauer",
       "profile_url": "https://github.com/imlauera",
-      "public_contributions": 3046,
+      "public_contributions": 3030,
       "public_repos": 73,
       "public_gists": 1,
-      "observed_public_commits": 3046,
+      "observed_public_commits": 3030,
       "observed_public_pull_requests": 0,
       "followers": 705,
       "location": "Argentina",
@@ -110,11 +110,11 @@
       "login": "kzu",
       "name": "Daniel Cazzulino",
       "profile_url": "https://github.com/kzu",
-      "public_contributions": 2007,
+      "public_contributions": 1984,
       "public_repos": 311,
       "public_gists": 60,
-      "observed_public_commits": 2007,
-      "observed_public_pull_requests": 1006,
+      "observed_public_commits": 1984,
+      "observed_public_pull_requests": 996,
       "followers": 459,
       "location": "Buenos Aires, Argentina",
       "location_confidence": "multi-location",
@@ -127,27 +127,27 @@
       "login": "mgaitan",
       "name": "Martín Gaitán",
       "profile_url": "https://github.com/mgaitan",
-      "public_contributions": 1401,
+      "public_contributions": 1418,
       "public_repos": 369,
       "public_gists": 236,
-      "observed_public_commits": 1401,
-      "observed_public_pull_requests": 287,
+      "observed_public_commits": 1418,
+      "observed_public_pull_requests": 292,
       "followers": 311,
       "location": "Córdoba, Argentina",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
       "rank": 6,
-      "previous_rank": 7
+      "previous_rank": 6
     },
     {
       "login": "lucperkins",
       "name": "Luc Perkins",
       "profile_url": "https://github.com/lucperkins",
-      "public_contributions": 1312,
+      "public_contributions": 1311,
       "public_repos": 123,
       "public_gists": 73,
-      "observed_public_commits": 1312,
+      "observed_public_commits": 1311,
       "observed_public_pull_requests": 207,
       "followers": 529,
       "location": "Buenos Aires, Argentina",
@@ -155,16 +155,16 @@
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
       "rank": 7,
-      "previous_rank": 6
+      "previous_rank": 7
     },
     {
       "login": "seppo0010",
       "name": "Sebastian Waisbrot",
       "profile_url": "https://github.com/seppo0010",
-      "public_contributions": 812,
+      "public_contributions": 811,
       "public_repos": 281,
       "public_gists": 22,
-      "observed_public_commits": 812,
+      "observed_public_commits": 811,
       "observed_public_pull_requests": 0,
       "followers": 325,
       "location": "Buenos Aires, Argentina",
@@ -189,7 +189,7 @@
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
       "rank": 9,
-      "previous_rank": 10
+      "previous_rank": 9
     },
     {
       "login": "spalladino",
@@ -199,14 +199,14 @@
       "public_repos": 150,
       "public_gists": 56,
       "observed_public_commits": 763,
-      "observed_public_pull_requests": 766,
+      "observed_public_pull_requests": 764,
       "followers": 750,
       "location": "Buenos Aires, Argentina",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
       "rank": 10,
-      "previous_rank": 9
+      "previous_rank": 10
     },
     {
       "login": "sammwyy",
@@ -223,7 +223,7 @@
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
       "rank": 11,
-      "previous_rank": 12
+      "previous_rank": 11
     },
     {
       "login": "asterite",
@@ -233,14 +233,14 @@
       "public_repos": 116,
       "public_gists": 156,
       "observed_public_commits": 642,
-      "observed_public_pull_requests": 635,
+      "observed_public_pull_requests": 634,
       "followers": 634,
       "location": "Buenos Aires, Argentina",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
       "rank": 12,
-      "previous_rank": 11
+      "previous_rank": 12
     },
     {
       "login": "ianaya89",
@@ -257,24 +257,7 @@
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
       "rank": 13,
-      "previous_rank": 14
-    },
-    {
-      "login": "flesler",
-      "name": "Ariel Flesler",
-      "profile_url": "https://github.com/flesler",
-      "public_contributions": 582,
-      "public_repos": 84,
-      "public_gists": 10,
-      "observed_public_commits": 582,
-      "observed_public_pull_requests": 8,
-      "followers": 449,
-      "location": "Buenos Aires, Argentina",
-      "location_confidence": "multi-location",
-      "discovered_by_query": "location:Argentina repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 14,
-      "previous_rank": 15
+      "previous_rank": 13
     },
     {
       "login": "jrgarciadev",
@@ -290,8 +273,25 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
+      "rank": 14,
+      "previous_rank": 15
+    },
+    {
+      "login": "flesler",
+      "name": "Ariel Flesler",
+      "profile_url": "https://github.com/flesler",
+      "public_contributions": 577,
+      "public_repos": 84,
+      "public_gists": 10,
+      "observed_public_commits": 577,
+      "observed_public_pull_requests": 8,
+      "followers": 449,
+      "location": "Buenos Aires, Argentina",
+      "location_confidence": "multi-location",
+      "discovered_by_query": "location:Argentina repos:>5 type:user",
+      "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 13
+      "previous_rank": 14
     },
     {
       "login": "wcd6",
@@ -314,10 +314,10 @@
       "login": "linuxmobile",
       "name": "リナックス (LINUX)",
       "profile_url": "https://github.com/linuxmobile",
-      "public_contributions": 419,
+      "public_contributions": 417,
       "public_repos": 84,
       "public_gists": 0,
-      "observed_public_commits": 419,
+      "observed_public_commits": 417,
       "observed_public_pull_requests": 64,
       "followers": 469,
       "location": "Argentina",
@@ -325,23 +325,6 @@
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 18
-    },
-    {
-      "login": "LucioFex",
-      "name": "Luciano Esteban",
-      "profile_url": "https://github.com/LucioFex",
-      "public_contributions": 401,
-      "public_repos": 54,
-      "public_gists": 0,
-      "observed_public_commits": 401,
-      "observed_public_pull_requests": 3,
-      "followers": 792,
-      "location": "Argentina",
-      "location_confidence": "exact-country",
-      "discovered_by_query": "location:Argentina repos:>5 type:user",
-      "notable_repositories": [],
-      "rank": 18,
       "previous_rank": 17
     },
     {
@@ -358,8 +341,25 @@
       "location_confidence": "exact-country",
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 19,
+      "rank": 18,
       "previous_rank": 19
+    },
+    {
+      "login": "LucioFex",
+      "name": "Luciano Esteban",
+      "profile_url": "https://github.com/LucioFex",
+      "public_contributions": 395,
+      "public_repos": 54,
+      "public_gists": 0,
+      "observed_public_commits": 395,
+      "observed_public_pull_requests": 3,
+      "followers": 792,
+      "location": "Argentina",
+      "location_confidence": "exact-country",
+      "discovered_by_query": "location:Argentina repos:>5 type:user",
+      "notable_repositories": [],
+      "rank": 19,
+      "previous_rank": 18
     },
     {
       "login": "gerMdz",
@@ -375,7 +375,8 @@
       "location_confidence": "multi-location",
       "discovered_by_query": "location:Argentina repos:>5 type:user",
       "notable_repositories": [],
-      "rank": 20
+      "rank": 20,
+      "previous_rank": 20
     }
   ]
 }
