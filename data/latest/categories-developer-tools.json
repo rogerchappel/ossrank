@@ -3,23 +3,23 @@
   "slug": "developer-tools",
   "name": "Developer Tools",
   "title": "Top observed developer tools open-source projects",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-rest-search-real-recent-project-signals",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      586
+      573
     ]
   },
-  "candidate_count": 164661,
+  "candidate_count": 164690,
   "caveats": [
     "Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.",
     "Project PR counts use recent merged pull requests visible through GitHub GraphQL; high-volume repositories may be capped by the first 100 recently updated merged PRs per snapshot.",
@@ -34,17 +34,17 @@
   "candidate_count_by_query": [
     {
       "query": "topic:developer-tools archived:false",
-      "total": 51245,
+      "total": 51257,
       "accepted": 34
     },
     {
       "query": "topic:cli archived:false",
-      "total": 107396,
+      "total": 107412,
       "accepted": 30
     },
     {
       "query": "topic:devtools archived:false",
-      "total": 6020,
+      "total": 6021,
       "accepted": 32
     }
   ],
@@ -52,10 +52,10 @@
     {
       "full_name": "Hmbown/CodeWhale",
       "url": "https://github.com/Hmbown/CodeWhale",
-      "stars": 40520,
+      "stars": 40521,
       "pull_requests_merged_7d": 90,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 2574,
+      "recent_commits_30d": 2564,
       "active_contributors_30d": 172,
       "total_contributors_observed": 172,
       "releases_90d": 49,
@@ -68,15 +68,15 @@
     {
       "full_name": "esengine/DeepSeek-Reasonix",
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
-      "stars": 32367,
+      "stars": 32406,
       "pull_requests_merged_7d": 100,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 1707,
+      "recent_commits_30d": 1712,
       "active_contributors_30d": 125,
       "total_contributors_observed": 125,
       "releases_90d": 100,
-      "open_issues": 616,
-      "pushed_at": "2026-08-06T16:27:42Z",
+      "open_issues": 618,
+      "pushed_at": "2026-08-07T00:43:35Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Go",
       "rank": 2
@@ -84,7 +84,7 @@
     {
       "full_name": "n8n-io/n8n",
       "url": "https://github.com/n8n-io/n8n",
-      "stars": 199622,
+      "stars": 199625,
       "pull_requests_merged_7d": 99,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 1124,
@@ -92,7 +92,7 @@
       "total_contributors_observed": 426,
       "releases_90d": 100,
       "open_issues": 334,
-      "pushed_at": "2026-08-06T23:29:27Z",
+      "pushed_at": "2026-08-07T00:51:22Z",
       "discovered_by_query": "topic:cli archived:false",
       "primary_language": "TypeScript",
       "rank": 3
@@ -100,8 +100,8 @@
     {
       "full_name": "DeusData/codebase-memory-mcp",
       "url": "https://github.com/DeusData/codebase-memory-mcp",
-      "stars": 37823,
-      "pull_requests_merged_7d": 52,
+      "stars": 37838,
+      "pull_requests_merged_7d": 43,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 679,
       "active_contributors_30d": 101,
@@ -116,10 +116,10 @@
     {
       "full_name": "ComposioHQ/composio",
       "url": "https://github.com/ComposioHQ/composio",
-      "stars": 29567,
-      "pull_requests_merged_7d": 35,
+      "stars": 29568,
+      "pull_requests_merged_7d": 33,
       "pull_requests_merged_30d": 100,
-      "recent_commits_30d": 390,
+      "recent_commits_30d": 389,
       "active_contributors_30d": 83,
       "total_contributors_observed": 83,
       "releases_90d": 100,
@@ -149,14 +149,14 @@
       "full_name": "streamlit/streamlit",
       "url": "https://github.com/streamlit/streamlit",
       "stars": 45502,
-      "pull_requests_merged_7d": 79,
+      "pull_requests_merged_7d": 80,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 258,
       "active_contributors_30d": 318,
       "total_contributors_observed": 318,
       "releases_90d": 7,
       "open_issues": 989,
-      "pushed_at": "2026-08-06T23:23:11Z",
+      "pushed_at": "2026-08-07T00:48:27Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 7
@@ -164,7 +164,7 @@
     {
       "full_name": "cobusgreyling/loop-engineering",
       "url": "https://github.com/cobusgreyling/loop-engineering",
-      "stars": 9930,
+      "stars": 9932,
       "pull_requests_merged_7d": 22,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 204,
@@ -180,8 +180,8 @@
     {
       "full_name": "ministackorg/ministack",
       "url": "https://github.com/ministackorg/ministack",
-      "stars": 3966,
-      "pull_requests_merged_7d": 52,
+      "stars": 3967,
+      "pull_requests_merged_7d": 49,
       "pull_requests_merged_30d": 100,
       "recent_commits_30d": 169,
       "active_contributors_30d": 119,
@@ -212,15 +212,15 @@
     {
       "full_name": "stablyai/orca",
       "url": "https://github.com/stablyai/orca",
-      "stars": 38925,
+      "stars": 38961,
       "pull_requests_merged_7d": 97,
       "pull_requests_merged_30d": 99,
-      "recent_commits_30d": 1964,
+      "recent_commits_30d": 1960,
       "active_contributors_30d": 309,
       "total_contributors_observed": 309,
       "releases_90d": 100,
-      "open_issues": 1534,
-      "pushed_at": "2026-08-06T23:33:43Z",
+      "open_issues": 1533,
+      "pushed_at": "2026-08-07T00:57:36Z",
       "discovered_by_query": "topic:cli archived:false",
       "primary_language": "TypeScript",
       "rank": 11
@@ -244,7 +244,7 @@
     {
       "full_name": "sickn33/agentic-awesome-skills",
       "url": "https://github.com/sickn33/agentic-awesome-skills",
-      "stars": 44566,
+      "stars": 44568,
       "pull_requests_merged_7d": 43,
       "pull_requests_merged_30d": 98,
       "recent_commits_30d": 316,
@@ -260,15 +260,15 @@
     {
       "full_name": "agno-agi/agno",
       "url": "https://github.com/agno-agi/agno",
-      "stars": 41608,
+      "stars": 41609,
       "pull_requests_merged_7d": 34,
       "pull_requests_merged_30d": 98,
       "recent_commits_30d": 148,
       "active_contributors_30d": 443,
       "total_contributors_observed": 443,
       "releases_90d": 42,
-      "open_issues": 581,
-      "pushed_at": "2026-08-06T23:29:34Z",
+      "open_issues": 586,
+      "pushed_at": "2026-08-07T00:35:59Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "Python",
       "rank": 14
@@ -276,7 +276,7 @@
     {
       "full_name": "santifer/career-ops",
       "url": "https://github.com/santifer/career-ops",
-      "stars": 63072,
+      "stars": 63079,
       "pull_requests_merged_7d": 78,
       "pull_requests_merged_30d": 90,
       "recent_commits_30d": 499,
@@ -292,14 +292,14 @@
     {
       "full_name": "herdrdev/herdr",
       "url": "https://github.com/herdrdev/herdr",
-      "stars": 25090,
+      "stars": 25118,
       "pull_requests_merged_7d": 40,
       "pull_requests_merged_30d": 88,
-      "recent_commits_30d": 288,
+      "recent_commits_30d": 283,
       "active_contributors_30d": 73,
       "total_contributors_observed": 73,
       "releases_90d": 50,
-      "open_issues": 114,
+      "open_issues": 115,
       "pushed_at": "2026-08-06T23:27:08Z",
       "discovered_by_query": "topic:devtools archived:false",
       "primary_language": "Rust",
@@ -308,7 +308,7 @@
     {
       "full_name": "cli/cli",
       "url": "https://github.com/cli/cli",
-      "stars": 45706,
+      "stars": 45708,
       "pull_requests_merged_7d": 27,
       "pull_requests_merged_30d": 88,
       "recent_commits_30d": 192,
@@ -324,7 +324,7 @@
     {
       "full_name": "OpenHands/OpenHands",
       "url": "https://github.com/OpenHands/OpenHands",
-      "stars": 83290,
+      "stars": 83298,
       "pull_requests_merged_7d": 46,
       "pull_requests_merged_30d": 86,
       "recent_commits_30d": 242,
@@ -332,7 +332,7 @@
       "total_contributors_observed": 463,
       "releases_90d": 27,
       "open_issues": 257,
-      "pushed_at": "2026-08-06T21:04:09Z",
+      "pushed_at": "2026-08-07T00:16:26Z",
       "discovered_by_query": "topic:developer-tools archived:false",
       "primary_language": "TypeScript",
       "rank": 18
@@ -340,7 +340,7 @@
     {
       "full_name": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": 48646,
+      "stars": 48647,
       "pull_requests_merged_7d": 23,
       "pull_requests_merged_30d": 86,
       "recent_commits_30d": 86,
@@ -356,7 +356,7 @@
     {
       "full_name": "affaan-m/ECC",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 238295,
+      "stars": 238312,
       "pull_requests_merged_7d": 21,
       "pull_requests_merged_30d": 82,
       "recent_commits_30d": 103,
