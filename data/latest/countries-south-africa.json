@@ -3,20 +3,20 @@
   "slug": "south-africa",
   "name": "South Africa",
   "title": "Top observed GitHub contributors in South Africa",
-  "generated_at": "2026-08-06T22:47:05.727Z",
-  "fresh_until": "2026-08-13T22:47:05.727Z",
+  "generated_at": "2026-08-07T00:16:01.997Z",
+  "fresh_until": "2026-08-14T00:16:01.997Z",
   "status": "fresh",
   "method": "github-graphql-one-year-contribution-activity",
-  "source_run": "2026-08-06",
+  "source_run": "2026-08-07",
   "history": {
     "weeks": [
-      "2026-08-06"
+      "2026-08-07"
     ],
     "ranked_items": [
       20
     ],
     "top_10_signal": [
-      69502
+      69481
     ]
   },
   "code": "ZA",
@@ -102,10 +102,10 @@
       "login": "mitchellkrogza",
       "name": "Mitchell Krog",
       "profile_url": "https://github.com/mitchellkrogza",
-      "public_contributions": 3614,
+      "public_contributions": 3595,
       "public_repos": 173,
       "public_gists": 64,
-      "observed_public_commits": 3614,
+      "observed_public_commits": 3595,
       "observed_public_pull_requests": 0,
       "followers": 970,
       "location": "South Africa",
@@ -119,10 +119,10 @@
       "login": "NickiMash17",
       "name": "Nicolette Mashaba",
       "profile_url": "https://github.com/NickiMash17",
-      "public_contributions": 3053,
+      "public_contributions": 3051,
       "public_repos": 67,
       "public_gists": 0,
-      "observed_public_commits": 3053,
+      "observed_public_commits": 3051,
       "observed_public_pull_requests": 53,
       "followers": 389,
       "location": "South Africa",
@@ -221,10 +221,10 @@
       "login": "limbopro",
       "name": "毒奶博主",
       "profile_url": "https://github.com/limbopro",
-      "public_contributions": 1993,
+      "public_contributions": 1996,
       "public_repos": 75,
       "public_gists": 0,
-      "observed_public_commits": 1993,
+      "observed_public_commits": 1996,
       "observed_public_pull_requests": 0,
       "followers": 2585,
       "location": "South Africa",
@@ -238,11 +238,11 @@
       "login": "mattleibow",
       "name": "Matthew Leibowitz",
       "profile_url": "https://github.com/mattleibow",
-      "public_contributions": 1702,
+      "public_contributions": 1699,
       "public_repos": 527,
       "public_gists": 272,
-      "observed_public_commits": 1702,
-      "observed_public_pull_requests": 1137,
+      "observed_public_commits": 1699,
+      "observed_public_pull_requests": 1139,
       "followers": 1110,
       "location": "Cape Town, South Africa",
       "location_confidence": "multi-location",
@@ -255,10 +255,10 @@
       "login": "ashleykleynhans",
       "name": "Ashley Kleynhans",
       "profile_url": "https://github.com/ashleykleynhans",
-      "public_contributions": 1507,
+      "public_contributions": 1504,
       "public_repos": 135,
       "public_gists": 6,
-      "observed_public_commits": 1507,
+      "observed_public_commits": 1504,
       "observed_public_pull_requests": 2,
       "followers": 246,
       "location": "South Africa",
@@ -289,10 +289,10 @@
       "login": "gregzaal",
       "name": "Greg Zaal",
       "profile_url": "https://github.com/gregzaal",
-      "public_contributions": 1199,
+      "public_contributions": 1194,
       "public_repos": 22,
       "public_gists": 2,
-      "observed_public_commits": 1199,
+      "observed_public_commits": 1194,
       "observed_public_pull_requests": 1,
       "followers": 151,
       "location": "South Africa",
@@ -300,24 +300,24 @@
       "discovered_by_query": "location:\"South Africa\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 15,
-      "previous_rank": 18
+      "previous_rank": 15
     },
     {
       "login": "abhi18av",
       "name": "Abhinav Sharma",
       "profile_url": "https://github.com/abhi18av",
-      "public_contributions": 1132,
+      "public_contributions": 1129,
       "public_repos": 486,
       "public_gists": 40,
-      "observed_public_commits": 1132,
-      "observed_public_pull_requests": 93,
+      "observed_public_commits": 1129,
+      "observed_public_pull_requests": 92,
       "followers": 302,
       "location": "Cape Town, South Africa",
       "location_confidence": "multi-location",
       "discovered_by_query": "location:\"South Africa\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 16,
-      "previous_rank": 15
+      "previous_rank": 16
     },
     {
       "login": "ShaunSHamilton",
@@ -327,14 +327,14 @@
       "public_repos": 108,
       "public_gists": 29,
       "observed_public_commits": 1060,
-      "observed_public_pull_requests": 121,
+      "observed_public_pull_requests": 119,
       "followers": 193,
       "location": "South Africa",
       "location_confidence": "exact-country",
       "discovered_by_query": "location:\"South Africa\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 17,
-      "previous_rank": 16
+      "previous_rank": 17
     },
     {
       "login": "Darrenvandervelde",
@@ -351,7 +351,7 @@
       "discovered_by_query": "location:\"South Africa\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 18,
-      "previous_rank": 20
+      "previous_rank": 18
     },
     {
       "login": "lefajmofokeng",
@@ -368,7 +368,7 @@
       "discovered_by_query": "location:\"South Africa\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 19,
-      "previous_rank": 17
+      "previous_rank": 19
     },
     {
       "login": "rizonesoft",
@@ -385,7 +385,7 @@
       "discovered_by_query": "location:\"South Africa\" repos:>5 type:user",
       "notable_repositories": [],
       "rank": 20,
-      "previous_rank": 19
+      "previous_rank": 20
     }
   ]
 }
