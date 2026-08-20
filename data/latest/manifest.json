@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-13T20:20:48.849Z",
-  "source_commit": "6811cbc",
+  "generated_at": "2026-08-20T19:52:28.086Z",
+  "source_commit": "a4a5c97",
   "method": "github-live-refresh",
   "status": "fresh",
   "completed_shards": [
@@ -10,8 +10,8 @@
       "title": "Top observed GitHub contributors globally",
       "path": "/data/latest/global-contributors.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -20,8 +20,8 @@
       "title": "Top observed GitHub contributors in Australia",
       "path": "/data/latest/countries-australia.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -30,8 +30,8 @@
       "title": "Top observed GitHub contributors in New Zealand",
       "path": "/data/latest/countries-new-zealand.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -40,8 +40,8 @@
       "title": "Top observed GitHub contributors in United States",
       "path": "/data/latest/countries-united-states.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -50,8 +50,8 @@
       "title": "Top observed GitHub contributors in Canada",
       "path": "/data/latest/countries-canada.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -60,8 +60,8 @@
       "title": "Top observed GitHub contributors in United Kingdom",
       "path": "/data/latest/countries-united-kingdom.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -70,8 +70,8 @@
       "title": "Top observed GitHub contributors in Ireland",
       "path": "/data/latest/countries-ireland.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -80,8 +80,8 @@
       "title": "Top observed GitHub contributors in Germany",
       "path": "/data/latest/countries-germany.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -90,8 +90,8 @@
       "title": "Top observed GitHub contributors in France",
       "path": "/data/latest/countries-france.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -100,8 +100,8 @@
       "title": "Top observed GitHub contributors in Netherlands",
       "path": "/data/latest/countries-netherlands.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -110,8 +110,8 @@
       "title": "Top observed GitHub contributors in Sweden",
       "path": "/data/latest/countries-sweden.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -120,8 +120,8 @@
       "title": "Top observed GitHub contributors in Norway",
       "path": "/data/latest/countries-norway.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -130,8 +130,8 @@
       "title": "Top observed GitHub contributors in Denmark",
       "path": "/data/latest/countries-denmark.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -140,8 +140,8 @@
       "title": "Top observed GitHub contributors in Finland",
       "path": "/data/latest/countries-finland.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -150,8 +150,8 @@
       "title": "Top observed GitHub contributors in Switzerland",
       "path": "/data/latest/countries-switzerland.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -160,8 +160,8 @@
       "title": "Top observed GitHub contributors in Austria",
       "path": "/data/latest/countries-austria.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -170,8 +170,8 @@
       "title": "Top observed GitHub contributors in Spain",
       "path": "/data/latest/countries-spain.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -180,8 +180,8 @@
       "title": "Top observed GitHub contributors in Portugal",
       "path": "/data/latest/countries-portugal.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -190,8 +190,8 @@
       "title": "Top observed GitHub contributors in Italy",
       "path": "/data/latest/countries-italy.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -200,8 +200,8 @@
       "title": "Top observed GitHub contributors in Poland",
       "path": "/data/latest/countries-poland.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -210,8 +210,8 @@
       "title": "Top observed GitHub contributors in Ukraine",
       "path": "/data/latest/countries-ukraine.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -220,8 +220,8 @@
       "title": "Top observed GitHub contributors in India",
       "path": "/data/latest/countries-india.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -230,8 +230,8 @@
       "title": "Top observed GitHub contributors in China",
       "path": "/data/latest/countries-china.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -240,8 +240,8 @@
       "title": "Top observed GitHub contributors in Japan",
       "path": "/data/latest/countries-japan.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -250,8 +250,8 @@
       "title": "Top observed GitHub contributors in Republic of Korea",
       "path": "/data/latest/countries-republic-of-korea.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -260,8 +260,8 @@
       "title": "Top observed GitHub contributors in Taiwan",
       "path": "/data/latest/countries-taiwan.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -270,8 +270,8 @@
       "title": "Top observed GitHub contributors in Hong Kong",
       "path": "/data/latest/countries-hong-kong.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -280,8 +280,8 @@
       "title": "Top observed GitHub contributors in Singapore",
       "path": "/data/latest/countries-singapore.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -290,8 +290,8 @@
       "title": "Top observed GitHub contributors in Indonesia",
       "path": "/data/latest/countries-indonesia.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -300,8 +300,8 @@
       "title": "Top observed GitHub contributors in Malaysia",
       "path": "/data/latest/countries-malaysia.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -310,8 +310,8 @@
       "title": "Top observed GitHub contributors in Philippines",
       "path": "/data/latest/countries-philippines.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -320,8 +320,8 @@
       "title": "Top observed GitHub contributors in Thailand",
       "path": "/data/latest/countries-thailand.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -330,8 +330,8 @@
       "title": "Top observed GitHub contributors in Vietnam",
       "path": "/data/latest/countries-vietnam.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -340,8 +340,8 @@
       "title": "Top observed GitHub contributors in Brazil",
       "path": "/data/latest/countries-brazil.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -350,8 +350,8 @@
       "title": "Top observed GitHub contributors in Mexico",
       "path": "/data/latest/countries-mexico.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -360,8 +360,8 @@
       "title": "Top observed GitHub contributors in Argentina",
       "path": "/data/latest/countries-argentina.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -370,8 +370,8 @@
       "title": "Top observed GitHub contributors in Chile",
       "path": "/data/latest/countries-chile.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -380,8 +380,8 @@
       "title": "Top observed GitHub contributors in South Africa",
       "path": "/data/latest/countries-south-africa.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -390,8 +390,8 @@
       "title": "Top observed GitHub contributors in Israel",
       "path": "/data/latest/countries-israel.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -400,8 +400,8 @@
       "title": "Top observed GitHub contributors in United Arab Emirates",
       "path": "/data/latest/countries-united-arab-emirates.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -410,8 +410,8 @@
       "title": "Top observed TypeScript open-source contributors",
       "path": "/data/latest/languages-typescript.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -420,8 +420,8 @@
       "title": "Top observed developer tools open-source projects",
       "path": "/data/latest/categories-developer-tools.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -430,8 +430,8 @@
       "title": "Fastest growing observed open-source projects",
       "path": "/data/latest/projects-fastest-growing-open-source-projects.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -440,8 +440,8 @@
       "title": "Top observed agentic open-source projects",
       "path": "/data/latest/categories-agentic-projects.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -450,8 +450,8 @@
       "title": "Top observed Claude-related open-source projects",
       "path": "/data/latest/categories-claude-projects.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -460,8 +460,8 @@
       "title": "Top observed Codex-related open-source projects",
       "path": "/data/latest/categories-codex-projects.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -470,8 +470,8 @@
       "title": "Top observed OpenClaw-related open-source projects",
       "path": "/data/latest/categories-openclaw-projects.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -480,8 +480,8 @@
       "title": "Momentum versus legitimacy map for observed open-source projects",
       "path": "/data/latest/momentum-project-momentum-map.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     },
     {
@@ -490,8 +490,8 @@
       "title": "High-signal observed GitHub contributors with strong activity relative to audience size",
       "path": "/data/latest/rising-contributors.json",
       "status": "fresh",
-      "generated_at": "2026-08-13T19:26:11.752Z",
-      "fresh_until": "2026-08-20T19:26:11.752Z",
+      "generated_at": "2026-08-20T19:00:08.727Z",
+      "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
     }
   ],
@@ -500,7 +500,7 @@
   "api_budget": {
     "provider": "github",
     "mode": "live",
-    "remaining": 4467
+    "remaining": 3361
   },
-  "duration_ms": 3277097
+  "duration_ms": 3139359
 }
