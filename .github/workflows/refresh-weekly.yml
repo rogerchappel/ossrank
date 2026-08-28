@@ -10,6 +10,13 @@ on:
         required: false
         default: '20'
 
+# GitHub may delay scheduled events, so a cron run can arrive while a manual
+# dispatch is still refreshing the same weekly branch. Keep the workflow
+# single-flight and let the newest trigger supersede the older one.
+concurrency:
+  group: ossrank-weekly-refresh
+  cancel-in-progress: true
+
 permissions:
   contents: write
   pull-requests: write
