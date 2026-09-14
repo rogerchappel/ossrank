@@ -16,6 +16,7 @@ export interface GitHubCollectorOptions {
   limit: number;
   generatedAt?: string;
   maxCountries?: number;
+  candidateLimit?: number;
   saveDir?: GitHubCollectorSaveDir;
 }
 
@@ -515,12 +516,18 @@ async function searchUsers(client: GitHubClient, query: string, limit: number): 
 // Collect users — batched GraphQL profiles and contribution activity
 // ---------------------------------------------------------------------------
 
-async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, throttler: SmartThrottler, locationTerms?: string[], countryName?: string, candidateLimit = Math.max(25, limit * 3)): Promise<{ total: number; users: RankedContributor[]; queryStats: CandidateQueryStat[] }> {
+async function collectUsers(client: GitHubClient, queries: string | string[], limit: number, generatedAt: string, throttler: SmartThrottler, locationTerms?: string[], countryName?: string, candidateLimit = Math.max(25, limit * 3), seedLogins: string[] = []): Promise<{ total: number; users: RankedContributor[]; queryStats: CandidateQueryStat[] }> {
   const searchQueries = Array.isArray(queries) ? queries : [queries];
   const details = new Map<string, UserCandidate>();
   const queryStats: CandidateQueryStat[] = [];
   let total = 0;
-  const perQueryLimit = Math.min(100, Math.max(limit, Math.ceil(candidateLimit / searchQueries.length)));
+  const seeded = await userProfilesWithActivityBatch(client, seedLogins, generatedAt);
+  for (const detail of seeded) {
+    if (!locationTerms || matchesLocation(detail.user.location, locationTerms)) {
+      details.set(detail.user.login.toLowerCase(), { ...detail, discoveredByQuery: 'previous snapshot anchor' });
+    }
+  }
+  const perQueryLimit = Math.min(100, Math.max(1, Math.ceil(candidateLimit / searchQueries.length)));
 
   for (const query of searchQueries) {
     const search = await searchUsers(client, userQuery(query), perQueryLimit);
@@ -726,6 +733,19 @@ async function loadSavedCountrySnapshots(saveDir: GitHubCollectorSaveDir, genera
   return saved;
 }
 
+async function loadPreviousCountryAnchors(saveDir: GitHubCollectorSaveDir, configs: CountryConfig[]): Promise<Map<string, string[]>> {
+  const anchors = new Map<string, string[]>();
+  for (const config of configs) {
+    try {
+      const snapshot = JSON.parse(await readFile(join(saveDir.latestDir, `countries-${config.slug}.json`), 'utf8')) as RankingSnapshot<RankedContributor>;
+      anchors.set(config.slug, snapshot.entries.slice(0, 20).map((entry) => entry.login));
+    } catch {
+      // No previous snapshot is available for this country.
+    }
+  }
+  return anchors;
+}
+
 // ---------------------------------------------------------------------------
 // Main entry — orchestrates all snapshots
 // ---------------------------------------------------------------------------
@@ -748,12 +768,14 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   // the final manifest/site build.
   const saveDir = options.saveDir;
   const savedCountrySnapshots = saveDir ? await loadSavedCountrySnapshots(saveDir, generatedAt) : new Map<string, RankingSnapshot<RankedContributor>>();
+  const countryConfigs = COUNTRY_CONFIGS.slice(0, options.maxCountries ?? COUNTRY_CONFIGS.length);
+  const previousCountryAnchors = saveDir ? await loadPreviousCountryAnchors(saveDir, countryConfigs) : new Map<string, string[]>();
   if (savedCountrySnapshots.size > 0) {
     process.stderr.write(`[resume] Found ${savedCountrySnapshots.size} previously saved countries for this run, skipping and reusing them.\n`);
   }
 
+  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, throttler, undefined, undefined, Math.max(100, limit * 8));
   const countryResults: CountryResult[] = [];
-  const countryConfigs = COUNTRY_CONFIGS.slice(0, options.maxCountries ?? COUNTRY_CONFIGS.length);
 
   for (const config of countryConfigs) {
     // Skip already-saved countries for this run only (resume support).
@@ -763,7 +785,7 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     }
 
     process.stderr.write(`Refreshing ${config.name}...\n`);
-    const result = await collectUsers(client, config.queries, limit, generatedAt, throttler, config.locationTerms, config.name, config.candidateLimit ?? Math.max(50, limit * 5));
+    const result = await collectUsers(client, config.queries, limit, generatedAt, throttler, config.locationTerms, config.name, options.candidateLimit ?? Math.max(50, limit * 5), previousCountryAnchors.get(config.slug) ?? []);
     countryResults.push({ config, ...result });
 
     // Save immediately after each country completes
@@ -772,7 +794,6 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     }
   }
 
-  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, throttler, undefined, undefined, Math.max(100, limit * 8));
   const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, throttler, undefined, undefined, Math.max(50, limit * 5));
   const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit, generatedAt, throttler);
   const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, generatedAt, throttler, Math.max(100, limit * 8));

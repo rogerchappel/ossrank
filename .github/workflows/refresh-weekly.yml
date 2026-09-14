@@ -9,6 +9,14 @@ on:
         description: Candidates per shard
         required: false
         default: '20'
+      max_countries:
+        description: Number of country boards to refresh
+        required: false
+        default: '10'
+      candidate_limit:
+        description: New candidates to discover per country
+        required: false
+        default: '20'
 
 # GitHub may delay scheduled events, so a cron run can arrive while a manual
 # dispatch is still refreshing the same weekly branch. Keep the workflow
@@ -60,7 +68,9 @@ jobs:
         env:
           OSSRANK_GITHUB_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
           OSSRANK_LIMIT: ${{ inputs.limit || '20' }}
-        run: pnpm run refresh:live
+          OSSRANK_MAX_COUNTRIES: ${{ inputs.max_countries || '10' }}
+          OSSRANK_CANDIDATE_LIMIT: ${{ inputs.candidate_limit || '20' }}
+        run: pnpm exec tsx src/cli.ts refresh --mode live --limit "${OSSRANK_LIMIT}" --max-countries "${OSSRANK_MAX_COUNTRIES}" --candidate-limit "${OSSRANK_CANDIDATE_LIMIT}"
       - name: Validate refreshed data
         id: validate_data
         if: steps.refresh_live.outcome == 'success'
