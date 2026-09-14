@@ -84,7 +84,7 @@ jobs:
       - name: Push data to branch and create PR
         if: always() && !cancelled()
         env:
-          GH_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           REFRESH_OUTCOME: ${{ steps.refresh_live.outcome }}
           VALIDATE_OUTCOME: ${{ steps.validate_data.outcome }}
           BUILD_OUTCOME: ${{ steps.build_site.outcome }}
