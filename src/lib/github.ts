@@ -82,7 +82,6 @@ interface GitHubUserActivityNode {
   contributionsCollection: {
     totalCommitContributions: number;
     totalPullRequestContributions: number;
-    contributionCalendar: { weeks: Array<{ contributionDays: Array<{ contributionCount: number }> }> };
   };
 }
 
@@ -410,7 +409,7 @@ function toUserCandidate(node: GitHubUserActivityNode): { user: GitHubUserDetail
     activity: {
       commits: node.contributionsCollection.totalCommitContributions,
       pullRequests: node.contributionsCollection.totalPullRequestContributions,
-      dailyContributions: node.contributionsCollection.contributionCalendar.weeks.flatMap((week) => week.contributionDays.map((day) => day.contributionCount))
+      dailyContributions: []
     }
   };
 }
@@ -438,11 +437,6 @@ async function userProfilesWithActivityBatch(
         contributionsCollection(from: $from, to: $to) {
           totalCommitContributions
           totalPullRequestContributions
-          contributionCalendar {
-            weeks {
-              contributionDays { contributionCount }
-            }
-          }
         }
       }`).join('');
     const variables: Record<string, unknown> = { from, to };
@@ -695,7 +689,8 @@ async function saveCountrySnapshot(
     candidate_count: total,
     caveats: [
       'Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.',
-      'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.'
+      'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.',
+      'The normal refresh uses scalar contribution totals; daily contribution calendars are omitted to keep GraphQL resource usage bounded, so burst adjustment is unavailable for these snapshots.'
     ],
     discovery_queries: config.queries.map(userQuery),
     candidate_count_by_query: queryStats,
@@ -811,6 +806,7 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     'Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.',
     'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.',
     'Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.',
+    'The normal refresh uses scalar contribution totals; daily contribution calendars are omitted to keep GraphQL resource usage bounded, so burst adjustment is unavailable for these snapshots.',
     'The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages.'
   ];
   const projectCaveats = [
