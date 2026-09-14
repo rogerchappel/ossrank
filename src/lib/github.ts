@@ -774,7 +774,12 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     process.stderr.write(`[resume] Found ${savedCountrySnapshots.size} previously saved countries for this run, skipping and reusing them.\n`);
   }
 
-  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, throttler, undefined, undefined, Math.max(100, limit * 8));
+  // Keep the global and downstream contributor boards inside the same bounded
+  // workload as countries when the workflow supplies a candidate limit.
+  const contributorCandidateLimit = options.candidateLimit ?? Math.max(50, limit * 5);
+  const globalCandidateLimit = options.candidateLimit ? Math.max(40, options.candidateLimit * 2) : Math.max(100, limit * 8);
+  const projectCandidateLimit = options.candidateLimit ?? Math.max(50, limit * 5);
+  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, throttler, undefined, undefined, globalCandidateLimit);
   const countryResults: CountryResult[] = [];
 
   for (const config of countryConfigs) {
@@ -794,13 +799,13 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
     }
   }
 
-  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, throttler, undefined, undefined, Math.max(50, limit * 5));
-  const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit, generatedAt, throttler);
-  const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, generatedAt, throttler, Math.max(100, limit * 8));
-  const agentic = await collectRepos(client, ['agentic archived:false pushed:>=2026-04-01', 'topic:ai-agents archived:false', 'topic:llm-agents archived:false', 'topic:mcp archived:false', 'agent framework archived:false stars:>100'], limit, generatedAt, throttler, Math.max(80, limit * 5));
-  const claude = await collectRepos(client, ['claude archived:false pushed:>=2026-04-01', 'claude-code archived:false', 'topic:claude archived:false', 'anthropic claude archived:false stars:>50'], limit, generatedAt, throttler, Math.max(60, limit * 4));
-  const codex = await collectRepos(client, ['codex archived:false pushed:>=2026-04-01', 'openai codex archived:false', 'topic:codex archived:false', 'codex cli archived:false'], limit, generatedAt, throttler, Math.max(60, limit * 4));
-  const openclaw = await collectRepos(client, ['openclaw archived:false', 'topic:openclaw archived:false', 'openclaw agent archived:false'], limit, generatedAt, throttler, Math.max(40, limit * 3));
+  const ts = await collectUsers(client, 'language:TypeScript repos:>10 followers:>25', limit, generatedAt, throttler, undefined, undefined, contributorCandidateLimit);
+  const devtools = await collectRepos(client, ['topic:developer-tools archived:false', 'topic:cli archived:false', 'topic:devtools archived:false'], limit, generatedAt, throttler, projectCandidateLimit);
+  const growing = await collectRepos(client, ['stars:>500 pushed:>=2026-04-01 archived:false', 'created:>=2025-01-01 stars:>1000 archived:false'], limit, generatedAt, throttler, projectCandidateLimit);
+  const agentic = await collectRepos(client, ['agentic archived:false pushed:>=2026-04-01', 'topic:ai-agents archived:false', 'topic:llm-agents archived:false', 'topic:mcp archived:false', 'agent framework archived:false stars:>100'], limit, generatedAt, throttler, projectCandidateLimit);
+  const claude = await collectRepos(client, ['claude archived:false pushed:>=2026-04-01', 'claude-code archived:false', 'topic:claude archived:false', 'anthropic claude archived:false stars:>50'], limit, generatedAt, throttler, projectCandidateLimit);
+  const codex = await collectRepos(client, ['codex archived:false pushed:>=2026-04-01', 'openai codex archived:false', 'topic:codex archived:false', 'codex cli archived:false'], limit, generatedAt, throttler, projectCandidateLimit);
+  const openclaw = await collectRepos(client, ['openclaw archived:false', 'topic:openclaw archived:false', 'openclaw agent archived:false'], limit, generatedAt, throttler, projectCandidateLimit);
 
   const contributorCaveats = [
     'Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.',
