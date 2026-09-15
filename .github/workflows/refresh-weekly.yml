@@ -84,7 +84,7 @@ jobs:
       - name: Push data to branch and create PR
         if: always() && !cancelled()
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.OSSRANK_GITHUB_TOKEN }}
           REFRESH_OUTCOME: ${{ steps.refresh_live.outcome }}
           VALIDATE_OUTCOME: ${{ steps.validate_data.outcome }}
           BUILD_OUTCOME: ${{ steps.build_site.outcome }}
@@ -149,18 +149,18 @@ jobs:
           - [ ] Other:
           EOF
           cat "${PR_BODY_FILE}"
-          PR_NUMBER=$(gh pr view "${BRANCH}" --json number --jq .number 2>/dev/null || true)
+          PR_NUMBER=$(gh api "repos/${GITHUB_REPOSITORY}/pulls?head=${GITHUB_REPOSITORY_OWNER}:${BRANCH}&base=main&state=open" --jq '.[0].number' 2>/dev/null || true)
           if [ -n "${PR_NUMBER}" ]; then
-            gh pr edit "${PR_NUMBER}" \
-              --title "${PR_TITLE}" \
-              --body-file "${PR_BODY_FILE}"
+            gh api --method PATCH "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}" \
+              -f title="${PR_TITLE}" \
+              -f body="$(<"${PR_BODY_FILE}")"
           else
             echo "No existing PR found for ${BRANCH}; creating one."
-            gh pr create \
-              --head "${BRANCH}" \
-              --base main \
-              --title "${PR_TITLE}" \
-              --body-file "${PR_BODY_FILE}"
+            gh api --method POST "repos/${GITHUB_REPOSITORY}/pulls" \
+              -f head="${BRANCH}" \
+              -f base=main \
+              -f title="${PR_TITLE}" \
+              -f body="$(<"${PR_BODY_FILE}")"
           fi
       - name: Deploy refreshed site to Cloudflare Pages
         if: steps.refresh_live.outcome == 'success' && steps.validate_data.outcome == 'success' && steps.build_site.outcome == 'success'
