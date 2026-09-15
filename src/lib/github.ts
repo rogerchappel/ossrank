@@ -442,9 +442,22 @@ async function userProfilesWithActivityBatch(
     const variables: Record<string, unknown> = { from, to };
     batch.forEach((login, index) => { variables[`login${index}`] = login; });
 
-    const data = await client.graphql<GitHubUserActivityBatchResponse>(`query OssrankUserActivityBatch($from: DateTime!, $to: DateTime!, ${variableDefinitions}) {${aliases}
-      rateLimit { remaining cost }
-    }`, variables);
+    let data: GitHubUserActivityBatchResponse;
+    try {
+      data = await client.graphql<GitHubUserActivityBatchResponse>(`query OssrankUserActivityBatch($from: DateTime!, $to: DateTime!, ${variableDefinitions}) {${aliases}
+        rateLimit { remaining cost }
+      }`, variables);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      if (!message.includes('Resource limits for this query exceeded') || batch.length === 1) throw error;
+      // GitHub can reject a valid five-user query when one user's contribution
+      // history makes the combined query too expensive. Retry only this batch
+      // one user at a time so the whole refresh remains resumable.
+      for (const login of batch) {
+        results.push(...await userProfilesWithActivityBatch(client, [login], generatedAt));
+      }
+      continue;
+    }
 
     for (let index = 0; index < batch.length; index += 1) {
       const node = data[`u${index}`] as GitHubUserActivityNode | null | undefined;
