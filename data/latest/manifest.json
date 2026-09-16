@@ -1,19 +1,9 @@
 {
-  "generated_at": "2026-08-20T19:52:28.086Z",
-  "source_commit": "a4a5c97",
+  "generated_at": "2026-09-16T04:41:43.660Z",
+  "source_commit": "d0dffcd",
   "method": "github-live-refresh",
   "status": "fresh",
   "completed_shards": [
-    {
-      "kind": "global",
-      "slug": "contributors",
-      "title": "Top observed GitHub contributors globally",
-      "path": "/data/latest/global-contributors.json",
-      "status": "fresh",
-      "generated_at": "2026-08-20T19:00:08.727Z",
-      "fresh_until": "2026-08-27T19:00:08.727Z",
-      "entries": 20
-    },
     {
       "kind": "country",
       "slug": "australia",
@@ -493,6 +483,16 @@
       "generated_at": "2026-08-20T19:00:08.727Z",
       "fresh_until": "2026-08-27T19:00:08.727Z",
       "entries": 20
+    },
+    {
+      "kind": "global",
+      "slug": "contributors",
+      "title": "Top observed GitHub contributors globally",
+      "path": "/data/latest/global-contributors.json",
+      "status": "fresh",
+      "generated_at": "2026-09-16T04:39:57.575Z",
+      "fresh_until": "2026-09-23T04:39:57.575Z",
+      "entries": 20
     }
   ],
   "failed_shards": [],
@@ -500,7 +500,7 @@
   "api_budget": {
     "provider": "github",
     "mode": "live",
-    "remaining": 3361
+    "remaining": 4867
   },
-  "duration_ms": 3139359
+  "duration_ms": 106086
 }
