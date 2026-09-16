@@ -17,6 +17,7 @@ export interface GitHubCollectorOptions {
   generatedAt?: string;
   maxCountries?: number;
   candidateLimit?: number;
+  scope?: 'all' | 'global';
   saveDir?: GitHubCollectorSaveDir;
 }
 
@@ -754,6 +755,15 @@ async function loadPreviousCountryAnchors(saveDir: GitHubCollectorSaveDir, confi
   return anchors;
 }
 
+async function loadPreviousGlobalAnchors(saveDir: GitHubCollectorSaveDir): Promise<string[]> {
+  try {
+    const snapshot = JSON.parse(await readFile(join(saveDir.latestDir, 'global-contributors.json'), 'utf8')) as RankingSnapshot<RankedContributor>;
+    return snapshot.entries.slice(0, 20).map((entry) => entry.login);
+  } catch {
+    return [];
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Main entry — orchestrates all snapshots
 // ---------------------------------------------------------------------------
@@ -770,6 +780,13 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const client = new GitHubClient(provider, throttler);
 
   const limit = Math.max(1, options.limit);
+  const contributorCaveats = [
+    'Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.',
+    'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.',
+    'Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.',
+    'The normal refresh uses scalar contribution totals; daily contribution calendars are omitted to keep GraphQL resource usage bounded, so burst adjustment is unavailable for these snapshots.',
+    'The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages.'
+  ];
 
   // Incremental save: load already-saved country snapshots for this run so
   // interrupted refreshes can resume without dropping skipped countries from
@@ -785,9 +802,23 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   // Keep the global and downstream contributor boards inside the same bounded
   // workload as countries when the workflow supplies a candidate limit.
   const contributorCandidateLimit = options.candidateLimit ?? Math.max(50, limit * 5);
-  const globalCandidateLimit = options.candidateLimit ? Math.max(40, options.candidateLimit * 2) : Math.max(100, limit * 8);
+  const globalCandidateLimit = options.candidateLimit ?? Math.max(100, limit * 8);
   const projectCandidateLimit = options.candidateLimit ?? Math.max(50, limit * 5);
-  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, throttler, undefined, undefined, globalCandidateLimit);
+  const previousGlobalAnchors = saveDir ? await loadPreviousGlobalAnchors(saveDir) : [];
+  const global = await collectUsers(client, ['followers:>1000 repos:>20', 'repos:>100 followers:>500'], limit, generatedAt, throttler, undefined, undefined, globalCandidateLimit, previousGlobalAnchors);
+  if (options.scope === 'global') {
+    const globalEntries = rankContributors(global.users).slice(0, limit);
+    const globalContributors: RankingSnapshot<RankedContributor> = {
+      ...snapshotBase('global', 'contributors', 'Global', 'Top observed GitHub contributors globally', generatedAt, 'fresh', 'github-graphql-one-year-contribution-activity'),
+      candidate_count: global.total,
+      caveats: contributorCaveats,
+      discovery_queries: ['followers:>1000 repos:>20 type:user', 'repos:>100 followers:>500 type:user', 'previous global snapshot anchors'],
+      candidate_count_by_query: global.queryStats,
+      history: { weeks: [generatedAt.slice(0, 10)], ranked_items: [globalEntries.length], top_10_signal: [globalEntries.slice(0, 10).reduce((sum, user) => sum + user.public_contributions, 0)] },
+      entries: globalEntries
+    };
+    return { snapshots: [globalContributors], remaining: client.remaining };
+  }
   const countryResults: CountryResult[] = [];
 
   for (const config of countryConfigs) {
@@ -815,13 +846,6 @@ export async function collectLiveSnapshots(options: GitHubCollectorOptions): Pro
   const codex = await collectRepos(client, ['codex archived:false pushed:>=2026-04-01', 'openai codex archived:false', 'topic:codex archived:false', 'codex cli archived:false'], limit, generatedAt, throttler, projectCandidateLimit);
   const openclaw = await collectRepos(client, ['openclaw archived:false', 'topic:openclaw archived:false', 'openclaw agent archived:false'], limit, generatedAt, throttler, projectCandidateLimit);
 
-  const contributorCaveats = [
-    'Live data uses GitHub GraphQL contribution and public profile fields; it is an observed sample, not a complete census.',
-    'Location matching uses free-text GitHub profile locations and must not be treated as verified nationality or residence.',
-    'Contributor pages expose public repository counts plus one-year GitHub contribution activity from GraphQL. These are not all-time totals and may differ from private contribution graphs.',
-    'The normal refresh uses scalar contribution totals; daily contribution calendars are omitted to keep GraphQL resource usage bounded, so burst adjustment is unavailable for these snapshots.',
-    'The OSSRank score is retained only as a combined proxy; raw commits, pull requests, and repository tables are preferred for review and SEO pages.'
-  ];
   const projectCaveats = [
     'Live data uses GitHub repository search and public repository fields; it is an observed sample, not a complete census.',
     'Project PR counts use recent merged pull requests visible through GitHub GraphQL; high-volume repositories may be capped by the first 100 recently updated merged PRs per snapshot.',

@@ -17,6 +17,7 @@ interface CliOptions {
   token?: string;
   maxCountries?: number;
   candidateLimit?: number;
+  scope: 'all' | 'global';
   requireGraphqlSearch: boolean;
 }
 
@@ -38,7 +39,8 @@ Options:
   --mode <fixture|live> Refresh mode (default: live for refresh)
   --token <token>       GitHub token; defaults to OSSRANK_GITHUB_TOKEN or GITHUB_TOKEN
   --max-countries <n>   Refresh only the first n configured countries
-  --candidate-limit <n> Limit new candidates discovered per country
+  --candidate-limit <n> Limit new candidates discovered per board
+  --scope <all|global> Refresh every board or only the global contributor board
   --require-graphql-search  Validate that the token can run the GraphQL user search used by live refresh
 
 Live mode uses GitHub REST and GraphQL APIs with conservative limits and writes
@@ -50,7 +52,7 @@ function parseArgs(argv: string[]): CliOptions {
   const command = argv[0] ?? 'help';
   const kind = argv[1]?.startsWith('-') ? undefined : argv[1];
   const rest = argv.slice(kind ? 2 : 1);
-  const options: CliOptions = { command, kind, limit: 50, format: 'json', mode: 'live', requireGraphqlSearch: false };
+  const options: CliOptions = { command, kind, limit: 50, format: 'json', mode: 'live', scope: 'all', requireGraphqlSearch: false };
   for (let index = 0; index < rest.length; index += 1) {
     const arg = rest[index];
     const value = rest[index + 1];
@@ -62,6 +64,7 @@ function parseArgs(argv: string[]): CliOptions {
     if (arg === '--token') { options.token = value; index += 1; continue; }
     if (arg === '--max-countries') { options.maxCountries = parsePositiveInteger(value, '--max-countries'); index += 1; continue; }
     if (arg === '--candidate-limit') { options.candidateLimit = parsePositiveInteger(value, '--candidate-limit'); index += 1; continue; }
+    if (arg === '--scope') { options.scope = parseChoice(value, '--scope', ['all', 'global']); index += 1; continue; }
     if (arg === '--require-graphql-search') { options.requireGraphqlSearch = true; continue; }
     if (arg === '--help' || arg === '-h') options.command = 'help';
   }
@@ -173,8 +176,8 @@ async function main(): Promise<void> {
     // Incremental save setup — country results are saved immediately so a
     // crash/interruption doesn't lose hours of work. Re-run resumes where left off.
     const root = process.cwd();
-    const { snapshots, remaining } = await collectLiveSnapshots({ token, limit: options.limit, maxCountries: options.maxCountries, candidateLimit: options.candidateLimit, saveDir: { latestDir: join(root, 'data/latest'), historyDir: join(root, 'data/history') } });
-    const manifest = await writeSnapshots(snapshots, { method: 'github-live-refresh', mode: 'live', durationMs: Date.now() - started, remaining });
+    const { snapshots, remaining } = await collectLiveSnapshots({ token, limit: options.limit, maxCountries: options.maxCountries, candidateLimit: options.candidateLimit, scope: options.scope, saveDir: { latestDir: join(root, 'data/latest'), historyDir: join(root, 'data/history') } });
+    const manifest = await writeSnapshots(snapshots, { method: 'github-live-refresh', mode: 'live', durationMs: Date.now() - started, remaining, mergeExistingManifest: options.scope !== 'all' });
     await emit(manifest, options);
     return;
   }
