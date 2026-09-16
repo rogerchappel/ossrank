@@ -147,7 +147,17 @@ export async function writeSnapshots(snapshots: RankingSnapshot<unknown>[], opti
   const manifestJson = JSON.stringify(manifest, null, 2) + '\n';
   await writeFile(join(latestDir, 'manifest.json'), manifestJson);
   await writeFile(join(runDir, 'manifest.json'), manifestJson);
-  await cp(latestDir, join(historyDir, runId), { recursive: true, force: true });
+  if (options.mergeExistingManifest) {
+    const historyRunDir = join(historyDir, runId);
+    await mkdir(historyRunDir, { recursive: true });
+    for (const snapshot of snapshotsWithMovement) {
+      const filename = shardFilename(snapshot);
+      await cp(join(latestDir, filename), join(historyRunDir, filename), { force: true });
+    }
+    await writeFile(join(historyRunDir, 'manifest.json'), manifestJson);
+  } else {
+    await cp(latestDir, join(historyDir, runId), { recursive: true, force: true });
+  }
   return manifest;
 }
 

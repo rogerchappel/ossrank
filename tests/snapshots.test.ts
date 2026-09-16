@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { access, mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
@@ -48,6 +48,7 @@ test('scoped writes replace their shard and preserve unrelated manifest shards',
     duration_ms: 1
   };
   await writeFile(join(latestDir, 'global-contributors.json'), JSON.stringify(previousGlobal));
+  await writeFile(join(latestDir, 'countries-australia.json'), '{}');
   await writeFile(join(latestDir, 'manifest.json'), JSON.stringify(existingManifest));
 
   try {
@@ -71,6 +72,8 @@ test('scoped writes replace their shard and preserve unrelated manifest shards',
 
     const written = JSON.parse(await readFile(join(latestDir, 'manifest.json'), 'utf8')) as Manifest;
     assert.deepEqual(written.completed_shards, manifest.completed_shards);
+    await access(join(historyDir, '2026-09-16/global-contributors.json'));
+    await assert.rejects(access(join(historyDir, '2026-09-16/countries-australia.json')));
   } finally {
     await rm(root, { recursive: true, force: true });
   }
