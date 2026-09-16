@@ -15,6 +15,7 @@ export interface SnapshotWriteOptions {
   durationMs: number;
   remaining?: number;
   failedShards?: Array<{ slug: string; reason: string }>;
+  mergeExistingManifest?: boolean;
 }
 
 export function sourceCommit(root = process.cwd()): string {
@@ -94,6 +95,15 @@ export async function writeSnapshots(snapshots: RankingSnapshot<unknown>[], opti
   await mkdir(runDir, { recursive: true });
   await mkdir(historyDir, { recursive: true });
 
+  let existingManifest: Manifest | undefined;
+  if (options.mergeExistingManifest) {
+    try {
+      existingManifest = JSON.parse(await readFile(join(latestDir, 'manifest.json'), 'utf8')) as Manifest;
+    } catch {
+      // A scoped refresh can still create the first manifest in a fresh checkout.
+    }
+  }
+
   const snapshotsWithMovement = await Promise.all(snapshots.map((snapshot) => addPreviousContributorRanks(snapshot, latestDir, historyDir, runId)));
 
   const completed: ManifestShard[] = [];
@@ -114,13 +124,20 @@ export async function writeSnapshots(snapshots: RankingSnapshot<unknown>[], opti
     });
   }
 
-  const stalePages = snapshotsWithMovement.filter((snapshot) => snapshot.status === 'stale' || snapshot.status === 'failed').map((snapshot) => snapshot.slug);
+  const refreshedKeys = new Set(completed.map((shard) => `${shard.kind}:${shard.slug}`));
+  const completedShards = options.mergeExistingManifest
+    ? [
+        ...(existingManifest?.completed_shards ?? []).filter((shard) => !refreshedKeys.has(`${shard.kind}:${shard.slug}`)),
+        ...completed
+      ]
+    : completed;
+  const stalePages = completedShards.filter((shard) => shard.status === 'stale' || shard.status === 'failed').map((shard) => shard.slug);
   const manifest: Manifest = {
     generated_at: generatedAt,
     source_commit: sourceCommit(root),
     method: options.method,
     status: options.failedShards?.length ? 'failed' : options.mode === 'live' ? 'fresh' : 'demo',
-    completed_shards: completed,
+    completed_shards: completedShards,
     failed_shards: options.failedShards ?? [],
     stale_pages: stalePages,
     api_budget: { provider: 'github', mode: options.mode, remaining: options.remaining },
@@ -130,7 +147,17 @@ export async function writeSnapshots(snapshots: RankingSnapshot<unknown>[], opti
   const manifestJson = JSON.stringify(manifest, null, 2) + '\n';
   await writeFile(join(latestDir, 'manifest.json'), manifestJson);
   await writeFile(join(runDir, 'manifest.json'), manifestJson);
-  await cp(latestDir, join(historyDir, runId), { recursive: true, force: true });
+  if (options.mergeExistingManifest) {
+    const historyRunDir = join(historyDir, runId);
+    await mkdir(historyRunDir, { recursive: true });
+    for (const snapshot of snapshotsWithMovement) {
+      const filename = shardFilename(snapshot);
+      await cp(join(latestDir, filename), join(historyRunDir, filename), { force: true });
+    }
+    await writeFile(join(historyRunDir, 'manifest.json'), manifestJson);
+  } else {
+    await cp(latestDir, join(historyDir, runId), { recursive: true, force: true });
+  }
   return manifest;
 }
 
