@@ -55,7 +55,7 @@ interface GitHubPublicEvent {
 }
 interface GitHubGraphqlResponse<T> {
   data?: T;
-  errors?: Array<{ message: string }>;
+  errors?: Array<{ message: string; type?: string }>;
 }
 interface GitHubUserSearchResponse {
   search: {
@@ -221,6 +221,28 @@ class SmartThrottler {
 // Rate-limit-aware GitHub client
 // ---------------------------------------------------------------------------
 
+type GitHubFailureKind = 'gateway' | 'rate_limit' | 'resource_limit' | 'http' | 'graphql' | 'transport' | 'invalid_response';
+
+class GitHubRequestError extends Error {
+  constructor(readonly kind: GitHubFailureKind, operation: string, readonly status?: number) {
+    super(`GitHub ${operation} failed: ${kind}${status ? ` (HTTP ${status})` : ''}`);
+  }
+}
+
+function githubDiagnostic(fields: Record<string, unknown>): void {
+  process.stderr.write(`[github] ${JSON.stringify(fields)}\n`);
+}
+
+function githubRetryDelay(headers: Headers | undefined, attempt: number, rateLimited: boolean): number {
+  const retryAfter = headers?.get('retry-after');
+  const seconds = retryAfter ? Number(retryAfter) : NaN;
+  const retryMs = Number.isFinite(seconds) ? seconds * 1000 : retryAfter ? Date.parse(retryAfter) - Date.now() : NaN;
+  const reset = headers?.get('x-ratelimit-reset');
+  const resetMs = reset ? Number(reset) * 1000 - Date.now() + 1000 : NaN;
+  const requested = Number.isFinite(retryMs) ? retryMs : rateLimited && Number.isFinite(resetMs) ? resetMs : rateLimited ? 60_000 : 1000 * 2 ** (attempt - 1);
+  return Math.max(1000, Math.min(60_000, requested));
+}
+
 export class GitHubClient {
   remaining?: number;
   private tokenProvider: GitHubTokenProvider;
@@ -296,41 +318,65 @@ export class GitHubClient {
   }
 
   async graphql<T>(query: string, variables: Record<string, unknown>): Promise<T> {
-    await this.throttler.beforeCall('graphql');
-    const auth = await this.authHeaders();
-    const response = await fetchWithRetry('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/vnd.github+json',
-        'Content-Type': 'application/json',
-        'User-Agent': 'ossrank/0.1.0',
-        ...auth
-      },
-      body: JSON.stringify({ query, variables })
-    });
-    const remaining = response.headers.get('x-ratelimit-remaining');
-    if (remaining) this.remaining = Number(remaining);
-    this.throttler.updateFromHeaders(response.headers, 'graphql');
-    const body = await response.json() as GitHubGraphqlResponse<T>;
-    if (!response.ok || body.errors?.length) {
-      const message = body.errors?.map((error) => error.message).join('; ') ?? response.statusText;
-      // If it's a rate-limit error from GraphQL, sleep and retry once
-      if (response.status === 403 || message.includes('rate limit')) {
-        const reset = response.headers.get('x-ratelimit-reset');
-        const retryAfter = response.headers.get('retry-after');
-        const sleepMs = retryAfter
-          ? Math.min(Number(retryAfter) * 1000, 3_600_000)
-          : reset
-            ? Math.max(Number(reset) * 1000 - Date.now() + 1000, 0)
-            : 60_000;
-        process.stderr.write(`[throttle] GraphQL hit rate limit — sleeping ${Math.ceil(sleepMs / 1000)}s.\n`);
-        await new Promise((resolve) => setTimeout(resolve, Math.min(sleepMs, 3_600_000)));
-        return this.graphql<T>(query, variables);
+    // Log only selected metadata, never query text, variables, credentials or bodies.
+    const operation = query.match(/query\s+(\w+)/)?.[1] ?? 'anonymous';
+    const logins = Object.entries(variables)
+      .filter(([key, value]) => /^login\d+$/.test(key) && typeof value === 'string')
+      .map(([, value]) => value as string);
+    const context = { operation, batchSize: logins.length, logins };
+    const maxAttempts = 3;
+    for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+      await this.throttler.beforeCall('graphql');
+      const auth = await this.authHeaders();
+      const started = Date.now();
+      let response: Response | undefined;
+      let failure: GitHubRequestError;
+      try {
+        response = await fetch('https://api.github.com/graphql', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/vnd.github+json',
+            'Content-Type': 'application/json',
+            'User-Agent': 'ossrank/0.1.0',
+            ...auth
+          },
+          body: JSON.stringify({ query, variables }),
+          signal: AbortSignal.timeout(60_000)
+        });
+        this.throttler.updateFromHeaders(response.headers, 'graphql');
+        const remaining = response.headers.get('x-ratelimit-remaining');
+        if (remaining) this.remaining = Number(remaining);
+        // Gateways can return HTML. Classify HTTP status before decoding JSON.
+        if (!response.ok) {
+          const kind = [502, 503, 504].includes(response.status) ? 'gateway'
+            : response.status === 429 || (response.status === 403 &&
+              (response.headers.has('retry-after') || remaining === '0')) ? 'rate_limit' : 'http';
+          failure = new GitHubRequestError(kind, operation, response.status);
+          await response.body?.cancel();
+        } else {
+          const body = await response.json() as GitHubGraphqlResponse<T>;
+          if (!body.errors?.length && body.data) {
+            githubDiagnostic({ ...context, event: 'request', attempt, durationMs: Date.now() - started,
+              status: response.status, requestId: response.headers.get('x-github-request-id'), outcome: 'success' });
+            return body.data;
+          }
+          const rateLimited = body.errors?.some(error => error.type === 'RATE_LIMITED' || /rate limit/i.test(error.message));
+          const resourceLimited = body.errors?.some(error => /Resource limits for this query exceeded/i.test(error.message));
+          failure = new GitHubRequestError(rateLimited ? 'rate_limit' : resourceLimited ? 'resource_limit' : 'graphql', operation, response.status);
+        }
+      } catch {
+        // Do not include exception text: transports may echo request credentials.
+        failure = new GitHubRequestError(response ? 'invalid_response' : 'transport', operation, response?.status);
       }
-      throw new Error(`GitHub GraphQL failed: ${message}`);
+      const retry = attempt < maxAttempts && ['gateway', 'rate_limit', 'transport'].includes(failure.kind);
+      const delayMs = retry ? githubRetryDelay(response?.headers, attempt, failure.kind === 'rate_limit') : 0;
+      githubDiagnostic({ ...context, event: 'request', attempt, durationMs: Date.now() - started,
+        status: response?.status, requestId: response?.headers.get('x-github-request-id') ?? null,
+        outcome: failure.kind, retry, delayMs });
+      if (!retry) throw failure;
+      await new Promise(resolve => setTimeout(resolve, delayMs));
     }
-    if (!body.data) throw new Error('GraphQL returned no data');
-    return body.data;
+    throw new Error('Unreachable GraphQL retry state');
   }
 }
 
@@ -449,20 +495,28 @@ async function userProfilesWithActivityBatch(
         rateLimit { remaining cost }
       }`, variables);
     } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      if (!message.includes('Resource limits for this query exceeded') || batch.length === 1) throw error;
-      // GitHub can reject a valid five-user query when one user's contribution
-      // history makes the combined query too expensive. Retry only this batch
-      // one user at a time so the whole refresh remains resumable.
-      for (const login of batch) {
-        results.push(...await userProfilesWithActivityBatch(client, [login], generatedAt));
+      if (!(error instanceof GitHubRequestError) ||
+          !['gateway', 'resource_limit'].includes(error.kind) || batch.length === 1) throw error;
+      // Sequential bisection bounds a five-user batch to at most nine nodes.
+      // Never split rate limits or accept a partially successful GraphQL response.
+      const midpoint = Math.ceil(batch.length / 2);
+      githubDiagnostic({ event: 'split', operation: 'OssrankUserActivityBatch',
+        batchSize: batch.length, logins: batch, reason: error.kind, status: error.status,
+        childSizes: [midpoint, batch.length - midpoint] });
+      for (const child of [batch.slice(0, midpoint), batch.slice(midpoint)]) {
+        results.push(...await userProfilesWithActivityBatch(client, child, generatedAt));
       }
       continue;
     }
 
     for (let index = 0; index < batch.length; index += 1) {
       const node = data[`u${index}`] as GitHubUserActivityNode | null | undefined;
-      if (node?.login) results.push(toUserCandidate(node));
+      if (!node?.login) {
+        githubDiagnostic({ event: 'incomplete_batch', operation: 'OssrankUserActivityBatch',
+          batchSize: batch.length, logins: batch, missingLogin: batch[index] });
+        throw new GitHubRequestError('invalid_response', 'OssrankUserActivityBatch');
+      }
+      results.push(toUserCandidate(node));
     }
   }
 
