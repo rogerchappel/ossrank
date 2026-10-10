@@ -17,7 +17,7 @@ function success(batch: string[]) {
 }
 
 for (const scenario of ['transient502', 'transient504', 'split502', 'split504', 'split503', 'resource',
-  'single504', 'partial504', 'missing', 'rateRecovery', 'rate429', 'rate403', 'rateGraphql', 'forbidden', 'invalid', 'transport'] as const) {
+  'single504', 'partial504', 'missing', 'rateRecovery', 'rate429', 'rate403', 'rateGraphql', 'forbidden', 'invalid', 'transport', 'decodeRecovery', 'streamRecovery', 'nullEnvelope', 'badEnvelope'] as const) {
   test(`live collection: ${scenario}`, async t => {
     const root = await mkdtemp(join(tmpdir(), 'ossrank-github-'));
     t.after(() => rm(root, { recursive: true, force: true }));
@@ -51,12 +51,18 @@ for (const scenario of ['transient502', 'transient504', 'split502', 'split504', 
       if (scenario === 'rate429' || scenario === 'rate403') return new Response(secret, { status: Number(scenario.slice(-3)), headers: { ...headers, 'retry-after': '99999999' } });
       if (scenario === 'rateGraphql') return Response.json({ errors: [{ type: 'RATE_LIMITED', message: 'API rate limit exceeded' }] }, { headers: { ...headers, 'retry-after': 'invalid' } });
       if (scenario === 'forbidden') return new Response(secret, { status: 403, headers });
+      if (scenario === 'decodeRecovery' && batches.length === 1) return new Response('{"data":' + secret, { headers });
+      if (scenario === 'streamRecovery' && batches.length === 1) return new Response(new ReadableStream({
+        start(controller) { controller.error(new TypeError(secret)); }
+      }), { headers });
+      if (scenario === 'nullEnvelope') return Response.json(null, { headers });
+      if (scenario === 'badEnvelope') return Response.json({ errors: { message: secret } }, { headers });
       if (scenario === 'invalid') return new Response(secret, { headers });
       if (scenario === 'transport') throw new Error(secret);
       return success(batch);
     });
     const run = collectLiveSnapshots({ token: secret, generatedAt, limit: 5, scope: 'global', saveDir: { latestDir, historyDir: join(root, 'history') } });
-    const fails = ['single504', 'partial504', 'missing', 'rate429', 'rate403', 'rateGraphql', 'forbidden', 'invalid', 'transport'].includes(scenario);
+    const fails = ['single504', 'partial504', 'missing', 'rate429', 'rate403', 'rateGraphql', 'forbidden', 'invalid', 'transport', 'nullEnvelope', 'badEnvelope'].includes(scenario);
     if (fails) await assert.rejects(run, error => {
       assert.ok(error instanceof Error);
       assert.doesNotMatch(error.message, new RegExp(secret));
@@ -74,13 +80,31 @@ for (const scenario of ['transient502', 'transient504', 'split502', 'split504', 
       assert.equal(batches.length, 3);
       assert.ok(batches.every(batch => batch.length === 5));
     }
-    if (scenario === 'forbidden' || scenario === 'invalid') assert.equal(batches.length, 1);
+    if (scenario === 'forbidden' || scenario === 'nullEnvelope' || scenario === 'badEnvelope') assert.equal(batches.length, 1);
+    if (scenario === 'invalid') assert.equal(batches.length, 3);
+    if (scenario === 'decodeRecovery' || scenario === 'streamRecovery') assert.equal(batches.length, 2);
     assert.equal(await readFile(snapshotPath, 'utf8'), previous);
     assert.ok(delays.every(delay => delay <= 60_000));
     assert.ok(!logs.join('').includes(secret));
     const events = logs.filter(line => line.startsWith('[github]')).map(line => JSON.parse(line.slice(9)));
     const requests = events.filter(event => event.event === 'request');
     assert.equal(requests.length, batches.length + (fails ? 0 : 2));
+    if (scenario === 'invalid' || scenario === 'decodeRecovery' || scenario === 'streamRecovery') {
+      assert.equal(requests[0].outcome, 'response_decode');
+      assert.equal(requests[0].stage, 'body_decode');
+      assert.equal(requests[0].failureReason, scenario === 'streamRecovery' ? 'body_read' : 'json_syntax');
+      assert.equal(requests[0].requestId, 'request-123');
+      assert.equal(requests[0].retry, true);
+    }
+    if (scenario === 'invalid') {
+      assert.equal(requests[2].retry, false);
+      assert.equal(requests[2].delayMs, 0);
+      assert.ok(!events.some(event => event.event === 'split'));
+    }
+    if (scenario === 'nullEnvelope' || scenario === 'badEnvelope') {
+      assert.equal(requests[0].outcome, 'invalid_response');
+      assert.equal(requests[0].failureReason, 'invalid_envelope');
+    }
     assert.ok(requests.every(event => typeof event.durationMs === 'number' && event.attempt >= 1 && event.operation));
     if (scenario.startsWith('transient') || scenario.startsWith('split')) assert.equal(requests[0].requestId, 'request-123');
   });
