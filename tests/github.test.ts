@@ -69,7 +69,7 @@ for (const scenario of ['transient502', 'transient504', 'split502', 'split504', 
       if (scenario.startsWith('split')) assert.equal(batches.length, 17); // four internal nodes * three attempts + five leaves
       if (scenario === 'resource') assert.equal(batches.length, 9);
     }
-    if (scenario === 'single504') assert.deepEqual(batches.map(batch => batch.length), [5, 5, 5, 3, 3, 3, 2, 2, 2, 1, 1, 1]);
+    if (scenario === 'single504') assert.deepEqual(batches.map(batch => batch.length), [5, 5, 5, 3, 3, 3, 2, 2, 2, ...Array(12).fill(1)]);
     if ((scenario.startsWith('rate') && scenario !== 'rateRecovery') || scenario === 'transport') {
       assert.equal(batches.length, 3);
       assert.ok(batches.every(batch => batch.length === 5));
@@ -83,5 +83,90 @@ for (const scenario of ['transient502', 'transient504', 'split502', 'split504', 
     assert.equal(requests.length, batches.length + (fails ? 0 : 2));
     assert.ok(requests.every(event => typeof event.durationMs === 'number' && event.attempt >= 1 && event.operation));
     if (scenario.startsWith('transient') || scenario.startsWith('split')) assert.equal(requests[0].requestId, 'request-123');
+  });
+}
+
+for (const scenario of ['windowResource', 'windowGateway', 'windowExhausted', 'overlapFailure', 'badOverlap', 'badCount', 'windowRateLimit'] as const) {
+  test(`single-user window recovery: ${scenario}`, async t => {
+    const root = await mkdtemp(join(tmpdir(), 'ossrank-window-'));
+    t.after(() => rm(root, { recursive: true, force: true }));
+    const latestDir = join(root, 'latest');
+    await mkdir(latestDir);
+    const snapshotPath = join(latestDir, 'global-contributors.json');
+    const previous = JSON.stringify({ entries: [{ login: 'colinhacks' }] });
+    await writeFile(snapshotPath, previous);
+    // Preserve arbitrary outer timestamps, including leap day and milliseconds.
+    const to = '2024-03-01T12:34:56.789Z';
+    const end = Date.parse(to);
+    const start = end - 365 * 86_400_000;
+    const day = 86_400_000;
+    const eventTimes = new Set<number>([start, end, Date.parse('2024-02-29T00:00:00.000Z')]);
+    function addBoundaryEvents(a: number, b: number, depth: number) {
+      if (depth === 3) return;
+      const middle = Math.floor((a + b) / 2);
+      for (const boundary of [middle - day / 2, middle + day / 2]) {
+        for (const delta of [-1, 0, 1]) eventTimes.add(boundary + delta);
+      }
+      addBoundaryEvents(a, middle + day / 2, depth + 1);
+      addBoundaryEvents(middle - day / 2, b, depth + 1);
+    }
+    addBoundaryEvents(start, end, 0);
+    // Different contributions to the SAME repository across windows count as
+    // separate events. The profile repository total must not be summed.
+    const events = [...eventTimes].sort((a, b) => a - b).map((time, i) => ({
+      time, repository: 'same/repo', commits: i % 4 + 1, prs: i % 2
+    }));
+    const calls: Array<{ from: number; to: number }> = [];
+    const logs: string[] = [];
+    t.mock.method(globalThis, 'setTimeout', (callback: () => void) => { queueMicrotask(callback); return 0; });
+    t.mock.method(process.stderr, 'write', (chunk: string) => { logs.push(chunk); return true; });
+    t.mock.method(globalThis, 'fetch', async (_url: string, init: RequestInit) => {
+      const { query, variables } = JSON.parse(init.body as string);
+      if (query.includes('OssrankUserSearch')) return Response.json({ data: { search: { userCount: 0, nodes: [] } } });
+      const from = Date.parse(variables.from);
+      const toMs = Date.parse(variables.to);
+      calls.push({ from, to: toMs });
+      const width = toMs - from;
+      if (scenario === 'windowRateLimit' && width < end - start) return new Response('', { status: 429, headers: { 'retry-after': '1' } });
+      if (width > 50 * day || scenario === 'windowExhausted' || (scenario === 'overlapFailure' && width === day)) {
+        if (scenario === 'windowGateway') return new Response('gateway body omitted', { status: 504 });
+        // Structured type works independently of the legacy English message;
+        // deliberately supplied partial data must never be accepted.
+        return Response.json({ data: { u0: { login: 'colinhacks' } }, errors: [{ type: 'RESOURCE_LIMITS_EXCEEDED', message: 'resource exhausted' }] });
+      }
+      const included = events.filter(event => event.time >= from && event.time <= toMs);
+      const body = await success(['colinhacks']).json();
+      body.data.u0.contributionsCollection = {
+        totalCommitContributions: included.reduce((sum, event) => sum + event.commits, 0),
+        totalPullRequestContributions: included.reduce((sum, event) => sum + event.prs, 0)
+      };
+      if (scenario === 'badOverlap' && width === day) body.data.u0.contributionsCollection.totalCommitContributions = 1_000_000;
+      if (scenario === 'badCount') body.data.u0.contributionsCollection.totalPullRequestContributions = null;
+      return Response.json(body);
+    });
+    const run = collectLiveSnapshots({ token: secret, generatedAt: to, limit: 1, scope: 'global', saveDir: { latestDir, historyDir: join(root, 'history') } });
+    if (scenario === 'windowResource' || scenario === 'windowGateway') {
+      const result = await run;
+      const entry = result.snapshots[0].entries[0] as Record<string, unknown>;
+      assert.equal(entry.observed_public_commits, events.reduce((sum, event) => sum + event.commits, 0));
+      assert.equal(entry.observed_public_pull_requests, events.reduce((sum, event) => sum + event.prs, 0));
+      assert.equal(entry.public_repos, 10);
+      assert.equal(entry.public_gists, 2);
+      assert.equal(entry.followers, 30);
+      assert.equal(calls.length, scenario === 'windowResource' ? 22 : 36);
+      assert.equal(Math.min(...calls.map(call => call.from)), start);
+      assert.equal(Math.max(...calls.map(call => call.to)), end);
+      assert.equal(calls.filter(call => call.to - call.from === day).length, 7);
+    } else {
+      await assert.rejects(run);
+      assert.ok(calls.length <= 22);
+      if (scenario === 'windowExhausted') assert.equal(calls.length, 4);
+      if (scenario === 'windowRateLimit') assert.equal(calls.length, 4);
+    }
+    assert.equal(await readFile(snapshotPath, 'utf8'), previous);
+    assert.ok(!logs.join('').includes(secret));
+    const requests = logs.filter(line => line.startsWith('[github]')).map(line => JSON.parse(line.slice(9)));
+    assert.ok(requests.some(event => event.event === 'split_window'));
+    assert.ok(requests.filter(event => event.event === 'request' && event.operation === 'OssrankUserActivityBatch').every(event => event.window.from && event.window.to));
   });
 }
