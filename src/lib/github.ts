@@ -221,7 +221,7 @@ class SmartThrottler {
 // Rate-limit-aware GitHub client
 // ---------------------------------------------------------------------------
 
-type GitHubFailureKind = 'gateway' | 'rate_limit' | 'resource_limit' | 'http' | 'graphql' | 'transport' | 'invalid_response';
+type GitHubFailureKind = 'gateway' | 'rate_limit' | 'resource_limit' | 'http' | 'graphql' | 'transport' | 'invalid_response' | 'response_decode';
 
 class GitHubRequestError extends Error {
   constructor(readonly kind: GitHubFailureKind, operation: string, readonly status?: number) {
@@ -335,6 +335,8 @@ export class GitHubClient {
       const started = Date.now();
       let response: Response | undefined;
       let failure: GitHubRequestError;
+      let stage: 'fetch' | 'headers' | 'body_decode' | 'graphql_envelope' = 'fetch';
+      let failureReason: string | undefined;
       try {
         response = await fetch('https://api.github.com/graphql', {
           method: 'POST',
@@ -347,6 +349,7 @@ export class GitHubClient {
           body: JSON.stringify({ query, variables }),
           signal: AbortSignal.timeout(60_000)
         });
+        stage = 'headers';
         this.throttler.updateFromHeaders(response.headers, 'graphql');
         const remaining = response.headers.get('x-ratelimit-remaining');
         if (remaining) this.remaining = Number(remaining);
@@ -358,7 +361,15 @@ export class GitHubClient {
           failure = new GitHubRequestError(kind, operation, response.status);
           await response.body?.cancel();
         } else {
+          stage = 'body_decode';
           const body = await response.json() as GitHubGraphqlResponse<T>;
+          stage = 'graphql_envelope';
+          if (!body || typeof body !== 'object' || Array.isArray(body) ||
+              (body.errors !== undefined && (!Array.isArray(body.errors) ||
+                body.errors.some(error => !error || typeof error.message !== 'string'))) ||
+              (body.data !== undefined && body.data !== null && (typeof body.data !== 'object' || Array.isArray(body.data)))) {
+            throw new Error('Invalid GraphQL envelope');
+          }
           if (!body.errors?.length && body.data) {
             githubDiagnostic({ ...context, event: 'request', attempt, durationMs: Date.now() - started,
               status: response.status, requestId: response.headers.get('x-github-request-id'), outcome: 'success' });
@@ -368,15 +379,20 @@ export class GitHubClient {
           const resourceLimited = body.errors?.some(error => error.type === 'RESOURCE_LIMITS_EXCEEDED' || /Resource limits for this query exceeded/i.test(error.message));
           failure = new GitHubRequestError(rateLimited ? 'rate_limit' : resourceLimited ? 'resource_limit' : 'graphql', operation, response.status);
         }
-      } catch {
-        // Do not include exception text: transports may echo request credentials.
-        failure = new GitHubRequestError(response ? 'invalid_response' : 'transport', operation, response?.status);
+      } catch (error) {
+        // Only fixed labels leave this catch; decoder errors can contain body text.
+        failureReason = stage === 'body_decode'
+          ? error instanceof SyntaxError ? 'json_syntax'
+            : error instanceof Error && ['AbortError', 'TimeoutError'].includes(error.name) ? 'body_timeout' : 'body_read'
+          : stage === 'graphql_envelope' ? 'invalid_envelope' : 'request_processing';
+        failure = new GitHubRequestError(stage === 'body_decode' ? 'response_decode'
+          : response ? 'invalid_response' : 'transport', operation, response?.status);
       }
-      const retry = attempt < maxAttempts && ['gateway', 'rate_limit', 'transport'].includes(failure.kind);
+      const retry = attempt < maxAttempts && ['gateway', 'rate_limit', 'transport', 'response_decode'].includes(failure.kind);
       const delayMs = retry ? githubRetryDelay(response?.headers, attempt, failure.kind === 'rate_limit') : 0;
       githubDiagnostic({ ...context, event: 'request', attempt, durationMs: Date.now() - started,
         status: response?.status, requestId: response?.headers.get('x-github-request-id') ?? null,
-        outcome: failure.kind, retry, delayMs });
+        outcome: failure.kind, stage, failureReason, retry, delayMs });
       if (!retry) throw failure;
       await new Promise(resolve => setTimeout(resolve, delayMs));
     }
