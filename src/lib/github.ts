@@ -323,7 +323,11 @@ export class GitHubClient {
     const logins = Object.entries(variables)
       .filter(([key, value]) => /^login\d+$/.test(key) && typeof value === 'string')
       .map(([, value]) => value as string);
-    const context = { operation, batchSize: logins.length, logins };
+    const window = operation === 'OssrankUserActivityBatch' &&
+      typeof variables.from === 'string' && typeof variables.to === 'string' &&
+      Number.isFinite(Date.parse(variables.from)) && Number.isFinite(Date.parse(variables.to))
+      ? { from: new Date(variables.from).toISOString(), to: new Date(variables.to).toISOString() } : undefined;
+    const context = { operation, batchSize: logins.length, logins, window };
     const maxAttempts = 3;
     for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
       await this.throttler.beforeCall('graphql');
@@ -361,7 +365,7 @@ export class GitHubClient {
             return body.data;
           }
           const rateLimited = body.errors?.some(error => error.type === 'RATE_LIMITED' || /rate limit/i.test(error.message));
-          const resourceLimited = body.errors?.some(error => /Resource limits for this query exceeded/i.test(error.message));
+          const resourceLimited = body.errors?.some(error => error.type === 'RESOURCE_LIMITS_EXCEEDED' || /Resource limits for this query exceeded/i.test(error.message));
           failure = new GitHubRequestError(rateLimited ? 'rate_limit' : resourceLimited ? 'resource_limit' : 'graphql', operation, response.status);
         }
       } catch {
@@ -464,10 +468,10 @@ function toUserCandidate(node: GitHubUserActivityNode): { user: GitHubUserDetail
 async function userProfilesWithActivityBatch(
   client: GitHubClient,
   logins: string[],
-  generatedAt: string
+  generatedAt: string,
+  window = { from: daysAgoIso(generatedAt, 365), to: generatedAt, depth: 0 }
 ): Promise<Array<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number; dailyContributions: number[] } }>> {
-  const from = daysAgoIso(generatedAt, 365);
-  const to = generatedAt;
+  const { from, to, depth } = window;
   const results: Array<{ user: GitHubUserDetail; activity: { commits: number; pullRequests: number; dailyContributions: number[] } }> = [];
 
   for (const batch of chunks(logins, 5)) {
@@ -496,7 +500,51 @@ async function userProfilesWithActivityBatch(
       }`, variables);
     } catch (error) {
       if (!(error instanceof GitHubRequestError) ||
-          !['gateway', 'resource_limit'].includes(error.kind) || batch.length === 1) throw error;
+          !['gateway', 'resource_limit'].includes(error.kind)) throw error;
+      if (batch.length === 1) {
+        const start = Date.parse(from);
+        const end = Date.parse(to);
+        const dayMs = 86_400_000;
+        // Three levels permit at most 21 additional window queries per user
+        // (each still subject to the client's three-attempt limit).
+        if (depth >= 3 || !Number.isFinite(start) || !Number.isFinite(end) || end - start <= 2 * dayMs) {
+          githubDiagnostic({ event: 'window_exhausted', operation: 'OssrankUserActivityBatch',
+            logins: batch, from, to, depth, reason: error.kind });
+          throw error;
+        }
+        const middle = Math.floor((start + end) / 2);
+        const overlapFrom = new Date(middle - dayMs / 2).toISOString();
+        const overlapTo = new Date(middle + dayMs / 2).toISOString();
+        githubDiagnostic({ event: 'split_window', operation: 'OssrankUserActivityBatch',
+          logins: batch, from, to, overlapFrom, overlapTo, depth, reason: error.kind });
+        // GitHub documents both endpoints as inclusive. Inclusion-exclusion
+        // avoids guessing the timestamp precision or subtracting an epsilon:
+        // C(from,to) = C(from,overlapTo) + C(overlapFrom,to) - C(overlapFrom,overlapTo).
+        // Only event counts are additive, never distinct repositories/profile totals.
+        // https://docs.github.com/en/graphql/reference/users#contributionscollection
+        const [left] = await userProfilesWithActivityBatch(client, batch, generatedAt,
+          { from, to: overlapTo, depth: depth + 1 });
+        const [right] = await userProfilesWithActivityBatch(client, batch, generatedAt,
+          { from: overlapFrom, to, depth: depth + 1 });
+        const [overlap] = await userProfilesWithActivityBatch(client, batch, generatedAt,
+          { from: overlapFrom, to: overlapTo, depth: 3 });
+        if (left.user.login !== right.user.login || left.user.login !== overlap.user.login) {
+          throw new GitHubRequestError('invalid_response', 'OssrankUserActivityBatch');
+        }
+        const combine = (field: 'commits' | 'pullRequests'): number => {
+          const counts = [left.activity[field], right.activity[field], overlap.activity[field]];
+          const combined = counts[0] + counts[1] - counts[2];
+          if (!counts.every(count => Number.isSafeInteger(count) && count >= 0) ||
+              counts[2] > Math.min(counts[0], counts[1]) || !Number.isSafeInteger(combined)) {
+            throw new GitHubRequestError('invalid_response', 'OssrankUserActivityBatch');
+          }
+          return combined;
+        };
+        results.push({ user: left.user, activity: {
+          commits: combine('commits'), pullRequests: combine('pullRequests'), dailyContributions: []
+        } });
+        continue;
+      }
       // Sequential bisection bounds a five-user batch to at most nine nodes.
       // Never split rate limits or accept a partially successful GraphQL response.
       const midpoint = Math.ceil(batch.length / 2);
@@ -504,7 +552,7 @@ async function userProfilesWithActivityBatch(
         batchSize: batch.length, logins: batch, reason: error.kind, status: error.status,
         childSizes: [midpoint, batch.length - midpoint] });
       for (const child of [batch.slice(0, midpoint), batch.slice(midpoint)]) {
-        results.push(...await userProfilesWithActivityBatch(client, child, generatedAt));
+        results.push(...await userProfilesWithActivityBatch(client, child, generatedAt, window));
       }
       continue;
     }
